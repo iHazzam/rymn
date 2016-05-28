@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ripon Youth Music Network | @yield('pagetitle')</title>
+
+    <!-- Bootstrap Core CSS -->
+    @yield('css')
+    <link href="{{url('css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{url('css/rymn.css')}}" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+@section('stickynav')
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="http://i.imgur.com/dnRzIc7.png" alt="logo">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="/learn" class="dropdown-toggle" data-toggle="dropdown">Learn <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/learn/instruments"><i class=""></i> Learn an instrument</a>
+                            </li>
+                            <li>
+                                <a href="/learn/teachers"><i class=""></i> Find a teacher</a>
+                            </li>
+                            <li>
+                                <a href="/learn/parents"><i class=""></i> Information for parents</a>
+                            </li>
+                            <li>
+                                <a href="/learn/kids"><i class=""></i>Information for kids</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/teach" class="dropdown-toggle" data-toggle="dropdown">Teach <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/teach/register"><i class=""></i>Register as a teacher</a>
+                            </li>
+                            <li>
+                                <a href="/teach/resources"><i class=""></i>Resources for teachers</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/play" class="dropdown-toggle" data-toggle="dropdown">Play <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/play/groups"><i class=""></i>Join an ensemble</a>
+                            </li>
+                            <li>
+                                <a href="/play/groups"><i class=""></i>Benifits of group playing</a>
+                            </li>
+                            <li>
+                                <a href="/play/advertise"><i class=""></i> Add your ensemble to RYMN</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/discover" class="dropdown-toggle" data-toggle="dropdown">Discover <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/discover/calendar"><i class=""></i>Events Calendar</a>
+                            </li>
+                            <li>
+                                <a href="/discover/map"><i class=""></i>Events Map</a>
+                            </li>
+                            <li>
+                                <a href="/discover/newsletter"><i class=""></i>The RYMN newsletter</a>
+                            </li>
+                            <li>
+                                <a href="discover/social"><i class=""></i>RYMN Social Feed</a>
+                            </li>
+                            <li>
+                                <a href="discover/about"><i class=""></i>About RYMN</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+@show
+
+<!-- Page Content -->
+<div class="container">
+
+    @yield('body')
+
+    <!-- Footer -->
+
+
+</div>
+<footer>
+    <div class="col-lg-12">
+        <p>Copyright &copy; Ripon Youth Music Network {{date("Y")}}</p>
+    </div>
+</footer>
+<!-- /.container -->
+
+@yield('js')
+<!-- jQuery -->
+<script src="{{url('/js/jquery.js')}}"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="{{url('js/bootstrap.min.js')}}"></script>
+
+</body>
+
+</html>
