@@ -1,4 +1,4 @@
-@extends('template')
+@extends('admin_template')
 
 @section('title', 'homepage')
 

@@ -14,6 +14,7 @@
     <!-- Bootstrap Core CSS -->
     @yield('css')
     <link href="{{url('css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="{{url('css/rymn.css')}}" rel="stylesheet">
@@ -42,8 +43,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
-                    <img src="http://i.imgur.com/dnRzIc7.png" alt="logo">
+                <a class="navbar-brand" href="/">
+                    <img src="{{url('imgs/logo.png')}}" class="logo" alt="logo">
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -111,6 +112,17 @@
                             </li>
                         </ul>
                     </li>
+                    @if (Auth::check())
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('admin/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                            </ul>
+                        </li>
+                    @endif
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -120,13 +132,14 @@
 @show
 
 <!-- Page Content -->
-<div class="container">
-
+<div class="fullwidth">
+    @yield('banner')
+    <div class="container">
     @yield('body')
 
     <!-- Footer -->
 
-
+    </div>
 </div>
 <footer>
     <div class="col-lg-12">

@@ -17,8 +17,6 @@
  * Frontpages
  */
 Route::get('/', 'pageController@home');
-Route::get('/admin', 'pageController@login');
-Route::get('/admin/dashboard', 'pageController@dashboard');
 Route::get('/learn', 'pageController@learn');
 Route::get('/teach', 'pageController@teach');
 Route::get('/play', 'pageController@play');
@@ -48,3 +46,16 @@ Route::post('/discover/add_event/post', 'discoverController@newEvent' );
 Route::post('/play/advertise/post', 'playController@newAd');
 Route::post('/teach/register/post', 'teachController@newTeach');
 Route::post('/mailing/reg/{list}', 'newsletterController@addtolist');
+
+Route::get('/admin/dashboard', 'adminController@dashboard');
+Route::get('/admin/logout', 'adminController@logout');
+Route::get('/admin/dashboard/events', 'adminController@events');
+Route::get('/admin/dashboard/teachers', 'adminController@teachers');
+Route::get('/admin/dashboard/groups', 'adminController@groups');
+Route::get('/admin/dashboard/social', 'adminController@social');
+Route::get('/admin/dashboard/submit', 'adminController@submit');
+
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

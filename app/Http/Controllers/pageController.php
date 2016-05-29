@@ -29,12 +29,15 @@ class pageController extends Controller
     {
         return view('discover');
     }
-    public function login()
-    {
-        return view('admin.login');
-    }
     public function dashboard()
     {
-        return view('admin.dashboard');
+        if(Auth::check())
+        {
+            return view('admin.dashboard');
+        }
+        else{
+            return redirect()->back;
+        }
+
     }
 }
