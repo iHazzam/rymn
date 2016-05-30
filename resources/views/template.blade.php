@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Ripon Youth Music Network | @yield('pagetitle')</title>
+    <title>Ripon Youth Music Network | @yield('title')</title>
 
     <!-- Bootstrap Core CSS -->
     @yield('css')
@@ -119,7 +119,8 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('admin/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                <li><a href="{{ url('admin/dashboard') }}"><i class="fa fa-btn fa-tachometer"></i> Admin Panel</a></li>
+                                <li><a href="{{ url('admin/logout') }}"><i class="fa fa-btn fa-sign-out"></i> Logout</a></li>
                             </ul>
                         </li>
                     @endif
