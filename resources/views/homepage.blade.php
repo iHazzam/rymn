@@ -28,7 +28,8 @@
 @endsection
 @section('body')
     <div class="row welcome">
-        <h1 class="fix-middle">this is the homepage of the site. Test!</h1>
+        <h1 class="fix-middle">
+           {{phpinfo()}};</h1>
     </div>
 
 
