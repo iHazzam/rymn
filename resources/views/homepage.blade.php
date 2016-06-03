@@ -29,7 +29,7 @@
 @section('body')
     <div class="row welcome">
         <h1 class="fix-middle">
-           {{phpinfo()}};</h1>
+           Welcome to RYMN</h1>
     </div>
 
 
