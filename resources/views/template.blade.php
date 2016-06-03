@@ -138,11 +138,26 @@
     <div class="container">
     @yield('body')
 
-    <!-- Footer -->
+
 
     </div>
 </div>
+<div class="stick">
+    <div class="col-md-offset-3 col-md-6 subscribe">
+        <form class="form-inline mailform" role="form" action="{{url('newsletter/subscribe_chimp')}}" method="post">
+            <div class="form-group">
+                <label  for="subscribe-email"><span class="sub_text">Sign-up for news and information: </span></label>
+                <input type="text" name="email" placeholder="Enter your email..." class="subscribe-email form-control" id="subscribe-email">
+            </div>
+            <button type="submit" class="btn btn-default">Subscribe</button>
+        </form>
+
+        <div class="success-message"></div>
+        <div class="error-message"></div>
+    </div>
+</div>
 <footer>
+
     <div class="col-lg-12">
         <p>Copyright &copy; Ripon Youth Music Network {{date("Y")}}</p>
     </div>
