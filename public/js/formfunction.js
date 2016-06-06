@@ -23,9 +23,23 @@ $( document ).ready(function() {
       $("#sf2").show("slow");
     });
 
-    $(document).ready(function(){
-
-        $('#strings').change(function() {
-            $('#strings-children').removeClass('hidden');
-        })
-    });
+    //$(document).ready(function(){
+    //    $('#strings').click(function() {
+    //        $("#string-children").toggle(this.checked);
+    //    });
+    //    $('#wind').click(function() {
+    //        $("#wind-children").toggle(this.checked);
+    //    });
+    //    $('#brass').click(function() {
+    //        $("#brass-children").toggle(this.checked);
+    //    });
+    //    $('#keys').click(function() {
+    //        $("#keys-children").toggle(this.checked);
+    //    });
+    //    $('#percussion').click(function() {
+    //        $("#percussion-children").toggle(this.checked);
+    //    });
+    //    $('#singing').click(function() {
+    //        $("#singing-children").toggle(this.checked);
+    //    });
+    //});

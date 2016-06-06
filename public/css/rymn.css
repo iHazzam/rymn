@@ -163,6 +163,16 @@ footer {
 }
 
 
+.panel-heading a:after {
+    font-family:'Glyphicons Halflings';
+    content:"\e114";
+    float: right;
+    color: #428bca;
+}
+.panel-heading a.collapsed:after {
+    content:"\e080";
+}
+
 
 
 

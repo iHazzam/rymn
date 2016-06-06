@@ -263,8 +263,8 @@ th {
 @font-face {
   font-family: 'Glyphicons Halflings';
 
-  src: url('../../../../../Users/harry_000/Downloads/startbootstrap-small-business-1.0.4/startbootstrap-small-business-1.0.4/fonts/glyphicons-halflings-regular.eot');
-  src: url('../../../../../Users/harry_000/Downloads/startbootstrap-small-business-1.0.4/startbootstrap-small-business-1.0.4/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../../../../Users/harry_000/Downloads/startbootstrap-small-business-1.0.4/startbootstrap-small-business-1.0.4/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../../../../../Users/harry_000/Downloads/startbootstrap-small-business-1.0.4/startbootstrap-small-business-1.0.4/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../../../../Users/harry_000/Downloads/startbootstrap-small-business-1.0.4/startbootstrap-small-business-1.0.4/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../../../../Users/harry_000/Downloads/startbootstrap-small-business-1.0.4/startbootstrap-small-business-1.0.4/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/fonts/glyphicons-halflings-regular.eot');
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/fonts/glyphicons-halflings-regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;

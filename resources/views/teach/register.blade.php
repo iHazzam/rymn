@@ -120,51 +120,162 @@
                                 <legend>Step 3 of 6 - Instruments Taught</legend>
                                 <span>Which of the following do you teach (check all that apply)</span>
                                 <div class="form-group">
+                                    <div class="panel-group" id="accordion">
+                                        <div class="panel panel-default" id="panel1">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-target="#collapseOne" href="#collapseOne " class="collapsed">
+                                                        Collapsible Group Item #1
+                                                    </a>
+                                                </h4>
+
+                                            </div>
+                                            <div id="collapseOne" class="panel-collapse collapse">
+                                                <div class="panel-body">
+
+
+                                                </div>
+                                            </div>
+                                       </div>
+                                        <div class="panel panel-default" id="panel2">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-target="#collapseTwo" href="#collapseTwo" class="collapsed">
+                                                        Collapsible Group Item #2
+                                                    </a>
+                                                </h4>
+
+                                            </div>
+                                            <div id="collapseTwo" class="panel-collapse collapse">
+                                                <div class="panel-body">
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default" id="panel3">
+                                            <div class="panel-heading" class="collapsed">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-target="#collapseThree" href="#collapseThree" class="collapsed">
+                                                        Collapsible Group Item #3
+                                                    </a>
+                                                </h4>
+
+                                            </div>
+                                            <div id="collapseThree" class="panel-collapse collapse">
+                                                <div class="panel-body">
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default" id="panel4">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-target="#collapseFour"
+                                                       href="#collapseFour" class="collapsed">
+                                                        Collapsible Group Item #4
+                                                    </a>
+                                                </h4>
+
+                                            </div>
+                                            <div id="collapseFour" class="panel-collapse collapse">
+                                                <div class="panel-body">
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default" id="panel5">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-target="#collapseFive" href="#collapseFive" class="collapsed">
+                                                        Collapsible Group Item #5
+                                                    </a>
+                                                </h4>
+
+                                            </div>
+                                            <div id="collapseFive" class="panel-collapse collapse">
+                                                <div class="panel-body">
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default" id="panel6">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-target="#collapseSix" href="#collapseSix" class="collapsed">
+                                                        Collapsible Group Item #6
+                                                    </a>
+                                                </h4>
+
+                                            </div>
+                                            <div id="collapseSix" class="panel-collapse collapse">
+                                                <div class="panel-body">
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div class="form-group">
                                     <label>
                                         <input type="checkbox" value="strings" id="strings">
                                         Strings
                                     </label>
-                                    <div class="form-group hidden" id="string-children">
+                                    </br>
+                                    <div class="form-group" style="display:none" id="string-children">
                                         <label>
                                             <input type="checkbox" value="Violin" id="Violin">
                                             Violin
                                         </label>
+                                        </br>
                                         <label>
                                             <input type="checkbox" value="Viola" id="Viola">
                                             Viola
                                         </label>
+                                        </br>
                                         <label>
                                             <input type="checkbox" value="Cello" id="Cello">
                                             Cello
                                         </label>
+                                        </br>
                                         <label>
                                             <input type="checkbox" value="Double Bass" id="Double Bass">
                                             Double Bass
                                         </label>
+                                        </br>
                                         <label>
                                             <input type="checkbox" value="Harp" id="Harp">
-                                            Harp
+                                            Harp`.
                                         </label>
+                                        </br>
                                         <label>
                                             <input type="checkbox" value="Guitar" id="Guitar">
                                             Guitar
                                         </label>
+                                        </br>
                                         <label>
                                             <input type="checkbox" value="Electric_Guitar" id="Electric_Guitar">
                                             Electric Guitar
                                         </label>
+                                        </br>
                                         <label>
                                             <input type="checkbox" value="Bass_Guitar" id="Bass_Guitar">
                                             Bass Guitar
                                         </label>
+                                        </br>
                                         <label>
                                             <input type="checkbox" value="Banjo" id="Banjo">
                                             Banjo/Ukelele
                                         </label>
+                                        </br>
                                         <label>
                                             <input type="checkbox" value="Other" id="Other">
                                             Other String Instrument
                                         </label>
+                                        </br>
                                     </div>
 
 
@@ -172,31 +283,31 @@
                                         <input type="checkbox" value="wind" id="wind">
                                         Wind
                                     </label>
-
+                                    </br>
 
                                     <label>
                                         <input type="checkbox" value="brass" id="brass">
                                         Brass
                                     </label>
-
+                                    </br>
 
                                     <label>
                                         <input type="checkbox" value="percussion" id="percussion">
                                         Percussion
                                     </label>
-
+                                    </br>
 
                                     <label>
                                         <input type="checkbox" value="keys" id="keys">
                                         Keyboards/Piano
                                     </label>
-
+                                    </br>
 
                                     <label>
                                         <input type="checkbox" value="voice" id="voice">
                                         Singing/Voice
                                     </label>
-
+                                    </br>
 
                                 </div>
 
@@ -210,7 +321,7 @@
                                         <button class="btn btn-primary open2" type="button">Next <span class="fa fa-arrow-right"></span></button>
                                     </div>
                                 </div>
-
+                            </div>
                             </fieldset>
                         </div>
                         <div id="sf3" class="frm" style="display: none;">
