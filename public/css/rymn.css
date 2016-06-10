@@ -3,10 +3,10 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-
 body {
-    padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
     margin-bottom: 60px;
+    padding-bottom: 122px;
 }
 
 .navbar-fixed-top .nav {
@@ -33,9 +33,12 @@ html {
     min-height: 100%;
 }
 .stick{
-    position: absolute;
-    bottom:60px;
+    position: fixed;
+    bottom:0px;
     width:100%;
+}
+.minheight{
+    min-height: 2000px;
 }
 footer {
     position: absolute;
@@ -45,7 +48,6 @@ footer {
     background-color: #f5f5f5;
     padding: 30px 0;
     text-align:center;
-
 }
 
 .fix-middle{
@@ -162,7 +164,6 @@ footer {
     text-align: center;
 }
 
-
 .panel-heading a:after {
     font-family:'Glyphicons Halflings';
     content:"\e114";
@@ -173,8 +174,65 @@ footer {
     content:"\e080";
 }
 
+#underline{
+    text-decoration: underline;
+}
 
+.top-row{
+    min-height: 100px;
+}
+.instruments-row{
+    min-height: 300px;
+}
+.cyan_color{
+    background-color: #E1F4FA ;
+}
+.grey_color{
+    background-color: #E8E8E8 ;
+}
 
+.insthead{
+    text-decoration: underline;
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 
+.img_left{
+    float: left;
+    padding-left: 15px;
+}
 
+.img_right{
+    float: right;
+    padding-right: 15px;
+}
+.paddmeleft{
+     padding-left: 15em;
+     padding-right: 2em;
+}
+.paddmeright{
+    padding-left: 2em;
+    padding-right: 15em;
+}
 
+#kids_div1,#parents_div1{
+    width: 50%; height: 50%; float: left;
+    background-color: #1b6d85;
+    min-height: 300px;
+}
+#kids_div2,#parents_div2{
+    width: 50%; height: 50%; float: left;
+    background-color: #E1F4FA;
+    min-height: 300px;
+}
+#kids_div3,#parents_div3{
+    width: 50%; height: 50%; float: left;
+    background-color: #428bca;
+    min-height: 300px;
+}
+#kids_div4,#parents_div4{
+    width: 50%; height: 50%; float: left;
+    background-color: #E8E8E8;
+    min-height: 300px;
+}

@@ -29,7 +29,6 @@
 </head>
 
 <body>
-
 <!-- Navigation -->
 
 @section('stickynav')
@@ -136,9 +135,7 @@
 <div class="fullwidth">
     @yield('banner')
     <div class="container">
-    @yield('body')
-
-
+        @yield('body')
 
     </div>
 </div>
@@ -167,10 +164,9 @@
 
 <!-- jQuery -->
 <script src="{{url('/js/jquery.js')}}"></script>
-
+    <script src="{{url('/js/rymn.js')}}"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="{{url('js/bootstrap.min.js')}}"></script>
-
 @yield('js')
 </body>
 
