@@ -16,19 +16,20 @@
     <nav class="navbar navbar-default navbar-lower" role="findingstuff">
         <div class="container">
             <div class="collapse navbar-collapse collapse-buttons">
-                <form class="navbar-form navbar-left form-inline" role="filter">
+                <form class="navbar-form navbar-left form-inline"  id="teachdbform" method="post" action="/teachdb">
                     <label>Instrument
                         <select id="cband" class="form-control">
-                            <option value="C15+">C15+</option>
-                            <option value="C12-14">C12-14</option>
-                            <option value="Other">Other</option>
+                            @foreach($rows as $row)
+                                <option value={{$row}}>{{$row}}</option>"}}
+                            @endforeach
                         </select>
                     </label>
                     <label>Age
-                        <input type="number" class="form-control" id="age" placeholder="0" required="true"  min="0" step="1">
+                        <input type="number" class="form-control" id="age" placeholder="0"  min="0" step="1">
                     </label>
                     <label>Teaching Location
                         <select id="location" class="form-control">
+                            <option value="">-</option>
                             <option value="own_home">Teaches at own home</option>
                             <option value="pupil_home">Teaches at pupil home</option>
                             <option value="online">Teaches online</option>
@@ -36,6 +37,7 @@
                     </label>
                     <label>Subject
                         <select id="cband" class="form-control">
+                            <option value="">-</option>
                             <option value="own_home">Instrument</option>
                             <option value="pupil_home">Aural</option>
                             <option value="online">Composition</option>
@@ -57,14 +59,11 @@
                             <option value="concert_soloist">Concert Soloist</option>
                         </select>
                     </label>
-                </form>
-                <form class="navbar-form navbar-right" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                        </div>
-                    </div>
+                    <label>Search by name</label>
+                    <input type="text" class="form-control" placeholder="Name" name="name" id="name">
+                    <label>Search by town</label>
+                    <input type="text" class="form-control" placeholder="Town" name="town" id="town">
+                    <button type="submit" class="btn btn-primary">Search</button>
                 </form>
             </div>
         </div>
@@ -73,7 +72,19 @@
 
 @section('body')
 
-    <h1 class="fix-middle">this is the teacher db page of the site. Test!</h1>
+    @foreach($teachers as $teacher)
+    <div class="col-lg-3 panel panel-default teacherpanel" data-toggle="modal" data-target="#myModal">
+        <div class="panel-body">
+            <img src="http://placehold.it/100x100" alt="leftimg" class="teachercard_img" />
+            <p>This card will have a summary of each teacher as well as a profile picture</p>
+            <br>
+            <br>
+            <p>Clicking on the card will bring up an expanded view</p>
+        </div>
+    </div>
+
+
+    @endforeach
 
 
 @endsection

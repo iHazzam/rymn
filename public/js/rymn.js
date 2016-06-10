@@ -17,3 +17,11 @@ $.fn.scrollBottom = function() {
 $.fn.distToBottom= function() {
     return $(document).height()  - this.height();
 };
+
+
+$(document).ready(function(){
+    alert('working');
+    $(".teacherpanel").click(function(){
+        $("#myModal").modal('show');
+    });
+});
