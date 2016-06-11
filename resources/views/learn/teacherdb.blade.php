@@ -73,6 +73,7 @@
 @section('body')
 
     @foreach($teachers as $teacher)
+        <a id="teacherpanellink">
     <div class="col-lg-3 panel panel-default teacherpanel" data-toggle="modal" data-target="#myModal">
         <div class="panel-body">
             <img src="http://placehold.it/100x100" alt="leftimg" class="teachercard_img" />
@@ -82,6 +83,7 @@
             <p>Clicking on the card will bring up an expanded view</p>
         </div>
     </div>
+        </a>
 
 
     @endforeach

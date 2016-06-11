@@ -20,8 +20,7 @@ $.fn.distToBottom= function() {
 
 
 $(document).ready(function(){
-    alert('working');
-    $(".teacherpanel").click(function(){
+    $("#teacherpanellink").click(function(){
         $("#myModal").modal('show');
     });
 });
