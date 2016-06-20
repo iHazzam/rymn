@@ -41,12 +41,6 @@ Route::get('/discover/newsletter', 'discoverController@newsletter');
 Route::get('/discover/social', 'discoverController@social');
 Route::get('/discover/add_event', 'discoverController@addEvent' );
 Route::get('/discover/about', 'discoverController@about' );
-/*forms*/
-Route::post('/discover/add_event/post', 'discoverController@newEvent' );
-Route::post('/play/advertise/post', 'playController@newAd');
-Route::post('/teach/register/post', 'teachController@newTeach');
-Route::post('/mailing/reg/{list}', 'newsletterController@addtolist');
-
 Route::get('/admin/dashboard', 'adminController@dashboard');
 Route::get('/admin/logout', 'adminController@logout');
 Route::get('/admin/dashboard/events', 'adminController@events');
@@ -58,4 +52,9 @@ Route::get('/admin/dashboard/submit', 'adminController@submit');
 
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
+
+/*forms*/
+Route::post('/discover/add_event/post', 'discoverController@newEvent' );
+Route::post('/postensemble', 'playController@newAd');
+Route::post('/teach/register/post', 'teachController@newTeach');
+Route::post('/mailing/reg/{list}', 'newsletterController@addtolist');

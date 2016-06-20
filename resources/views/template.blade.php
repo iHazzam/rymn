@@ -104,10 +104,10 @@
                                 <a href="/discover/newsletter"><i class=""></i>The RYMN newsletter</a>
                             </li>
                             <li>
-                                <a href="discover/social"><i class=""></i>RYMN Social Feed</a>
+                                <a href="/discover/social"><i class=""></i>RYMN Social Feed</a>
                             </li>
                             <li>
-                                <a href="discover/about"><i class=""></i>About RYMN</a>
+                                <a href="/discover/about"><i class=""></i>About RYMN</a>
                             </li>
                         </ul>
                     </li>

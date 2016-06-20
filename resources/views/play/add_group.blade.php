@@ -4,12 +4,6 @@
 
 @section('body')
 
-    @extends('template')
-
-@section('title', 'homepage')
-
-@section('body')
-
     <div class="row">
         <br>
         <br>
@@ -20,53 +14,72 @@
                 </div>
                 <div class="panel-body">
                     <p>Adding details of your group allows you to advertise for members, add events to the calendar and reach a large number of potential audience members via our newsletter</p>
-                    <form name="basicform" id="basicform" method="post" action="/postensemble">
+                    <form name="basicform" id="groupform" method="post" action="/postensemble">
                         {!! csrf_field() !!}
                         <div id="sf1" class="frm">
                             <fieldset>
-                                <legend>Headline</legend>
+                                <div class="alert alert-warning alert-dismissible hidden" id="incomplete" role="alert">Please complete all fields to continue</div>
+                                <legend>Group information</legend>
                                 <div class="form-group">
                                     <div class="form-group">
-                                        <label for="firstname" class="control-label">First Name</label>
+                                        <label for="groupname" class="control-label">Group Name</label>
 
-                                        <input type="text" class="form-control" id="firstname" placeholder="" required="">
-
-
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="lastname" class="control-label">Last Name</label>
-
-                                        <input type="text" class="form-control" id="lastname" placeholder="" required="">
+                                        <input type="text" class="form-control" id="groupname"  name="groupname" placeholder="" required="">
 
 
                                     </div>
                                     <div class="form-group">
-                                        <label for="addr1" class="control-label">Address Line 1</label>
+                                        <label for="grouptown" class="control-label">Town group is based in (Please select closest) </label>
+                                        <select class="form-control" id="grouptown" name="grouptown" required>
+                                            <option value="">-</option>
+                                            <option value="ripon">Ripon</option>
+                                            <option value="thirsk">Thirsk</option>
+                                            <option value="easingwold">Easingwold</option>
+                                            <option value="boroughbridge">Boroughbridge</option>
+                                            <option value="harrogate">Harrogate</option>
+                                            <option value="knaresborough">Knaresborough</option>
+                                            <option value="northallerton">Northallerton</option>
+                                            <option value="pately_bridge">Pately Bridge</option>
+                                            <option value="ripley">Ripley</option>
+                                            <option value="masham">Masham</option>
+                                            <option value="richmond">Richmond</option>
+                                            <option value="skipton">Skipton</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="typeofgroup" class="control-label">Type of group: </label>
+                                        <select class="form-control" id="typeofgroup" name="typeofgroup" required>
+                                            <option value="">-</option>
+                                            <option value="brass_band">Brass Band</option>
+                                            <option value="choir">Choir</option>
+                                            <option value="community_group">Community Group </option>
+                                            <option value="orchestra">Orchestra </option>
+                                            <option value="percussion_ensemble">Percussion Ensemble</option>
+                                            <option value="pop/rock_band">Pop/Rock group</option>
+                                            <option value="string_chamber_group">String Chamber Group</option>
+                                            <option value="string_group">String Group</option>
+                                            <option value="wind_band">Wind Band</option>
+                                            <option value="wind_chamber_group">Wind Chamber Group</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="description" class="control-label">Paragraph about the group:</label>
 
-                                        <input type="text" class="form-control" id="addr1" placeholder="" required="">
+                                        <textarea class="form-control" id="biography" name="biography" required></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="groupname" class="control-label">Contact email</label>
+                                        <span id="helpemail"   class="hidden">- Email must be correct format and include an @ symbol</span>
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="" required>
 
 
                                     </div>
+
                                     <div class="form-group">
-                                        <label for="addr2" class="control-label">Address Line 2</label>
-
-                                        <input type="text" class="form-control" id="addr2" placeholder="" required="">
-
-
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="city" class="control-label">City</label>
-
-                                        <input type="text" class="form-control" id="city" placeholder="" required="">
-
-
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="postcode" class="control-label">Postcode</label>
-
-                                        <input type="text" class="form-control" id="postcode" placeholder="" required="">
-
-
+                                        <div class="checkbox" >
+                                            <label for="recruiting" class="control-label"><input type="checkbox" id="recruiting" value="recruiting" name="recruiting" onchange="valueChangedRecruiting();">Is the group recruiting for new members?</label>
+                                        </div>
                                     </div>
 
 
@@ -74,66 +87,22 @@
 
                                     <div class="form-group">
                                         <div class="col-lg-10 col-lg-offset-2">
-                                            <button class="btn btn-primary open1" type="button">Next <span class="fa fa-arrow-right"></span></button>
+                                            <button type="submit" id="group_sub" class="btn btn-warning"> <span class="fa fa-paper-plane"></span> Submit </button>
+                                            <button class="btn btn-primary hidden open1" id="group_next" type="button">Next <span class="fa fa-arrow-right"></span></button>
                                         </div>
                                     </div>
                                 </div>
                             </fieldset>
                         </div>
-
                         <div id="sf2" class="frm" style="display: none;">
                             <fieldset>
-                                <legend>Step 2 of 6 - Contact Details</legend>
+                                <legend>Recruiting details:</legend>
 
                                 <div class="form-group">
                                     <div class="form-group">
-                                        <label for="email" class="control-label">Email</label>
-
-                                        <input type="email" class="form-control" id="email" placeholder="" required="">
-
-
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="phone" class="control-label">Phone Number</label>
-
-                                        <input type="tel" class="form-control" id="phone" placeholder="">
-                                        <p class="help-block">Optional</p>
-
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="phone" class="control-label">Mobile Number</label>
-
-                                        <input type="tel" class="form-control" id="phone" placeholder="">
-                                        <p class="help-block">Optional</p>
-
-                                    </div>
-                                </div>
-
-                                <div class="clearfix" style="height: 10px;clear: both;"></div>
-                                <div class="clearfix" style="height: 10px;clear: both;"></div>
-
-                                <div class="form-group">
-                                    <div class="col-lg-10 col-lg-offset-2">
-                                        <button class="btn btn-warning back2" type="button"><span class="fa fa-arrow-left"></span> Back</button>
-                                        <button class="btn btn-primary open2" type="button">Next <span class="fa fa-arrow-right"></span></button>
-                                    </div>
-                                </div>
-
-                            </fieldset>
-                        </div>
-                        <div id="sf3" class="frm" style="display: none;">
-                            <fieldset>
-                                <legend>Step 6 of 6 - Final Details</legend>
-
-                                <div class="form-group">
-                                    <div class="form-group">
-                                        <div class="checkbox" >
-                                            <label><input type="checkbox" id="cb-acc" value="accompanies" onchange="valueChangedAcc();">Do you accompany students?</label>
-                                        </div>
-                                        <div class="form-group hidden" id="acc">
-                                            <label for="instrument_1_select">Maximum level accompanied:</label>
-                                            <select class="form-control" id="instrument_1_select">
+                                        <div class="form-group" id="acc">
+                                            <label for="instrument_1_select">Minimum standard required to join:</label>
+                                            <select class="form-control" id="standard" name="standard">
                                                 <option value="">-</option>
                                                 <option value="grade1">Grade 1</option>
                                                 <option value="grade2">Grade 2</option>
@@ -150,26 +119,15 @@
                                     </div>
                                     <div class=form-group>
                                         <div class="checkbox" >
-                                            <label><input type="checkbox" id="crb" value="crb">Are you CRB checked?</label>
+                                            <label><input type="checkbox" id="audition"  name="audition" value="audition">Will there be an audition for new members?</label>
                                         </div>
                                     </div>
-                                    <div class=form-group>
-                                        <div class="checkbox" >
-                                            <label><input type="checkbox" id="repair" value="repair" onchange="valueChangedRepair()">Do you repair instruments?</label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group hidden" id="repair_inst">
-                                        <label for="repair_inst" class="control-label">Please enter the name of any instruments you repair below</label>
 
-                                        <input type="text" class="form-control" placeholder="" required="">
-
-
-                                    </div>
-                                    <span>Please enter any further details you would like to be displayed to potential students that are not covered above </span>
+                                    <span>Please enter any further details you would like to be displayed to potential new members that are not covered above </span>
                                     <div class="form-group">
-                                        <label for="biography" class="control-label">Further biographical details:</label>
+                                        <label for="biography" class="control-label">Further details for potential members:</label>
 
-                                        <textarea class="form-control" id="biography" ></textarea>
+                                        <textarea class="form-control" id="recruit_details" name="recruit_details"></textarea>
                                     </div>
 
                                 </div>
@@ -179,8 +137,8 @@
 
                                 <div class="form-group">
                                     <div class="col-lg-10 col-lg-offset-2">
-                                        <button class="btn btn-warning back6" type="button"><span class="fa fa-arrow-left"></span> Back</button>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button class="btn btn-primary back2" type="button"><span class="fa fa-arrow-left"></span> Back</button>
+                                        <button type="submit" id="group_sub" class="btn btn-warning"><span class="fa fa-paper-plane"></span> Submit </button>
                                     </div>
                                 </div>
 
@@ -197,7 +155,3 @@
     <script src="{{url('/js/addgroup.js')}}"></script>
 @endsection
 
-
-
-
-@endsection

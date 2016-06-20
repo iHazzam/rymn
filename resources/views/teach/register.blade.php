@@ -647,7 +647,7 @@
                                         </div>
                                     <div class=form-group>
                                         <div class="checkbox" >
-                                            <label><input type="checkbox" id="repair" value="repair" onchange="valueChangedRepair()">Do you repair instruments?</label>
+                                            <label><input type="checkbox" id="repair" value="repair" onchange="valueChangedRepair();">Do you repair instruments?</label>
                                         </div>
                                     </div>
                                     <div class="form-group hidden" id="repair_inst">
