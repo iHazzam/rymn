@@ -12,9 +12,18 @@
                 <div class="panel-heading cent">
                     <h3 class="panel-title">Add your ensemble to RYNM's site!</h3>
                 </div>
+                @if (count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <div class="panel-body">
                     <p>Adding details of your group allows you to advertise for members, add events to the calendar and reach a large number of potential audience members via our newsletter</p>
-                    <form name="basicform" id="groupform" method="post" action="/postensemble">
+                    <form name="basicform" id="groupform" method="post" action="/postensemble" enctype="multipart/form-data">
                         {!! csrf_field() !!}
                         <div id="sf1" class="frm">
                             <fieldset>
@@ -22,9 +31,9 @@
                                 <legend>Group information</legend>
                                 <div class="form-group">
                                     <div class="form-group">
-                                        <label for="groupname" class="control-label">Group Name</label>
+                                        <label for="group_name" class="control-label">Group Name</label>
 
-                                        <input type="text" class="form-control" id="groupname"  name="groupname" placeholder="" required="">
+                                        <input type="text" class="form-control" id="group_name"  name="group_name" placeholder="" required="">
 
 
                                     </div>
@@ -75,7 +84,16 @@
 
 
                                     </div>
+                                    <div class="form-group">
+                                        <label for="thumbnail" class="control-label">Thumbnail image for group</label>
+                                        {!! Form::file('thumbnail') !!}
 
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="thumbnail" class="control-label">Other group photos(Only two will be used)</label>
+                                        {!! Form::file('images[]', array('multiple'=>true)) !!}
+
+                                    </div>
                                     <div class="form-group">
                                         <div class="checkbox" >
                                             <label for="recruiting" class="control-label"><input type="checkbox" id="recruiting" value="recruiting" name="recruiting" onchange="valueChangedRecruiting();">Is the group recruiting for new members?</label>
