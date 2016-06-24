@@ -27,8 +27,12 @@ class teachController extends Controller
 
         return view('teach.resources')->with('files', $files);
     }
-    public function newTeach()
+    public function newTeach(Request $request)
     {
+        var_dump($request->all());
+
+
+        exit(0);
         return redirect()->back();
     }
 }

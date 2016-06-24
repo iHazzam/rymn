@@ -259,6 +259,10 @@ footer {
     margin: 0 auto;
 }
 
-#helpemail{
+#helpemail,#helpcheckbox{
     color: #ac2925;
+}
+
+.smaller{
+    font-size: 9px;
 }

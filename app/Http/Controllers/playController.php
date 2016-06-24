@@ -45,21 +45,22 @@ class playController extends Controller
         $group->ensemble_type = $request->typeofgroup;
         $group->group_description = $request->biography;
         $group->contact_email = $request->email;
+        if(Input::file('thumbnail')) {
+            if (Input::file('thumbnail')->isValid()) {
+                $destPath = 'upload';
+                $extension = Input::file('thumbnail')->getClientOriginalExtension();
 
-        if(Input::file('thumbnail')->isValid())
-        {
-            $destPath = 'upload';
-            $extension = Input::file('thumbnail')->getClientOriginalExtension();
-
-            if($extension == 'png'||'gif'||'jpg'||'jpeg')
-            {
-                $filename = rand(11111,99999).'.'.$extension;
-                Input::file('thumbnail')->move($destPath, $filename);
-                $group->thumbnail_image_path = $destPath . "/" . $filename;
+                if ($extension == 'png' || 'gif' || 'jpg' || 'jpeg') {
+                    $filename = rand(11111, 99999) . '.' . $extension;
+                    Input::file('thumbnail')->move($destPath, $filename);
+                    $group->thumbnail_image_path = $destPath . "/" . $filename;
+                } else {
+                    return Redirect::back()->withErrors(['Error: Incorrect filetype uploaded (Must be png, gif, jpg, or jpeg)']);
+                }
             }
-            else{
-                return Redirect::back()->withErrors(['Error: Incorrect filetype uploaded (Must be png, gif, jpg, or jpeg)']);
-            }
+        }
+        else{
+            $group->thumbnail_image_path = "/upload/default.png";
         }
         $images = Input::file('images');
         $size = sizeof($images);

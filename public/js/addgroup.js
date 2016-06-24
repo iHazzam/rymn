@@ -8,6 +8,10 @@ $( document ).ready(function() {
       {
           $(".frm").hide("fast");
           $("#sf2").show("slow");
+          if(!$("#incomplete".hasClass('hidden')))
+          {
+              $("#incomplete").addClass('hidden');
+          }
       }
       else
       {
