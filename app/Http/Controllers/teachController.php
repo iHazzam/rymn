@@ -30,9 +30,22 @@ class teachController extends Controller
     public function newTeach(Request $request)
     {
         var_dump($request->all());
+        $this->validate($request,[
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'addr1' => 'required',
+            'city' => 'required',
+            'postcode' => 'required',
+            'email' => 'required',
+        ]);
 
 
         exit(0);
         return redirect()->back();
+    }
+    function is_valid_postcode($postcode) {
+        $validation_expression = '/^(((([A-PR-UWYZ][0-9][0-9A-HJKS-UW]?)|([A-PR-UWYZ][A-HK-Y][0-9][0-9ABEHMNPRV-Y]?))\s{0,2}[0-9]([ABD-HJLNP-UW-Z]{2}))|(GIR\s{0,2}0AA))$/i';
+
+        return preg_match($validation_expression, $postcode);
     }
 }

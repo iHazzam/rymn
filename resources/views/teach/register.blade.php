@@ -271,7 +271,7 @@
                                                         </label>
                                                         </br>
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Bass_Clarinet" id="Bass_Clarinet" name="Basset_Horn">
+                                                            <input class="smaller" type="checkbox" value="Bass_Clarinet" id="Bass_Clarinet" name="Bass_Clarinet">
                                                             Bass Clarinet
                                                         </label>
                                                         </br>
@@ -589,7 +589,7 @@
                                             <br><br>
                                             <div class="form-group">
                                                 <label for="instrument_1_select_min"><i class="fa fa-star" aria-hidden="true"></i>Minimum Level:</label>
-                                                <select class="form-control" id="instrument_1_select_min" name="instrument_1_select_min" required>
+                                                <select  id="instrument_1_select_min" name="instrument_1_select_min" required>
                                                         <option value="">-</option>
                                                         <option value="grade1">Grade 1</option>
                                                         <option value="grade2">Grade 2</option>
@@ -605,7 +605,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="instrument_1_select_max"><i class="fa fa-star" aria-hidden="true"></i>Maximum Level:</label>
-                                                <select class="form-control" id="instrument_1_select_max" name="instrument_1_select_max" required>
+                                                <select  id="instrument_1_select_max" name="instrument_1_select_max" required>
                                                     <option value="">-</option>
                                                     <option value="grade1">Grade 1</option>
                                                     <option value="grade2">Grade 2</option>
@@ -686,16 +686,16 @@
                                 <span>I... (Check all that apply)</span>
                                 <div class="form-group">
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="teach_at_pupil_home">Teach at pupil's home</label>
+                                        <label><input type="checkbox" name="teach_at_pupil_home" value="teach_at_pupil_home">Teach at pupil's home</label>
                                     </div>
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="teach_at_own_home">Teach at own home</label>
+                                        <label><input type="checkbox" name="teach_at_own_home" value="teach_at_own_home">Teach at own home</label>
                                     </div>
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="teach_online">Teach online</label>
+                                        <label><input type="checkbox" name="teach_online" value="teach_online">Teach online</label>
                                     </div>
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="teach_at_school">Teach at school</label>
+                                        <label><input type="checkbox" name="teach_at_school" value="teach_at_school">Teach at school</label>
                                     </div>
                                     <div class="checkbox">
                                         <label><input type="checkbox" id="tmt-cb" name="tmt-cb" value="teach_theory" onchange="valueChangedTmt();">Teach Music Theory</label>
@@ -810,7 +810,7 @@
                                     <div class="form-group hidden" id="repair_inst">
                                         <label for="repair_inst" class="control-label">Please enter the name of any instruments you repair below</label>
 
-                                        <input type="text"  placeholder="">
+                                        <input type="text"  name="repair_instruments" placeholder="">
 
 
                                     </div>
@@ -818,7 +818,7 @@
                                     <div class="form-group">
                                         <label for="biography" class="control-label">Further biographical details:</label>
 
-                                        <textarea class="form-control" id="biography"  id="name"></textarea>
+                                        <textarea class="form-control" id="biography"  name="biography"></textarea>
                                     </div>
 
                                 </div>
