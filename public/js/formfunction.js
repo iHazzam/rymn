@@ -56,7 +56,7 @@ $( document ).ready(function() {
     });
 
     $(".open4").click(function() {
-        if(($('#instrument_1')[0].checkValidity()) && ($('#instrument_1_select_min')[0].checkValidity()) && ($('#instrument_1_select_max')[0].checkValidity()))
+        if(($('#instrument_1')[0].checkValidity()) && ($('#instrument_1_select_min')[0].checkValidity()) && ($('#instrument_1_select_max')[0].checkValidity()) && ($('#Qualification')[0].checkValidity()) && ($('#performing_experience')[0].checkValidity()) && ($('#teaching_experience')[0].checkValidity()))
         {
             $(".frm").hide("fast");
             $("#sf5").show("slow");

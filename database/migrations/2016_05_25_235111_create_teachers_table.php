@@ -39,19 +39,19 @@ class CreateTeachersTable extends Migration
             $table->boolean('teach_at_pupil_home');
             $table->boolean('teach_at_own_home');
             $table->boolean('teach_online');
+            $table->boolean('teach_at_school');
             $table->boolean('teach_theory');
             $table->enum('theory_level',['grade1','grade2','grade3','grade4','grade5','grade6','grade7','grade8','diploma']);
             $table->boolean('teach_aural');
             $table->enum('aural_level',['grade1','grade2','grade3','grade4','grade5','grade6','grade7','grade8','diploma']);
             $table->boolean('teach_composition');
             $table->enum('composition_level',['grade1','grade2','grade3','grade4','grade5','grade6','grade7','grade8','diploma','professional']);
-            $table->boolean('teach_accompanying');
-            $table->enum('accompanying_level',['beginner','intermediate','advanced','professional']);
             $table->boolean('is_accompanist');
             $table->enum('level_accompanied',['grade1','grade2','grade3','grade4','grade5','grade6','grade7','grade8','diploma','professional']);
             $table->boolean('is_instrument_repairer');
             $table->boolean('crb_checked');
             $table->longText('biography');
+            $table->longText('instruments_repaired');
             $table->timestamps();
         });
     }

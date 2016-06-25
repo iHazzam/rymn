@@ -43,7 +43,7 @@
                                     <div class="form-group">
                                         <label for="addr2" class="control-label">Address Line 2</label>
 
-                                        <input type="text" class="form-control" id="addr2" name="addr2" placeholder="" required="">
+                                        <input type="text" class="form-control" id="addr2" name="addr2" placeholder="" >
 
 
                                     </div>
@@ -625,24 +625,24 @@
                                     <span>Please enter your highest level of qualification</span>
 
                                         <div class="form-group">
-                                            <label for="qualification" class="control-label">Qualification (E.G BA Music)</label>
+                                            <label for="qualification" class="control-label"><i class="fa fa-star" aria-hidden="true"></i>Qualification (E.G BA Music)</label>
 
-                                            <input type="text" class="form-control" id="Qualification" name="Qualification" placeholder="" required="">
+                                            <input type="text" class="form-control" id="Qualification" name="Qualification" placeholder="" required>
 
 
                                         </div>
                                     <span>Please enter details of your experience: </span>
                                         <div class="form-group">
-                                            <label for="performing_experience" class="control-label">Performing Experience</label>
+                                            <label for="performing_experience" class="control-label"><i class="fa fa-star" aria-hidden="true"></i>Performing Experience</label>
 
-                                            <textarea class="form-control" id="performing_experience"  name="performing_experience"></textarea>
+                                            <textarea class="form-control" id="performing_experience"  name="performing_experience" required></textarea>
 
 
                                         </div>
                                     <div class="form-group">
-                                        <label for="teaching_experience" class="control-label">Teaching Experience</label>
+                                        <label for="teaching_experience" class="control-label"><i class="fa fa-star" aria-hidden="true"></i>Teaching Experience</label>
 
-                                        <textarea class="form-control" id="teaching_experience" name="teaching_experience"></textarea>
+                                        <textarea class="form-control" id="teaching_experience" name="teaching_experience" required></textarea>
 
 
                                     </div>
@@ -698,7 +698,7 @@
                                         <label><input type="checkbox" name="teach_at_school" value="teach_at_school">Teach at school</label>
                                     </div>
                                     <div class="checkbox">
-                                        <label><input type="checkbox" id="tmt-cb" name="tmt-cb" value="teach_theory" onchange="valueChangedTmt();">Teach Music Theory</label>
+                                        <label><input type="checkbox" id="tmt-cb" name="tmt_cb" value="teach_theory" onchange="valueChangedTmt();">Teach Music Theory</label>
                                     </div>
                                     <div class="form-group hidden" id="tmt">
                                         <label for="level_musictheory">Max Level:</label>
@@ -717,7 +717,7 @@
                                         </select>
                                     </div>
                                     <div class="checkbox" >
-                                        <label><input type="checkbox" id="ta-cb" name="ta-cb" value="teach_aural" onchange="valueChangedTa();">Teach Aural</label>
+                                        <label><input type="checkbox" id="ta-cb" name="ta_cb" value="teach_aural" onchange="valueChangedTa();">Teach Aural</label>
                                     </div>
                                     <div class="form-group hidden" id="ta">
                                         <label for="level_aural">Max Level:</label>
@@ -737,7 +737,7 @@
                                         </select>
                                     </div>
                                     <div class="checkbox" >
-                                        <label><input type="checkbox" id="tc-cb" name="tc-cb"value="teach_composition" onchange="valueChangedTc();">Teach Composition</label>
+                                        <label><input type="checkbox" id="tc-cb" name="tc_cb"value="teach_composition" onchange="valueChangedTc();">Teach Composition</label>
                                     </div>
                                     <div class="form-group hidden" id="tc">
                                         <label for="level_composition">Max Level:</label>
@@ -778,7 +778,7 @@
                                 <div class="form-group">
                                         <div class="form-group">
                                             <div class="checkbox" >
-                                                <label><input type="checkbox" id="cb-acc" name="cb-acc"  value="accompanies" onchange="valueChangedAcc();">Do you accompany students?</label>
+                                                <label><input type="checkbox" id="cb-acc" name="cb_acc"  value="accompanies" onchange="valueChangedAcc();">Do you accompany students?</label>
                                             </div>
                                             <div class="form-group hidden" id="acc">
                                                 <label for="level_accompanied">Maximum level accompanied:</label>
