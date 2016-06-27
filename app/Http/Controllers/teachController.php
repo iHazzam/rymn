@@ -139,25 +139,25 @@ class teachController extends Controller
 
         if($request->has('teach_at_pupil_home'))
         {
-            $teacher->teach_at_pupil_home = $request->teach_at_pupil_home;
+            $teacher->teach_at_pupil_home = 1;
         }
 
         if($request->has('teach_at_own_home'))
         {
-            $teacher->teach_at_own_home = $request->teach_at_own_home;
+            $teacher->teach_at_own_home = 1;
         }
 
         if($request->has('teach_online'))
         {
-            $teacher->teach_online = $request->teach_online;
+            $teacher->teach_online = 1;
         }
         if($request->has('teach_at_school'))
         {
-            $teacher->teach_at_school = $request->teach_at_school;//add
+            $teacher->teach_at_school = 1;
         }
         if($request->has('tmt_cb'))
         {
-            $teacher->teach_theory = $request->tmt_cb;
+            $teacher->teach_theory = 1;
         }
         if($request->has('level_musictheory'))
         {
@@ -165,7 +165,7 @@ class teachController extends Controller
         }
         if($request->has('ta_cb'))
         {
-            $teacher->teach_aural = $request->ta_cb;
+            $teacher->teach_aural = 1;
         }
         if($request->has('level_aural'))
         {
@@ -173,7 +173,7 @@ class teachController extends Controller
         }
         if($request->has('tc_cb'))
         {
-            $teacher->teach_composition = $request->tc_cb;
+            $teacher->teach_composition = 1;
         }
         if($request->has('level_composition'))
         {
@@ -181,7 +181,7 @@ class teachController extends Controller
         }
         if($request->has('cb_acc'))
         {
-            $teacher->is_accompanist = $request->cb_acc;
+            $teacher->is_accompanist = 1;
         }
         if($request->has('level_accompanied'))
         {
@@ -189,7 +189,7 @@ class teachController extends Controller
         }
         if($request->has('repair'))
         {
-            $teacher->is_instrument_repairer = $request->repair;
+            $teacher->is_instrument_repairer = 1;
         }
         if($request->has('repair_instruments'))
         {
@@ -197,7 +197,7 @@ class teachController extends Controller
         }
         if($request->has('crb'))
         {
-            $teacher->crb_checked = $request->crb;
+            $teacher->crb_checked = 1;
         }
         if($request->has('biography'))
         {
@@ -207,290 +207,292 @@ class teachController extends Controller
         //Remove acompanying level
         if($request->has('Violin'))
         {
-            $teacher_instruments->Violin = true;
+            $teacher_instruments->Violin = 1;
         }
 
         if($request->has('Viola'))
         {
-            $teacher_instruments->Viola = true;
+            $teacher_instruments->Viola = 1;
         }
 
         if($request->has('Cello'))
         {
-            $teacher_instruments->Cello = true;
+            $teacher_instruments->Cello = 1;
         }
 
         if($request->has('Double_Bass'))
         {
-            $teacher_instruments->Double_Bass = true;
+            $teacher_instruments->Double_Bass = 1;
         }
 
         if($request->has('Harp'))
         {
-            $teacher_instruments->Harp = true;
+            $teacher_instruments->Harp = 1;
         }
 
         if($request->has('Classical_Guitar'))
         {
-            $teacher_instruments->Classical_Guitar = true;
+            $teacher_instruments->Classical_Guitar = 1;
         }
 
         if($request->has('Electric_Guitar'))
         {
-            $teacher_instruments->Electric_Guitar = true;
+            $teacher_instruments->Electric_Guitar = 1;
         }
 
         if($request->has('Bass_Guitar'))
         {
-            $teacher_instruments->Bass_Guitar = true;
+            $teacher_instruments->Bass_Guitar = 1;
         }
 
         if($request->has('Banjo'))
         {
-            $teacher_instruments->Banjo = true;
+            $teacher_instruments->Banjo = 1;
         }
 
         if($request->has('Ukelele'))
         {
-            $teacher_instruments->Ukelele = true;
+            $teacher_instruments->Ukelele = 1;
         }
 
         if($request->has('Sitar'))
         {
-            $teacher_instruments->Sitar = true;
+            $teacher_instruments->Sitar = 1;
         }
 
         if($request->has('Balalaika'))
         {
-            $teacher_instruments->Balalaika = true;
+            $teacher_instruments->Balalaika = 1;
         }
 
         if($request->has('Mandolin'))
         {
-            $teacher_instruments->Mandolin = true;
+            $teacher_instruments->Mandolin = 1;
         }
 
         if($request->has('Zither'))
         {
-            $teacher_instruments->Zither = true;
+            $teacher_instruments->Zither = 1;
         }
 
         if($request->has('Flute'))
         {
-            $teacher_instruments->Flute = true;
+            $teacher_instruments->Flute = 1;
         }
 
         if($request->has('Clarinet'))
         {
-            $teacher_instruments->Clarinet = true;
+            $teacher_instruments->Clarinet = 1;
         }
 
         if($request->has('Oboe'))
         {
-            $teacher_instruments->Oboe = true;
+            $teacher_instruments->Oboe = 1;
         }
 
         if($request->has('Bassoon'))
         {
-            $teacher_instruments->Bassoon = true;
+            $teacher_instruments->Bassoon = 1;
         }
 
         if($request->has('Recorder'))
         {
-            $teacher_instruments->Recorder = true;
+            $teacher_instruments->Recorder = 1;
         }
 
         if($request->has('Piccolo'))
         {
-            $teacher_instruments->Piccolo = true;
+            $teacher_instruments->Piccolo = 1;
         }
 
         if($request->has('Saxophone'))
         {
-            $teacher_instruments->Saxophone = true;
+            $teacher_instruments->Saxophone = 1;
         }
 
         if($request->has('Cor_Anglais'))
         {
-            $teacher_instruments->Cor_Anglais = true;
+            $teacher_instruments->Cor_Anglais = 1;
         }
 
         if($request->has('Basset_Horn'))
         {
-            $teacher_instruments->Basset_Horn = true;
+            $teacher_instruments->Basset_Horn = 1;
         }
 
         if($request->has('Bass_Clarinet'))
         {
-            $teacher_instruments->Bass_Clarinet = true;
+            $teacher_instruments->Bass_Clarinet = 1;
         }
 
         if($request->has('Contra_Bassoon'))
         {
-            $teacher_instruments->Contra_Bassoon = true;
+            $teacher_instruments->Contra_Bassoon = 1;
         }
 
         if($request->has('Bagpipes'))
         {
-            $teacher_instruments->Bagpipes = true;
+            $teacher_instruments->Bagpipes = 1;
         }
 
         if($request->has('Ocarina'))
         {
-            $teacher_instruments->Ocarina = true;
+            $teacher_instruments->Ocarina = 1;
         }
 
         if($request->has('Mouth_Organ'))
         {
-            $teacher_instruments->Mouth_Organ = true;
+            $teacher_instruments->Mouth_Organ = 1;
         }
 
         if($request->has('Horn'))
         {
-            $teacher_instruments->Horn = true;
+            $teacher_instruments->Horn = 1;
         }
 
         if($request->has('Trumpet'))
         {
-            $teacher_instruments->Trumpet = true;
+            $teacher_instruments->Trumpet = 1;
         }
 
         if($request->has('Trombone'))
         {
-            $teacher_instruments->Trombone = true;
+            $teacher_instruments->Trombone = 1;
         }
 
         if($request->has('Tuba'))
         {
-            $teacher_instruments->Tuba = true;
+            $teacher_instruments->Tuba = 1;
         }
 
         if($request->has('Cornet'))
         {
-            $teacher_instruments->Cornet = true;
+            $teacher_instruments->Cornet = 1;
         }
 
         if($request->has('Flugel_Horn'))
         {
-            $teacher_instruments->Flugel_Horn = true;
+            $teacher_instruments->Flugel_Horn = 1;
         }
 
         if($request->has('Tenor_Horn'))
         {
-            $teacher_instruments->Tenor_Horn = true;
+            $teacher_instruments->Tenor_Horn = 1;
         }
 
         if($request->has('Baritone'))
         {
-            $teacher_instruments->Baritone = true;
+            $teacher_instruments->Baritone = 1;
         }
 
         if($request->has('Euphonium'))
         {
-            $teacher_instruments->Euphonium = true;
+            $teacher_instruments->Euphonium = 1;
         }
 
         if($request->has('Ophicleide'))
         {
-            $teacher_instruments->Ophicleide = true;
+            $teacher_instruments->Ophicleide = 1;
         }
 
         if($request->has('Sackbutt'))
         {
-            $teacher_instruments->Sackbutt = true;
+            $teacher_instruments->Sackbutt = 1;
         }
 
         if($request->has('Cornette'))
         {
-            $teacher_instruments->Cornette = true;
+            $teacher_instruments->Cornette = 1;
         }
 
         if($request->has('Serpent'))
         {
-            $teacher_instruments->Serpent = true;
+            $teacher_instruments->Serpent = 1;
         }
 
         if($request->has('Didgeridoo'))
         {
-            $teacher_instruments->Didgeridoo = true;
+            $teacher_instruments->Didgeridoo = 1;
         }
         if($request->has('Timpani'))
         {
-            $teacher_instruments->Timpani = true;
+            $teacher_instruments->Timpani = 1;
         }
 
         if($request->has('Orchestral_Percussion'))
         {
-            $teacher_instruments->Orchestral_Percussion = true;
+            $teacher_instruments->Orchestral_Percussion = 1;
         }
         if($request->has('Tuned_Percusion'))
         {
-            $teacher_instruments->Tuned_Percusion = true;
+            $teacher_instruments->Tuned_Percusion = 1;
         }
 
         if($request->has('Drum_Kit'))
         {
-            $teacher_instruments->Drum_Kit = true;
+            $teacher_instruments->Drum_Kit = 1;
         }
         if($request->has('Xylaphone'))
         {
-            $teacher_instruments->Xylaphone = true;
+            $teacher_instruments->Xylaphone = 1;
         }
 
         if($request->has('Marimba'))
         {
-            $teacher_instruments->Marimba = true;
+            $teacher_instruments->Marimba = 1;
         }
         if($request->has('Vibraphone'))
         {
-            $teacher_instruments->Vibraphone = true;
+            $teacher_instruments->Vibraphone = 1;
         }
 
         if($request->has('Glockenspiel'))
         {
-            $teacher_instruments->Glockenspiel = true;
+            $teacher_instruments->Glockenspiel = 1;
         }
         if($request->has('Cembalom'))
         {
-            $teacher_instruments->Cembalom = true;
+            $teacher_instruments->Cembalom = 1;
         }
 
         if($request->has('Piano'))
         {
-            $teacher_instruments->Piano = true;
+            $teacher_instruments->Piano = 1;
         }
         if($request->has('Organ'))
         {
-            $teacher_instruments->Organ = true;
+            $teacher_instruments->Organ = 1;
         }
 
         if($request->has('Keyboard'))
         {
-            $teacher_instruments->Keyboard = true;
+            $teacher_instruments->Keyboard = 1;
         }
         if($request->has('Harpsichord'))
         {
-            $teacher_instruments->Harpsichord = true;
+            $teacher_instruments->Harpsichord = 1;
         }
 
         if($request->has('Male'))
         {
-            $teacher_instruments->Male = true;
+            $teacher_instruments->Male = 1;
         }
         if($request->has('Female'))
         {
-            $teacher_instruments->Female = true;
+            $teacher_instruments->Female = 1;
         }
 
         if($error == false)
         {
 
             $teacher->save();
+            $teacher_instruments->teacher_id = $teacher->id;
             $teacher_instruments->save();
-            $request->session()->flash('alert-success', "Congrats, group registration was successful. You can now add this group's events to the calendar!");
+            $request->session()->flash('alert-success', "Thanks! Teacher registration complete!");
             return Redirect::back();
         }
         else{
+            $request->session()->flash('alert-danger',$errormessage);
             return Redirect::back()->withInput()->withErrors($errormessage);
         }
     }

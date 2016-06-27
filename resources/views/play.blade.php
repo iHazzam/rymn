@@ -26,8 +26,6 @@
     </div>
 @endsection
 @section('body')
-
-    <h1 class="fix-middle">this is the learn page of the site. Test!</h1>
     <div class="flash-message">
         @foreach (['danger', 'warning', 'success', 'info'] as $msg)
             @if(Session::has('alert-' . $msg))
@@ -36,6 +34,8 @@
             @endif
         @endforeach
     </div> <!-- end .flash-message -->
+    <h1 class="fix-middle">this is the learn page of the site. Test!</h1>
+
 
 
 @endsection

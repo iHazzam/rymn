@@ -7,6 +7,14 @@
     <div class="row">
         <br>
         <br>
+        <div class="flash-message">
+            @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+                @if(Session::has('alert-' . $msg))
+
+                    <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }} <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></p>
+                @endif
+            @endforeach
+        </div> <!-- end .flash-message -->
         <div class="col-lg-offset-2 col-lg-8">
             <div class="panel panel-default" id="multistep-panel" >
                 <div class="panel-heading cent">

@@ -58,3 +58,4 @@ Route::post('/discover/add_event/post', 'discoverController@newEvent' );
 Route::post('/postensemble', 'playController@newAd');
 Route::post('/teach/register/post', 'teachController@newTeach');
 Route::post('/mailing/reg/{list}', 'newsletterController@addtolist');
+Route::post('/teachdb', 'learnController@search');

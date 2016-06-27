@@ -17,6 +17,7 @@
         <div class="container">
             <div class="collapse navbar-collapse collapse-buttons">
                 <form class="navbar-form navbar-left form-inline"  id="teachdbform" method="post" action="/teachdb">
+                    {!! csrf_field() !!}
                     <label>Instrument
                         <select id="cband" class="form-control">
                             @foreach($rows as $row)
@@ -25,18 +26,19 @@
                         </select>
                     </label>
                     <label>Age
-                        <input type="number" class="form-control" id="age" placeholder="0"  min="0" step="1">
+                        <input type="number" class="form-control" name="age" id="age" placeholder="0"  min="0" step="1">
                     </label>
                     <label>Teaching Location
-                        <select id="location" class="form-control">
+                        <select id="location" name="location" class="form-control">
                             <option value="">-</option>
                             <option value="own_home">Teaches at own home</option>
+                            <option value="school">Teaches at school</option>
                             <option value="pupil_home">Teaches at pupil home</option>
                             <option value="online">Teaches online</option>
                         </select>
                     </label>
                     <label>Subject
-                        <select id="cband" class="form-control">
+                        <select id="cband" name="subject" class="form-control">
                             <option value="">-</option>
                             <option value="own_home">Instrument</option>
                             <option value="pupil_home">Aural</option>
@@ -45,7 +47,7 @@
                         </select>
                     </label>
                     <label>Student Level
-                        <select class="form-control" id="instrument_1_select">
+                        <select class="form-control" name="level" id="instrument_1_select">
                             <option value="">-</option>
                             <option value="grade1">Grade 1</option>
                             <option value="grade2">Grade 2</option>

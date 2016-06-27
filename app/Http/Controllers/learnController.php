@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Instruments_Taught;
 use Illuminate\Database\Schema\Builder;
 use Illuminate\Support\Facades\DB;
+use App\Teacher;
+use Illuminate\Http\Request;
 
 class learnController extends Controller
 {
@@ -15,8 +17,11 @@ class learnController extends Controller
     }
     public function teacherdb()
     {
-        $teachers = ['temp','teacher2','test3','test4'];
-        $rows = ['-','violin','viola','cello','double bass','harp','guitar','electric guitar','bass guitar','banjo/ukelele','other string instrument','recorder','flute','piccolo','clarinet','oboe','bassoon','saxophone','other wind instrument','cornet','trumpet','tenor horn','euphonium','trombone','french horn','tuba','other brass instrumnent','piano','harpshichord','organ','keyboard','other keys','xylophone','marimba','drum kit','timpani','other percussion','classical singing','musical theatre singing', 'jazz singing','opera singing','pop singing', 'other singing'];
+        $rows = DB::getSchemaBuilder()->getColumnListing('instruments_taught');
+        unset($rows[0]); $rows[1] = "-"; //remove the first two columns (the headers)
+        array_pop($rows); array_pop($rows); //remove the timestamps
+        $rows = str_replace('_',' ',$rows); //replace all underscores with spaces
+        $teachers = Teacher::all();
         return view('learn.teacherdb', ['rows' => $rows,'teachers' => $teachers,]);
     }
     public function parents()
@@ -30,5 +35,27 @@ class learnController extends Controller
     public function newInfo()
     {
         return redirect('/learn');
+    }
+    public function search(Request $request)
+    {
+        $rows = DB::getSchemaBuilder()->getColumnListing('instruments_taught');
+        unset($rows[0]); $rows[1] = "-"; //remove the first two columns (the headers)
+        array_pop($rows); array_pop($rows); //remove the timestamps
+        $rows = str_replace('_',' ',$rows); //replace all underscores with spaces
+        $reqAll = $request->all();
+        unset($request[0]); //remove csrf token
+        foreach($reqAll as )
+        {
+            var_dump($r);
+            echo("</br>");
+        }
+
+        $teachers = DB::table('teachers')->select()->where('');
+        exit();
+
+
+       // $teachers =
+
+        return view('learn.teacherdb', ['rows' => $rows,'teachers' => $teachers,]);
     }
 }

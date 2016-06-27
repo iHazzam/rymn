@@ -24,6 +24,7 @@ class CreateGroupsTable extends Migration
             $table->boolean('recruiting');
             $table->enum('minimum_level', ['grade1','grade2','grade3','grade4','grade5','grade6','grade7','grade8','diploma','concert_soloist'])->nullable();
             $table->boolean('audition')->nullable();
+            $table->longText('recruit_details')->nullable();
             $table->string('contact_email');
             $table->timestamps();
         });
