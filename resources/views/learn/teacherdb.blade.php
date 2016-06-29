@@ -16,10 +16,18 @@
     <nav class="navbar navbar-default navbar-lower" role="findingstuff">
         <div class="container">
             <div class="collapse navbar-collapse collapse-buttons">
+                <div class="flash-message">
+                    @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+                        @if(Session::has('alert-' . $msg))
+
+                            <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }} <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></p>
+                        @endif
+                    @endforeach
+                </div> <!-- end .flash-message -->
                 <form class="navbar-form navbar-left form-inline"  id="teachdbform" method="post" action="/teachdb">
                     {!! csrf_field() !!}
                     <label>Instrument
-                        <select id="cband" class="form-control">
+                        <select id="cband" name="instrument" class="form-control">
                             @foreach($rows as $row)
                                 <option value={{$row}}>{{$row}}</option>"}}
                             @endforeach
@@ -31,19 +39,18 @@
                     <label>Teaching Location
                         <select id="location" name="location" class="form-control">
                             <option value="">-</option>
-                            <option value="own_home">Teaches at own home</option>
-                            <option value="school">Teaches at school</option>
-                            <option value="pupil_home">Teaches at pupil home</option>
-                            <option value="online">Teaches online</option>
+                            <option value="teach_at_own_home">Teaches at own (teacher's) home</option>
+                            <option value="teach_at_school">Teaches at school</option>
+                            <option value="teach_at_pupil_home">Teaches at pupil home</option>
+                            <option value="teach_online">Teaches online</option>
                         </select>
                     </label>
                     <label>Subject
                         <select id="cband" name="subject" class="form-control">
                             <option value="">-</option>
-                            <option value="own_home">Instrument</option>
-                            <option value="pupil_home">Aural</option>
-                            <option value="online">Composition</option>
-                            <option value="online">Theory</option>
+                            <option value="aural">Aural</option>
+                            <option value="composition">Composition</option>
+                            <option value="theory">Theory</option>
                         </select>
                     </label>
                     <label>Student Level
