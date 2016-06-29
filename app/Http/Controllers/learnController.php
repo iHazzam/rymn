@@ -18,7 +18,7 @@ class learnController extends Controller
     public function teacherdb()
     {
         $rows = DB::getSchemaBuilder()->getColumnListing('instruments_taught');
-        unset($rows[0]); $rows[1] = "-"; //remove the first two columns (the headers)
+        unset($rows[0]); $rows[1] = ""; //remove the first two columns (the headers)
         array_pop($rows); array_pop($rows); //remove the timestamps
         $rows = str_replace('_',' ',$rows); //replace all underscores with spaces
         $teachers = Teacher::all();
@@ -70,35 +70,37 @@ class learnController extends Controller
             $teacher = DB::table('teachers')->where($location, '=' , '1')->get();
             $reqArray[] = $teacher;
         }
-        if(($request->has('subject'))&&($request->has('level')))
+        if(($request->has('subject')))
         {
             $subject = $reqAll['subject'];
-            $level = $reqAll['level'];
-            $teacher = DB::table('teachers')->where('teach_'.$subject, '=' , '1')->where($subject.'_level','<',$level)->get();
+            $teacher = DB::table('teachers')->where('teach_'.$subject, '=' , '1')->get();
             $reqArray[] = $teacher;
         }
-        elseif($request->has('subject'))
-        {
-            $subject = $reqAll['subject'];
-            $level = $reqAll['level'];
-            $teacher = DB::table('teachers')->where('teach_'.$subject, '=' , '1')->where($subject.'_level','<',$level)->get();
-            $reqArray[] = $teacher;
-        }
-        
-        
-        
+
         if($request->has('name'))
         {
-
+            $name = $reqAll['name'];
+            if(strpos($name, ' '))//if contains a space
+            {
+                $pieces = explode(" ", $name);//explode around space
+                $teacher = DB::table('teachers')->where('last_name', 'LIKE' , $pieces[0])->orwhere('first_name','LIKE',$pieces[1])->orwhere('last_name', 'LIKE' , $pieces[1])->orwhere('first_name','LIKE',$pieces[0])->get();
+            }
+            else{
+                $teacher = DB::table('teachers')->where('last_name', 'LIKE' , $name)->orwhere('first_name','LIKE',$name)->get();
+            }
+            $reqArray = [];//clear
+            $reqArray[] = $teacher;
         }
         if($request->has('town'))
         {
-
+            $town = $reqAll['town'];
+            $teacher = DB::table('teachers')->where('city', 'LIKE' , $town)->get();
+            $reqArray = [];//clear
+            $reqArray[] = $teacher;
         }
-
-        var_dump($query . $ageQ);
-        $teachers = DB::select($query . $ageQ , array('age' => $age, 'age2' => $age2));
-        var_dump($teachers);
+        echo('<pre>');
+        var_dump($reqArray);
+        echo('</pre>');
         exit();
 
 
