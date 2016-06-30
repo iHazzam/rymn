@@ -473,15 +473,37 @@ class teachController extends Controller
             $teacher_instruments->Harpsichord = 1;
         }
 
-        if($request->has('Male'))
+        if($request->has('Male_Singing'))
         {
-            $teacher_instruments->Male = 1;
+            $teacher_instruments->Male_Singing = 1;
         }
-        if($request->has('Female'))
+        if($request->has('Female_Singing'))
         {
-            $teacher_instruments->Female = 1;
+            $teacher_instruments->Female_Singing = 1;
         }
+        var_dump('arriving');
+        if($request->hasFile('thumbnail_image'))
+        {
+            var_dump('has');
+            if ($request->file('thumbnail_image')->isValid()) {
+                    $destPath = 'upload';
+                    $extension = $request->file('thumbnail_image')->getClientOriginalExtension();
 
+                    if ($extension == 'png' || 'gif' || 'jpg' || 'jpeg') {
+                        $filename = rand(11111, 99999) . '.' . $extension;
+                        $request->file('thumbnail_image')->move($destPath, $filename);
+                        $teacher->thumbnail_img = $destPath . "/" . $filename;
+                    } else {
+                        $error = true;
+                        $errormessage = 'Error: Incorrect filetype uploaded (Must be png, gif, jpg, or jpeg)';
+                    }
+                }
+                else{
+                    $error = true;
+                    $errormessage = 'Error: Added file not valid)';
+                }
+
+        }
         if($error == false)
         {
 

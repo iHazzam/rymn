@@ -22,7 +22,7 @@
                 </div>
                 <div class="panel-body">
                     <div class="alert alert-warning alert-dismissible hidden" id="incomplete" role="alert">Please complete all starred fields to continue</div>
-                    <form name="basicform" id="basicform" method="post" action="/teach/register/post">
+                    <form name="basicform" id="basicform" method="post" action="/teach/register/post" enctype="multipart/form-data">
                         {!! csrf_field() !!}
                         <div id="sf1" class="frm">
                             <fieldset name="one">
@@ -517,12 +517,12 @@
                                                     <div class="form-group" id="keys-children">
                                                         <div class="form-group" id="singing-children">
                                                             <label>
-                                                                <input type="checkbox" value="Male" id="Male" name="Male">
+                                                                <input type="checkbox" value="Male_Singing" id="Male_Singing" name="Male_Singing">
                                                                 Male
                                                             </label>
                                                             <br>
                                                             <label>
-                                                                <input type="checkbox" value="Female" id="Female" name="Female">
+                                                                <input type="checkbox" value="Female_Singing" id="Female_Singing" name="Female_Singing">
                                                                 Female
                                                             </label>
                                                         </div>
@@ -589,8 +589,8 @@
                                                         <option value="Organ">Organ</option>
                                                     </optgroup>
                                                     <optgroup label="Singing">
-                                                        <option value="Male">Male</option>
-                                                        <option value="Female">Female</option>
+                                                        <option value="Male_Singing">Male</option>
+                                                        <option value="Female_Singing">Female</option>
                                                     </optgroup>
                                                 </select>
                                             </div>
@@ -828,7 +828,11 @@
 
                                         <textarea class="form-control" id="biography"  name="biography"></textarea>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="thumbnail_image" class="control-label">Add an image to be used for your profile (optional)</label>
+                                        {!! Form::file('thumbnail_image') !!}
 
+                                    </div>
                                 </div>
 
                                 <div class="clearfix" style="height: 10px;clear: both;"></div>

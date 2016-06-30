@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed649e33-b377-40ad-868e-9b8b4cecf892" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/learnController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/learnController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/teachController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/teachController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_05_25_235111_create_teachers_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_05_25_235111_create_teachers_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_05_26_005208_create_instruments_taught_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_05_26_005208_create_instruments_taught_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/rymn.css" afterPath="$PROJECT_DIR$/public/css/rymn.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/learn/teacherdb.blade.php" afterPath="$PROJECT_DIR$/resources/views/learn/teacherdb.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/teach/register.blade.php" afterPath="$PROJECT_DIR$/resources/views/teach/register.blade.php" />
     </list>
     <ignored path="rymn.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,11 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="teachController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="teachController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/teachController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="664">
-              <caret line="483" column="0" selection-start-line="483" selection-start-column="0" selection-end-line="483" selection-end-column="0" />
+            <state relative-caret-position="153">
+              <caret line="493" column="86" selection-start-line="493" selection-start-column="86" selection-end-line="493" selection-end-column="86" />
               <folding>
                 <element signature="e#40#67#0#PHP" expanded="true" />
               </folding>
@@ -44,80 +52,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="learnController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/learnController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-              <folding>
-                <element signature="e#40#67#0#PHP" expanded="true" />
-              </folding>
-            </state>
+      <file leaf-file-name="18286.JPG" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/upload/18286.JPG">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teacherdb.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/learn/teacherdb.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/teach/register.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2016_06_17_111057_create_groups_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_17_111057_create_groups_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="play.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/play.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2016_05_26_005208_create_instruments_taught_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_05_26_005208_create_instruments_taught_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2016_05_26_005658_create_references_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_05_26_005658_create_references_table.php">
+      <file leaf-file-name="discoverController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/discoverController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -126,11 +69,71 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/database.php">
+      <file leaf-file-name="playController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/playController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="55" column="32" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
+            <state relative-caret-position="413">
+              <caret line="47" column="22" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/teach/register.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="50" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teacherdb.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/learn/teacherdb.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="88" column="32" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Group.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Group.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2016_05_25_235111_create_teachers_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_05_25_235111_create_teachers_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="446">
+              <caret line="57" column="54" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2016_06_17_111057_create_groups_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_17_111057_create_groups_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="548">
+              <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_group.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/play/add_group.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="123" selection-start-line="25" selection-start-column="95" selection-end-line="25" selection-end-column="123" />
               <folding />
             </state>
           </provider>
@@ -185,17 +188,17 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/playController.php" />
         <option value="$PROJECT_DIR$/resources/views/play/add_group.blade.php" />
         <option value="$PROJECT_DIR$/public/js/addgroup.js" />
-        <option value="$PROJECT_DIR$/public/css/rymn.css" />
         <option value="$PROJECT_DIR$/public/js/formfunction.js" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_05_26_005208_create_instruments_taught_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_06_17_111057_create_groups_table.php" />
         <option value="$PROJECT_DIR$/resources/views/play.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/teach/register.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_05_25_235111_create_teachers_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_05_26_005208_create_instruments_taught_table.php" />
+        <option value="$PROJECT_DIR$/public/css/rymn.css" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/teachController.php" />
         <option value="$PROJECT_DIR$/resources/views/learn/teacherdb.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/learnController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_05_25_235111_create_teachers_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/teach/register.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/teachController.php" />
       </list>
     </option>
   </component>
@@ -307,8 +310,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -324,6 +325,86 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -385,6 +466,28 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="play" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="learn" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -400,6 +503,106 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upload" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -459,6 +662,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -469,17 +674,17 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\rymn\storage\app\public" />
+      <recent name="C:\laragon\www\rymn\public\js" />
+      <recent name="C:\laragon\www\rymn\public\css" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\laragon\www\rymn\public\js" />
       <recent name="C:\laragon\www\rymn\resources\views" />
       <recent name="C:\laragon\www\rymn\resources\views\admin\dashboard" />
       <recent name="C:\laragon\www\rymn\resources\views\teach" />
       <recent name="C:\laragon\www\rymn\resources\views\play" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\rymn\storage\app\public" />
-      <recent name="C:\laragon\www\rymn\public\js" />
-      <recent name="C:\laragon\www\rymn\public\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -547,21 +752,23 @@
       <workItem from="1466867807995" duration="17929000" />
       <workItem from="1467026267320" duration="13018000" />
       <workItem from="1467197651677" duration="19336000" />
+      <workItem from="1467227165979" duration="15558000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124216000" />
+    <option name="totallyTimeSpent" value="139774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24479167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26744187" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32769555" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -575,7 +782,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769555" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -622,18 +828,11 @@
           <line>4</line>
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Console/stubs/make/views/layouts/app.stub">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="14" column="84" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/learn.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -788,13 +987,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Group.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/homepage.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -815,13 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/rymn.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4522">
-          <caret line="266" column="18" selection-start-line="266" selection-start-column="18" selection-end-line="266" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -852,55 +1037,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/discoverController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/playController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-699">
-          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_05_25_235111_create_teachers_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_05_26_004527_create_instruments_repaired_table.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/play/add_group.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="41" column="88" selection-start-line="41" selection-start-column="88" selection-end-line="41" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_05_26_005208_create_instruments_taught_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_05_26_005658_create_references_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -921,44 +1062,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_17_111057_create_groups_table.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_05_26_005208_create_instruments_taught_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+        <state relative-caret-position="248">
+          <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/teach/register.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/css/rymn.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+        <state relative-caret-position="242">
+          <caret line="253" column="21" selection-start-line="253" selection-start-column="21" selection-end-line="253" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/teachController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="483" column="0" selection-start-line="483" selection-start-column="0" selection-end-line="483" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#67#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/learn/teacherdb.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+        <state relative-caret-position="548">
+          <caret line="60" column="57" selection-start-line="60" selection-start-column="57" selection-end-line="60" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/learnController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        <state relative-caret-position="235">
+          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Group.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/play/add_group.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="123" selection-start-line="25" selection-start-column="95" selection-end-line="25" selection-end-column="123" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_17_111057_create_groups_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_05_25_235111_create_teachers_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="57" column="54" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/learn/teacherdb.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="88" column="32" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/teach/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="50" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/playController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="47" column="22" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/discoverController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/upload/18286.JPG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/teachController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="493" column="86" selection-start-line="493" selection-start-column="86" selection-end-line="493" selection-end-column="86" />
           <folding>
             <element signature="e#40#67#0#PHP" expanded="true" />
           </folding>

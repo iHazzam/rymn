@@ -70,8 +70,8 @@ class CreateInstrumentsTaughtTable extends Migration
             $table->boolean('harpsichord');
             $table->boolean('keyboard');
             $table->boolean('organ');
-            $table->boolean('male');
-            $table->boolean('female');
+            $table->boolean('male_singing');
+            $table->boolean('female_singing');
 
             $table->timestamps();
         });

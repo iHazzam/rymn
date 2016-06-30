@@ -55,6 +55,7 @@ class CreateTeachersTable extends Migration
             $table->boolean('is_instrument_repairer');
             $table->boolean('crb_checked');
             $table->longText('biography')->nullable();
+            $table->string('thumbnail_img')->nullable();
             $table->longText('instruments_repaired')->nullable();
             $table->timestamps();
         });

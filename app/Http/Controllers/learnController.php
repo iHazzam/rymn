@@ -7,6 +7,7 @@ use Illuminate\Database\Schema\Builder;
 use Illuminate\Support\Facades\DB;
 use App\Teacher;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class learnController extends Controller
 {
@@ -20,9 +21,11 @@ class learnController extends Controller
         $rows = DB::getSchemaBuilder()->getColumnListing('instruments_taught');
         unset($rows[0]); $rows[1] = ""; //remove the first two columns (the headers)
         array_pop($rows); array_pop($rows); //remove the timestamps
+        $values =  $rows; //save the values without the spaces removed to make them postable
         $rows = str_replace('_',' ',$rows); //replace all underscores with spaces
+
         $teachers = Teacher::all();
-        return view('learn.teacherdb', ['rows' => $rows,'teachers' => $teachers,]);
+        return view('learn.teacherdb', ['rows' => $rows, 'values' => $values,'teachers' => $teachers,]);
     }
     public function parents()
     {
@@ -41,10 +44,10 @@ class learnController extends Controller
         $rows = DB::getSchemaBuilder()->getColumnListing('instruments_taught');
         unset($rows[0]); $rows[1] = ""; //remove the first two columns (the headers)
         array_pop($rows); array_pop($rows); //remove the timestamps
+        $values=  $rows; //save the values without the spaces removed to make them postable
         $rows = str_replace('_',' ',$rows); //replace all underscores with spaces
         $reqAll = $request->all();
         unset($reqAll["_token"]); //remove csrf token
-        var_dump($reqAll);
         $reqArray = [];
         if((($request->has('instrument')))&&($request->has('subject')))
         {
@@ -98,15 +101,50 @@ class learnController extends Controller
             $reqArray = [];//clear
             $reqArray[] = $teacher;
         }
-        echo('<pre>');
-        var_dump($reqArray);
-        echo('</pre>');
-        exit();
+
+        $ids = $this->restrictValues($reqArray);
+
+        $teachers = [];
+        if(count($ids) > 1)
+        {
+            $ids_final = call_user_func_array('array_intersect', $ids);
+            foreach($ids_final as $id)
+            {
+                $teachers[] = DB::table('teachers')->where('id', '=', $id)->get();
+            }
+        }
+        elseif($ids != null) {
+            foreach ($ids[0] as $id) {
+                $teachers[] = DB::table('teachers')->where('id', '=', $id)->get();
+            }
+        }
+        else{
+            $request->session()->flash('alert-danger',"No results found for this search! Please try again!");
+            return Redirect::back();
+        }
 
 
-       // $teachers =
 
 
-        return view('learn.teacherdb', ['rows' => $rows,'teachers' => $teachers,]);
+        return view('learn.teacherdb', ['rows' => $rows,'values' => $values,'teachers' => $teachers,]);
     }
+    function restrictValues($array)
+    {
+        $array_keys = [];
+        foreach ($array as $key => $tier2)
+        {
+            foreach($tier2 as $key2 => $tier3)
+            {
+                $array_keys[$key][$key2] = $tier3->id;
+            }
+        }
+        return $array_keys;
+    }
+    function arrayFlatten($array)
+    {
+            $return = array();
+            array_walk_recursive($array, function($a) use (&$return) { $return[] = $a; });
+            return $return;
+    }
+
 }
