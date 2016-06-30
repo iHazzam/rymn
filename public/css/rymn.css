@@ -267,6 +267,11 @@ footer {
     font-size: 9px;
 }
 
-.permalock{
-
+.idcard{
+    font-size: 11px;
+    color: #000000;
+}
+.userinput{
+    color: #428bca;
+    font-weight: bold;
 }

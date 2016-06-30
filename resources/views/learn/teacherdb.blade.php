@@ -84,12 +84,53 @@
 @section('body')
 
     @foreach($teachers as $teacher)
+
+        <?php if(is_array($teacher[0])) $teacher=$teacher[0];?>
         <a id="teacherpanellink">
     <div class="col-lg-3 col-sm-4 col-xs-8 panel panel-default teacherpanel" data-toggle="modal" data-target="#myModal">
         <div class="panel-body">
-            <img src="http://placehold.it/100x100" alt="leftimg" class="teachercard_img" />
-            <p>This card will have a summary of each teacher as well as a profile picture</p>
-            <p>Clicking on the card will bring up an expanded view</p>
+            <img src="{{isset($teacher->thumbnail_image) ? $teacher->thumbnail_image : "http://placehold.it/100x100"}}" alt="leftimg" class="teachercard_img" />
+            <p class="idcard">Name: <span class="userinput">{{$teacher->first_name . ' ' . $teacher->last_name}}</span></p>
+            <p class="idcard">Location: <span class="userinput">{{$teacher->city}}</span></p>
+            <br>
+            <p class="blackheader">Primary Instruments</p>
+            <p class="idcard">
+                <?php
+                    for($id = 1; $id<5; $id++)
+                    {
+                        $fieldPlayed = 'instruments_played'.$id;
+                        if(isset($teacher->$fieldPlayed))
+                        {
+                            $played = $teacher->$fieldPlayed;
+                            $min = 'level_min_instrument'.$id;
+                            $fieldMin = $teacher->$min;
+                            $fieldMin = chunk_split($fieldMin, 5, ' ');
+                            $max = 'level_max_instrument'.$id;
+                            $fieldMax = $teacher->$max;
+
+                            if($fieldMax=="concert_soloist")
+                            {
+                                $fieldMax = str_replace("_", ' ',$fieldMax);
+                            }
+                            else{
+                                $fieldMax = chunk_split($fieldMax, 5, ' ');
+                            }
+                            $string = '<span class="userinput"><i class="fa fa-bullseye" aria-hidden="true"></i>&nbsp;'.$played.' ('.$fieldMin .' to ' .$fieldMax . ')</span><br><br>';
+                            echo($string);
+                        }
+                    }
+
+
+
+
+                ?>
+
+                <?php
+
+                    if(isset($teacher->i))
+
+                ?>
+            </p>
         </div>
     </div>
         </a>
