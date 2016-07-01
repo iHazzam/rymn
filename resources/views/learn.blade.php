@@ -5,22 +5,22 @@
     <div class="row banner no-gutters">
         <div class="col-md-3  col-sm-6 col-xs-6">
             <a href="learn/instruments">
-                <img class="banner-img" src="imgs/placeholder.png">
+                <img class="banner-img" src="imgs/banners/learn_1.png">
             </a>
         </div>
         <div class="col-md-3  col-sm-6 col-xs-6">
-            <a href="learn/find">
-                <img class="banner-img" src="imgs/placeholder.png">
+            <a href="learn/teachers">
+                <img class="banner-img" src="imgs/banners/learn_2.png">
             </a>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-6">
             <a href="learn/parents">
-                <img class="banner-img" src="imgs/placeholder.png">
+                <img class="banner-img" src="imgs/banners/learn_3.png">
             </a>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-6">
             <a href="learn/kids">
-                <img class="banner-img" src="imgs/placeholder.png">
+                <img class="banner-img" src="imgs/banners/learn_4.png">
             </a>
         </div>
     </div>

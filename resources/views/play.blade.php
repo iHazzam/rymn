@@ -4,23 +4,23 @@
 @section('banner')
     <div class="row banner no-gutters">
         <div class="col-md-3  col-sm-6 col-xs-6">
-            <a href="learn">
-                <img class="banner-img" src="imgs/placeholder.png">
+            <a href="play/join">
+                <img class="banner-img" src="imgs/banners/play_1.png">
             </a>
         </div>
         <div class="col-md-3  col-sm-6 col-xs-6">
-            <a href="teach">
-                <img class="banner-img" src="imgs/placeholder.png">
+            <a href="play/groups">
+                <img class="banner-img" src="imgs/banners/play_2.png">
             </a>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-6">
-            <a href="play">
-                <img class="banner-img" src="imgs/placeholder.png">
+            <a href="play/advertise">
+                <img class="banner-img" src="imgs/banners/play_3.png">
             </a>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-6">
-            <a href="discover">
-                <img class="banner-img" src="imgs/placeholder.png">
+            <a href="discover/about">
+                <img class="banner-img" src="imgs/banners/play_4.png">
             </a>
         </div>
     </div>
