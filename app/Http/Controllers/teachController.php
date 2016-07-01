@@ -232,7 +232,7 @@ class teachController extends Controller
 
         if($request->has('Classical_Guitar'))
         {
-            $teacher_instruments->Classical_Guitar = 1;
+            $teacher_instruments->guitar = 1;
         }
 
         if($request->has('Electric_Guitar'))
@@ -347,7 +347,7 @@ class teachController extends Controller
 
         if($request->has('Horn'))
         {
-            $teacher_instruments->Horn = 1;
+            $teacher_instruments->French_Horn = 1;
         }
 
         if($request->has('Trumpet'))
@@ -410,9 +410,9 @@ class teachController extends Controller
             $teacher_instruments->Serpent = 1;
         }
 
-        if($request->has('Didgeridoo'))
+        if($request->has('Digeridoo'))
         {
-            $teacher_instruments->Didgeridoo = 1;
+            $teacher_instruments->Digeridoo = 1;
         }
         if($request->has('Timpani'))
         {
@@ -423,18 +423,18 @@ class teachController extends Controller
         {
             $teacher_instruments->Orchestral_Percussion = 1;
         }
-        if($request->has('Tuned_Percusion'))
+        if($request->has('Tuned_Percussion'))
         {
-            $teacher_instruments->Tuned_Percusion = 1;
+            $teacher_instruments->Tuned_Percussion = 1;
         }
 
         if($request->has('Drum_Kit'))
         {
             $teacher_instruments->Drum_Kit = 1;
         }
-        if($request->has('Xylaphone'))
+        if($request->has('xylophone'))
         {
-            $teacher_instruments->Xylaphone = 1;
+            $teacher_instruments->xylophone = 1;
         }
 
         if($request->has('Marimba'))

@@ -246,8 +246,19 @@ footer {
     float:right;
     margin-right: 0;
     margin-left: 1em;
+
+    width: 100px;
+}
+.teachercard_full_img{
+    margin-right: 0;
+    margin-left: 25em;
+
+    width: 200px;
 }
 
+.list-left{
+    padding-left: 20px;
+}
 .file-icon{
     max-width: 200px;
     float: left;
@@ -275,3 +286,48 @@ footer {
     color: #428bca;
     font-weight: bold;
 }
+.blackheader{
+    border-top: 140px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.bottom-line-ban{
+
+    position: absolute;
+    bottom: 0;
+    @override color: #ffffff;
+    background-color: #428bca;
+    width: 90%;
+    border-left: 0px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height: 30px;
+}
+
+#good{
+    color:lawngreen;
+}
+#bad{
+    color:red;
+}
+
+.icons{
+    display:flex;
+    justify-content:center;
+    align-items: baseline;
+    position:relative;
+}
+#minheight{
+    min-height: 100px;
+}
+#minheight2{
+    min-height: 110px;
+    max-height: 110px;
+}
+
+.btn-link,.btn-link:hover{
+    color:white;
+}
+

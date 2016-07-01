@@ -390,7 +390,7 @@
                                                         </br>
                                                         <label class="smaller" >
                                                             <input class="smaller" type="checkbox" value="Didgeridoo" id="Didgeridoo" name="Didgeridoo">
-                                                            Didgeridoo
+                                                            Digeridoo
                                                         </label>
                                                         </br>
                                                     </div>
@@ -424,7 +424,7 @@
                                                         </label>
                                                         </br>
                                                         <label>
-                                                            <input type="checkbox" value="Tuned_Percusion" id="Tuned_Percusion" name="Tuned_Percusion">
+                                                            <input type="checkbox" value="Tuned_Percussion" id="Tuned_Percussion" name="Tuned_Percussion">
                                                             Tuned Percussion
                                                         </label>
                                                         </br>
@@ -435,8 +435,8 @@
                                                         </br>
                                                         <span class="smaller">Other Instruments:</span></br>
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Xylaphone" id="Xylaphone" name="Xylaphone">
-                                                            Xylaphone
+                                                            <input class="smaller" type="checkbox" value="xylophone" id="xylophone" name="xylophone">
+                                                            xylophone
                                                         </label>
                                                         </br>
                                                         <label class="smaller">
@@ -550,6 +550,7 @@
                                 <legend>Step 4 of 6 - Experience</legend>
                                 <span>Please name the principle instruments you teach, and the min/max levels you teach them (Limit 4)</span>
                                 <button type="button" class="btn btn-primary" value="+" onclick="addInput('dynamicInput');"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-primary" value="-" onclick="removeInput('dynamicInput');"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>
                                 <div class="form-group">
                                     <div class="form-group" id="dynamicInput">
                                         <div class="form-inline">
@@ -614,6 +615,243 @@
                                             <div class="form-group">
                                                 <label for="instrument_1_select_max"><i class="fa fa-star" aria-hidden="true"></i>Maximum Level:</label>
                                                 <select  id="instrument_1_select_max" name="instrument_1_select_max" required>
+                                                    <option value="">-</option>
+                                                    <option value="grade1">Grade 1</option>
+                                                    <option value="grade2">Grade 2</option>
+                                                    <option value="grade3">Grade 3</option>
+                                                    <option value="grade4">Grade 4</option>
+                                                    <option value="grade5">Grade 5</option>
+                                                    <option value="grade6">Grade 6</option>
+                                                    <option value="grade7">Grade 7</option>
+                                                    <option value="grade8">Grade 8</option>
+                                                    <option value="diploma">Diploma</option>
+                                                    <option value="concert_soloist">Concert Soloist</option>
+                                                </select>
+                                            </div>
+                                            </br>
+                                        </div>
+                                    </div>
+                                    <div class="form-group hidden" id="dynamicInput2">
+                                        <div class="form-inline">
+                                            <div class="form-group">
+                                                <label for="instrument_2" class="control-label">Instrument 2</label>
+                                                <select class="form-control" id="instrument_2" name="instrument_2">
+                                                    <option value="">-</option>
+                                                    <optgroup label="String Instruments">
+                                                        <option value="Violin">Violin</option>
+                                                        <option value="Viola">Viola</option>
+                                                        <option value="Cello">Cello</option>
+                                                        <option value="Double Bass">Double Bass</option>
+                                                        <option value="Harp">Harp</option>
+                                                        <option value="Guitar">Guitar</option>
+                                                    </optgroup>
+                                                    <optgroup label="Wind Instruments">
+                                                        <option value="Flute">Flute</option>
+                                                        <option value="Oboe">Oboe</option>
+                                                        <option value="Clarinet">Clarinet</option>
+                                                        <option value="Bassoon">Bassoon</option>
+                                                        <option value="Recorder">Recorder</option>
+                                                    </optgroup>
+                                                    <optgroup label="Brass Instruments">
+                                                        <option value="Horn">(French) Horn</option>
+                                                        <option value="Trumpet">Trumpet</option>
+                                                        <option value="Trombone">Trombone</option>
+                                                        <option value="Tuba">Tuba</option>
+                                                    </optgroup>
+                                                    <optgroup label="Percussion Instruments">
+                                                        <option value="Timpani">Timpani</option>
+                                                        <option value="Orchestral_Percussion">Orchestral Percussion</option>
+                                                        <option value="Tuned_Percussion">Tuned Percussion</option>
+                                                        <option value="Drum_Kit">Drum Kit</option>
+                                                    </optgroup>
+                                                    <optgroup label="Keyboard/Piano">
+                                                        <option value="Piano">Piano</option>
+                                                        <option value="Organ">Organ</option>
+                                                    </optgroup>
+                                                    <optgroup label="Singing">
+                                                        <option value="Male_Singing">Male</option>
+                                                        <option value="Female_Singing">Female</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                            <br><br>
+                                            <div class="form-group">
+                                                <label for="instrument_2_select_min">Minimum Level:</label>
+                                                <select  id="instrument_2_select_min" name="instrument_2_select_min">
+                                                    <option value="">-</option>
+                                                    <option value="grade1">Grade 1</option>
+                                                    <option value="grade2">Grade 2</option>
+                                                    <option value="grade3">Grade 3</option>
+                                                    <option value="grade4">Grade 4</option>
+                                                    <option value="grade5">Grade 5</option>
+                                                    <option value="grade6">Grade 6</option>
+                                                    <option value="grade7">Grade 7</option>
+                                                    <option value="grade8">Grade 8</option>
+                                                    <option value="diploma">Diploma</option>
+                                                    <option value="concert_soloist">Concert Soloist</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="instrument_2_select_max">Maximum Level:</label>
+                                                <select  id="instrument_2_select_max" name="instrument_2_select_max">
+                                                    <option value="">-</option>
+                                                    <option value="grade1">Grade 1</option>
+                                                    <option value="grade2">Grade 2</option>
+                                                    <option value="grade3">Grade 3</option>
+                                                    <option value="grade4">Grade 4</option>
+                                                    <option value="grade5">Grade 5</option>
+                                                    <option value="grade6">Grade 6</option>
+                                                    <option value="grade7">Grade 7</option>
+                                                    <option value="grade8">Grade 8</option>
+                                                    <option value="diploma">Diploma</option>
+                                                    <option value="concert_soloist">Concert Soloist</option>
+                                                </select>
+                                            </div>
+                                            </br>
+                                        </div>
+                                    </div>
+                                    <div class="form-group hidden" id="dynamicInput3">
+                                        <div class="form-inline">
+                                            <div class="form-group">
+                                                <label for="instrument_3" class="control-label">Instrument 3</label>
+                                                <select class="form-control" id="instrument_3" name="instrument_3">
+                                                    <option value="">-</option>
+                                                    <optgroup label="String Instruments">
+                                                        <option value="Violin">Violin</option>
+                                                        <option value="Viola">Viola</option>
+                                                        <option value="Cello">Cello</option>
+                                                        <option value="Double Bass">Double Bass</option>
+                                                        <option value="Harp">Harp</option>
+                                                        <option value="Guitar">Guitar</option>
+                                                    </optgroup>
+                                                    <optgroup label="Wind Instruments">
+                                                        <option value="Flute">Flute</option>
+                                                        <option value="Oboe">Oboe</option>
+                                                        <option value="Clarinet">Clarinet</option>
+                                                        <option value="Bassoon">Bassoon</option>
+                                                        <option value="Recorder">Recorder</option>
+                                                    </optgroup>
+                                                    <optgroup label="Brass Instruments">
+                                                        <option value="Horn">(French) Horn</option>
+                                                        <option value="Trumpet">Trumpet</option>
+                                                        <option value="Trombone">Trombone</option>
+                                                        <option value="Tuba">Tuba</option>
+                                                    </optgroup>
+                                                    <optgroup label="Percussion Instruments">
+                                                        <option value="Timpani">Timpani</option>
+                                                        <option value="Orchestral_Percussion">Orchestral Percussion</option>
+                                                        <option value="Tuned_Percussion">Tuned Percussion</option>
+                                                        <option value="Drum_Kit">Drum Kit</option>
+                                                    </optgroup>
+                                                    <optgroup label="Keyboard/Piano">
+                                                        <option value="Piano">Piano</option>
+                                                        <option value="Organ">Organ</option>
+                                                    </optgroup>
+                                                    <optgroup label="Singing">
+                                                        <option value="Male_Singing">Male</option>
+                                                        <option value="Female_Singing">Female</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                            <br><br>
+                                            <div class="form-group">
+                                                <label for="instrument_3_select_min">Minimum Level:</label>
+                                                <select  id="instrument_3_select_min" name="instrument_3_select_min">
+                                                    <option value="">-</option>
+                                                    <option value="grade1">Grade 1</option>
+                                                    <option value="grade2">Grade 2</option>
+                                                    <option value="grade3">Grade 3</option>
+                                                    <option value="grade4">Grade 4</option>
+                                                    <option value="grade5">Grade 5</option>
+                                                    <option value="grade6">Grade 6</option>
+                                                    <option value="grade7">Grade 7</option>
+                                                    <option value="grade8">Grade 8</option>
+                                                    <option value="diploma">Diploma</option>
+                                                    <option value="concert_soloist">Concert Soloist</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="instrument_3_select_max">Maximum Level:</label>
+                                                <select  id="instrument_3_select_max" name="instrument_3_select_max">
+                                                    <option value="">-</option>
+                                                    <option value="grade1">Grade 1</option>
+                                                    <option value="grade2">Grade 2</option>
+                                                    <option value="grade3">Grade 3</option>
+                                                    <option value="grade4">Grade 4</option>
+                                                    <option value="grade5">Grade 5</option>
+                                                    <option value="grade6">Grade 6</option>
+                                                    <option value="grade7">Grade 7</option>
+                                                    <option value="grade8">Grade 8</option>
+                                                    <option value="diploma">Diploma</option>
+                                                    <option value="concert_soloist">Concert Soloist</option>
+                                                </select>
+                                            </div>
+                                            </br>
+                                        </div>
+                                    </div>
+                                    <div class="form-group hidden" id="dynamicInput4">
+                                        <div class="form-inline">
+                                            <div class="form-group">
+                                                <label for="instrument_4" class="control-label">Instrument 4</label>
+                                                <select class="form-control" id="instrument_4" name="instrument_4">
+                                                    <option value="">-</option>
+                                                    <optgroup label="String Instruments">
+                                                        <option value="Violin">Violin</option>
+                                                        <option value="Viola">Viola</option>
+                                                        <option value="Cello">Cello</option>
+                                                        <option value="Double Bass">Double Bass</option>
+                                                        <option value="Harp">Harp</option>
+                                                        <option value="Guitar">Guitar</option>
+                                                    </optgroup>
+                                                    <optgroup label="Wind Instruments">
+                                                        <option value="Flute">Flute</option>
+                                                        <option value="Oboe">Oboe</option>
+                                                        <option value="Clarinet">Clarinet</option>
+                                                        <option value="Bassoon">Bassoon</option>
+                                                        <option value="Recorder">Recorder</option>
+                                                    </optgroup>
+                                                    <optgroup label="Brass Instruments">
+                                                        <option value="Horn">(French) Horn</option>
+                                                        <option value="Trumpet">Trumpet</option>
+                                                        <option value="Trombone">Trombone</option>
+                                                        <option value="Tuba">Tuba</option>
+                                                    </optgroup>
+                                                    <optgroup label="Percussion Instruments">
+                                                        <option value="Timpani">Timpani</option>
+                                                        <option value="Orchestral_Percussion">Orchestral Percussion</option>
+                                                        <option value="Tuned_Percussion">Tuned Percussion</option>
+                                                        <option value="Drum_Kit">Drum Kit</option>
+                                                    </optgroup>
+                                                    <optgroup label="Keyboard/Piano">
+                                                        <option value="Piano">Piano</option>
+                                                        <option value="Organ">Organ</option>
+                                                    </optgroup>
+                                                    <optgroup label="Singing">
+                                                        <option value="Male_Singing">Male</option>
+                                                        <option value="Female_Singing">Female</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                            <br><br>
+                                            <div class="form-group">
+                                                <label for="instrument_4_select_min">Minimum Level:</label>
+                                                <select  id="instrument_4_select_min" name="instrument_4_select_min" >
+                                                    <option value="">-</option>
+                                                    <option value="grade1">Grade 1</option>
+                                                    <option value="grade2">Grade 2</option>
+                                                    <option value="grade3">Grade 3</option>
+                                                    <option value="grade4">Grade 4</option>
+                                                    <option value="grade5">Grade 5</option>
+                                                    <option value="grade6">Grade 6</option>
+                                                    <option value="grade7">Grade 7</option>
+                                                    <option value="grade8">Grade 8</option>
+                                                    <option value="diploma">Diploma</option>
+                                                    <option value="concert_soloist">Concert Soloist</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="instrument_4_select_max"></i>Maximum Level:</label>
+                                                <select  id="instrument_4_select_max" name="instrument_4_select_max">
                                                     <option value="">-</option>
                                                     <option value="grade1">Grade 1</option>
                                                     <option value="grade2">Grade 2</option>

@@ -14,7 +14,7 @@
     <!-- Bootstrap Core CSS -->
     @yield('css')
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="{{url('css/rymn.css')}}" rel="stylesheet">

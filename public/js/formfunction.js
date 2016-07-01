@@ -100,18 +100,27 @@ $( document ).ready(function() {
 
 var counter = 2;
 var limit = 5;
+var minLimit = 2;
 function addInput(divName){
+    console.log(counter);
     if (counter == limit)  {
         alert("You have reached the limit of adding 4 inputs");
     }
     else {
-        var newdiv = document.createElement('div');
-        newdiv.innerHTML = '</br><div id="generated_'+counter+'"> <div class="form-group"> <div class="form-group" id="dynamicInput"> <div class="form-inline"> <div class="form-group"> <label for="instrument'+counter+'" class="control-label">Instrument '+counter+'&nbsp;</label> <select class="form-control" id="instrument_'+counter+'"> <option value="">-</option> <optgroup label="String Instruments"> <option value="Violin">Violin</option> <option value="Viola">Viola</option> <option value="Cello">Cello</option> <option value="Double Bass">Double Bass</option> <option value="Harp">Harp</option> <option value="Guitar">Guitar</option> </optgroup> <optgroup label="Wind Instruments"> <option value="Flute">Flute</option> <option value="Oboe">Oboe</option> <option value="Clarinet">Clarinet</option> <option value="Bassoon">Bassoon</option> <option value="Recorder">Recorder</option> </optgroup> <optgroup label="Brass Instruments"> <option value="Horn">(French) Horn</option> <option value="Trumpet">Trumpet</option> <option value="Trombone">Trombone</option> <option value="Tuba">Tuba</option> </optgroup> <optgroup label="Percussion Instruments"> <option value="Timpani">Timpani</option> <option value="Orchestral_Percussion">Orchestral Percussion</option> <option value="Tuned_Percussion">Tuned Percussion</option> <option value="Drum_Kit">Drum Kit</option> </optgroup> <optgroup label="Keyboard/Piano"> <option value="Piano">Piano</option> <option value="Organ">Organ</option> </optgroup> <optgroup label="Singing"> <option value="Male">Male</option> <option value="Female">Female</option> </optgroup> </select> </div><br><br><div class="form-group"> <label for="sel'+counter+'">&nbsp;Minimum Level:&nbsp;</label> <select  id="instrument_'+counter+'_select_min"> <option value="">-</option> <option value="grade1">Grade 1</option> <option value="grade2">Grade 2</option> <option value="grade3">Grade 3</option> <option value="grade4">Grade 4</option> <option value="grade5">Grade 5</option> <option value="grade6">Grade 6</option> <option value="grade7">Grade 7</option> <option value="grade8">Grade 8</option> <option value="diploma">Diploma</option> <option value="concert_soloist">Concert Soloist</option> </select> </div> <div class="form-group"> <label for="sel'+counter+'">&nbsp;Maximum Level:&nbsp;</label> <select  id="instrument_'+counter+'_select_max"> <option value="">-</option> <option value="grade1">Grade 1</option> <option value="grade2">Grade 2</option> <option value="grade3">Grade 3</option> <option value="grade4">Grade 4</option> <option value="grade5">Grade 5</option> <option value="grade6">Grade 6</option> <option value="grade7">Grade 7</option> <option value="grade8">Grade 8</option> <option value="diploma">Diploma</option> <option value="concert_soloist">Concert Soloist</option> </select> </div> </br> </div> </div>';
-        document.getElementById(divName).appendChild(newdiv);
+        $("#dynamicInput"+counter).removeClass('hidden');
         counter++;
     }
 }
-
+function removeInput(divName){
+    console.log(counter);
+    if (counter == minLimit)  {
+        alert("You cannot remove the last input");
+    }
+    else {
+        $("#dynamicInput"+(counter-1)).addClass('hidden');
+        counter--;
+    }
+}
 function valueChangedTmt()
 {
     if($('#tmt-cb').is(":checked"))
