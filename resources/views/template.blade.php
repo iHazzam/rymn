@@ -29,6 +29,14 @@
 </head>
 
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.6&appId=918966724895981";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 <!-- Navigation -->
 
 @section('stickynav')
@@ -132,6 +140,20 @@
 @show
 
 <!-- Page Content -->
+<div class="facebook-advert">
+    <div class="facebook-inner">
+
+        <span id='close-fb' onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false;'><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+    <p class="facebook-text"><a href="https://www.facebook.com/youth.music.network/"><span class="facebook-header"> Please visit and “like” our Facebook Page</span> This will also post articles and feature comment and discussion about a whole range of relevant issues, as well as allowing people and organisations to publicise events, exchange ideas and information, advertise the buying and selling of instruments and music, and a range of other topics – even to help organise lift-sharing to rehearsals, concerts and other events.</p>
+
+        <div class="fb_iframe_widget">
+            <div class="fb-like" data-href="https://www.facebook.com/youth.music.network/" data-layout="box_count" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>
+
+        </div>
+        </a>
+
+    </div>
+</div>
 <div class="fullwidth">
     @yield('banner')
     <div class="container">
