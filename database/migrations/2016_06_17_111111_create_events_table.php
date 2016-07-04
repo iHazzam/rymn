@@ -19,12 +19,11 @@ class CreateEventsTable extends Migration
             $table->string('concert_address_line2')->nullable();
             $table->string('city', 30);
             $table->string('postcode', 7);
-            $table->text('tickets');
+            $table->date('date');
+            $table->time('time');
+            $table->decimal('ticket_cost', 5, 2);
             $table->longText('concert_details');
-            $table->string('thumbnail');
-            $table->string('image1')->nullable();
-            $table->string('image2')->nullable();
-            $table->string('contact_email');
+            $table->string('thumbnail_img')->nullable();
             $table->timestamps();
         });
     }
