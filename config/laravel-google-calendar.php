@@ -1,5 +1,6 @@
 <?php
 
+
 return [
 
     /**
@@ -8,8 +9,8 @@ return [
     'client_secret_json' => base_path('storage/clientsecret/client_secret.json'),
 
     /**
-     *  The id of the Google Calendar that will be used by default.
+     *  The id of the Google Calendar that will be used b#y default.
      */
     'calendar_id' => 'iemim1pip3o5hha070tjvt5q70@group.calendar.google.com',
-    
+
 ];

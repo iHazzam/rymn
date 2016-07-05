@@ -24,7 +24,8 @@ Route::get('/discover', 'pageController@discover');
 /*Second-tier pages*/
 /*learn*/
 Route::get('/learn/instruments', 'learnController@instruments');
-Route::get('/learn/teachers', 'learnController@teacherdb');
+Route::get('/learn/teacherdb', 'learnController@teacherdb');
+Route::get('/learn/teachers', 'learnController@teachers');
 Route::get('/learn/parents', 'learnController@parents');
 Route::get('/learn/kids', 'learnController@kids');
 /*teach*/

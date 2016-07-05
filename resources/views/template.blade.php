@@ -61,6 +61,10 @@
                         <a href="/learn" class="dropdown-toggle" data-toggle="dropdown">Learn <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
+                                <a href="/learn"><i class=""></i>Learn Dashboard</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
                                 <a href="/learn/instruments"><i class=""></i> Learn an instrument</a>
                             </li>
                             <li>
@@ -78,6 +82,10 @@
                         <a href="/teach" class="dropdown-toggle" data-toggle="dropdown">Teach <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
+                                <a href="/teach"><i class=""></i>Teach Dashboard</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
                                 <a href="/teach/register"><i class=""></i>Register as a teacher</a>
                             </li>
                             <li>
@@ -88,6 +96,10 @@
                     <li class="dropdown">
                         <a href="/play" class="dropdown-toggle" data-toggle="dropdown">Play <b class="caret"></b></a>
                         <ul class="dropdown-menu">
+                            <li>
+                                <a href="/play"><i class=""></i>Play Dashboard</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
                             <li>
                                 <a href="/play/groups"><i class=""></i>Join an ensemble</a>
                             </li>
@@ -102,6 +114,10 @@
                     <li class="dropdown">
                         <a href="/discover" class="dropdown-toggle" data-toggle="dropdown">Discover <b class="caret"></b></a>
                         <ul class="dropdown-menu">
+                            <li>
+                                <a href="/discover"><i class=""></i>Discover Dashboard</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
                             <li>
                                 <a href="/discover/calendar"><i class=""></i>Events Calendar</a>
                             </li>
@@ -144,11 +160,9 @@
     <div class="facebook-inner">
 
         <span id='close-fb' onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false;'><i class="fa fa-times-circle" aria-hidden="true"></i></span>
-    <p class="facebook-text"><a href="https://www.facebook.com/youth.music.network/"><span class="facebook-header"> Please visit and “like” our Facebook Page</span> This will also post articles and feature comment and discussion about a whole range of relevant issues, as well as allowing people and organisations to publicise events, exchange ideas and information, advertise the buying and selling of instruments and music, and a range of other topics – even to help organise lift-sharing to rehearsals, concerts and other events.</p>
-
+    <p class="facebook-text"><a href="https://www.facebook.com/youth.music.network/"><span class="facebook-header"> Please visit and “like” our Facebook Page</span>
         <div class="fb_iframe_widget">
             <div class="fb-like" data-href="https://www.facebook.com/youth.music.network/" data-layout="box_count" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>
-
         </div>
         </a>
 

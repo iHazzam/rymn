@@ -335,9 +335,9 @@ footer {
     position: fixed;
     z-index : 1;
     left: 0;
-    top: 400px;
-    min-height: 20em;
-    max-height: 20em;
+    top: 500px;
+    min-height: 10em;
+    max-height: 10em;
     min-width: 20em;
     max-width: 20em;
     border: #3b5998;
@@ -347,7 +347,7 @@ footer {
 .facebook-inner
 {
     padding: 1em;
-    padding-bottom: 3em;
+    padding-bottom:1.5em;
     background-color: #428bca;
     color: white;
 }
@@ -385,4 +385,112 @@ footer {
 }
 #map{
     height:70vh;
+}
+
+.ssd {
+    margin: 0 0 40px;
+    text-align: left;
+}h2.set-left, p.set-left {
+     text-align: left;
+     margin: 0 0 12px!important;
+ }
+
+
+.ht-box {
+    background: #f7f7f7;
+    text-align: center;
+    padding: 15px 0;
+    margin: 0 0 40px;
+
+}
+
+.ht-box div {
+    border-radius: 50%;
+    background: #fff;
+    padding: 50px;
+    width: 190px;
+    height: 190px;
+    margin: 0 auto;
+}
+
+.ht-box img {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.foundation {
+    margin: 0 0 60px!important;
+}
+
+.foundation h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.htb1 {
+    font-weight: bold;
+    color: #0dadb9;
+}
+
+.htb_t{
+    font-weight: bold;
+    color:black;
+}
+
+.htb2 {
+    font-weight: bold;
+    color: #fab519;
+}
+
+.htb3 {
+    font-weight: bold;
+    color: #7d74c3;
+}
+
+.htb4 {
+    font-weight: bold;
+    color: #00aeef;
+}
+
+.htb5 {
+    font-weight: bold;
+    color: #f26767;
+}
+
+.htb6 {
+    font-weight: bold;
+    color: #0dadb9;
+}
+.inpage-navbar{
+
+}
+.inpage-navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left:3em;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.inpage-navbar li {
+    float: left;
+}
+
+.inpage-navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.inpage-navbar li a:hover {
+    background-color: #111;
+}
+.img_small{
+    padding-top: 8em;
+    max-width: 100%;
 }

@@ -31,7 +31,7 @@ class discoverController extends Controller
         $endTime = Carbon::createFromFormat('Y-m-d H:i:s',$dateTime, 'Europe/London')->addHours(2);
 
         $heldby = Group::find($event->group_id);
-        $e->name = $event->name . " - an event held by " . $heldby->group_town ;
+        $e->name = $event->name . " - an event held by " . $heldby->group_name ;
         $e->startDateTime = $time;
         $e->endDateTime = $endTime;
         $e->save();

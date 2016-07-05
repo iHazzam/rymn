@@ -27,14 +27,14 @@ class learnController extends Controller
         $teachers = Teacher::all();
         return view('learn.teacherdb', ['rows' => $rows, 'values' => $values,'teachers' => $teachers,]);
     }
-    public function parents()
+    public function teachers()
     {
-        return view('learn.parents');
-    }
-    public function kids()
-    {
-        return view('learn.kids');
-    }
+        return view('learn.teachers');
+}
+public function kids()
+{
+    return view('learn.kids');
+}
     public function newInfo()
     {
         return redirect('/learn');

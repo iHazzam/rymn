@@ -30,13 +30,32 @@
     <div class="background_home">
     <div class="row welcome">
         <h1 class="fix-middle">
-           Welcome to Ripon Youth Music Network</h1>
+           Welcome to our Youth Music Network</h1>
     </div>
     <div class="row info-row col-md-offset-1 col-md-10">
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt volutpat risus, ut mollis neque luctus et. Nullam aliquam mi nec quam sodales tempor. Morbi vestibulum ligula sit amet eros molestie fringilla. Cras volutpat, arcu sagittis vestibulum scelerisque, lorem dui ornare neque, quis dictum lectus urna quis nisi. Ut feugiat justo sed odio dapibus cursus. Praesent quis odio vitae mauris tincidunt molestie ac eu mi. Phasellus imperdiet imperdiet lorem, in fermentum diam pellentesque eu.
-        Integer pretium mattis metus at vulputate. Fusce interdum quam et ligula sollicitudin lacinia. Morbi diam eros, ultrices vel lectus id, dapibus fringilla diam. Praesent suscipit mattis ex in convallis. Donec eu pretium arcu. Vestibulum pulvinar id ante et malesuada. Suspendisse posuere diam quis tortor iaculis, non tempor dui semper. Donec iaculis semper condimentum. Vivamus maximus tortor quis odio rutrum viverra. Curabitur imperdiet eros id nisi semper aliquet. Morbi interdum nisl sit amet nisi luctus, quis pulvinar dolor lobortis. Quisque ut elit leo. Sed bibendum, enim sed pulvinar tempus, ante magna dictum ex, sit amet mollis arcu nisi quis libero. Donec id velit sit amet enim condimentum tincidunt. Fusce vel tincidunt sapien. Cras eu sem et arcu laoreet efficitur.
-        </p>
+            The main purpose of this website is to provide as much help, encouragement, advice and information as possible for young people and parents across North Yorkshire about anything and everything to do with music and music education.</p>
+        <h4 class="blackheader" >What is this site for?</h4>
+        <p> You can find information, resources and invaluable advice from professionals in the local area. Just some of the topics that can be found on the site are: (click on the bullet point for more details)</p>
+        <ul>
+            <li><a href="learn">The importance and educational value of learning to play an instrument and to sing.</a></li>
+            <li><a href="learn/instruments">How to choose the best instruments to learn.</a></li>
+            <li><a href="learn/teachers">How to find good teachers.</a></li>
+            <li><a href="learn/teacherdb">A database of teachers across the county</a></li>
+            <li><a href="play/groups">Where to find opportunities to play with others – orchestras, ensembles, bands, choirs etc.</a></li>
+            <li><a href="learn/purchase#buyrent">Where to buy, rent or borrow an instrument.</a></li>
+            <li><a href="learn/purchase#repair">Where to get an instrument repaired.</a></li>
+            <li><a href="learn/purchase#accessories">Where to buy instrumental accessories such as strings and reeds.</a></li>
+            <li><a href="learn/purchase#music">Where to buy music.</a></li>
+            <li><a href="learn/exams">About the different exam boards and what exams are available and when.</a></li>
+            <li><a href="learn/accompanists">How to find an accompanist.</a></li>
+            <li><a href="discover/calendar">Check out and add to our own diary of musical events, activities and opportunities for young musicians.</a></li>
+            <li><a href="discover/map">Or our interactive map of events in the area.</a></li>
+            <li><a href="http://www.stcticketing.org/index.php?p=concert">Check out the North Yorkshire Music & Arts Events Diary, used by more than 70 different organisations to publicise concerts and other events in the region.</a></li>
+            <li><a href="https://www.facebook.com/youth.music.network/?fref=ts">the RYMN Facebook Feed - a live page to get help, advice and much much more</a></li>
+
+
+        </ul>
     </div>
 
     </div>
