@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests;
 use App\Event;
 use App\Group;
 use Illuminate\Support\Facades\Input;
+use Google_Client;
+use \Spatie\GoogleCalendar;
 class discoverController extends Controller
 {
     //
@@ -15,10 +18,58 @@ class discoverController extends Controller
     {
         return view('discover.calendar');
     }
+    public function updateCalendar(Event $event){
+        $e = new \Spatie\GoogleCalendar\Event;
+        $date = $event->date;
+        $time = $event->time;
+        var_dump($time);
+        $time = $time . ":00";
+        $dateTime = $date . " " . $time;
+        var_dump($dateTime);
+        $time = Carbon::createFromFormat('Y-m-d H:i:s',$dateTime, 'Europe/London');
 
+        $endTime = Carbon::createFromFormat('Y-m-d H:i:s',$dateTime, 'Europe/London')->addHours(2);
+
+        $heldby = Group::find($event->group_id);
+        $e->name = $event->name . " - an event held by " . $heldby->group_town ;
+        $e->startDateTime = $time;
+        $e->endDateTime = $endTime;
+        $e->save();
+    }
     public function map()
     {
-        return view('discover.map');
+
+        $events = Event::where('date', '>', Carbon::now())->get();
+        $array = json_encode($events);
+        $array2 = [];
+        foreach ($events as $a)
+        {
+            $a = json_decode(json_encode($a));
+            $name = $a->name;
+            $address = "";
+            if($a->concert_address_line2 != null)
+            {
+                $address = $a->concert_address_line1 . "<br>" . $a->concert_address_line2 . "<br>" . $a->city . "<br>" . $a->postcode;
+            }
+            else{
+
+                $address = $a->concert_address_line1 . "<br>" . $a->city . "<br>" . $a->postcode;
+            }
+            $datetime = $a->date . " " . $a->time;
+            $datetime = Carbon::createFromFormat('Y-m-d H:i:s', $datetime, 'Europe/London')->toDayDateTimeString();
+            $concert_details = $a->concert_details;
+            $postcode = $a->postcode;
+
+            $coordinates = file_get_contents('http://maps.googleapis.com/maps/api/geocode/json?address=' . urlencode($postcode) . '&sensor=true');
+            $coordinates = json_decode($coordinates);
+            $lat = $coordinates->results[0]->geometry->location->lat;
+            $lng = $coordinates->results[0]->geometry->location->lng;
+
+            $ensemble=Group::where('id','=',$a->group_id)->select('group_name')->first();
+            $ensemble = $ensemble->group_name;
+            $array2[] = ['name' => $name,'address'=>$address,'datetime'=>$datetime,'concert_details'=>$concert_details,'lati'=>$lat,'lngi'=>$lng, 'ensemble'=>$ensemble];
+        }
+        return view('discover.map', ['events' => $array2]);
     }
 
     public function newsletter()
@@ -32,7 +83,8 @@ class discoverController extends Controller
         var_dump($req);
         $this->validate($request, [
             'group' => 'required',
-            'date' => 'required|date|after:tomorrow',
+            'name' => 'required',
+            'date' => 'required|date|after:today',
             'time' => 'required',
             'addr1' => 'required',
             'postcode' => 'required',
@@ -40,6 +92,7 @@ class discoverController extends Controller
         $error = false;
         $error_reason = "";
         $event = new Event;
+        $event->name = $req['name'];
         $event->group_id = $req['group'];
         $event->date = $req['date'];
         $event->time = $req['time'];
@@ -87,7 +140,8 @@ class discoverController extends Controller
         {
 
             $event->save();
-            $request->session()->flash('alert-success', "Thanks! Teacher registration complete!");
+            $this->updateCalendar($event);
+            $request->session()->flash('alert-success', "Thanks! Event added succesfully. Click <a href={{url('discover/calendar')}}>here</a> to see the calendar!");
             return redirect('/discover');
         }
         else{

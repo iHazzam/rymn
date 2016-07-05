@@ -14,6 +14,15 @@
                     <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }} <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></p>
                 @endif
             @endforeach
+                @if (count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
         </div> <!-- end .flash-message -->
         <div class="col-lg-offset-2 col-lg-8">
             <div class="panel panel-default" id="multistep-panel" >
@@ -41,6 +50,12 @@
                                 <label><i class="fa fa-star" aria-hidden="true"></i>Time of event
                                     <input type="time" class="form-control" name="time" id="time" >
                                 </label>
+
+                                <div class="form-group">
+                                    <label><i class="fa fa-star" aria-hidden="true"></i>Name of event
+                                        <input type="text" class="form-control" name="name" id="name" >
+                                    </label>
+                                </div>
                                 <div class="form-group">
                                     <label for="addr1" class="control-label"><i class="fa fa-star" aria-hidden="true"></i>Venue Address Line 1</label>
 

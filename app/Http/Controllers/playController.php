@@ -64,7 +64,7 @@ class playController extends Controller
         }
         $images = Input::file('images');
         $size = sizeof($images);
-        if ($size > 0)
+        if (($size > 0) && ($size[0] !== NULL))
         {
 
             $destPath = 'upload';

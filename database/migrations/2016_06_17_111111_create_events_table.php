@@ -19,6 +19,7 @@ class CreateEventsTable extends Migration
             $table->string('concert_address_line2')->nullable();
             $table->string('city', 30);
             $table->string('postcode', 7);
+            $table->string('name');
             $table->date('date');
             $table->time('time');
             $table->decimal('ticket_cost', 5, 2);
