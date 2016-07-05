@@ -5,7 +5,7 @@ return [
     /**
      * Path to a json file containing the credentials of a Google Service account.
      */
-    'client_secret_json' => base_path('app/storage/clientsecret/client_secret.json'),
+    'client_secret_json' => base_path('storage/clientsecret/client_secret.json'),
 
     /**
      *  The id of the Google Calendar that will be used by default.
