@@ -146,5 +146,49 @@ public function kids()
             array_walk_recursive($array, function($a) use (&$return) { $return[] = $a; });
             return $return;
     }
-
+    public function accompanists()
+    {
+        $accompanists = Teacher::where('is_accompanist', '=', '1')->orderBy('last_name','asc')->get();
+        $acc = [];
+        foreach($accompanists as $a)
+        {
+            $acc_temp['id'] = $a->id;
+            $acc_temp['name'] = $a->first_name . ' ' . $a->last_name;
+            $level = $a->level_accompanied;
+            if($level != 'diploma'|'concert_soloist')
+            {
+                $level = str_replace('grade','grade ',$level);
+            }
+            else if($level == 'concert_soloist' )
+            {
+                $level = 'concert soloist';
+            }
+            $level = ucfirst($level);
+            $acc_temp['level'] = $level;
+            $acc[] = $acc_temp;
+        }
+        return view('learn.accompanists', ['accomp' => $acc]);
+    }
+    public function repaired()
+    {
+        $accompanists = Teacher::where('is_instrument_repairer', '=', '1')->orderBy('last_name','asc')->get();
+        $acc = [];
+        foreach($accompanists as $a)
+        {
+            $acc_temp['id'] = $a->id;
+            $acc_temp['name'] = $a->first_name . ' ' . $a->last_name;
+            $level = $a->instruments_repaired;
+            $acc[] = $acc_temp;
+        }
+        return view('learn.maintainance', ['repair' => $acc]);
+    }
+    public function exams(){
+        return view('learn.exams');
+    }
+    public function purchase(){
+        return view('learn.purchase');
+    }
+    public function practice(){
+        return view('learn.practice');
+    }
 }

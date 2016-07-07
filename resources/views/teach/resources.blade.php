@@ -22,22 +22,22 @@
                     switch($f_extension)
                     {
                         case 'txt':
-                            echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="txt" src="/imgs/files/txt.png" width="85" height="85"></a>');
+                            echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="txt" src="/imgs/files/txt.svg" width="85" height="85"></a>');
                             break;
                         case ('ppt' |'pptx'):
-                            echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="ppt" src="/imgs/files/ppt.png" width="85" height="85"></a>');
+                            echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="ppt" src="/imgs/files/ppt.svg" width="85" height="85"></a>');
                             break;
                         case ('doc' | 'docx'):
-                            echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="doc" src="/imgs/files/doc.png" width="85" height="85"></a>');
+                            echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="doc" src="/imgs/files/doc.svg" width="85" height="85"></a>');
                             break;
                         case ('xls' | 'xlsx'):
-                            echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="xls" src="/imgs/files/xls.png" width="85" height="85"></a>');
+                            echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="xls" src="/imgs/files/xls.svg" width="85" height="85"></a>');
                             break;
                         case ('jpg' | 'png' | 'gif'):
-                            echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="img" src="/imgs/files/img.png" width="85" height="85"></a>');
+                            echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="img" src="/imgs/files/png.svg" width="85" height="85"></a>');
                             break;
                         default:
-                            echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="img" src="/imgs/files/other.png" width="85" height="85"></a>');
+                            echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="img" src="/imgs/files/file.svg" width="85" height="85"></a>');
                             break;
                     }
                       echo('<br>');
@@ -62,22 +62,22 @@
             switch($f_extension)
             {
                 case 'txt':
-                    echo('<a href="'.asset('storage/'.$filepath).'"><img  class="file-img" border="0" alt="txt" src="/imgs/files/txt.png" width="85" height="85"></a>');
+                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="txt" src="/imgs/files/txt.svg" width="85" height="85"></a>');
                     break;
                 case ('ppt' |'pptx'):
-                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="ppt" src="/imgs/files/ppt.png" width="85" height="85"></a>');
+                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="ppt" src="/imgs/files/ppt.svg" width="85" height="85"></a>');
                     break;
                 case ('doc' | 'docx'):
-                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="doc" src="/imgs/files/doc.png" width="85" height="85"></a>');
+                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="doc" src="/imgs/files/doc.svg" width="85" height="85"></a>');
                     break;
                 case ('xls' | 'xlsx'):
-                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="xls" src="/imgs/files/xls.png" width="85" height="85"></a>');
+                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="xls" src="/imgs/files/xls.svg" width="85" height="85"></a>');
                     break;
                 case ('jpg' | 'png' | 'gif'):
-                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="img" src="/imgs/files/img.png" width="85" height="85"></a>');
+                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="img" src="/imgs/files/png.svg" width="85" height="85"></a>');
                     break;
                 default:
-                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="img" src="/imgs/files/other.png" width="85" height="85"></a>');
+                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="img" src="/imgs/files/file.svg" width="85" height="85"></a>');
                     break;
             }
             echo('<br>');
@@ -102,23 +102,22 @@
             switch($f_extension)
             {
                 case 'txt':
-                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="txt" src="/imgs/files/txt.png" width="85" height="85"></a>');
+                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="txt" src="/imgs/files/txt.svg" width="85" height="85"></a>');
                     break;
                 case ('ppt' |'pptx'):
-                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="ppt" src="/imgs/files/ppt.png" width="85" height="85"></a>');
+                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="ppt" src="/imgs/files/ppt.svg" width="85" height="85"></a>');
                     break;
                 case ('doc' | 'docx'):
-                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="doc" src="/imgs/files/doc.png" width="85" height="85"></a>');
+                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="doc" src="/imgs/files/doc.svg" width="85" height="85"></a>');
                     break;
                 case ('xls' | 'xlsx'):
-                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="xls" src="/imgs/files/xls.png" width="85" height="85"></a>');
+                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="xls" src="/imgs/files/xls.svg" width="85" height="85"></a>');
                     break;
                 case ('jpg' | 'png' | 'gif'):
-                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="img" src="/imgs/files/img.png" width="85" height="85"></a>');
+                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="img" src="/imgs/files/png.svg" width="85" height="85"></a>');
                     break;
-
                 default:
-                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="img" src="/imgs/files/other.png" width="85" height="85"></a>');
+                    echo('<a href="'.asset('storage/'.$filepath).'"><img class="file-img" border="0" alt="img" src="/imgs/files/file.svg" width="85" height="85"></a>');
                     break;
             }
             echo('<br>');

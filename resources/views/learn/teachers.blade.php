@@ -3,110 +3,238 @@
 @section('title', 'homepage')
 
 @section('body')
-        <article class="inpage-navbar col-lg-offset-2 col-lg-7">
-        <div class="">
-            <ul>
-                <li><a href="#singing">Singing</a></li>
-                <li><a href="#keys">Piano/Keyboards</a></li>
-                <li><a href="#strings">Strings</a></li>
-                <li><a href="#percussion">Percussion</a></li>
-                <li><a href="#wind">Woodwind</a></li>
-                <li><a href="#brass">Brass</a></li>
-            </ul>
-        </div>
-    </article>
-
     <article class="content">
         <section class="pull-left">
             <div class="container">
-                <div class="ssd col-sm-8">
-                    <h2 class="set-left">Choosing an instrument</h2>
+                <div class="ssd col-sm-12">
+                    <br>
+                    <h2 class="set-left"><span class="htb6">Finding a Teacher:</span></h2>
                     <p>
-                        There are many factors which go into choosing an instrument for your child to learn. Different instruments are more relevant and realistic at certain stages of a child's development, and lead to different oppotunities down the road including the ensembles you can join and with who and how you can play.
-                        Remember, the goal of learning an instrument is to have fun and play together, so the first step is to choose the right (first?!) instrument for your child:
+                        This is even more important than <a href="/learn/instruments">choosing an instrument</a>!  A good teacher will be able to advise about choosing and help with and finding an instrument. Usually, your first port of call will be your school or the County Music Service – but bear in mind that, as your child progresses to a more advanced level, they may need individual lessons with a specialist teacher and the school or County Music Service may be unable to provide this.
                     </p>
-                    <h2 class="set-left">Making a start:</h2>
-                    <p>Before we get down to the practicalities, there are some important things to remember:-</p>
+                </div>
+                <div class="ssd col-sm-8">
+                    <h2 class="set-left"><span class="htb3">Qualifications:</span></h2>
+                    <p>There are a vast amount of qualifications available to a music teacher, proving their playing ability or teaching quality. These are usually a good initial indicator of the level of the teacher however while teaching ability and technical ability are a good indicator, musical prowess, knowledge and experience can often be just as important. It is also desirable that the teacher is (or once was) capable of performing at a high level. These are just some of the qualifications a teacher may have:</p>
                     <ul>
-                        <li>Few children will have had exposure to a wide variety of musical types and genres. (Most of them will have heard mainly “pop” music.) It is essential to teach them in such a way that it broadens their horizons and encourages them to explore new and less familiar types of music, especially those that are more intellectually and artistically challenging.</li>
-                        <li>Learning to read music is an essential component of music education! It isn’t at all difficult if it is introduced right from the start and developed gradually throughout the learning process. (N.B. – This applies to singing too!)</li>
-                        <li>Playing an instrument (or singing) involves time and commitment! It takes time to practise, musical activities take time and they often involve travel, which also takes time! It is also essential to make the commitment – ifyour child is involved in a choir, orchestra or ensemble, then they must attend regularly and not miss rehearsals – if they do, they will be letting down not only themselves but all the other members of the group.</li>
+                        <li>Dip ABRSM, LRSM, FRSM <span class="explain">Qualifications from Examinations Board.</span></li>
+                        <li>LRAM, ARCM, FRCM, LTCL, ATCL, AGSM, LGSM, ARNCM, GRNCM (etc.)<span class="explain">Diplomas from music colleges (more examples from college websites).</span></li>
+                        <li>BA, BMus, MMus, DMus<span class="explain">Degree (from university).</span></li>
+                        <li>PGCE<span class="explain">Postgraduate teaching qualification.</span></li>
+                        <li>QTS<span class="explain">Qualified Teacher Status (will have a number from Dept of Education).</span></li>
+                        <li>CRB/DBS check<span class="explain">Certificate showing they have been cleared by the criminal records bureau(Pre-2015) or the Disclosure and Barring Service.</span></li>
                     </ul>
                 </div>
-                <div class="col-sm-4">
-                    <img src="/images/ssd.jpg">
+                <div class="col-sm-3">
+                    <section class="ht-box2"><div><span class="helper"></span><img class="img_small" src="/imgs/teach.jpg"></div></section>
                 </div>
-
-                <div class="ssd col-sm-12">
-                    <h2 id="performance">Configured for Performance</h2>
-                    <p>Brilliant, well-configured hardware sets the foundation for a fast-loading website. But optimising the way that hardware and your website interact is the key to delivering stand-out load times for your website's visitors. We can work with you to advise on and configure a number of acceleration technologies such as Nginx & Zend Opcode Caching to ensure your website performs at its peak.</p>
+                <div class=" col-sm-12">
+                    <p>
+                        Some teachers may also have undergone training in child protection. Some will have qualifications in specialised teaching methods (e.g. Suzuki, Dalcrose, Orff, Kodaly). They may be a member of a teaching union –  <span style="font-weight: bold">ISM</span> (Incorporated Society of Musicians – which requires evidence of a high level of musical accomplishment), <span style="font-weight: bold">MMA</span>  (Music Masters Association)  <span style="font-weight: bold">orMU </span>(Musicians’ Union). This means they will have liability insurance and access to professional advice. They may also be a member of a professional teaching body, e.g. <span style="font-weight: bold"> ESTA</span> (European String Teachers Association), or <span style="font-weight: bold">FIPMT</span>  (Institute of Professional Music Teachers).
+                    </p>
                 </div>
+                <div class="col-sm-12">
+                    <h2 id="performance"><span class="htb2">Choosing an instrument:</span></h2>
+                    <a class="htb3"href="/learn/instruments"><h4>Click <span class="htb2">here</span> to read our full guide on choosing an instrument</h4></a>
+                    <p>At beginner levels, the same teacher may well teach several instruments from one family (see table). As your child progresses you may need to consider moving to a teacher who has specialised in the exact instrument. It is useful for the teacher to be able to demonstrate good technique and a good sound on the instrument your child is learning. Sometimes there can be problems later on that date back to a teacher working outside their speciality (e.g. a woodwind player teaching brass).</p>
 
+                    <table class="table table-striped table-bordered table-hover ">
+                        <thead>
+                        <tr>
+                            <th>
+                                <strong>Type (family)</strong>
+                            </th>
+                            <th>
+                                <strong>Instruments included</strong>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                Strings
+                            </td>
+                            <td>
+                                Violin, Viola, Cello, Double Bass
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Woodwind
+                            </td>
+                            <td>
+                                Flute, (Piccolo), Oboe, (Cor Anglais), Clarinet, Bassoon, Recorder, Saxophone.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Brass
+                            </td>
+                            <td>
+                                Horn (French Horn), Trumpet/Cornet, Trombone, Tuba, Euphonium etc.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Percussion
+                            </td>
+                            <td>
+                                Timpani, Side-Drum, Xylophone (and many more, including drum kit)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Keyboard
+                            </td>
+                            <td>
+                                Piano, Organ, Harpsichord (also Electric Piano &amp; Keyboard)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Guitar
+                            </td>
+                            <td>
+                                Classical (also acoustic, electric, bass, ukulele etc.)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Voice
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Other specialities
+                            </td>
+                            <td>
+                                Harp, Accordion, Music Theory, Composition, Conducting
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="col-sm-12">
+                    <h2 id="performance"><span class="htb4">Experience & References:</span></h2>
+                    <p>If a teacher has a passion for their instrument it is likely they will be playing it on a regular basis.  Whilst we would expect teachers to be (or to have been) expert performers, it is also important to realise that a good performer on an instrument is not necessarily a good teacher (especially with beginners). When looking into a teacher you can ask them about:
+                    </p>
+                    <ul>
+                        <li><span style="font-weight: bold">Teaching Experience:</span> How many pupils they have, how long they have been teaching, where they teach and have taught previously. </li>
+                        <li><span style="font-weight: bold">Performing Experience:</span> Have they played in and do they perform as soloists, with orchestras, in chamber groups (e.g. string quartets) or in bands or other types of ensemble.</li>
+                    </ul>
+                    <p>It is also considered reasonable to ask the teacher to give you contact details of a present or recent employer or the parents of another pupil.</p>
+                </div>
+                <div class="col-sm-12">
+                    <h2 id="performance"><span class="htb5">Costs of learning:</span></h2>
+                    <p>Charges for beginners will normally be between £25 and £35 per hour. Most beginner lessons last 20 minutes (common in school) or 30 minutes, so this will be around £10 -£18 per lesson.</p>
+                    <p>Group lessons are often available in school. Where these are provided by the County Music Service (the most common provider) they cost around £6.50 per child for 3 or 4 children, with 30% discounts for parents on Working Tax Credit and free group lessons for children receiving free school meals.</p>
+                    <p>It is often possible to arrange for two or more children to learn together with a private teacher, which will reduce but may not halve the cost. As all learners progress at different speeds they are likely to move onto individual lessons in the future.</p>
+                    <p>Most teachers work only in term time, but some will provide additional lessons in school holidays to keep the momentum going.</p>
+                    <h4 class="htb3">Administration:</h4>
+                    <p>
+                        You should be able to communicate well with the teacher, especially for younger pupils. Some teachers are happy for parents to sit in for lessons, but some find that this adversely affects the child. If you are not attending lessons, allow time at the end of some lessons to discuss what has been covered, how the child is progressing and what practice is necessary.  Teachers may use notebooks to record information for the child, and some teachers write reports, although this is not usually necessary if there is regular contact with parents/carers.
+                    </p>
+                    <p>
+                        Teachers will invoice you, often half-termly in advance, and may issue a receipt.  If you have a regular slot for a lesson, and are unable to attend, the cost of the lesson will not normally be reimbursed, as the teacher will not be able to fill it with another pupil. Some teachers are willing to swap lessons or fit an extra lesson in, but this is not always possible.
+                    </p>
+                </div>
+                <div class="col-sm-12">
+                    <h2 id="performance"><span class="htb1">Trial Lesson:</span></h2>
+                    <p>Maybe the most important factor in choosing a teacher is that they get on well with your child. It is accepted practice to have a trial lesson (which you would usually pay for) with no obligation on either side. This should be used to indicate whether the child and teacher can get on, on a personal basis, and that the practical arrangements will work. Once you are committed to lessons it is usual to give half a term’s notice if you wish to stop them.
+                    </p>
+                    <p>If the teacher has frequent professional engagements (which may well be at irregular times) they might need to rearrange or cancel lessons, which can affect continuity. However having a teacher who is actively performing is often a good indication of the calibre and enthusiasm of the teacher. It may also mean that they are prepared to be more flexible when it comes to re-arranging lessons. </p>
+                </div>
+                <div class="col-sm-12">
+                    <h2 id="performance"><span class="htb3">Where and when</span></h2>
+                    <p>There are a few normal times to deliver lessons, and these are detailed in the table below. There is no "right" or "wrong" way to pick this, and the way a child learns and the availability of teachers both will influence the decision making process
+                    </p>
+
+                    <table class="table table-striped table-bordered table-hover ">
+                        <thead>
+                        <tr>
+                            <th>
+                                <strong>Location/Time</strong>
+                            </th>
+                            <th>
+                                <strong>Advantages</strong>
+                            </th>
+                            <th>
+                                <strong>Disadvantages</strong>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                In school time
+                            </td>
+                            <td>
+                                No transport issues, may learn in a group (cheaper, more sociable).
+                            </td>
+                            <td>
+                                May miss school lessons, less or no choice of teacher, no direct contact for parents with teacher, may learn in a group (less individual attention from teacher).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                In school after hours
+                            </td>
+                            <td>
+                                May learn in a group (cheaper, more sociable)..
+                            </td>
+                            <td>
+                                May conflict with other activities, no choice of teacher, no direct contact for parents with teacher, may learn in a group (less individual attention from teacher).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                At your house
+                            </td>
+                            <td>
+                                No transport issues, you can choose the teacher, you get to know the teacher, you can arrange to lessons at weekend and during school holidays, children learn in a comfortable environment.
+                            </td>
+                            <td>
+                                You will need to provide a suitable space in which to have lessons..
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                At the teacher’s house
+                            </td>
+                            <td>
+                                Teacher has arranged facilities best suited to their teaching style, you can choose the teacher, you get to know the teacher, you can arrange to lessons at weekend and during school holidays.
+                            </td>
+                            <td>
+                                Travel to and from the lesson: parent spends time in lessons or waiting.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Online (Via Skype ect)
+                            </td>
+                            <td>
+                                No travel time, Can schedule lessons at any time and from any location
+                            </td>
+                            <td>
+                                Requires purchase of high quality microphone/webcam, Teacher cannot physically demonstrate techniques to students, technical difficulties can cause delays/cancelled lessons, bad for beginners.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-12">
+                    <h2 id="performance"><span class="htb2">Find a Teacher Online (RYMN Teacher Database):</span></h2>
+                    <a class="htb3" href="/learn/teacherdb"><h4>Click <span class="htb2">here</span> to visit the RYMN Teacher Database</h4></a>
+                    <p>There are several websites where teachers advertise their services – the most commonly used is <a href="www.musicteachers.com">www.musicteachers.com</a>  – which also gives a fair amount of useful advice.  However, this site (and most others) will have a disclaimer similar to ours below.</p>
+                    <h4>Disclaimer:</h4>
+                    <p>We have no control over the teachers listed on this site.  We have designed it to give as much information as possible but we are not responsible for the accuracy of the content – this is entered by the teachers themselves.
+                       <br> If we find any inaccurate or misleading information we will, of course, delete the entry – but we cannot take responsibility for vetting every teacher and their presence on this site is no guarantee of their quality.
+                    </p>
+                </div>
             </div>
         </section>
     </article>
-
-
-    <section class="apache">
-        <div class="container">
-            <div class="col-sm-6 apache-box">
-                <h2>Nginx &amp; Apache</h2>
-                <p>Nginx is a web server which comes as standard in our <a href="/vps-web-hosting/">VPS</a> and <a  href="/dedicated-web-hosting/">Managed Dedicated Servers</a>. It's highly efficient at handling static content such as HTML, JavaScript and images. It runs in front of the Apache web server, dealing with specific end-user requests to websites. Working together, Apache can deal with its workload faster – alongside Nginx’s already speedy processing for “easy” requests.</p>
-            </div>
-            <div class="col-sm-6 apache-image">
-                <img src="/images/apache.png">
-            </div>
-        </div>
-    </section>
-
-    <section class="zend">
-        <div class="container">
-            <div class="col-sm-6 zend-image">
-                <img src="/images/zend.png">
-            </div>
-            <div class="col-sm-6 zend-box">
-                <h2>Zend Opcode Caching</h2>
-                <p>Zend is a web application accelerator, which is installed in front of your web server and can speed up your website significantly. It's designed for content-heavy dynamic sites and effectively caches content, so that the web server only needs to fetch website files periodically when it doesn’t have a relevant cached copy. This means less server resources are required for big content-heavy sites, and because the web server doesn’t have to do any work if a page is cached, your users get a lightning-fast browsing experience too!</p>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="foundations" class="the-foundations container">
-
-        <h2>The Foundations</h2>
-
-        <div class="col-sm-6 col-md-4 foundation">
-            <section class="ht-box"><div><img src="/images/ht-hardware.png"></div></section>
-            <h3 class="htb1">Awesome Hardware</h3>
-            <p>We exclusively use the latest Dell web servers. They're loaded with high-quality RAM, multi-core processors, RAID SSD storage and then plugged in to a high-quality network. Why? Because it makes your website reliable, fast and enjoyable for your users!</p>
-        </div>
-        <div class="col-sm-6 col-md-4 foundation">
-            <section class="ht-box"><div><img src="/images/ht-data.png"></div></section>
-            <h3 class="htb2">Manchester Datacentre</h3>
-            <p>Every server needs a home. Our servers live in Manchester under 24-hour manned security, CCTV, fire suppression, environmental monitoring and independent &amp; redundant power supplies, with 24/7 on-site technical engineers.</p>
-        </div>
-        <div class="col-sm-6 col-md-4 foundation">
-            <section class="ht-box"><div><img src="/images/ht-bandwidth.png"></div></section>
-            <h3 class="htb3">Tier-1 bandwidth</h3>
-            <p>All our servers are fed through a cross connection to a number of Tier-1 bandwidth carriers. The techie bit: we use diverse fibre routing through multiple redundant core switches and routers. It just means that we’ll ensure your website is always accessible.</p>
-        </div>
-        <div class="col-sm-6 col-md-4 foundation">
-            <section class="ht-box"><div><img src="/images/ht-monitor.png"></div></section>
-            <h3 class="htb4">24/7 Server Monitoring</h3>
-            <p>Keeping servers online is what it’s all about. That’s why we monitor key processes on all our servers in real time, 24 hours a day – so if we see any early signs of trouble, we can do something about it before it becomes a problem.</p>
-        </div>
-        <div class="col-sm-6 col-md-4 foundation">
-            <section class="ht-box"><div><img src="/images/ht-plesk.png"></div></section>
-            <h3 class="htb5">Simple Plesk Control Panel</h3>
-            <p>All Nublue hosting comes with the Odin Plesk 12 control panel. Plesk puts the emphasis on usability, and greatly simplifies the process of managing your web hosting space and email accounts. It makes things simpler for you, and that’s why we use it.</p>
-        </div>
-        <div class="col-sm-6 col-md-4 foundation">
-            <section class="ht-box"><div><img src="/images/ht-backups.png"></div></section>
-            <h3 class="htb6">Backups</h3>
-            <p>Using R1Soft Continuous Data Protection (CDP) we backup every server, every night, and keep those backups for 10 days. For free. We do this because we think it’s the responsible thing to do – and to give all our customers the peace of mind that their data is safe.</p>
-        </div>
-
-    </section>
 
 @endsection

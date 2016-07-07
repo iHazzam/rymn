@@ -386,7 +386,9 @@ footer {
 #map{
     height:70vh;
 }
-
+.nonewline{
+    display:inline;
+}
 .ssd {
     margin: 0 0 40px;
     text-align: left;
@@ -405,19 +407,26 @@ footer {
 }
 
 .ht-box div {
-    border-radius: 50%;
-    background: #fff;
-    padding: 50px;
-    width: 190px;
-    height: 190px;
-    margin: 0 auto;
+    min-height: 190px;
+    /*border-radius: 50%;*/
+    /*background: #fff;*/
+    /*!*padding: 50px;*!*/
+    /*width: 190px;*/
+    /*height: 190px;*/
+    /*margin: 0 auto;*/
 }
 
 .ht-box img {
-    text-align: center;
+    vertical-align: middle;
     margin: 0 auto;
+    max-width: 200px;
+    max-height: 200px;
 }
-
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
 .foundation {
     margin: 0 0 60px!important;
 }
@@ -491,6 +500,30 @@ footer {
     background-color: #111;
 }
 .img_small{
-    padding-top: 8em;
+
     max-width: 100%;
+}
+.ht-box2 {
+    background: #f7f7f7;
+    text-align: center;
+    padding: 15px;
+    margin: 0 0 40px;
+
+}
+
+.ht-box2 img {
+    vertical-align: middle;
+    margin: 0 auto;
+    max-height: 400px;
+}
+#getTeacherDetails{
+    padding:0;
+}
+.listgrouptable td{
+    padding: 10px;
+    padding-left: 30px;
+}
+.contains_facebook{
+    width: 50%;
+    margin: 0 auto;
 }

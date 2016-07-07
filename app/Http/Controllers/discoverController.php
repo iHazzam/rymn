@@ -18,6 +18,9 @@ class discoverController extends Controller
     {
         return view('discover.calendar');
     }
+    public function social(){
+        return view('discover.social');
+    }
     public function updateCalendar(Event $event){
         $e = new \Spatie\GoogleCalendar\Event;
         $date = $event->date;

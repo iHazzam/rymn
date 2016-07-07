@@ -3,30 +3,19 @@
 @section('title', 'homepage')
 
 @section('body')
-    <article class="inpage-navbar col-lg-offset-2 col-lg-7">
-        <div class="">
-            <ul>
-                <li><a href="#singing">Singing</a></li>
-                <li><a href="#keys">Piano/Keyboards</a></li>
-                <li><a href="#strings">Strings</a></li>
-                <li><a href="#percussion">Percussion</a></li>
-                <li><a href="#wind">Woodwind</a></li>
-                <li><a href="#brass">Brass</a></li>
-            </ul>
-        </div>
-    </article>
-
     <article class="content">
         <section class="pull-left">
             <div class="container">
-                <div class="ssd col-sm-8">
+                <div class="ssd col-sm-12">
                     <br>
-                    <h2 class="set-left">Choosing an instrument</h2>
+                    <h2 class="set-left"><span class="htb6">Choosing an instrument:</span></h2>
                     <p>
                         There are many factors which go into choosing an instrument for your child to learn. Different instruments are more relevant and realistic at certain stages of a child's development, and lead to different oppotunities down the road including the ensembles you can join and with who and how you can play.
                         Remember, the goal of learning an instrument is to have fun and play together, so the first step is to choose the right (first?!) instrument for your child:
                     </p>
-                    <h2 class="set-left">Making a start:</h2>
+                </div>
+                <div class="ssd col-sm-8">
+                    <h2 class="set-left"><span class="htb3">Making a start:</span></h2>
                     <p>Before we get down to the practicalities, there are some important things to remember:-</p>
                     <ul>
                         <li>Few children will have had exposure to a wide variety of musical types and genres. (Most of them will have heard mainly “pop” music.) It is essential to teach them in such a way that it broadens their horizons and encourages them to explore new and less familiar types of music, especially those that are more intellectually and artistically challenging.</li>
@@ -35,12 +24,12 @@
                     </ul>
                 </div>
                 <div class="col-sm-3">
-                    <img class="img_small" src="http://i.imgur.com/hm9ZVF7.png">
+                    <section class="ht-box2"><div><span class="helper"></span><img class="img_small" src="http://i.imgur.com/hm9ZVF7.png"></div></section>
                 </div>
 
 
                 <div class="ssd col-sm-12">
-                    <h2 id="performance">Things to consider</h2>
+                    <h2 id="performance"><span class="htb2">Things to consider:</span></h2>
                     <p>Below exists information on all the types of instruments that could be played, and advice on when is right to choose the instrument for your child.</p>
                     <p>There are many factors that might affect your decision about which instrument to choose – here are just a few of the more important ones:-<p/>
 
@@ -65,7 +54,7 @@
         <h2>Guide to choosing an instrument</h2>
 
         <div class="col-sm-6 col-md-4 foundation">
-            <section class="ht-box"><div><img src="/images/ht-hardware.png"></div></section>
+            <section class="ht-box"><div><span class="helper"></span><img src="/imgs/singing.jpg"></div></section>
             <h3 class="htb_r">Singing</h3>
             <p><span class="htb1">Recommended minimum age:</span> 2-3</p>
             <p><span class="htb1">Instruments included: </span>Voice!</p>
@@ -74,7 +63,7 @@
             <p><span class="htb1">Practicalities:</span> Free! Try to learn to read music along the way!</p>
         </div>
         <div class="col-sm-6 col-md-4 foundation">
-            <section class="ht-box"><div><img src="/images/ht-data.png"></div></section>
+            <section class="ht-box"><div><span class="helper"></span><img src="/imgs/piano.jpg"></div></section>
             <h3 class="htb_r">Piano</h3>
             <p><span class="htb2">Recommended minimum age:</span> 4</p>
             <p><span class="htb2">Instruments included: </span>Piano, Electric Piano, Organ </p>
@@ -83,7 +72,7 @@
             <p><span class="htb2">Practicalities:</span> Free! Try to learn to read music along the way!</p>
         </div>
         <div class="col-sm-6 col-md-4 foundation">
-            <section class="ht-box"><div><img src="/images/ht-data.png"></div></section>
+            <section class="ht-box"><div><span class="helper"></span><img src="/imgs/strings.jpg"></div></section>
             <h3 class="htb_r">Strings</h3>
             <p><span class="htb3">Recommended minimum age:</span> 4-5</p>
             <p><span class="htb3">Instruments included: </span>Violin, Viola, Cello, Double Bass</p>
@@ -92,7 +81,7 @@
             <p><span class="htb3">Practicalities:</span> Transport issues for large Cellos and Basses can be a problem, requiring fold-down seats in cars!</p>
         </div>
         <div class="col-sm-6 col-md-4 foundation">
-            <section class="ht-box"><div><img src="/images/ht-data.png"></div></section>
+            <section class="ht-box"><div><span class="helper"></span><img src="/imgs/percussion.jpg"></div></section>
             <h3 class="htb_r">Percussion</h3>
             <p><span class="htb4">Recommended minimum age:</span> 8</p>
             <p><span class="htb4">Instruments included: </span>Drum kit, Timpani, Various tuned and untuned percussion</p>
@@ -101,7 +90,7 @@
             <p><span class="htb4">Practicalities:</span> Access to and transport of orchestral and other instruments can be a problem.</p>
         </div>
         <div class="col-sm-6 col-md-4 foundation">
-            <section class="ht-box"><div><img src="/images/ht-data.png"></div></section>
+            <section class="ht-box"><div><span class="helper"></span><img src="/imgs/wind.jpg"></div></section>
             <h3 class="htb_r">Wind</h3>
             <p><span class="htb5">Recommended minimum age:</span> 6-10 </p>
             <p><span class="htb5">Instruments included: </span>Flute, Oboe, Clarinet, Bassoon, Recorder, Saxophone, various others</p>
@@ -110,7 +99,7 @@
             <p><span class="htb5">Practicalities:</span> Reeds are required regularly, and there can be strong competition for places in ensembles</p>
         </div>
         <div class="col-sm-6 col-md-4 foundation">
-            <section class="ht-box"><div><img src="/images/ht-data.png"></div></section>
+            <section class="ht-box"><div><span class="helper"></span><img src="/imgs/brass.jpg"></div></section>
             <h3 class="htb_r">Brass</h3>
             <p><span class="htb6">Recommended minimum age:</span> 7-10 </p>
             <p><span class="htb6">Instruments included: </span>Trumpet, (French) Horn, Cornet, Trombone, Tuba</p>
@@ -120,5 +109,6 @@
         </div>
 
     </section>
+    <div id="centerme123_div">Please click <a href="{{asset('storage/instrument_analysis.pdf')}}">here</a> to download a full table containing more specific advice for all of the most common instruments listed above</div>
 
 @endsection

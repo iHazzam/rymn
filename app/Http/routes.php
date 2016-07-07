@@ -26,13 +26,18 @@ Route::get('/discover', 'pageController@discover');
 Route::get('/learn/instruments', 'learnController@instruments');
 Route::get('/learn/teacherdb', 'learnController@teacherdb');
 Route::get('/learn/teachers', 'learnController@teachers');
-Route::get('/learn/parents', 'learnController@parents');
-Route::get('/learn/kids', 'learnController@kids');
+Route::get('/learn/accompanists', 'learnController@accompanists');
+Route::get('/learn/maintainance','learnController@repaired');
+Route::get('/learn/exams','learnController@exams');
+Route::get('/learn/practice','learnController@practice');
+Route::get('/learn/purchase','learnController@purchase');
+
 /*teach*/
 Route::get('/teach/register', 'teachController@register');
 Route::get('/teach/resources', 'teachController@resources');
 /*play*/
 Route::get('/play/groups', 'playController@groups');
+Route::get('/play/join', 'playController@join');
 Route::get('/play/why', 'playController@why');
 Route::get('/play/advertise', 'playController@add_group');
 /*discover*/
@@ -60,3 +65,6 @@ Route::post('/postensemble', 'playController@newAd');
 Route::post('/teach/register/post', 'teachController@newTeach');
 Route::post('/mailing/reg/{list}', 'newsletterController@addtolist');
 Route::post('/learn/teachers', 'learnController@search');
+
+/*ajax get*/
+Route::get('/teach/teacher_details/{id}', 'teachController@getTeacherContactDetails');

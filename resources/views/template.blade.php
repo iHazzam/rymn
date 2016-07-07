@@ -15,6 +15,7 @@
     @yield('css')
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/css/bootstrap-dialog.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="{{url('css/rymn.css')}}" rel="stylesheet">
@@ -29,6 +30,7 @@
 </head>
 
 <body>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -71,10 +73,23 @@
                                 <a href="/learn/teachers"><i class=""></i> Find a teacher</a>
                             </li>
                             <li>
-                                <a href="/learn/parents"><i class=""></i> Information for parents</a>
+                                <a href="/learn/teacherdb"><i class=""></i> Teacher Database</a>
                             </li>
                             <li>
-                                <a href="/learn/kids"><i class=""></i>Information for kids</a>
+                                <a href="/learn/purchase"><i class=""></i> Buy and Repair</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="/learn/accompanists"><i class=""></i>Accompanists</a>
+                            </li>
+                            <li>
+                                <a href="/learn/maintainance"><i class=""></i>Instrument Repairers</a>
+                            </li>
+                            <li>
+                                <a href="/learn/exams"><i class=""></i>Exams</a>
+                            </li>
+                            <li>
+                                <a href="/learn/practice"><i class=""></i>Practice</a>
                             </li>
                         </ul>
                     </li>
@@ -101,7 +116,7 @@
                             </li>
                             <li role="separator" class="divider"></li>
                             <li>
-                                <a href="/play/groups"><i class=""></i>Join an ensemble</a>
+                                <a href="/play/join"><i class=""></i>Join an ensemble</a>
                             </li>
                             <li>
                                 <a href="/play/groups"><i class=""></i>Benifits of group playing</a>
@@ -156,10 +171,11 @@
 @show
 
 <!-- Page Content -->
+@if(!array_key_exists('facebook', $_COOKIE))
 <div class="facebook-advert">
     <div class="facebook-inner">
 
-        <span id='close-fb' onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false;'><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+        <span id='close-fb' onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); document.cookie = "facebook=true"; return false;'><i class="fa fa-times-circle" aria-hidden="true"></i></span>
     <p class="facebook-text"><a href="https://www.facebook.com/youth.music.network/"><span class="facebook-header"> Please visit and “like” our Facebook Page</span>
         <div class="fb_iframe_widget">
             <div class="fb-like" data-href="https://www.facebook.com/youth.music.network/" data-layout="box_count" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>
@@ -168,6 +184,7 @@
 
     </div>
 </div>
+@endif
 <div class="fullwidth">
     @yield('banner')
     <div class="container">
@@ -203,6 +220,8 @@
     <script src="{{url('/js/rymn.js')}}"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="{{url('js/bootstrap.min.js')}}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/js/bootstrap-dialog.min.js"></script>
 @yield('js')
 </body>
 

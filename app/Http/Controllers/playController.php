@@ -19,6 +19,10 @@ class playController extends Controller
     {
         return view('play.add_group');
     }
+    public function join()
+    {
+        return view('play.join');
+    }
     public function why()
     {
         return view('play.why');
