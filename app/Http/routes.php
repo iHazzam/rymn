@@ -65,6 +65,7 @@ Route::post('/postensemble', 'playController@newAd');
 Route::post('/teach/register/post', 'teachController@newTeach');
 Route::post('/mailing/reg/{list}', 'newsletterController@addtolist');
 Route::post('/learn/teachers', 'learnController@search');
+Route::post('/admin/dashboard/submit/post', 'adminController@process');
 
 /*ajax get*/
 Route::get('/teach/teacher_details/{id}', 'teachController@getTeacherContactDetails');

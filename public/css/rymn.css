@@ -471,6 +471,14 @@ footer {
     font-weight: bold;
     color: #0dadb9;
 }
+.boring{
+    font-weight: normal!important;
+    color: #000000;
+}
+.bold_div{
+    display:inline-block;
+    font-weight: bold;
+}
 .inpage-navbar{
 
 }

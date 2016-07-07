@@ -18,9 +18,20 @@
                         A rough guide to practice times:  For beginners, 5 – 10 minutes every day, building to about 15 or 20 minutes daily by the time you reach intermediate (grade 3).  For intermediate players, try to build it up to about ½ hour each day, maybe with the odd extra short stint.  For more advanced players (grade 6 upwards) aim for 1 hour each day, maybe in 2 separate stints, and occasionally a bit more.  As you approach grade 8, you will need to be doing up to 2 or more hours a day.<br>
                         Of course, more advanced players will probably also be playing in orchestras and ensembles, which may reduce the time they have for private practice.  That is fine, but try to make sure you do at least one stint of focussed, technical practice each day, on top of your other commitments.<br>
                         A useful tip:- If possible, don’t pack your instrument away in its case at the end of every practice stint – leave it out, so that you can just pick it up and play if you happen to have a couple of minutes to spare. (One possibility is to leave the instrument near the telly and, every time the adverts came on, pick it up and play!)<br>
-                        <br>
-                        Here’s a little illustrative story to think about:  Young Johnny comes home after his third cornet lesson and his Dad asks him: “How did you get on today? Show me what you’ve learnt.”  Johnny says: “Great. Listen to this!” – and plays the Little F & G march from Tune-a-day Book 1, pretty well accurately and in time.  Well, yes, he’s done OK!  On the other hand, young Freddy comes home after his third cornet lesson and his Dad asks the same question.  Freddy gets his cornet out and plays just one note – then says to his Dad: “Doesn’t that sound much better than last week?” Freddy is the one who is really making good progress! (And learning to understand music.)<br>
                     </p>
+                    <div class="bold_div">
+                        <p>
+                        <span class="htb5">Remember</span> – practising is not just about getting it right!  There are three elements to good practising:
+                        </p>
+                        <ol class="htb5">
+                            <li><span class="boring">Developing your technique – i.e. improving the mechanical and physical aspects of your playing.</span></li>
+                            <li><span class="boring">Getting the music right – i.e. playing the correct notes, in the right order, with the right rhythm, at the right speed, with the right dynamics.</span></li>
+                            <li style="font-style: italic"><span class="boring">Most important of all – making it sound better, making it mean something – this is what music is really about!</span></li>
+                        </ol>
+                    </div>
+                        <p>
+                            Here’s a little illustrative story to think about:  Young Johnny comes home after his third cornet lesson and his Dad asks him: “How did you get on today? Show me what you’ve learnt.”  Johnny says: “Great. Listen to this!” – and plays the Little F & G march from Tune-a-day Book 1, pretty well accurately and in time.  Well, yes, he’s done OK!  On the other hand, young Freddy comes home after his third cornet lesson and his Dad asks the same question.  Freddy gets his cornet out and plays just one note – then says to his Dad: “Doesn’t that sound much better than last week?” Freddy is the one who is really making good progress! (And learning to understand music.)<br>
+                        </p>
                 </div>
                 <div class="ssd col-xs-12">
                     <h2 class="set-left"><span class="htb4">Effective practice!</span></h2>
