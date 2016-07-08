@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Event;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
+use App\Group;
+use App\Teacher;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class adminController extends Controller
@@ -22,15 +26,18 @@ class adminController extends Controller
     }
     public function events()
     {
-        return view('admin.dashboard.moderate_events');
+        $events = Event::all()->sortBy("created_at");
+        return view('admin.dashboard.moderate_events', ['events' => $events]);
     }
     public function groups()
     {
-        return view('admin.dashboard.moderate_groups');
+        $groups = Group::all()->sortBy("created_at");
+        return view('admin.dashboard.moderate_groups', ['groups' => $groups]);
     }
     public function teachers()
     {
-        return view('admin.dashboard.moderate_teachers');
+        $teachers = Teacher::all()->sortBy("created_at");
+        return view('admin.dashboard.moderate_teachers', ['teachers' => $teachers]);
     }
     public function social()
     {
@@ -92,5 +99,41 @@ class adminController extends Controller
             return Redirect::back();
         }
     }
+    public function deleteGroup(Request $request, Group $group )
+    {
+        $group->delete();
+        if($group->trashed())
+        {
+            $request->session()->flash('alert-success', "Group successfully deleted from database!");
+        }
+        else{
+            dd("why!");
+            $request->session()->flash('alert-danger', "Group not deleted. Invalid permissions or other error");
+        }
+        return back();
+    }
+    public function deleteTeacher(Request $request, Teacher $teacher )
+    {
+        if($teacher->delete())
+        {
+            $request->session()->flash('alert-success', "Group successfully deleted from database!");
+        }
+        else{
 
+            $request->session()->flash('alert-danger', "Group not deleted. Invalid permissions or other error");
+        }
+        return back();
+    }
+    public function deleteEvent(Request $request, Event $event )
+    {
+        if($event->delete())
+        {
+            $request->session()->flash('alert-success', "Group successfully deleted from database!");
+        }
+        else{
+
+            $request->session()->flash('alert-danger', "Group not deleted. Invalid permissions or other error");
+        }
+        return back();
+    }
 }

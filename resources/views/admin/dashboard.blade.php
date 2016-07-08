@@ -1,45 +1,30 @@
 @extends('admin_template')
 
 @section('title', 'homepage')
-
-@section('banner')
-
-
-    <script>
-        $('.navbar-lower').affix({
-            offset: {top: 50}
-        });
-    </script>
-
-
-
-
-
-    <div class="divide-nav">
-        <div class="container">
-            <p class="divide-text">Admin Panel @yield('admin-title')</p>
-        </div>
-    </div>
-    <nav class="navbar navbar-default navbar-lower" role="navigation">
-        <div class="container">
-            <div class="collapse navbar-collapse collapse-buttons">
-                <form class="navbar-form navbar-left" role="search">
-                    <a href="dashboard/events" class="btn btn-primary">Events</a>
-                    <a href="dashboard/groups" class="btn btn-default">Groups</a>
-                    <a href="dashboard/teachers" class="btn btn-primary">Teachers</a>
-                    <a href="dashboard/social" class="btn btn-default">Social-Send</a>
-                    <a href="dashboard/submit" class="btn btn-primary">Submit Resources</a>
-                </form>
-            </div>
-        </div>
-    </nav>
-
-
-@endsection
-
+@section('admin-title', '- Social Sender')
 @section('body')
 
-    <h1> This is the admin dashboard </h1>
+    <article class="content">
+        <section class="pull-left">
+            <div class="container">
+                <div class="ssd col-sm-12">
+                    <br>
+                    <h2 class="set-left"><span class="htb6">Admin Panel</span></h2>
+                    <p>
+                        Important links:
+                    </p>
+                    <ul>
+                        <li><span class="htb2">Google Analytics:</span><a href="https://www.google.co.uk/analytics/#?modal_active=none">Username:riponymn@gmail.com</a></li>
+                        <li><span class="htb5">Web Developer: </span><a href="mailto:Harry@harrymessenger.co.uk">Harry@Harrymessenger.co.uk</a></li>
+                        <li><span class="htb3">Graphic designer: </span><a href="https://www.facebook.com/liquidvibedesigns/?pnref=lhc">LiquidVibeDesigns</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </section>
+    </article>
+
 
 
 @endsection

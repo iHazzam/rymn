@@ -23,11 +23,10 @@
             <div class="collapse navbar-collapse collapse-buttons">
                 <form class="navbar-form navbar-left" role="search">
                     <a href="/admin/dashboard" class="btn btn-default">Dashboard</a>
-                    <a href="events" class="btn btn-primary">Events</a>
-                    <a href="groups" class="btn btn-default">Groups</a>
-                    <a href="teachers" class="btn btn-primary">Teachers</a>
-                    <a href="social" class="btn btn-default">Social-Send</a>
-                    <a href="submit" class="btn btn-primary">Submit Resources</a>
+                    <a href="/admin/dashboard/events" class="btn btn-primary">Events</a>
+                    <a href="/admin/dashboard/groups" class="btn btn-default">Groups</a>
+                    <a href="/admin/dashboard/teachers" class="btn btn-primary">Teachers</a>
+                    <a href="/admin/dashboard/submit" class="btn btn-default">Submit Resources</a>
                 </form>
             </div>
         </div>

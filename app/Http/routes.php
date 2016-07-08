@@ -67,5 +67,9 @@ Route::post('/mailing/reg/{list}', 'newsletterController@addtolist');
 Route::post('/learn/teachers', 'learnController@search');
 Route::post('/admin/dashboard/submit/post', 'adminController@process');
 
+/*delete*/
+Route::delete('/admin/dashboard/groups/{group}','adminController@deleteGroup');
+Route::delete('/admin/dashboard/teachers/{teacher}','adminController@deleteTeacher');
+Route::delete('/admin/dashboard/events/{event}','adminController@deleteEvent');
 /*ajax get*/
 Route::get('/teach/teacher_details/{id}', 'teachController@getTeacherContactDetails');
