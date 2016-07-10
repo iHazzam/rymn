@@ -58,7 +58,8 @@ class discoverController extends Controller
 
                 $address = $a->concert_address_line1 . "<br>" . $a->city . "<br>" . $a->postcode;
             }
-            $datetime = $a->date . " " . $a->time;
+            $date = str_split($a->date,10)[0];
+            $datetime = $date . " " . $a->time;
             $datetime = Carbon::createFromFormat('Y-m-d H:i:s', $datetime, 'Europe/London')->toDayDateTimeString();
             $concert_details = $a->concert_details;
             $postcode = $a->postcode;

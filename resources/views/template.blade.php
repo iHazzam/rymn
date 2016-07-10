@@ -194,12 +194,13 @@
 </div>
 <div class="stick">
     <div class="col-md-offset-3 col-md-6 subscribe">
-        <form class="form-inline mailform" role="form" action="{{url('newsletter/subscribe_chimp')}}" method="post">
+        <form class="form-inline mailform" id="mailform" role="form" action="{{url('newsletter/subscribe_chimp')}}" method="post">
+            {{ csrf_field() }}
             <div class="form-group">
                 <label  for="subscribe-email"><span class="sub_text">Sign-up for news and information: </span></label>
                 <input type="text" name="email" placeholder="Enter your email..." class="subscribe-email form-control" id="subscribe-email">
             </div>
-            <button type="submit" class="btn btn-default">Subscribe</button>
+            <button class="btn btn-warning" type="submit" value="Subscribe">Subscribe</button>
         </form>
 
         <div class="success-message"></div>
@@ -222,6 +223,7 @@
 <script src="{{url('js/bootstrap.min.js')}}"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/js/bootstrap-dialog.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
 @yield('js')
 </body>
 

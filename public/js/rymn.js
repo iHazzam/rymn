@@ -24,3 +24,10 @@ $(document).ready(function(){
         $("#myModal").modal('show');
     });
 });
+
+$(document).ready(function() {
+    // bind 'myForm' and provide a simple callback function
+    $('#mailform').ajaxForm(function() {
+        alert("Added to mailing list!");
+    });
+});

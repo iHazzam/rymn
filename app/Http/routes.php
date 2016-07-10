@@ -63,7 +63,7 @@ Route::auth();
 Route::post('/discover/add/post', 'discoverController@newEvent' );
 Route::post('/postensemble', 'playController@newAd');
 Route::post('/teach/register/post', 'teachController@newTeach');
-Route::post('/mailing/reg/{list}', 'newsletterController@addtolist');
+Route::post('/newsletter/subscribe_chimp', 'newsletterController@addtolist');
 Route::post('/learn/teachers', 'learnController@search');
 Route::post('/admin/dashboard/submit/post', 'adminController@process');
 
@@ -73,3 +73,4 @@ Route::delete('/admin/dashboard/teachers/{teacher}','adminController@deleteTeach
 Route::delete('/admin/dashboard/events/{event}','adminController@deleteEvent');
 /*ajax get*/
 Route::get('/teach/teacher_details/{id}', 'teachController@getTeacherContactDetails');
+Route::post('/newsletter/subscribe_chimp', 'newsletterController@addtolist');

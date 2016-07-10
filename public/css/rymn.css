@@ -430,6 +430,30 @@ footer {
 .foundation {
     margin: 0 0 60px!important;
 }
+.brder1 {
+    border-style: solid;
+    border-color: #0dadb9;
+}
+
+.brder2  {
+    border-style: solid;
+    border-color: #fab519;
+}
+
+.brder3  {
+    border-style: solid;
+    border-color: #7d74c3;
+}
+
+.brder4  {
+    border-style: solid;
+    border-color: #00aeef;
+}
+
+.brder5  {
+    border-style: solid;
+    border-color: #f26767;
+}
 
 .foundation h3 {
     font-size: 16px;
@@ -517,6 +541,10 @@ footer {
     padding: 15px;
     margin: 0 0 40px;
 
+}
+
+.addspace{
+    padding-top: 50px;
 }
 
 .ht-box2 img {

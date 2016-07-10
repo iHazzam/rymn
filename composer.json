@@ -9,7 +9,8 @@
         "laravel/framework": "5.2.*",
         "laravelcollective/html": "^5.2",
         "google/apiclient": "1.1.*@beta",
-        "spatie/laravel-google-calendar": "^1.0"
+        "spatie/laravel-google-calendar": "^1.0",
+        "spatie/laravel-newsletter": "^3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
