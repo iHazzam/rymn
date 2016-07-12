@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed649e33-b377-40ad-868e-9b8b4cecf892" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/composer.lock" />
     </list>
     <ignored path="rymn.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -676,11 +676,11 @@
       <recent name="C:\laragon\www\rymn\app\laravel-google-calendar" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\rymn" />
       <recent name="C:\laragon\www\rymn\public\imgs\banners" />
       <recent name="C:\laragon\www\rymn\public\imgs" />
       <recent name="C:\laragon\www\rymn\public\imgs\files" />
       <recent name="C:\laragon\www\rymn\public\storage" />
-      <recent name="C:\laragon\www\rymn\storage" />
     </key>
   </component>
   <component name="RunManager">
@@ -762,12 +762,12 @@
       <workItem from="1467967623861" duration="9638000" />
       <workItem from="1467977396114" duration="1000" />
       <workItem from="1468104365928" duration="10806000" />
-      <workItem from="1468343674205" duration="11089000" />
+      <workItem from="1468343674205" duration="11245000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="334119000" />
+    <option name="totallyTimeSpent" value="334275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
