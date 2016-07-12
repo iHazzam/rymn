@@ -8,7 +8,7 @@
             <div class="container">
                 <div class="ssd col-xs-12">
                     <br>
-                    <h2 class="set-left"><span class="htb6">Practicing - tips and advice</span></h2>
+                    <h2 class="set-left"><span class="htb6">Practising - tips and advice</span></h2>
                     <h3 class="set-left"><span class="htb3">How much and how often?</span></h3>
                     <p>
                         It is too easy say “The more you do, the better you will get”. To a certain extent it is true but only if the practice is effective! (See below.) <br>

@@ -9,13 +9,12 @@
                 <div class="ssd col-xs-12">
                     <br>
                     <h2 class="set-left"><span class="htb6">Accompanists on RYMN</span></h2>
-                    <h3 class="set-left"><span class="htb3">Why would you need an accompanist</span></h3>
+                    <h3 class="set-left"><span class="htb3">Why would you need an accompanist? </span></h3>
                     <p>
-                        Playing some instruments alone can be rewarding and challenging, but much of the classical music repetoire is centered around a solo instrument and an accompanying part. Frequently this is intended to be an orchestra, however most students will not get the oppotunity to play with an orchestra until they are much further along in their musical development. Instead, the piano or organ is can be an exceptional replacement to learn to play with others and to
-                        embellish your playing in a small concert or in exams (indeed, an accompanist is required for most music exams).
+                        Playing an instrument on your own (solo) can be rewarding and challenging (especially the Piano, Organ or Harp) but, for most instruments, almost all the music written for them requires other players too.  Much of the repertoire involves a solo instrument with an accompanying part. Often, this will be written for Piano but sometimes it is intended to be an orchestra.  However, but most students will not get the opportunity to play solos with an orchestra until they are much further along in their musical development so, instead, the piano is an obvious replacement. Playing with a piano helps you to learn to play with others and enhances your playing in any small concerts, festivals or in exams (In fact, a piano accompanist is required for most music exams).
                     </p>
                     <p>
-                        The skill of accompanying requires a pianist well practiced in keeping time with others, adjusting along with the solo player and compensating for any small changes in speed (Tempo) or volumne (Dynamics). Someone well versed in accompanying can really bring out the best in a young musician. Skills to look for in an accompanist include previous experience, high level of piano skill and patience. Below, is listed anyone who has indicated to RYMN that they accompany students, and the level they accompany.
+                        If you are a pianist yourself, accompanying can be great fun – and one of the best and most enjoyable ways to learn to accompany, to play with others and to improve your reading and rhythmic skills is to play piano duets, ideally with somebody who is better then you!
                     </p>
                 </div>
                 <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">

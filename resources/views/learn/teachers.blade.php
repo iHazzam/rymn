@@ -10,19 +10,19 @@
                     <br>
                     <h2 class="set-left"><span class="htb6">Finding a Teacher:</span></h2>
                     <p>
-                        This is even more important than <a href="/learn/instruments">choosing an instrument</a>!  A good teacher will be able to advise about choosing and help with and finding an instrument. Usually, your first port of call will be your school or the County Music Service – but bear in mind that, as your child progresses to a more advanced level, they may need individual lessons with a specialist teacher and the school or County Music Service may be unable to provide this.
+                        This is even more important than <a href="/learn/instruments">choosing an instrument</a>!  A good teacher will be able to help and advise about choosing and finding an instrument. Usually, your first port of call will be your school or the County Music Service – but bear in mind that, as your child progresses to a more advanced level, they may need individual lessons with a specialist teacher and the school or County Music Service may be unable to provide this.
                     </p>
                 </div>
                 <div class="ssd col-sm-8">
                     <h2 class="set-left"><span class="htb3">Qualifications:</span></h2>
-                    <p>There are a vast amount of qualifications available to a music teacher, proving their playing ability or teaching quality. These are usually a good initial indicator of the level of the teacher however while teaching ability and technical ability are a good indicator, musical prowess, knowledge and experience can often be just as important. It is also desirable that the teacher is (or once was) capable of performing at a high level. These are just some of the qualifications a teacher may have:</p>
+                    <p>There are numerous qualifications available to music teachers, proving their playing ability or teaching quality. These are usually a good initial indicator of the level of the teacher. However, whilst teaching ability and technical ability are good indicators, musical prowess, knowledge and experience can often be just as important. It is also desirable that the teacher is (or at least has been) capable of performing at a high level. These are just some of the qualifications a teacher may have:</p>
                     <ul>
-                        <li>Dip ABRSM, LRSM, FRSM <span class="explain">Qualifications from Examinations Board.</span></li>
-                        <li>LRAM, ARCM, FRCM, LTCL, ATCL, AGSM, LGSM, ARNCM, GRNCM (etc.)<span class="explain">Diplomas from music colleges (more examples from college websites).</span></li>
-                        <li>BA, BMus, MMus, DMus<span class="explain">Degree (from university).</span></li>
-                        <li>PGCE<span class="explain">Postgraduate teaching qualification.</span></li>
-                        <li>QTS<span class="explain">Qualified Teacher Status (will have a number from Dept of Education).</span></li>
-                        <li>CRB/DBS check<span class="explain">Certificate showing they have been cleared by the criminal records bureau(Pre-2015) or the Disclosure and Barring Service.</span></li>
+                        <li>Dip ABRSM, LRSM, FRSM <span class="explain">- Qualifications from Examinations Board.</span></li>
+                        <li>LRAM, ARCM, FRCM, LTCL, ATCL, AGSM, LGSM, ARNCM, GRNCM (etc.)<span class="explain"> - Diplomas from music colleges (more examples from college websites).</span></li>
+                        <li>BA, BMus, MMus, DMus<span class="explain"> - Degree (from university).</span></li>
+                        <li>PGCE<span class="explain"> - Postgraduate teaching qualification.</span></li>
+                        <li>QTS<span class="explain"> - Qualified Teacher Status (will have a number from Dept of Education).</span></li>
+                        <li>CRB/DBS check<span class="explain"> - Certificate showing they have been cleared by the criminal records bureau (Pre-2015) or the Disclosure and Barring Service.</span></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
@@ -30,7 +30,7 @@
                 </div>
                 <div class=" col-sm-12">
                     <p>
-                        Some teachers may also have undergone training in child protection. Some will have qualifications in specialised teaching methods (e.g. Suzuki, Dalcrose, Orff, Kodaly). They may be a member of a teaching union –  <span style="font-weight: bold">ISM</span> (Incorporated Society of Musicians – which requires evidence of a high level of musical accomplishment), <span style="font-weight: bold">MMA</span>  (Music Masters Association)  <span style="font-weight: bold">orMU </span>(Musicians’ Union). This means they will have liability insurance and access to professional advice. They may also be a member of a professional teaching body, e.g. <span style="font-weight: bold"> ESTA</span> (European String Teachers Association), or <span style="font-weight: bold">FIPMT</span>  (Institute of Professional Music Teachers).
+                        Some teachers may also have undergone training in child protection. Some will have qualifications in specialised teaching methods (e.g. Suzuki, Dalcrose, Orff, Kodaly). They may be a member of a teaching union –  <span style="font-weight: bold">ISM</span> (Incorporated Society of Musicians – which requires evidence of a high level of musical accomplishment), <span style="font-weight: bold">MMA</span>  (Music Masters Association)  <span style="font-weight: bold">or MU </span>(Musicians’ Union). This means they will have liability insurance and access to professional advice. They may also be a member of a professional teaching body, e.g. <span style="font-weight: bold"> ESTA</span> (European String Teachers Association), or <span style="font-weight: bold">FIPMT</span>  (Institute of Professional Music Teachers).
                     </p>
                 </div>
                 <div class="col-sm-12">

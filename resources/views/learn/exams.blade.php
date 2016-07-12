@@ -11,14 +11,14 @@
                     <h2 class="set-left"><span class="htb6">Music Exams</span></h2>
                     <h3 class="set-left"><span class="htb3">Why take an exam?</span></h3>
                     <p>
-                        Students are encouraged to take music exams to both have something to work towards, to be able to measure and compare their ability in order to join appropriate ensembles, and as a way of personal pride and progress in the exam. Of course, the object of playing an instrument is not, primarily, to pass exams or to compete with others.  However, both examinations and competitions can be effective ways of motivating pupils as well as a useful guide to progress.  They also provide opportunities for students to perform – which can be useful if schools do not create such opportunities. This can also be a help when, at a more advanced stage, students need to audition for places in orchestras or admission to college.
+                        Students are often encouraged to take music exams, either to have something to work towards, or to be able to measure and compare their ability in order to join appropriate ensembles, or as a way of encouraging personal pride in their progress..
                     </p>
                     <h3 class="set-left"><span class="htb4">The examinations themselves</span></h3>
                     <p>
                         There are several different types of exams.  The most common are the ABRSM grade exams – grade 1 to 8 and then diploma level.  (Trinity College of Music provides an alternative system.)
                     </p>
                     <p>
-                        The great advantage of these exams is that you can take them when you are ready! There will probably be at least one centre offering exams in your area at least once each term.#
+                        The great advantage of these exams is that you can take them when you are ready! There will probably be at least one centre offering exams in your area at least once each term.
                     </p>
                     <p>
                         Some people like to take every grade, in succession, to keep a check on their progress.  However, there is no need to do this – you can just sit whatever exam you like, whenever you like.  Most people take grade 3, grade 5 and then, later, a more advanced grade, usually grade 8.  (N.B. – if you want to sit an advanced grade, above grade 5, you will also need to pass the grade 5, written theory exam.)
@@ -27,7 +27,7 @@
                         One big danger of focussing too much attention on grade exams is that you may end up learning only those pieces required for the exams – when, really, you should be learning and playing far more and a far greater variety of music than that!
                     </p>
                     <p>
-                        Also, exams don’t encourage you to play with other people – and it is from playing with others that you will get the most pleasure and the greatest educational benefit from your musical activities.
+                        Also, exams don’t encourage you to play with other people (apart from your accompanist) and and it is from playing with others that you will get the most pleasure and the greatest educational benefit from your musical activities.
                     </p>
                     <p>
                         Remember, exams don’t actually teach you anything and they don’t serve any useful purpose other than providing a rough guide to your progress and, maybe, a means of motivation.

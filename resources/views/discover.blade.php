@@ -34,7 +34,20 @@
             @endif
         @endforeach
     </div> <!-- end .flash-message -->
-    <h1 class="fix-middle">this is the discover page of the site. Test!</h1>
+    <div class="col-sm-6 col-md-4 foundation ">
+        <a href="http://rymn.dev/discover/map"><section class="ht-box brder3"><div><span class="helper"></span><img src="/imgs/banners/googlemaps_500.png"></div></section>
+            <h3 class="htb3">Find our events on google maps</h3></a>
+    </div>
+    <div class="col-sm-6 col-md-4 foundation">
+        <a href="https://www.facebook.com/youth.music.network/?fref=ts"><section class="ht-box  brder2"><div><span class="helper"></span><img src="/imgs/banners/facebook_500.png"></div></section>
+            <h3 class="htb2">Check our facebook page<br></h3></a>
+    </div>
+    <div class="col-sm-6 col-md-4 foundation  ">
+        <a href="http://www.stcticketing.org/index.php?p=concert"><section class="ht-box brder4"><div><span class="helper"></span><img src="/imgs/banners/eventsdiary_500.png"></div></section>
+            <h3 class="htb4">Or check the North Yorkshire Music and Arts Events Diary!</h3></a>
+    </div>
+
+
 
 
 @endsection
