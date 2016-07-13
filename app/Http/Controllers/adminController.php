@@ -74,7 +74,7 @@ class adminController extends Controller
                     case '10':
                         Storage::put('resources/10-16/'.$filename, $request->file_upload);
                         break;
-                    case '16+':
+                    case '16':
                         Storage::put('resources/16+/'.$filename,$request->file_upload);
                         break;
                     default:
