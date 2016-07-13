@@ -513,11 +513,11 @@ class teachController extends Controller
             $teacher_instruments->teacher_id = $teacher->id;
             $teacher_instruments->save();
             $request->session()->flash('alert-success', "Thanks! Teacher registration complete!");
-            return Redirect::back();
+            return redirect()->back();
         }
         else{
             $request->session()->flash('alert-danger',$errormessage);
-            return Redirect::back()->withInput()->withErrors($errormessage);
+            return redirect()->back()->withInput(Input::all())->withErrors($errormessage);
         }
     }
     function is_valid_postcode($postcode) {

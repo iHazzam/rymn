@@ -1,5 +1,9 @@
 $( document ).ready(function() {
-    console.log( "ready!" );
+    $("#instrument_1").change(function(){
+        var selected = $('#instrument_1').val();
+        $('#'+selected).prop('disabled', true);
+        $('#'+selected).prop('checked', true);
+    });
 });
 
 
@@ -40,13 +44,17 @@ $( document ).ready(function() {
     });
 
     $(".open3").click(function() {
-        if($('#basicform input[type=checkbox]:checked').length)
+        if(($('#instrument_1')[0].checkValidity()) && ($('#instrument_1_select_min')[0].checkValidity()) && ($('#instrument_1_select_max')[0].checkValidity()) && ($('#Qualification')[0].checkValidity()) && ($('#performing_experience')[0].checkValidity()) && ($('#teaching_experience')[0].checkValidity()))
         {
             $(".frm").hide("fast");
             $("#sf4").show("slow");
+            if(!$('#incomplete').hasClass('hidden'))
+            {
+                $("#incomplete").addClass('hidden');
+            }
         }
         else{
-            $("#helpcheckbox").removeClass('hidden');
+            $("#incomplete").removeClass('hidden');
         }
     });
 
@@ -56,18 +64,10 @@ $( document ).ready(function() {
     });
 
     $(".open4").click(function() {
-        if(($('#instrument_1')[0].checkValidity()) && ($('#instrument_1_select_min')[0].checkValidity()) && ($('#instrument_1_select_max')[0].checkValidity()) && ($('#Qualification')[0].checkValidity()) && ($('#performing_experience')[0].checkValidity()) && ($('#teaching_experience')[0].checkValidity()))
-        {
+
             $(".frm").hide("fast");
             $("#sf5").show("slow");
-            if(!$('#incomplete').hasClass('hidden'))
-            {
-                $("#incomplete").addClass('hidden');
-            }
-        }
-        else{
-            $("#incomplete").removeClass('hidden');
-        }
+
     });
 
     $(".back4").click(function() {

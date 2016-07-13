@@ -28,6 +28,9 @@
     <![endif]-->
 {{--jquery at top to fix banner?--}}
     <script src="{{url('/js/jquery.js')}}"></script>
+
+    <script src="{{url('js/bootstrap.min.js')}}"></script>
+
 </head>
 
 <body>
@@ -220,8 +223,6 @@
 <!-- jQuery -->
     <script src="{{url('/js/rymn.js')}}"></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="{{url('js/bootstrap.min.js')}}"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/js/bootstrap-dialog.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
 @yield('js')
