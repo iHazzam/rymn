@@ -63,6 +63,7 @@ Route::auth();
 Route::post('/discover/add/post', 'discoverController@newEvent' );
 Route::post('/postensemble', 'playController@newAd');
 Route::post('/teach/register/post', 'teachController@newTeach');
+Route::post('/play/join/post', 'playController@search');
 Route::post('/newsletter/subscribe_chimp', 'newsletterController@addtolist');
 Route::post('/learn/teachers', 'learnController@search');
 Route::post('/admin/dashboard/submit/post', 'adminController@process');

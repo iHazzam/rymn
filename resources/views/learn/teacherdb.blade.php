@@ -91,6 +91,7 @@
         <a id="teacherpanellink">
     <div class="col-lg-3 col-sm-4 col-xs-8 panel panel-default teacherpanel">
         <div class="panel-body">
+            <a href="#modal{{$teacher->id}}" role="button" data-toggle="modal" >
             <div id="minheight">
                 <img src="{{isset($teacher->thumbnail_img) ? '/'.$teacher->thumbnail_img : "http://placehold.it/100x100"}}" alt="leftimg" class="teachercard_img" />
                 <br>
@@ -183,7 +184,7 @@
 
 
         </div>
-
+        </a>
         </div>
         <div class="bottom-line-ban" id="teacher_modal{{$teacher->id}}"><button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal{{$teacher->id}}">To find out more, click here &nbsp; <i class="fa fa-angle-double-down" aria-hidden="true"></i> </button></div>
     </div>

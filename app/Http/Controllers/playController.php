@@ -7,6 +7,7 @@ use App\Group;
 Use Illuminate\Support\Facades\Input;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\DB;
 class playController extends Controller
 {
     //get
@@ -21,8 +22,115 @@ class playController extends Controller
     }
     public function join()
     {
-        return view('play.join');
+        $groups = Group::all();
+        foreach ($groups as $group)
+        {
+            $group = str_replace("_"," ",$group);
+            if(property_exists($group, "minimum_level"))
+            {
+                if($group->minimum_level == 'concert soloist')
+                {
+
+                }
+                else if($group->minimum_level == ('diploma' | null) )
+                {
+
+                }
+                else{
+                    $group->level = str_replace('grade','grade ',$group->level);
+                }
+            }
+        }
+        $cities = ['ripon'=>'Ripon','thirsk'=>'Thirsk','easingwold'=>'Easingwold','boroughbridge'=>'Boroughbridge','harrogate'=>'Harrogate','knaresborough'=>'Knaresborough','pately_bridge'=>'Pately Bridge','northallerton'=>'Northallerton','ripley'=>'Ripley','masham'=>'Masham','richmond'=>'Richmond','skipton'=>'Skipton'];
+        $types = ['brass_band'=>'Brass Band','choir'=>'Choir','community_group'=>'Community Group','orchestra'=>'Orchestra','percussion_ensemble'=>'Percussion Ensemble', 'pop/rock_band' => 'Pop/Rock band','string_chamber_group'=>'String Chamber Group','string_group'=>"String Group",'wind_band'=>'Wind band','wind_chamber_group'=>'Wind Chamber Group'];
+
+
+        return view('play.join',['groups' => $groups, 'cities'=>$cities,'types'=>$types]);
     }
+    public function search(Request $request){
+
+        $reqall = $request->all();
+        $reqArray = [];
+        if($request->has('type'))
+        {   
+            $type = $reqall['type'];
+            $groups = DB::table('groups')->where('ensemble_type', '=', $type)->get();
+            $reqArray[] = $groups;
+
+        }
+        if($request->has('location'))
+        {
+            $type = $reqall['location'];
+            $groups = DB::table('groups')->where('group_town', '=', $type)->get();
+            $reqArray[] = $groups;
+        }
+        if($request->has('recruiting'))
+        {
+            $type = $reqall['recruiting'];
+            $groups = DB::table('groups')->where('recruiting', '=', 1)->get();
+            $reqArray[] = $groups;
+        }
+        $ids = $this->restrictValues($reqArray);
+
+        $groups = [];
+        if(count($ids) > 1)
+        {
+            $ids_final = call_user_func_array('array_intersect', $ids);
+            foreach($ids_final as $id)
+            {
+                $groups[] = DB::table('groups')->where('id', '=', $id)->get();
+            }
+        }
+        elseif($ids != null) {
+            if(count($ids) == 1)
+            {
+                foreach ($ids as $id) {
+                    $groups[] = DB::table('groups')->where('id', '=', $id)->get();
+                }
+            }
+            foreach ($ids[0] as $id) {
+                $groups[] = DB::table('groups')->where('id', '=', $id)->get();
+            }
+        }
+        else{
+            $request->session()->flash('alert-danger',"No results found for this search! Please try again!");
+            return Redirect::back();
+        }
+
+
+        foreach ($groups as $group)
+        {
+            var_dump($group);
+            if(is_array($group))
+            {
+                $group=$group[0];
+            }
+
+            if(property_exists($group, "minimum_level"))
+            {
+                if($group->minimum_level == 'concert soloist')
+                {
+
+                }
+                else if($group->minimum_level == ('diploma' | null) )
+                {
+
+                }
+                else{
+                    $group->level = str_replace('grade','grade ',$group->level);
+                }
+            }
+        }
+        $cities = ['ripon'=>'Ripon','thirsk'=>'Thirsk','easingwold'=>'Easingwold','boroughbridge'=>'Boroughbridge','harrogate'=>'Harrogate','knaresborough'=>'Knaresborough','pately_bridge'=>'Pately Bridge','northallerton'=>'Northallerton','ripley'=>'Ripley','masham'=>'Masham','richmond'=>'Richmond','skipton'=>'Skipton'];
+        $types = ['brass_band'=>'Brass Band','choir'=>'Choir','community_group'=>'Community Group','orchestra'=>'Orchestra','percussion_ensemble'=>'Percussion Ensemble', 'pop/rock_band' => 'Pop/Rock band','string_chamber_group'=>'String Chamber Group','string_group'=>"String Group",'wind_band'=>'Wind band','wind_chamber_group'=>'Wind Chamber Group'];
+
+
+        return view('play.join',['groups' => $groups, 'cities'=>$cities,'types'=>$types]);
+    }
+
+
+
+
     public function why()
     {
         return view('play.why');
@@ -120,5 +228,17 @@ class playController extends Controller
         //add message to the redirect
         $request->session()->flash('alert-success', "Congrats, group registration was successful. You can now add this group's events to the calendar!");
         return redirect('/play');
+    }
+    function restrictValues($array)
+    {
+        $array_keys = [];
+        foreach ($array as $key => $tier2)
+        {
+            foreach($tier2 as $key2 => $tier3)
+            {
+                $array_keys[$key][$key2] = $tier3->id;
+            }
+        }
+        return $array_keys;
     }
 }
