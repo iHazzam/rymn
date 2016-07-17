@@ -136,4 +136,68 @@ class adminController extends Controller
         }
         return back();
     }
+    public function getAllMailingList()
+    {
+        $raw_emails = DB::table('subscribers')->select('email')->get();
+        $tml = DB::table('teachers')->select('email')->get();
+        $gml = DB::table('groups')->select('contact_email')->get();
+        $processString = "";
+        $debunk = [];
+        foreach($raw_emails as $r)
+        {
+            $debunk[] = $r->email;
+        }
+        foreach($tml as $t)
+        {
+            $debunk[] = $t->email;
+        }
+        foreach($gml as $g)
+        {
+            $debunk[] = $g->contact_email;
+        }
+        $debunk = $this->array_iunique($debunk);
+        foreach($debunk as $k => $d)
+        {
+            $processString = $processString . $d . ";";
+        }
+        return json_encode($processString);
+    }
+    public function getTeachersMailingList()
+    {
+        $raw_emails = DB::table('teachers')->select('email')->get();
+        $processString = "";
+        $debunk = [];
+        foreach($raw_emails as $r)
+        {
+            $debunk[] = $r->email;
+        }
+        $debunk = $this->array_iunique($debunk);
+        foreach($debunk as $k=>$d)
+        {
+            $processString = $processString . $d . ";";
+        }
+        return json_encode($processString);
+    }
+    public function getGroupsMailingList()
+    {
+        $raw_emails = DB::table('groups')->select('contact_email')->get();
+        $processString = "";
+        $debunk = [];
+        foreach($raw_emails as $r)
+        {
+            $debunk[] = $r->contact_email;
+        }
+        $debunk = $this->array_iunique($debunk);
+        foreach($debunk as $k=>$d)
+        {
+            $processString = $processString . $d . ";";
+        }
+        return json_encode($processString);
+    }
+    function array_iunique($array) {
+        return array_intersect_key(
+            $array,
+            array_unique(array_map("StrToLower",$array))
+        );
+    }
 }

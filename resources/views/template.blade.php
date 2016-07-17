@@ -28,7 +28,7 @@
     <![endif]-->
 {{--jquery at top to fix banner?--}}
     <script src="{{url('/js/jquery.js')}}"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
     <script src="{{url('js/bootstrap.min.js')}}"></script>
 
 </head>
@@ -196,8 +196,10 @@
 
     </div>
 </div>
+@if(!array_key_exists('banner', $_COOKIE))
 <div class="stick">
     <div class="col-md-offset-3 col-md-6 subscribe">
+        <span id='close-fb' onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); document.cookie = "banner=true"; return false;'><i class="fa fa-times-circle" aria-hidden="true"></i></span>
         <form class="form-inline mailform" id="mailform" role="form" action="{{url('newsletter/subscribe_chimp')}}" method="post">
             {{ csrf_field() }}
             <div class="form-group">
@@ -211,6 +213,7 @@
         <div class="error-message"></div>
     </div>
 </div>
+@endif
 <footer>
 
     <div class="col-lg-12">

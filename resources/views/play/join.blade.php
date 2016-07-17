@@ -15,7 +15,7 @@
     </div>
     <nav class="navbar navbar-default navbar-lower permalock" role="findingstuff">
         <div class="col-md-offset-3 col-md-6 col-xs-offset-1 col-xs-10">
-            <form class="navbar-form navbar-left form-inline"  id="teachdbform" method="post" action="/play/join/post">
+            <form class="navbar-form navbar-left form-inline"  id="teachdbform" method="post" action="{{ action('playController@search') }}">
                 {!! csrf_field() !!}
                 <label>Group type
                     <select id="type" name="type" class="form-control">
@@ -69,8 +69,10 @@
                 </tr>
             </thead>
             <tbody>
+
+
             @foreach($groups as $group)
-                @if(is_array($group)) {{$group=$group[0]}} @endif
+                @if(is_array($group))  <?php $group=$group[0]; ?> @endif
                 @if($group->recruiting == 1)
                     <div id="modal{{$group->id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -86,8 +88,7 @@
                                     <p><span class="htb4">Minimum level:</span> {{$group->minimum_level}}</p>
                                     <p><span class="htb4">Audition?</span> @if($group->audition == 1)  <i class="fa fa-check htb3" aria-hidden="true"></i>  @else <i class="fa fa-times htb5"  aria-hidden="true"></i>@endif</p>
                                     <p><span class="htb4">Details:</span> {{$group->recruit_details}}</p>
-                                    <button type="button" class="btn btn-default" >Get Group Contact Email Address</button>
-
+                                    <button type="button" id="{{$group->id}}" name="{{$group->name}}" class="btn btn-default" onclick="openModal(this.id,this.name)" >Get Group Contact Email Address</button>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

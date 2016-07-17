@@ -177,7 +177,7 @@ public function kids()
         {
             $acc_temp['id'] = $a->id;
             $acc_temp['name'] = $a->first_name . ' ' . $a->last_name;
-            $level = $a->instruments_repaired;
+            $acc_temp['repaired'] = $a->instruments_repaired;
             $acc[] = $acc_temp;
         }
         return view('learn.maintainance', ['repair' => $acc]);
@@ -190,5 +190,8 @@ public function kids()
     }
     public function practice(){
         return view('learn.practice');
+    }
+    public function parents(){
+        return view('learn.parents');
     }
 }

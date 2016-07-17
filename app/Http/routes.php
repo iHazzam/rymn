@@ -24,6 +24,7 @@ Route::get('/discover', 'pageController@discover');
 /*Second-tier pages*/
 /*learn*/
 Route::get('/learn/instruments', 'learnController@instruments');
+Route::get('/learn/instruments/parents', 'learnController@parents');
 Route::get('/learn/teacherdb', 'learnController@teacherdb');
 Route::get('/learn/teachers', 'learnController@teachers');
 Route::get('/learn/accompanists', 'learnController@accompanists');
@@ -75,3 +76,7 @@ Route::delete('/admin/dashboard/events/{event}','adminController@deleteEvent');
 /*ajax get*/
 Route::get('/teach/teacher_details/{id}', 'teachController@getTeacherContactDetails');
 Route::post('/newsletter/subscribe_chimp', 'newsletterController@addtolist');
+Route::get('/play/join/get/{id}', 'playController@getGroupContactDetails');
+Route::get('/admin/dashboard/getAll', 'adminController@getAllMailingList');
+Route::get('/admin/dashboard/getTeach', 'adminController@getTeachersMailingList');
+Route::get('/admin/dashboard/getGroup','adminController@getGroupsMailingList');

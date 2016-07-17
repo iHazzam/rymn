@@ -88,9 +88,12 @@ class playController extends Controller
                     $groups[] = DB::table('groups')->where('id', '=', $id)->get();
                 }
             }
-            foreach ($ids[0] as $id) {
-                $groups[] = DB::table('groups')->where('id', '=', $id)->get();
+            else{
+                foreach ($ids[0] as $id) {
+                    $groups[] = DB::table('groups')->where('id', '=', $id)->get();
+                }
             }
+
         }
         else{
             $request->session()->flash('alert-danger',"No results found for this search! Please try again!");
@@ -100,7 +103,7 @@ class playController extends Controller
 
         foreach ($groups as $group)
         {
-            var_dump($group);
+            //var_dump($group);
             if(is_array($group))
             {
                 $group=$group[0];
@@ -240,5 +243,12 @@ class playController extends Controller
             }
         }
         return $array_keys;
+    }
+    function getGroupContactDetails($id){
+        $group = Group::where('id','=',$id)->first();
+        $groups = [];
+        $groups['email'] = $group->contact_email;
+        return json_encode($groups);
+
     }
 }
