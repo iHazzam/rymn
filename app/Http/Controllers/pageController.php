@@ -29,6 +29,18 @@ class pageController extends Controller
     {
         return view('discover');
     }
+    public function privacy()
+    {
+        return view('privacy');
+    }
+    public function cookies()
+    {
+        return view('cookies');
+    }
+    public function sitemap()
+    {
+        return view('sitemap');
+    }
     public function dashboard()
     {
         if(Auth::check())

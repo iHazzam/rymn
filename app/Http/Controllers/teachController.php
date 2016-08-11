@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Instruments_Taught;
 use App\Teacher;
+use App\User;
 use Illuminate\Http\Request;
-
+use Illuminate\Database\QueryException;
 use App\Http\Requests;
 
 use Storage;
@@ -50,6 +51,11 @@ class teachController extends Controller
             'teaching_experience' => 'required',
         ]);
         $error = false;
+        if($request->password != $request->password2)
+        {
+            $error = true;
+            $errormessage = "Passwords do not match!";
+        }
         $teacher = new Teacher();
         $teacher_instruments = new Instruments_Taught();
 
@@ -506,14 +512,27 @@ class teachController extends Controller
                 }
 
         }
+        $user = new User;
+        $user->name = $request->firstname . " " . $request->lastname;
+        $user->email = $request->email;
+        $user->password =  bcrypt($request->password);
         if($error == false)
         {
+            try{
+                $user->save();
+                $teacher->user_id = $user->id;
+                $teacher->save();
+                $teacher_instruments->teacher_id = $teacher->id;
+                $teacher_instruments->save();
+                $request->session()->flash('alert-success', "Thanks! Teacher registration complete!");
+                return redirect()->back();
+            }
+            catch(QueryException $e){
+                $errormessage = "This Email Address may already be registered. Please try logging in";
+                $request->session()->flash('alert-danger',$errormessage);
+                return redirect()->back()->withInput(Input::all())->withErrors($errormessage);
+            }
 
-            $teacher->save();
-            $teacher_instruments->teacher_id = $teacher->id;
-            $teacher_instruments->save();
-            $request->session()->flash('alert-success', "Thanks! Teacher registration complete!");
-            return redirect()->back();
         }
         else{
             $request->session()->flash('alert-danger',$errormessage);

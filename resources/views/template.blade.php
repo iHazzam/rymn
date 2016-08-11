@@ -161,7 +161,19 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
+                                @if(Auth::user()->isAdmin())
                                 <li><a href="{{ url('admin/dashboard') }}"><i class="fa fa-btn fa-tachometer"></i> Admin Panel</a></li>
+                                @endif
+                                @if(Auth::user()->isTeacher())
+                                   <li><a href="{{ url('edit/user') }}"><i class="fa fa-btn fa-tachometer"></i>Edit Teacher Details</a></li>
+                                @endif
+                                @if(Auth::user()->isRepairer())
+                                    <li><a href="{{ url('edit/repairer') }}"><i class="fa fa-btn fa-tachometer"></i>Edit Repairer Details</a></li>
+                                @endif
+                                @if(Auth::user()->isGroup())
+                                        <li><a href="{{ url('edit/group') }}"><i class="fa fa-btn fa-tachometer"></i>Edit Group Details</a></li>
+                                        <li><a href="{{ url('edit/events') }}"><i class="fa fa-btn fa-tachometer"></i>Edit Group Events</a></li>
+                                @endif
                                 <li><a href="{{ url('admin/logout') }}"><i class="fa fa-btn fa-sign-out"></i> Logout</a></li>
                             </ul>
                         </li>
@@ -217,7 +229,11 @@
 <footer>
 
     <div class="col-lg-12">
-        <p>Copyright &copy; Ripon Youth Music Network {{date("Y")}}</p>
+        <p>
+            <a href="{{ url('privacy') }}">Privacy Policy</a> &nbsp;
+            <a href="{{ url('sitemap') }}">Sitemap</a> &nbsp;
+            <a href="{{ url('cookies') }}">Cookies Policy</a> &nbsp;
+            Copyright &copy; Ripon Youth Music Network {{date("Y")}}</p>
     </div>
 </footer>
 <!-- /.container -->

@@ -1069,6 +1069,16 @@
                                         {!! Form::file('thumbnail_image') !!}
 
                                     </div>
+                                    <div class="form-group">
+                                        <label for="password" class="control-label">Please enter a password</label>
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="">
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password2" class="control-label">Please re-enter the password to confirm they match:</label>
+                                        <input type="password" class="form-control" id="password2" name="password2" placeholder="">
+
+                                    </div>
                                 </div>
 
                                 <div class="clearfix" style="height: 10px;clear: both;"></div>

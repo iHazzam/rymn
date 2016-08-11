@@ -4,6 +4,21 @@ $( document ).ready(function() {
         $('#'+selected).prop('disabled', true);
         $('#'+selected).prop('checked', true);
     });
+    $("#instrument_2").change(function(){
+        var selected = $('#instrument_2').val();
+        $('#'+selected).prop('disabled', true);
+        $('#'+selected).prop('checked', true);
+    });
+    $("#instrument_3").change(function(){
+        var selected = $('#instrument_3').val();
+        $('#'+selected).prop('disabled', true);
+        $('#'+selected).prop('checked', true);
+    });
+    $("#instrument_4").change(function(){
+        var selected = $('#instrument_4').val();
+        $('#'+selected).prop('disabled', true);
+        $('#'+selected).prop('checked', true);
+    });
 });
 
 

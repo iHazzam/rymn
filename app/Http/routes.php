@@ -21,6 +21,11 @@ Route::get('/learn', 'pageController@learn');
 Route::get('/teach', 'pageController@teach');
 Route::get('/play', 'pageController@play');
 Route::get('/discover', 'pageController@discover');
+Route::get('/user_login', 'loginController@userLogin');
+
+Route::get('/privacy', 'pageController@privacy');
+Route::get('/cookies', 'pageController@cookies');
+Route::get('/sitemap', 'pageController@sitemap');
 /*Second-tier pages*/
 /*learn*/
 Route::get('/learn/instruments', 'learnController@instruments');
