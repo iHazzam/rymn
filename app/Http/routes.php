@@ -26,6 +26,8 @@ Route::get('/user_login', 'loginController@userLogin');
 Route::get('/privacy', 'pageController@privacy');
 Route::get('/cookies', 'pageController@cookies');
 Route::get('/sitemap', 'pageController@sitemap');
+
+Route::auth();
 /*Second-tier pages*/
 /*learn*/
 Route::get('/learn/instruments', 'learnController@instruments');
@@ -53,6 +55,8 @@ Route::get('/discover/newsletter', 'discoverController@newsletter');
 Route::get('/discover/social', 'discoverController@social');
 Route::get('/discover/add', 'discoverController@addEvent' );
 Route::get('/discover/about', 'discoverController@about' );
+
+/*admin*/
 Route::get('/admin/dashboard', 'adminController@dashboard');
 Route::get('/admin/logout', 'adminController@logout');
 Route::get('/admin/dashboard/events', 'adminController@events');
@@ -61,8 +65,21 @@ Route::get('/admin/dashboard/groups', 'adminController@groups');
 Route::get('/admin/dashboard/social', 'adminController@social');
 Route::get('/admin/dashboard/submit', 'adminController@submit');
 
+Route::post('/admin/dashboard/submit/post', 'adminController@process');
 
-Route::auth();
+Route::get('/admin/dashboard/getAll', 'adminController@getAllMailingList');
+Route::get('/admin/dashboard/getTeach', 'adminController@getTeachersMailingList');
+Route::get('/admin/dashboard/getGroup','adminController@getGroupsMailingList');
+
+/*teacher*/
+Route::get('/edit/teacher', 'loginController@getTeacherDashboard')->middleware(['auth','teacher']);
+
+/*repairer*/
+Route::get('/edit/repairer', 'loginController@getRepairerDashboard')->middleware(['auth','repairer']);
+
+/*group*/
+Route::get('/edit/group', 'loginController@getTeacherDashboard')->middleware(['auth','group']);
+
 
 
 /*forms*/
@@ -72,7 +89,6 @@ Route::post('/teach/register/post', 'teachController@newTeach');
 Route::post('/play/join/post', 'playController@search');
 Route::post('/newsletter/subscribe_chimp', 'newsletterController@addtolist');
 Route::post('/learn/teachers', 'learnController@search');
-Route::post('/admin/dashboard/submit/post', 'adminController@process');
 
 /*delete*/
 Route::delete('/admin/dashboard/groups/{group}','adminController@deleteGroup');
@@ -82,6 +98,3 @@ Route::delete('/admin/dashboard/events/{event}','adminController@deleteEvent');
 Route::get('/teach/teacher_details/{id}', 'teachController@getTeacherContactDetails');
 Route::post('/newsletter/subscribe_chimp', 'newsletterController@addtolist');
 Route::get('/play/join/get/{id}', 'playController@getGroupContactDetails');
-Route::get('/admin/dashboard/getAll', 'adminController@getAllMailingList');
-Route::get('/admin/dashboard/getTeach', 'adminController@getTeachersMailingList');
-Route::get('/admin/dashboard/getGroup','adminController@getGroupsMailingList');
