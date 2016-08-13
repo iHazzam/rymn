@@ -57,19 +57,19 @@ Route::get('/discover/add', 'discoverController@addEvent' );
 Route::get('/discover/about', 'discoverController@about' );
 
 /*admin*/
-Route::get('/admin/dashboard', 'adminController@dashboard');
-Route::get('/admin/logout', 'adminController@logout');
-Route::get('/admin/dashboard/events', 'adminController@events');
-Route::get('/admin/dashboard/teachers', 'adminController@teachers');
-Route::get('/admin/dashboard/groups', 'adminController@groups');
-Route::get('/admin/dashboard/social', 'adminController@social');
-Route::get('/admin/dashboard/submit', 'adminController@submit');
+Route::get('/admin/dashboard', 'adminController@dashboard')->middleware(['auth','admin']);
+Route::get('/admin/logout', 'adminController@logout')->middleware(['auth','admin']);
+Route::get('/admin/dashboard/events', 'adminController@events')->middleware(['auth','admin']);
+Route::get('/admin/dashboard/teachers', 'adminController@teachers')->middleware(['auth','admin']);
+Route::get('/admin/dashboard/groups', 'adminController@groups')->middleware(['auth','admin']);
+Route::get('/admin/dashboard/social', 'adminController@social')->middleware(['auth','admin']);
+Route::get('/admin/dashboard/submit', 'adminController@submit')->middleware(['auth','admin']);
 
-Route::post('/admin/dashboard/submit/post', 'adminController@process');
+Route::post('/admin/dashboard/submit/post', 'adminController@process')->middleware(['auth','admin']);
 
-Route::get('/admin/dashboard/getAll', 'adminController@getAllMailingList');
-Route::get('/admin/dashboard/getTeach', 'adminController@getTeachersMailingList');
-Route::get('/admin/dashboard/getGroup','adminController@getGroupsMailingList');
+Route::get('/admin/dashboard/getAll', 'adminController@getAllMailingList')->middleware(['auth','admin']);
+Route::get('/admin/dashboard/getTeach', 'adminController@getTeachersMailingList')->middleware(['auth','admin']);
+Route::get('/admin/dashboard/getGroup','adminController@getGroupsMailingList')->middleware(['auth','admin']);
 
 /*teacher*/
 Route::get('/edit/teacher', 'loginController@getTeacherDashboard')->middleware(['auth','teacher']);
@@ -78,8 +78,8 @@ Route::get('/edit/teacher', 'loginController@getTeacherDashboard')->middleware([
 Route::get('/edit/repairer', 'loginController@getRepairerDashboard')->middleware(['auth','repairer']);
 
 /*group*/
-Route::get('/edit/group', 'loginController@getTeacherDashboard')->middleware(['auth','group']);
-
+Route::get('/edit/group', 'loginController@getGroupDashboard')->middleware(['auth','group']);
+Route::get('/edit/group/event/{eventid}', 'loginController@editEvent')->middleware(['auth','group']);
 
 
 /*forms*/

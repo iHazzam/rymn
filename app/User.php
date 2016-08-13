@@ -28,4 +28,23 @@ class User extends Authenticatable
     {
         return $this->first_name . ' ' . $this->last_name;
     }
+
+    public function isAdmin()
+    {
+        return $this->is_admin;
+    }
+    public function isRepairer()
+    {
+        return $this->is_repairer;
+    }
+    public function isTeacher()
+    {
+        return $this->is_teacher;
+    }
+    public function isGroup()
+    {
+        return $this->is_group;
+    }
+
+
 }
