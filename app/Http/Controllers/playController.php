@@ -8,6 +8,8 @@ Use Illuminate\Support\Facades\Input;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
+use App\User;
 class playController extends Controller
 {
     //get
@@ -151,7 +153,12 @@ class playController extends Controller
             'email' => 'required',
             'recruit_details' => 'max:2000'
         ]);
-
+        $error = false;
+        if($request->password != $request->password2)
+        {
+            $error = true;
+            $errormessage = "Passwords do not match!";
+        }
         $isrecruiting = $request->recruiting ? true : false;
 
         $group = new Group;
@@ -226,7 +233,32 @@ class playController extends Controller
             $group->audition = $request->audition;
             $group->recruit_details = $request->recruit_details;
         }
-        $group->save();
+        if($error == false)
+        {
+            $input['email'] = $request->email;
+            $rules = array('email' => 'unique:users,email');
+            $validator = Validator::make($input, $rules);
+            if ($validator->fails()) {
+                $user = User::where('email', '=', $request->email)->get();
+                $userid = $user->id;
+                $user->is_group = true;
+                $user->save();
+            }
+            else{
+                $user = new User();
+                $user->name = $request->group_name;
+                $user->email = $request->email;
+                $user->password =  bcrypt($request->password);
+                $user->is_group = true;
+                $user->save();
+            }
+
+            $group->save();
+        }
+        else{
+            return redirect()->back()->withInput(Input::all())->withErrors($errormessage);
+        }
+
 
         //add message to the redirect
         $request->session()->flash('alert-success', "Congrats, group registration was successful. You can now add this group's events to the calendar!");

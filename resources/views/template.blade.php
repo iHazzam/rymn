@@ -154,6 +154,7 @@
                             </li>
                         </ul>
                     </li>
+
                     @if (Auth::check())
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -172,11 +173,12 @@
                                 @endif
                                 @if(Auth::user()->isGroup())
                                         <li><a href="{{ url('edit/group') }}"><i class="fa fa-btn fa-tachometer"></i>Edit Group Details</a></li>
-                                        <li><a href="{{ url('edit/events') }}"><i class="fa fa-btn fa-tachometer"></i>Edit Group Events</a></li>
                                 @endif
                                 <li><a href="{{ url('admin/logout') }}"><i class="fa fa-btn fa-sign-out"></i> Logout</a></li>
                             </ul>
                         </li>
+                    @else
+                        <li><a href="/login" >Log In</a></li>
                     @endif
                 </ul>
             </div>

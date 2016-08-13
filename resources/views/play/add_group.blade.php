@@ -94,6 +94,18 @@
                                         {!! Form::file('images[]', array('multiple'=>true)) !!}
 
                                     </div>
+                                    <span> Please enter a password to allow you to log in and edit the information you are entering.
+                                    Please note, if you have entered an email address which is already registered on the site (As a teacher, group or repairer) please use <b>the same</b> password here</span>
+                                    <div class="form-group">
+                                        <label for="password" class="control-label">Please enter a password</label>
+                                        <input type="password" class="form-control" id="password" name="password" required placeholder="">
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password2" class="control-label">Please re-enter the password to confirm they match:</label>
+                                        <input type="password" class="form-control" id="password2" name="password2" required placeholder="">
+
+                                    </div>
                                     <div class="form-group">
                                         <div class="checkbox" >
                                             <label for="recruiting" class="control-label"><input type="checkbox" id="recruiting" value="recruiting" name="recruiting" onchange="valueChangedRecruiting();">Is the group recruiting for new members?</label>

@@ -516,6 +516,7 @@ class teachController extends Controller
         $user->name = $request->firstname . " " . $request->lastname;
         $user->email = $request->email;
         $user->password =  bcrypt($request->password);
+        $user->is_teacher = true;
         if($error == false)
         {
             try{
