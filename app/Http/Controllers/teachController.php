@@ -512,14 +512,26 @@ class teachController extends Controller
                 }
 
         }
-        $user = new User;
-        $user->name = $request->firstname . " " . $request->lastname;
-        $user->email = $request->email;
-        $user->password =  bcrypt($request->password);
-        $user->is_teacher = true;
+        
         if($error == false)
         {
             try{
+                $input['email'] = $request->email;
+                $rules = array('email' => 'unique:users,email');
+                $validator = Validator::make($input, $rules);
+                if ($validator->fails()) {
+                    $user = User::where('email', '=', $request->email)->get();
+                    $user->is_teacher = true;
+                    $user->save();
+                }
+                else
+                {
+                    $user = new User;
+                    $user->name = $request->firstname . " " . $request->lastname;
+                    $user->email = $request->email;
+                    $user->password =  bcrypt($request->password);
+                    $user->is_teacher = true;
+                }
                 $user->save();
                 $teacher->user_id = $user->id;
                 $teacher->save();

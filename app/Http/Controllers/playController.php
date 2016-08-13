@@ -243,6 +243,7 @@ class playController extends Controller
                 $userid = $user->id;
                 $user->is_group = true;
                 $user->save();
+                $group->user_id = $userid;
             }
             else{
                 $user = new User();

@@ -174,7 +174,7 @@
                                 @if(Auth::user()->isGroup())
                                         <li><a href="{{ url('edit/group') }}"><i class="fa fa-btn fa-tachometer"></i>Edit Group Details</a></li>
                                 @endif
-                                <li><a href="{{ url('admin/logout') }}"><i class="fa fa-btn fa-sign-out"></i> Logout</a></li>
+                                <li><a href="{{ url('logout') }}"><i class="fa fa-btn fa-sign-out"></i> Logout</a></li>
                             </ul>
                         </li>
                     @else
