@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Instruments_Repaired;
 use App\Instruments_Taught;
+use App\Repairer;
 use Illuminate\Database\Schema\Builder;
 use Illuminate\Support\Facades\DB;
 use App\Teacher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
-
+use Illuminate\Support\Facades\Validator;
+use App\User;
 class learnController extends Controller
 {
     //
@@ -182,7 +185,507 @@ public function kids()
         }
         return view('learn.maintainance', ['repair' => $acc]);
     }
-    public function exams(){
+
+    public function registerRepairer()
+    {
+        return view ('learn/repairers');
+    }
+    public function newRepairer(Request $request)
+    {
+        var_dump($request->all());
+        $this->validate($request,[
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'addr1' => 'required',
+            'city' => 'required',
+            'postcode' => 'required',
+            'email' => 'required'
+        ]);
+        $error = false;
+        if($request->password != $request->password2)
+        {
+            $errormessage = "Passwords do not match!";
+            $request->session()->flash('alert-danger',$errormessage);
+            return redirect()->back()->withInput(Input::all())->withErrors($errormessage);
+        }
+        $repairer = new Repairer();
+        $repairer_instruments = new Instruments_Repaired();
+
+        $repairer->first_name = $request->firstname;
+        $repairer->last_name = $request->lastname;
+        $repairer->address_line1 = $request->addr1;
+        if($request->has('addr2'))
+        {
+            $repairer->address_line2 = $request->addr2;
+        }
+        $repairer->city = $request->city;
+        if (!$this->is_valid_postcode($request->postcode))
+        {
+            $errormessage = "invalid postcode entered on page 1 of form";
+            $error = true;
+        }
+        else
+        {
+            $repairer->postcode = $request->postcode;
+        }
+        $repairer->email = $request->email;
+
+        if($request->has('mobile'))
+        {
+            $checkMob = $this->checkUKTelephone($request->phone);
+            if($checkMob)
+            {
+                $repairer->mobile = $request->mobile;
+            }
+            else{
+                $errormessage = "Invalid mobile number entered on page 2 of form";
+                $error = true;
+            }
+        }
+        if($request->has('phone'))
+        {
+            $checkPhon = $this->checkUKTelephone($request->phone);
+            if($checkPhon)
+            {
+                $repairer->phone = $request->phone;
+            }
+            else{
+                $errormessage = "Invalid phone number entered on page 2 of form";
+                $error = true;
+            }
+        }
+
+        if($request->has('biography'))
+        {
+            $repairer->biography = $request->biography;
+        }
+//remove teach_accompanying
+//Remove acompanying level
+        if($request->has('Violin'))
+        {
+            $repairer_instruments->Violin = 1;
+        }
+
+        if($request->has('Viola'))
+        {
+            $repairer_instruments->Viola = 1;
+        }
+
+        if($request->has('Cello'))
+        {
+            $repairer_instruments->Cello = 1;
+        }
+
+        if($request->has('Double_Bass'))
+        {
+            $repairer_instruments->Double_Bass = 1;
+        }
+
+        if($request->has('Harp'))
+        {
+            $repairer_instruments->Harp = 1;
+        }
+
+        if($request->has('Classical_Guitar'))
+        {
+            $repairer_instruments->guitar = 1;
+        }
+
+        if($request->has('Electric_Guitar'))
+        {
+            $repairer_instruments->Electric_Guitar = 1;
+        }
+
+        if($request->has('Bass_Guitar'))
+        {
+            $repairer_instruments->Bass_Guitar = 1;
+        }
+
+        if($request->has('Banjo'))
+        {
+            $repairer_instruments->Banjo = 1;
+        }
+
+        if($request->has('Ukelele'))
+        {
+            $repairer_instruments->Ukelele = 1;
+        }
+
+        if($request->has('Sitar'))
+        {
+            $repairer_instruments->Sitar = 1;
+        }
+
+        if($request->has('Balalaika'))
+        {
+            $repairer_instruments->Balalaika = 1;
+        }
+
+        if($request->has('Mandolin'))
+        {
+            $repairer_instruments->Mandolin = 1;
+        }
+
+        if($request->has('Zither'))
+        {
+            $repairer_instruments->Zither = 1;
+        }
+
+        if($request->has('Flute'))
+        {
+            $repairer_instruments->Flute = 1;
+        }
+
+        if($request->has('Clarinet'))
+        {
+            $repairer_instruments->Clarinet = 1;
+        }
+
+        if($request->has('Oboe'))
+        {
+            $repairer_instruments->Oboe = 1;
+        }
+
+        if($request->has('Bassoon'))
+        {
+            $repairer_instruments->Bassoon = 1;
+        }
+
+        if($request->has('Recorder'))
+        {
+            $repairer_instruments->Recorder = 1;
+        }
+
+        if($request->has('Piccolo'))
+        {
+            $repairer_instruments->Piccolo = 1;
+        }
+
+        if($request->has('Saxophone'))
+        {
+            $repairer_instruments->Saxophone = 1;
+        }
+
+        if($request->has('Cor_Anglais'))
+        {
+            $repairer_instruments->Cor_Anglais = 1;
+        }
+
+        if($request->has('Basset_Horn'))
+        {
+            $repairer_instruments->Basset_Horn = 1;
+        }
+
+        if($request->has('Bass_Clarinet'))
+        {
+            $repairer_instruments->Bass_Clarinet = 1;
+        }
+
+        if($request->has('Contra_Bassoon'))
+        {
+            $repairer_instruments->Contra_Bassoon = 1;
+        }
+
+        if($request->has('Bagpipes'))
+        {
+            $repairer_instruments->Bagpipes = 1;
+        }
+
+        if($request->has('Ocarina'))
+        {
+            $repairer_instruments->Ocarina = 1;
+        }
+
+        if($request->has('Mouth_Organ'))
+        {
+            $repairer_instruments->Mouth_Organ = 1;
+        }
+
+        if($request->has('Horn'))
+        {
+            $repairer_instruments->French_Horn = 1;
+        }
+
+        if($request->has('Trumpet'))
+        {
+            $repairer_instruments->Trumpet = 1;
+        }
+
+        if($request->has('Trombone'))
+        {
+            $repairer_instruments->Trombone = 1;
+        }
+
+        if($request->has('Tuba'))
+        {
+            $repairer_instruments->Tuba = 1;
+        }
+
+        if($request->has('Cornet'))
+        {
+            $repairer_instruments->Cornet = 1;
+        }
+
+        if($request->has('Flugel_Horn'))
+        {
+            $repairer_instruments->Flugel_Horn = 1;
+        }
+
+        if($request->has('Tenor_Horn'))
+        {
+            $repairer_instruments->Tenor_Horn = 1;
+        }
+
+        if($request->has('Baritone'))
+        {
+            $repairer_instruments->Baritone = 1;
+        }
+
+        if($request->has('Euphonium'))
+        {
+            $repairer_instruments->Euphonium = 1;
+        }
+
+        if($request->has('Ophicleide'))
+        {
+            $repairer_instruments->Ophicleide = 1;
+        }
+
+        if($request->has('Sackbutt'))
+        {
+            $repairer_instruments->Sackbutt = 1;
+        }
+
+        if($request->has('Cornette'))
+        {
+            $repairer_instruments->Cornette = 1;
+        }
+
+        if($request->has('Serpent'))
+        {
+            $repairer_instruments->Serpent = 1;
+        }
+
+        if($request->has('Digeridoo'))
+        {
+            $repairer_instruments->Digeridoo = 1;
+        }
+        if($request->has('Timpani'))
+        {
+            $repairer_instruments->Timpani = 1;
+        }
+
+        if($request->has('Orchestral_Percussion'))
+        {
+            $repairer_instruments->Orchestral_Percussion = 1;
+        }
+        if($request->has('Tuned_Percussion'))
+        {
+            $repairer_instruments->Tuned_Percussion = 1;
+        }
+
+        if($request->has('Drum_Kit'))
+        {
+            $repairer_instruments->Drum_Kit = 1;
+        }
+        if($request->has('xylophone'))
+        {
+            $repairer_instruments->xylophone = 1;
+        }
+
+        if($request->has('Marimba'))
+        {
+            $repairer_instruments->Marimba = 1;
+        }
+        if($request->has('Vibraphone'))
+        {
+            $repairer_instruments->Vibraphone = 1;
+        }
+
+        if($request->has('Glockenspiel'))
+        {
+            $repairer_instruments->Glockenspiel = 1;
+        }
+        if($request->has('Cembalom'))
+        {
+            $repairer_instruments->Cembalom = 1;
+        }
+
+        if($request->has('Piano'))
+        {
+            $repairer_instruments->Piano = 1;
+        }
+        if($request->has('Organ'))
+        {
+            $repairer_instruments->Organ = 1;
+        }
+
+        if($request->has('Keyboard'))
+        {
+            $repairer_instruments->Keyboard = 1;
+        }
+        if($request->has('Harpsichord'))
+        {
+            $repairer_instruments->Harpsichord = 1;
+        }
+
+        if($request->hasFile('thumbnail_image'))
+        {
+            if ($request->file('thumbnail_image')->isValid()) {
+                $destPath = 'upload';
+                $extension = $request->file('thumbnail_image')->getClientOriginalExtension();
+
+                if ($extension == 'png' || 'gif' || 'jpg' || 'jpeg') {
+                    $filename = rand(11111, 99999) . '.' . $extension;
+                    $request->file('thumbnail_image')->move($destPath, $filename);
+                    $repairer->thumbnail_img = $destPath . "/" . $filename;
+                } else {
+                    $error = true;
+                    $errormessage = 'Error: Incorrect filetype uploaded (Must be png, gif, jpg, or jpeg)';
+                }
+            }
+            else{
+                $error = true;
+                $errormessage = 'Error: Added file not valid)';
+            }
+
+        }
+
+        if($error == false)
+        {
+            try{
+                $input['email'] = $request->email;
+                $rules = array('email' => 'unique:users,email');
+                $validator = Validator::make($input, $rules);
+                if ($validator->fails()) {
+                    $user = User::where('email', '=', $request->email)->first();
+                    var_dump($user);
+                    $user->is_repairer = true;
+                    $user->save();
+                }
+                else
+                {
+                    $user = new User;
+                    $user->name = $request->firstname . " " . $request->lastname;
+                    $user->email = $request->email;
+                    $user->password =  bcrypt($request->password);
+                    $user->is_repairer = true;
+                }
+                $user->save();
+                $repairer->user_id = $user->id;
+                $repairer->save();
+                $repairer_instruments->repairer_id = $repairer->id;
+                $repairer_instruments->save();
+                $request->session()->flash('alert-success', "Thanks! Repairer registration complete!");
+                return redirect()->back();
+            }
+            catch(QueryException $e){
+                $errormessage = "This Email Address may already be registered. Please try logging in";
+                $request->session()->flash('alert-danger',$errormessage);
+                return redirect()->back()->withInput(Input::all())->withErrors($errormessage);
+            }
+
+        }
+        else{
+            $request->session()->flash('alert-danger',$errormessage);
+            return redirect()->back()->withInput(Input::all())->withErrors($errormessage);
+        }
+    }
+
+function is_valid_postcode($postcode) {
+    $validation_expression = '/^(((([A-PR-UWYZ][0-9][0-9A-HJKS-UW]?)|([A-PR-UWYZ][A-HK-Y][0-9][0-9ABEHMNPRV-Y]?))\s{0,2}[0-9]([ABD-HJLNP-UW-Z]{2}))|(GIR\s{0,2}0AA))$/i';
+
+    return preg_match($validation_expression, $postcode);
+}
+function checkUKTelephone ($strTelephoneNumber) {
+
+    // Copy the parameter and strip out the spaces
+    $strTelephoneNumberCopy = str_replace (' ', '', $strTelephoneNumber);
+
+    // Convert into a string and check that we were provided with something
+    if (empty($strTelephoneNumberCopy)) {
+        $intError = 1;
+        $strError = 'Telephone number not provided';
+        return false;
+    }
+
+    // Don't allow country codes to be included (assumes a leading "+")
+    if (preg_match('/^(\+)[\s]*(.*)$/',$strTelephoneNumberCopy)) {
+        $intError = 2;
+        $strError = 'UK telephone number without the country code, please';
+        return false;
+    }
+
+    // Remove hyphens - they are not part of a telephone number
+    $strTelephoneNumberCopy = str_replace ('-', '', $strTelephoneNumberCopy);
+
+    // Now check that all the characters are digits
+    if (!preg_match('/^[0-9]{10,11}$/',$strTelephoneNumberCopy)) {
+        $intError = 3;
+        $strError = 'UK telephone numbers should contain 10 or 11 digits';
+        return false;
+    }
+
+    // Now check that the first digit is 0
+    if (!preg_match('/^0[0-9]{9,10}$/',$strTelephoneNumberCopy)) {
+        $intError = 4;
+        $strError = 'The telephone number should start with a 0';
+        return false;
+    }
+
+    // Check the string against the numbers allocated for dramas
+
+    // Expression for numbers allocated to dramas
+
+    $tnexp[0] =  '/^(0113|0114|0115|0116|0117|0118|0121|0131|0141|0151|0161)(4960)[0-9]{3}$/';
+    $tnexp[1] =  '/^02079460[0-9]{3}$/';
+    $tnexp[2] =  '/^01914980[0-9]{3}$/';
+    $tnexp[3] =  '/^02890180[0-9]{3}$/';
+    $tnexp[4] =  '/^02920180[0-9]{3}$/';
+    $tnexp[5] =  '/^01632960[0-9]{3}$/';
+    $tnexp[6] =  '/^07700900[0-9]{3}$/';
+    $tnexp[7] =  '/^08081570[0-9]{3}$/';
+    $tnexp[8] =  '/^09098790[0-9]{3}$/';
+    $tnexp[9] =  '/^03069990[0-9]{3}$/';
+
+    foreach ($tnexp as $regexp) {
+        if (preg_match($regexp,$strTelephoneNumberCopy, $matches)) {
+            $intError = 5;
+            $strError = 'The telephone number is either invalid or inappropriate';
+            return false;
+        }
+    }
+
+    // Finally, check that the telephone number is appropriate.
+    if (!preg_match('/^(01|02|03|05|070|071|072|073|074|075|07624|077|078|079)[0-9]+$/',$strTelephoneNumberCopy)) {
+        $intError = 5;
+        $strError = 'The telephone number is either invalid or inappropriate';
+        return false;
+    }
+
+    // Seems to be valid - return the stripped telephone number
+    $strTelephoneNumber = $strTelephoneNumberCopy;
+    $intError = 0;
+    $strError = '';
+    return true;
+}
+function getTeacherContactDetails($id){
+    $teach = Teacher::where('id','=',$id)->first();
+    $teacher = [];
+    $teacher['email'] = $teach->email;
+    if($teach->phone !== null)
+    {
+        $teacher['phone'] = $teach->phone;
+    }
+    if($teach->mobile !== null)
+    {
+        $teacher['mobile'] = $teach->mobile;
+    }
+    return json_encode($teacher);
+
+}
+
+public function exams(){
         return view('learn.exams');
     }
     public function purchase(){

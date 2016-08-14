@@ -397,6 +397,10 @@ footer {
      margin: 0 0 12px!important;
  }
 
+ .nonewline{
+     display:inline;
+ }
+
 
 .ht-box {
     background: #f7f7f7;

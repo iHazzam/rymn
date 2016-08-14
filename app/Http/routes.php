@@ -48,6 +48,7 @@ Route::get('/learn/teacherdb', 'learnController@teacherdb');
 Route::get('/learn/teachers', 'learnController@teachers');
 Route::get('/learn/accompanists', 'learnController@accompanists');
 Route::get('/learn/maintainance','learnController@repaired');
+Route::get('/learn/repairers','learnController@registerRepairer');
 Route::get('/learn/exams','learnController@exams');
 Route::get('/learn/practice','learnController@practice');
 Route::get('/learn/purchase','learnController@purchase');
@@ -96,6 +97,7 @@ Route::get('/edit/group/event/{eventid}', 'loginController@editEvent')->middlewa
 
 /*forms*/
 Route::post('/discover/add/post', 'discoverController@newEvent' );
+Route::post('/learn/repairers/post', 'learnController@newRepairer');
 Route::post('/postensemble', 'playController@newAd');
 Route::post('/teach/register/post', 'teachController@newTeach');
 Route::post('/play/join/post', 'playController@search');

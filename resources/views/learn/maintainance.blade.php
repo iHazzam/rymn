@@ -18,7 +18,9 @@
                     </p>
                 </div>
                 <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
-                    <h2 class="set-left"><span class="htb3">Instrument Repairers</span></h2>
+                    <h2 class="set-left nonewline"><span class="htb3">Instrument Repairers</span></h2>
+                    <a  class="btn btn-info" role="button" href="{{url('learn/repairers')}}">Register as a repairer</a>
+
                     <ul class="accompanist_list list-group">
                      @if(sizeof($repair) > 0)
                          @foreach($repair as $k => $a)

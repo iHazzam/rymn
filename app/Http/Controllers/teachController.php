@@ -53,8 +53,9 @@ class teachController extends Controller
         $error = false;
         if($request->password != $request->password2)
         {
-            $error = true;
             $errormessage = "Passwords do not match!";
+            $request->session()->flash('alert-danger',$errormessage);
+            return redirect()->back()->withInput(Input::all())->withErrors($errormessage);
         }
         $teacher = new Teacher();
         $teacher_instruments = new Instruments_Taught();
@@ -520,7 +521,7 @@ class teachController extends Controller
                 $rules = array('email' => 'unique:users,email');
                 $validator = Validator::make($input, $rules);
                 if ($validator->fails()) {
-                    $user = User::where('email', '=', $request->email)->get();
+                    $user = User::where('email', '=', $request->email)->first();
                     $user->is_teacher = true;
                     $user->save();
                 }
