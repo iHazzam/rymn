@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use App\Http\Requests;
+use Illuminate\Support\Facades\Validator;
 
 use Storage;
 
@@ -514,6 +515,693 @@ class teachController extends Controller
 
         }
         
+        if($error == false)
+        {
+            try{
+                $input['email'] = $request->email;
+                $rules = array('email' => 'unique:users,email');
+                $validator = Validator::make($input, $rules);
+                if ($validator->fails()) {
+                    $user = User::where('email', '=', $request->email)->first();
+                    $user->is_teacher = true;
+                    $user->save();
+                }
+                else
+                {
+                    $user = new User;
+                    $user->name = $request->firstname . " " . $request->lastname;
+                    $user->email = $request->email;
+                    $user->password =  bcrypt($request->password);
+                    $user->is_teacher = true;
+                }
+                $user->save();
+                $teacher->user_id = $user->id;
+                $teacher->save();
+                $teacher_instruments->teacher_id = $teacher->id;
+                $teacher_instruments->save();
+                $request->session()->flash('alert-success', "Thanks! Teacher registration complete!");
+                return redirect()->back();
+            }
+            catch(QueryException $e){
+                $errormessage = "This Email Address may already be registered. Please try logging in";
+                $request->session()->flash('alert-danger',$errormessage);
+                return redirect()->back()->withInput(Input::all())->withErrors($errormessage);
+            }
+
+        }
+        else{
+            $request->session()->flash('alert-danger',$errormessage);
+            return redirect()->back()->withInput(Input::all())->withErrors($errormessage);
+        }
+    }
+
+    public function editTeach(Request $request)
+    {
+        var_dump($request->all());
+        $this->validate($request,[
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'addr1' => 'required',
+            'city' => 'required',
+            'postcode' => 'required',
+            'email' => 'required',
+            'instrument_1' => 'required',
+            'instrument_1_select_min'=>'required',
+            'instrument_1_select_max'=>'required',
+            'Qualification' => 'required',
+            'performing_experience' => 'required',
+            'teaching_experience' => 'required',
+        ]);
+        $error = false;
+
+        $teacher = Teacher::where('user_id', '==', Auth::user()->id)->first();
+        $teacher_instruments = Instruments_Taught::where('id','==', $teacher->id)->first();
+
+        $teacher->first_name = $request->firstname;
+        $teacher->last_name = $request->lastname;
+        $teacher->address_line1 = $request->addr1;
+        if($request->has('addr2'))
+        {
+            $teacher->address_line2 = $request->addr2;
+        }
+        else{
+            $teacher->address_line2 = "";
+        }
+        $teacher->city = $request->city;
+        if (!$this->is_valid_postcode($request->postcode))
+        {
+            $errormessage = "invalid postcode entered on page 1 of form";
+            $error = true;
+        }
+        else
+        {
+            $teacher->postcode = $request->postcode;
+        }
+        $teacher->email = $request->email;
+
+        if($request->has('mobile'))
+        {
+            $checkMob = $this->checkUKTelephone($request->phone);
+            if($checkMob)
+            {
+                $teacher->mobile = $request->mobile;
+            }
+            else{
+                $errormessage = "Invalid mobile number entered on page 2 of form";
+                $error = true;
+            }
+        }
+        else{
+            $teacher->mobile = "";
+        }
+        if($request->has('phone'))
+        {
+            $checkPhon = $this->checkUKTelephone($request->phone);
+            if($checkPhon)
+            {
+                $teacher->phone = $request->phone;
+            }
+            else{
+                $errormessage = "Invalid phone number entered on page 2 of form";
+                $error = true;
+            }
+        }else{
+            $teacher->phone = "";
+        }
+        $teacher->instruments_played1 = $request->instrument_1;
+        $teacher->level_min_instrument1 = $request->instrument_1_select_min;
+        $teacher->level_max_instrument1 = $request->instrument_1_select_max;
+        if($request->has('instrument_2'))
+        {
+            $teacher->instruments_played2 = $request->instrument_2;
+            $teacher->level_min_instrument2 = $request->instrument_2_select_min;
+            $teacher->level_max_instrument2 = $request->instrument_2_select_max;
+        }
+        else{
+            $teacher->instruments_played2 = "";
+            $teacher->level_min_instrument2 = "";
+            $teacher->level_max_instrument2 = "";
+        }
+        if($request->has('instrument_3'))
+        {
+            $teacher->instruments_played3 = $request->instrument_3;
+            $teacher->level_min_instrument3 = $request->instrument_3_select_min;
+            $teacher->level_max_instrument3 = $request->instrument_3_select_max;
+        }
+        else{
+            $teacher->instruments_played3 = "";
+            $teacher->level_min_instrument3 = "";
+            $teacher->level_max_instrument3 = "";
+        }
+        if($request->has('instrument_4'))
+        {
+            $teacher->instruments_played4 = $request->instrument_4;
+            $teacher->level_min_instrument4 = $request->instrument_4_select_min;
+            $teacher->level_max_instrument4 = $request->instrument_4_select_max;
+        }
+        else{
+            $teacher->instruments_played4 = "";
+            $teacher->level_min_instrument4 = "";
+            $teacher->level_max_instrument4 = "";
+        }
+        $teacher->qualification = $request->Qualification;
+        $teacher->performing_experience = $request->performing_experience;
+        $teacher->teaching_experience = $request->teaching_experience;
+
+        if($request->has('minage'))
+        {
+            $teacher->min_age_taught = $request->minage;
+        }
+        else
+        {
+            $teacher->min_age_taught = 0;
+        }
+
+        if($request->has('maxage'))
+        {
+            $teacher->max_age_taught = $request->maxage;
+        }
+        else
+        {
+            $teacher->max_age_taught = 999;
+        }
+
+        if($request->has('teach_at_pupil_home'))
+        {
+            $teacher->teach_at_pupil_home = 1;
+        }
+        else{
+            $teacher->teach_at_pupil_home = 0;
+        }
+        if($request->has('teach_at_own_home'))
+        {
+            $teacher->teach_at_own_home = 1;
+        }else{
+            $teacher->teach_at_own_home = 0;
+        }
+
+        if($request->has('teach_online'))
+        {
+            $teacher->teach_online = 1;
+        }else{
+            $teacher->teach_online = 0;
+        }
+        if($request->has('teach_at_school'))
+        {
+            $teacher->teach_at_school = 1;
+        }else{
+            $teacher->teach_at_school = 0;
+        }
+        if($request->has('tmt_cb'))
+        {
+            $teacher->teach_theory = 1;
+        }else{
+            $teacher->teach_theory = 0;
+        }
+        if($request->has('level_musictheory'))
+        {
+            $teacher->theory_level = $request->level_musictheory;
+        }else{
+            $teacher->theory_level = 0;
+        }
+        if($request->has('ta_cb'))
+        {
+            $teacher->teach_aural = 1;
+        }else{
+            $teacher->teach_aural = 0;
+        }
+        if($request->has('level_aural'))
+        {
+            $teacher->aural_level = $request->level_aural;
+        }else{
+            $teacher->aural_level = 0;
+        }
+        if($request->has('tc_cb'))
+        {
+            $teacher->teach_composition = 1;
+        }else{
+            $teacher->teach_composition = 0;
+        }
+        if($request->has('level_composition'))
+        {
+            $teacher->composition_level = $request->level_composition;
+        }else{
+            $teacher->composition_level = 0;
+        }
+        if($request->has('cb_acc'))
+        {
+            $teacher->is_accompanist = 1;
+        }else{
+            $teacher->is_accompanist = 0;
+        }
+        if($request->has('level_accompanied'))
+        {
+            $teacher->level_accompanied = $request->level_accompanied;
+        }else{
+            $teacher->level_accompanied = 0;
+        }
+        if($request->has('repair'))
+        {
+            $teacher->is_instrument_repairer = 1;
+        }else{
+            $teacher->is_instrument_repairer = 0;
+        }
+        if($request->has('repair_instruments'))
+        {
+            $teacher->instruments_repaired = $request->repair_instruments;//add
+        }else{
+            $teacher->instruments_repaired = "";
+        }
+        if($request->has('crb'))
+        {
+            $teacher->crb_checked = 1;
+        }else{
+            $teacher->crb_checked = 0;
+        }
+        if($request->has('biography'))
+        {
+            $teacher->biography = $request->biography;
+        }else{
+            $teacher->biography = "";
+        }
+        //remove teach_accompanying
+        //Remove acompanying level
+        if($request->has('Violin'))
+        {
+            $teacher_instruments->Violin = 1;
+        }
+        else{
+            $teacher_instruments->Violin=0;
+        }
+
+        if($request->has('Viola'))
+        {
+            $teacher_instruments->Viola = 1;
+        }
+        else{
+            $teacher_instruments->Viola=0;
+        }
+
+        if($request->has('Cello'))
+        {
+            $teacher_instruments->Cello = 1;
+        }else{
+            $teacher_instruments->Cello=0;
+        }
+
+        if($request->has('Double_Bass'))
+        {
+            $teacher_instruments->Double_Bass = 1;
+        }else{
+            $teacher_instruments->Double_Bass=0;
+        }
+
+        if($request->has('Harp'))
+        {
+            $teacher_instruments->Harp = 1;
+        }else{
+            $teacher_instruments->Harp =0;
+        }
+
+        if($request->has('Classical_Guitar'))
+        {
+            $teacher_instruments->guitar = 1;
+        }else{
+            $teacher_instruments->guitar=0;
+        }
+
+        if($request->has('Electric_Guitar'))
+        {
+            $teacher_instruments->Electric_Guitar = 1;
+        }else{
+            $teacher_instruments->Electric_Guitar=0;
+        }
+
+        if($request->has('Bass_Guitar'))
+        {
+            $teacher_instruments->Bass_Guitar = 1;
+        }else{
+            $teacher_instruments->Bass_Guitar=0;
+        }
+
+        if($request->has('Banjo'))
+        {
+            $teacher_instruments->Banjo = 1;
+        }else{
+            $teacher_instruments->Banjo =0;
+        }
+
+        if($request->has('Ukelele'))
+        {
+            $teacher_instruments->Ukelele = 1;
+        }else{
+            $teacher_instruments->Ukelele =0;
+        }
+
+        if($request->has('Sitar'))
+        {
+            $teacher_instruments->Sitar = 1;
+        }else{
+            $teacher_instruments->Sitar =0;
+        }
+
+        if($request->has('Balalaika'))
+        {
+            $teacher_instruments->Balalaika = 1;
+        }else{
+            $teacher_instruments->Balalaika =0;
+        }
+
+        if($request->has('Mandolin'))
+        {
+            $teacher_instruments->Mandolin = 1;
+        }else{
+            $teacher_instruments->Mandolin =0;
+        }
+
+        if($request->has('Zither'))
+        {
+            $teacher_instruments->Zither = 1;
+        }else{
+            $teacher_instruments->Zither =0;
+        }
+
+        if($request->has('Flute'))
+        {
+            $teacher_instruments->Flute = 1;
+        }else{
+            $teacher_instruments->Flute =0;
+        }
+
+        if($request->has('Clarinet'))
+        {
+            $teacher_instruments->Clarinet = 1;
+        }else{
+            $teacher_instruments->Clarinet =0;
+        }
+
+        if($request->has('Oboe'))
+        {
+            $teacher_instruments->Oboe = 1;
+        }else{
+            $teacher_instruments->Oboe =0;
+        }
+
+        if($request->has('Bassoon'))
+        {
+            $teacher_instruments->Bassoon = 1;
+        }else{
+            $teacher_instruments->Bassoon =0;
+        }
+
+        if($request->has('Recorder'))
+        {
+            $teacher_instruments->Recorder = 1;
+        }else{
+            $teacher_instruments->Recorder =0;
+        }
+
+        if($request->has('Piccolo'))
+        {
+            $teacher_instruments->Piccolo = 1;
+        }else{
+            $teacher_instruments->Piccolo =0;
+        }
+
+        if($request->has('Saxophone'))
+        {
+            $teacher_instruments->Saxophone = 1;
+        }else{
+            $teacher_instruments->Saxophone =0;
+        }
+
+        if($request->has('Cor_Anglais'))
+        {
+            $teacher_instruments->Cor_Anglais = 1;
+        }else{
+            $teacher_instruments->Cor_Anglais =0;
+        }
+
+        if($request->has('Basset_Horn'))
+        {
+            $teacher_instruments->Basset_Horn = 1;
+        }else{
+            $teacher_instruments->Basset_Horn=0;
+        }
+
+        if($request->has('Bass_Clarinet'))
+        {
+            $teacher_instruments->Bass_Clarinet = 1;
+        }else{
+            $teacher_instruments->Bass_Clarinet =0;
+        }
+
+        if($request->has('Contra_Bassoon'))
+        {
+            $teacher_instruments->Contra_Bassoon = 1;
+        }else{
+            $teacher_instruments->Contra_Bassoon =0;
+        }
+
+        if($request->has('Bagpipes'))
+        {
+            $teacher_instruments->Bagpipes = 1;
+        }else{
+            $teacher_instruments->Bagpipes =0;
+        }
+
+        if($request->has('Ocarina'))
+        {
+            $teacher_instruments->Ocarina = 1;
+        }else{
+            $teacher_instruments->Ocarina=0;
+        }
+
+        if($request->has('Mouth_Organ'))
+        {
+            $teacher_instruments->Mouth_Organ = 1;
+        }else{
+            $teacher_instruments->Mouth_Organ=0;
+        }
+
+        if($request->has('Horn'))
+        {
+            $teacher_instruments->French_Horn = 1;
+        }else{
+            $teacher_instruments->French_Horn=0;
+        }
+
+        if($request->has('Trumpet'))
+        {
+            $teacher_instruments->Trumpet = 1;
+        }else{
+            $teacher_instruments->Trumpet=0;
+        }
+
+        if($request->has('Trombone'))
+        {
+            $teacher_instruments->Trombone = 1;
+        }else{
+            $teacher_instruments->Trombone=0;
+        }
+
+        if($request->has('Tuba'))
+        {
+            $teacher_instruments->Tuba = 1;
+        }else{
+            $teacher_instruments->Tuba=0;
+        }
+
+        if($request->has('Cornet'))
+        {
+            $teacher_instruments->Cornet = 1;
+        }else{
+            $teacher_instruments->Cornet=0;
+        }
+
+        if($request->has('Flugel_Horn'))
+        {
+            $teacher_instruments->Flugel_Horn = 1;
+        }else{
+            $teacher_instruments->Flugel_Horn=0;
+        }
+
+        if($request->has('Tenor_Horn'))
+        {
+            $teacher_instruments->Tenor_Horn = 1;
+        }else{
+            $teacher_instruments->Tenor_Horn=0;
+        }
+
+        if($request->has('Baritone'))
+        {
+            $teacher_instruments->Baritone = 1;
+        }else{
+            $teacher_instruments->Baritone=0;
+        }
+
+        if($request->has('Euphonium'))
+        {
+            $teacher_instruments->Euphonium = 1;
+        }else{
+            $teacher_instruments->Euphonium=0;
+        }
+
+        if($request->has('Ophicleide'))
+        {
+            $teacher_instruments->Ophicleide = 1;
+        }else{
+            $teacher_instruments->Ophicleide=0;
+        }
+
+        if($request->has('Sackbutt'))
+        {
+            $teacher_instruments->Sackbutt = 1;
+        }else{
+            $teacher_instruments->Sackbutt=0;
+        }
+
+        if($request->has('Cornette'))
+        {
+            $teacher_instruments->Cornette = 1;
+        }else{
+            $teacher_instruments->Cornette =0;
+        }
+
+        if($request->has('Serpent'))
+        {
+            $teacher_instruments->Serpent = 1;
+        }else{
+            $teacher_instruments->Serpent=0;
+        }
+
+        if($request->has('Digeridoo'))
+        {
+            $teacher_instruments->Digeridoo = 1;
+        }else{
+            $teacher_instruments->Digeridoo =0;
+        }
+        if($request->has('Timpani'))
+        {
+            $teacher_instruments->Timpani = 1;
+        }else{
+            $teacher_instruments->Timpani=0;
+        }
+
+        if($request->has('Orchestral_Percussion'))
+        {
+            $teacher_instruments->Orchestral_Percussion = 1;
+        }else{
+            $teacher_instruments->Orchestral_Percussion=0;
+        }
+        if($request->has('Tuned_Percussion'))
+        {
+            $teacher_instruments->Tuned_Percussion = 1;
+        }else{
+            $teacher_instruments->Tuned_Percussion=0;
+        }
+
+        if($request->has('Drum_Kit'))
+        {
+            $teacher_instruments->Drum_Kit = 1;
+        }else{
+            $teacher_instruments->Drum_Kit=0;
+        }
+        if($request->has('xylophone'))
+        {
+            $teacher_instruments->xylophone = 1;
+        }else{
+            $teacher_instruments->xylophone=0;
+        }
+
+        if($request->has('Marimba'))
+        {
+            $teacher_instruments->Marimba = 1;
+        }else{
+            $teacher_instruments->Marimba=0;
+        }
+        if($request->has('Vibraphone'))
+        {
+            $teacher_instruments->Vibraphone = 1;
+        }else{
+            $teacher_instruments->Vibraphone=0;
+        }
+
+        if($request->has('Glockenspiel'))
+        {
+            $teacher_instruments->Glockenspiel = 1;
+        }else{
+            $teacher_instruments->Glockenspiel=0;
+        }
+        if($request->has('Cembalom'))
+        {
+            $teacher_instruments->Cembalom = 1;
+        }else{
+            $teacher_instruments->Cembalom=0;
+        }
+
+        if($request->has('Piano'))
+        {
+            $teacher_instruments->Piano = 1;
+        }else{
+            $teacher_instruments->Piano=0;
+        }
+        if($request->has('Organ'))
+        {
+            $teacher_instruments->Organ = 1;
+        }else{
+            $teacher_instruments->Organ=0;
+        }
+
+        if($request->has('Keyboard'))
+        {
+            $teacher_instruments->Keyboard = 1;
+        }else{
+            $teacher_instruments->Keyboard=0;
+        }
+        if($request->has('Harpsichord'))
+        {
+            $teacher_instruments->Harpsichord = 1;
+        }else{
+            $teacher_instruments->Harpsichord=0;
+        }
+
+        if($request->has('Male_Singing'))
+        {
+            $teacher_instruments->Male_Singing = 1;
+        }else{
+            $teacher_instruments->Male_Singing=0;
+        }
+        if($request->has('Female_Singing'))
+        {
+            $teacher_instruments->Female_Singing = 1;
+        }else{
+            $teacher_instruments->Female_Singing=0;
+        }
+        var_dump('arriving');
+        if($request->hasFile('thumbnail_image'))
+        {
+            var_dump('has');
+            if ($request->file('thumbnail_image')->isValid()) {
+                $destPath = 'upload';
+                $extension = $request->file('thumbnail_image')->getClientOriginalExtension();
+
+                if ($extension == 'png' || 'gif' || 'jpg' || 'jpeg') {
+                    $filename = rand(11111, 99999) . '.' . $extension;
+                    $request->file('thumbnail_image')->move($destPath, $filename);
+                    $teacher->thumbnail_img = $destPath . "/" . $filename;
+                } else {
+                    $error = true;
+                    $errormessage = 'Error: Incorrect filetype uploaded (Must be png, gif, jpg, or jpeg)';
+                }
+            }
+            else{
+                $error = true;
+                $errormessage = 'Error: Added file not valid)';
+            }
+
+        }
+
         if($error == false)
         {
             try{

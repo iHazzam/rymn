@@ -166,7 +166,7 @@
                                 <li><a href="{{ url('admin/dashboard') }}"><i class="fa fa-btn fa-tachometer"></i> Admin Panel</a></li>
                                 @endif
                                 @if(Auth::user()->isTeacher())
-                                   <li><a href="{{ url('edit/user') }}"><i class="fa fa-btn fa-tachometer"></i>Edit Teacher Details</a></li>
+                                   <li><a href="{{ url('edit/teacher') }}"><i class="fa fa-btn fa-tachometer"></i>Edit Teacher Details</a></li>
                                 @endif
                                 @if(Auth::user()->isRepairer())
                                     <li><a href="{{ url('edit/repairer') }}"><i class="fa fa-btn fa-tachometer"></i>Edit Repairer Details</a></li>

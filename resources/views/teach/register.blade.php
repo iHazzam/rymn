@@ -962,7 +962,7 @@
                                         </select>
                                     </div>
                                     <div class="checkbox" >
-                                        <label><input type="checkbox" id="ta-cb" name="ta_cb" value="teach_aural" onchange="valueChangedTa();">Teach Aural</label>
+                                        <label><input type="checkbox" id="ta-cb" name="ta_cb" value="teach_aural" onchange="valueChangedTa();" @if(old('teach_aural') == "teach_aural") selected @endif>Teach Aural</label>
                                     </div>
                                     <div class="form-group hidden" id="ta">
                                         <label for="level_aural">Max Level:</label>
