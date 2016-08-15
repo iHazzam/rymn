@@ -13,8 +13,9 @@ use App\Http\Requests;
 class loginController extends Controller
 {
     public function getTeacherDashboard(){
-        $data = Teacher::where('user_id','==', Auth::user()->id)->first();
-        $data2 = $data->instruments_taught;
+
+        $data = Teacher::whereUser_id(Auth::user()->id)->first();
+        $data2 = $data->Instruments_Taught()->first();
         return view('edit.teacher',['data'=> $data, 'data2'=>$data2]);
     }
     public function getRepairerDashboard(){

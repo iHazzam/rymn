@@ -9,9 +9,8 @@ use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Validator;
-
 use Storage;
-
+use Illuminate\Support\Facades\Auth;
 Use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 
@@ -575,8 +574,7 @@ class teachController extends Controller
         $error = false;
 
         $teacher = Teacher::where('user_id', '==', Auth::user()->id)->first();
-        $teacher_instruments = Instruments_Taught::where('id','==', $teacher->id)->first();
-
+        $teacher_instruments = Instruments_Taught::find($teacher->id);
         $teacher->first_name = $request->firstname;
         $teacher->last_name = $request->lastname;
         $teacher->address_line1 = $request->addr1;
@@ -1226,7 +1224,7 @@ class teachController extends Controller
                 $teacher->save();
                 $teacher_instruments->teacher_id = $teacher->id;
                 $teacher_instruments->save();
-                $request->session()->flash('alert-success', "Thanks! Teacher registration complete!");
+                $request->session()->flash('alert-success', "Thanks! Teacher successfully edited!");
                 return redirect()->back();
             }
             catch(QueryException $e){

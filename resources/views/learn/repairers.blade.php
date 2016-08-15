@@ -523,7 +523,7 @@
                                 <legend>Step 4 of 4 - Final Details</legend>
 
                                 <div class="form-group">
-                                    <span>Please enter any further details you would like to be displayed to potential students that are not covered above </span>
+                                    <span>Please enter any further details you would like to be displayed to potential customers that are not covered above </span>
                                     <div class="form-group">
                                         <label for="biography" class="control-label">Further biographical details:</label>
 

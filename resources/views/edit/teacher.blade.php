@@ -32,6 +32,7 @@
                 <div class="panel-body">
                     <form name="basicform" id="basicform" method="post" action="/teach/edit/post" enctype="multipart/form-data">
                         {!! csrf_field() !!}
+
                         <div id="sf1" class="frm">
                             <fieldset name="one">
                                 <legend>Step 1 of 6 - Personal Details</legend>
@@ -514,73 +515,73 @@
                                                     <div class="form-group" id="string-children">
                                                         <span class="header">Main Instruments:</span> </br>
                                                         <label>
-                                                            <input type="checkbox" value="Violin" id="Violin" name="Violin" @if($data2->Violin) checked @endif>
+                                                            <input type="checkbox" value="Violin" id="Violin" name="Violin" @if($data2->violin) checked @endif>
                                                             Violin
                                                         </label>
                                                         </br>
                                                         <label>
-                                                            <input type="checkbox" value="Viola" id="Viola" name="Viola" @if($data2->Viola) checked @endif>
+                                                            <input type="checkbox" value="Viola" id="Viola" name="Viola" @if($data2->viola) checked @endif>
                                                             Viola
                                                         </label>
                                                         </br>
                                                         <label>
-                                                            <input type="checkbox" value="Cello" id="Cello" name="Cello" @if($data2->Cello) checked @endif>
+                                                            <input type="checkbox" value="Cello" id="Cello" name="Cello" @if($data2->cello) checked @endif>
                                                             Cello
                                                         </label>
                                                         </br>
                                                         <label>
-                                                            <input type="checkbox" value="Double_Bass" id="Double_Bass" name="Double_Bass" @if($data2->Double_Bass) checked @endif>
+                                                            <input type="checkbox" value="Double_Bass" id="Double_Bass" name="Double_Bass" @if($data2->double_bass) checked @endif>
                                                             Double Bass
                                                         </label>
                                                         </br>
                                                         <label>
-                                                            <input type="checkbox" value="Harp" id="Harp" name="Harp" @if($data2->Harp) checked @endif>
+                                                            <input type="checkbox" value="Harp" id="Harp" name="Harp" @if($data2->harp) checked @endif>
                                                             Harp
                                                         </label>
                                                         </br>
                                                         <label>
-                                                            <input type="checkbox" value="Classical_Guitar" id="Classical_Guitar" name="Classical_Guitar" @if($data2->Classical_Guitar) checked @endif>
+                                                            <input type="checkbox" value="Classical_Guitar" id="Classical_Guitar" name="Classical_Guitar" @if($data2->guitar) checked @endif>
                                                             Guitar (Classical)
                                                         </label>
                                                         </br>
                                                         <span class="smaller">Other Instruments:</span> </br>
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Electric_Guitar" id="Electric_Guitar" name="Electric_Guitar" @if($data2->Electric_Guitar) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Electric_Guitar" id="Electric_Guitar" name="Electric_Guitar" @if($data2->electric_guitar) checked @endif>
                                                             Electric Guitar
                                                         </label>
                                                         </br>
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Bass_Guitar" id="Bass_Guitar" name="Bass_Guitar" @if($data2->Bass_Guitar) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Bass_Guitar" id="Bass_Guitar" name="Bass_Guitar" @if($data2->bass_guitar) checked @endif>
                                                             Bass Guitar
                                                         </label>
                                                         </br>
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Banjo" id="Banjo" name="Banjo" @if($data2->Banjo) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Banjo" id="Banjo" name="Banjo" @if($data2->banjo) checked @endif>
                                                             Banjo
                                                         </label>
                                                         </br>
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Ukelele" id="Ukelele" name="Ukelele" @if($data2->Ukelele) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Ukelele" id="Ukelele" name="Ukelele" @if($data2->ukelele) checked @endif>
                                                             Ukelele
                                                         </label>
                                                         </br>
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Sitar" id="Sitar" name="Sitar" @if($data2->Sitar) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Sitar" id="Sitar" name="Sitar" @if($data2->sitar) checked @endif>
                                                             Sitar
                                                         </label>
                                                         </br>
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Balalaika" id="Balalaika" name="Balalaika" @if($data2->Balalaika) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Balalaika" id="Balalaika" name="Balalaika" @if($data2->balalaika) checked @endif>
                                                             Balalaika
                                                         </label>
                                                         </br>
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Mandolin" id="Mandolin" name="Mandolin" @if($data2->Mandolin) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Mandolin" id="Mandolin" name="Mandolin" @if($data2->mandolin) checked @endif>
                                                             Mandolin
                                                         </label>
                                                         </br>
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Zither" id="Zither" name="Zither" @if($data2->Zither) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Zither" id="Zither" name="Zither" @if($data2->zither) checked @endif>
                                                             Zither
                                                         </label>
                                                         </br>
@@ -602,73 +603,73 @@
                                                     <div class="form-group" id="wind-children">
                                                         <span class="header">Main Instruments:</span></br>
                                                         <label>
-                                                            <input type="checkbox" value="Flute" id="Flute" name="Flute" @if($data2->Flute) checked @endif>
+                                                            <input type="checkbox" value="Flute" id="Flute" name="Flute" @if($data2->flute) checked @endif>
                                                             Flute
                                                         </label>
                                                         </br>
                                                         <label>
-                                                            <input type="checkbox" value="Clarinet" id="Clarinet" name="Clarinet" @if($data2->Clarinet) checked @endif>
+                                                            <input type="checkbox" value="Clarinet" id="Clarinet" name="Clarinet" @if($data2->clarinet) checked @endif>
                                                             Clarinet
                                                         </label>
                                                         </br>
                                                         <label>
-                                                            <input type="checkbox" value="Oboe" id="Oboe" name="Oboe" @if($data2->Oboe) checked @endif>
+                                                            <input type="checkbox" value="Oboe" id="Oboe" name="Oboe" @if($data2->oboe) checked @endif>
                                                             Oboe
                                                         </label>
                                                         </br>
                                                         <label>
-                                                            <input type="checkbox" value="Bassoon" id="Bassoon" name="Bassoon" @if($data2->Bassoon) checked @endif>
+                                                            <input type="checkbox" value="Bassoon" id="Bassoon" name="Bassoon" @if($data2->bassoon) checked @endif>
                                                             Bassoon
                                                         </label>
                                                         </br>
                                                         <label>
-                                                            <input type="checkbox" value="Recorder" id="Recorder" name="Recorder" @if($data2->Recorder) checked @endif>
+                                                            <input type="checkbox" value="Recorder" id="Recorder" name="Recorder" @if($data2->recorder) checked @endif>
                                                             Recorder
                                                         </label>
                                                         </br>
                                                         <span class="smaller">Other Instruments:</span></br>
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Piccolo" id="Piccolo" name="Piccolo" @if($data2->Piccolo) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Piccolo" id="Piccolo" name="Piccolo" @if($data2->piccolo) checked @endif>
                                                             Piccolo
                                                         </label>
                                                         </br>
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Saxophone" id="Saxophone" name="Saxophone" @if($data2->Saxophone) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Saxophone" id="Saxophone" name="Saxophone" @if($data2->saxophone) checked @endif>
                                                             Saxophone
                                                         </label>
                                                         </br>
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Cor_Anglais" id="Cor_Anglais" name="Cor_Anglais" @if($data2->Cor_Anglais) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Cor_Anglais" id="Cor_Anglais" name="Cor_Anglais" @if($data2->cor_anglais) checked @endif>
                                                             Cor Anglais
                                                         </label>
                                                         </br>
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Basset_Horn" id="Basset_Horn" name="Basset_Horn" @if($data2->Basset_Horn) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Basset_Horn" id="Basset_Horn" name="Basset_Horn" @if($data2->basset_horn) checked @endif>
                                                             Basset Horn
                                                         </label>
                                                         </br>
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Bass_Clarinet" id="Bass_Clarinet" name="Bass_Clarinet" @if($data2->Bass_Clarinet) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Bass_Clarinet" id="Bass_Clarinet" name="Bass_Clarinet" @if($data2->bass_clarinet) checked @endif>
                                                             Bass Clarinet
                                                         </label>
                                                         </br>
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Contra_Bassoon" id="Contra_Bassoon" name="Contra_Bassoon" @if($data2->Contra_Bassoon) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Contra_Bassoon" id="Contra_Bassoon" name="Contra_Bassoon" @if($data2->contra_bassoon) checked @endif>
                                                             Contra Bassoon
                                                         </label>
                                                         </br>
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Bagpipes" id="Bagpipes" name="Bagpipes" @if($data2->Bagpipes) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Bagpipes" id="Bagpipes" name="Bagpipes" @if($data2->bagpipes) checked @endif>
                                                             Bagpipes
                                                         </label>
                                                         </br>
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Ocarina" id="Ocarina" name="Ocarina" @if($data2->Ocarina) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Ocarina" id="Ocarina" name="Ocarina" @if($data2->ocarina) checked @endif>
                                                             Ocarina
                                                         </label>
                                                         </br>
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Mouth_Organ" id="Mouth_Organ" name="Mouth_Organ" @if($data2->Mouth_Organ) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Mouth_Organ" id="Mouth_Organ" name="Mouth_Organ" @if($data2->mouth_organ) checked @endif>
                                                             Mouth Organ
                                                         </label>
                                                         </br>
@@ -692,73 +693,73 @@
                                                         <span class="header">Main Instruments:</span></br>
                                                         <br>
                                                         <label>
-                                                            <input type="checkbox" value="Horn" id="Horn" name="Horn" @if($data2->Horn) checked @endif>
+                                                            <input type="checkbox" value="Horn" id="Horn" name="Horn" @if($data2->french_horn) checked @endif>
                                                             (French) Horn
                                                         </label>
                                                         </br>
                                                         <label>
-                                                            <input type="checkbox" value="Trumpet" id="Trumpet" name="Trumpet" @if($data2->Trumpet) checked @endif>
+                                                            <input type="checkbox" value="Trumpet" id="Trumpet" name="Trumpet" @if($data2->trumpet) checked @endif>
                                                             Trumpet
                                                         </label>
                                                         </br>
                                                         <label>
-                                                            <input type="checkbox" value="Trombone" id="Trombone" name="Trombone" @if($data2->Trombone) checked @endif>
+                                                            <input type="checkbox" value="Trombone" id="Trombone" name="Trombone" @if($data2->trombone) checked @endif>
                                                             Trombone
                                                         </label>
                                                         </br>
                                                         <label>
-                                                            <input type="checkbox" value="Tuba" id="Tuba" name="Tuba" @if($data2->Tuba) checked @endif>
+                                                            <input type="checkbox" value="Tuba" id="Tuba" name="Tuba" @if($data2->tuba) checked @endif>
                                                             Tuba
                                                         </label>
                                                         </br>
                                                         <span class="smaller">Other Instruments:</span></br>
                                                         <label class="smaller" >
-                                                            <input class="smaller" type="checkbox" value="Cornet" id="Cornet" name="Cornet" @if($data2->Cornet) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Cornet" id="Cornet" name="Cornet" @if($data2->cornet) checked @endif>
                                                             Cornet
                                                         </label>
                                                         </br>
                                                         <label class="smaller" >
-                                                            <input class="smaller" type="checkbox" value="Flugel_Horn" id="Flugel_Horn" name="Flugel_Horn"  @if($data2->Flugel_Horn) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Flugel_Horn" id="Flugel_Horn" name="Flugel_Horn"  @if($data2->flugel_horn) checked @endif>
                                                             Flugel Horn
                                                         </label>
                                                         </br>
                                                         <label class="smaller" >
-                                                            <input class="smaller" type="checkbox" value="Tenor_Horn" id="Tenor_Horn" name="Tenor_Horn"  @if($data2->Tenor_Horn) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Tenor_Horn" id="Tenor_Horn" name="Tenor_Horn"  @if($data2->tenor_horn) checked @endif>
                                                             Tenor Horn
                                                         </label>
                                                         </br>
                                                         <label class="smaller" >
-                                                            <input class="smaller" type="checkbox" value="Baritone" id="Baritone" name="Baritone"  @if($data2->Baritone) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Baritone" id="Baritone" name="Baritone"  @if($data2->baritone) checked @endif>
                                                             Baritone
                                                         </label>
                                                         </br>
                                                         <label class="smaller" >
-                                                            <input class="smaller" type="checkbox" value="Euphonium" id="Euphonium" name="Euphonium"  @if($data2->Euphonium) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Euphonium" id="Euphonium" name="Euphonium"  @if($data2->euphonium) checked @endif>
                                                             Euphonium
                                                         </label>
                                                         </br>
                                                         <label class="smaller" >
-                                                            <input class="smaller" type="checkbox" value="Ophicleide" id="Ophicleide" name="Ophicleide"  @if($data2->Ophicleide) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Ophicleide" id="Ophicleide" name="Ophicleide"  @if($data2->ophicleide) checked @endif>
                                                             Ophicleide
                                                         </label>
                                                         </br>
                                                         <label class="smaller" >
-                                                            <input class="smaller" type="checkbox" value="Sackbutt" id="Sackbutt" name="Sackbutt"  @if($data2->Sackbutt) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Sackbutt" id="Sackbutt" name="Sackbutt"  @if($data2->sackbutt) checked @endif>
                                                             Sackbutt
                                                         </label>
                                                         </br>
                                                         <label class="smaller" >
-                                                            <input class="smaller" type="checkbox" value="Cornette" id="Cornette" name="Cornette"  @if($data2->Cornette) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Cornette" id="Cornette" name="Cornette"  @if($data2->cornette) checked @endif>
                                                             Cornette
                                                         </label>
                                                         </br>
                                                         <label class="smaller" >
-                                                            <input class="smaller" type="checkbox" value="Serpent" id="Serpent" name="Serpent"  @if($data2->Serpent) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Serpent" id="Serpent" name="Serpent"  @if($data2->serpent) checked @endif>
                                                             Serpent
                                                         </label>
                                                         </br>
                                                         <label class="smaller" >
-                                                            <input class="smaller" type="checkbox" value="Didgeridoo" id="Didgeridoo" name="Didgeridoo"  @if($data2->Didgeridoo) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Didgeridoo" id="Didgeridoo" name="Didgeridoo"  @if($data2->didgeridoo) checked @endif>
                                                             Digeridoo
                                                         </label>
                                                         </br>
@@ -783,22 +784,22 @@
                                                         <span class="header">Main Instruments:</span></br>
 
                                                         <label>
-                                                            <input type="checkbox" value="Timpani" id="Timpani" name="Timpani"  @if($data2->Timpani) checked @endif>
+                                                            <input type="checkbox" value="Timpani" id="Timpani" name="Timpani"  @if($data2->timpani) checked @endif>
                                                             Timpani
                                                         </label>
                                                         </br>
                                                         <label>
-                                                            <input type="checkbox" value="Orchestral_Percussion" id="Orchestral_Percussion" name="Orchestral_Percussion"  @if($data2->Orchestral_Percussion) checked @endif>
+                                                            <input type="checkbox" value="Orchestral_Percussion" id="Orchestral_Percussion" name="Orchestral_Percussion"  @if($data2->orchestral_percussion) checked @endif>
                                                             Orchestral Percussion
                                                         </label>
                                                         </br>
                                                         <label>
-                                                            <input type="checkbox" value="Tuned_Percussion" id="Tuned_Percussion" name="Tuned_Percussion"  @if($data2->Tuned_Percussion) checked @endif>
+                                                            <input type="checkbox" value="Tuned_Percussion" id="Tuned_Percussion" name="Tuned_Percussion"  @if($data2->tuned_percussion) checked @endif>
                                                             Tuned Percussion
                                                         </label>
                                                         </br>
                                                         <label>
-                                                            <input type="checkbox" value="Drum_Kit" id="Drum_Kit" name="Drum_Kit"  @if($data2->Drum_Kit) checked @endif>
+                                                            <input type="checkbox" value="Drum_Kit" id="Drum_Kit" name="Drum_Kit"  @if($data2->drum_kit) checked @endif>
                                                             Drum Kit
                                                         </label>
                                                         </br>
@@ -809,25 +810,25 @@
                                                         </label>
                                                         </br>
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Marimba" id="Marimba" name="Marimba"  @if($data2->Marimba) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Marimba" id="Marimba" name="Marimba"  @if($data2->marimba) checked @endif>
                                                             Marimba
                                                         </label>
                                                         </br>
 
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Vibraphone" id="Vibraphone" name="Vibraphone"  @if($data2->Vibraphone) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Vibraphone" id="Vibraphone" name="Vibraphone"  @if($data2->vibraphone) checked @endif>
                                                             Vibraphone
                                                         </label>
                                                         </br>
 
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Glockenspiel" id="Glockenspiel" name="Glockenspiel"  @if($data2->Glockenspiel) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Glockenspiel" id="Glockenspiel" name="Glockenspiel"  @if($data2->glockenspiel) checked @endif>
                                                             Glockenspiel
                                                         </label>
                                                         </br>
 
                                                         <label class="smaller">
-                                                            <input class="smaller" type="checkbox" value="Cembalom" id="Cembalom" name="Cembalom"  @if($data2->Cembalom) checked @endif>
+                                                            <input class="smaller" type="checkbox" value="Cembalom" id="Cembalom" name="Cembalom"  @if($data2->cembalom) checked @endif>
                                                             Cembalom
                                                         </label>
                                                         </br>
@@ -849,23 +850,23 @@
 
                                                     <span class="header">Main Instruments:</span></br>
                                                     <label>
-                                                        <input type="checkbox" value="Piano" id="Piano" name="Piano"  @if($data2->Piano) checked @endif>
+                                                        <input type="checkbox" value="Piano" id="Piano" name="Piano"  @if($data2->piano) checked @endif>
                                                         Piano
                                                     </label>
                                                     </br>
                                                     <label>
-                                                        <input type="checkbox" value="Organ" id="Organ" name="Organ"  @if($data2->Organ) checked @endif>
+                                                        <input type="checkbox" value="Organ" id="Organ" name="Organ"  @if($data2->organ) checked @endif>
                                                         Organ
                                                     </label>
                                                     </br>
                                                     <span class="smaller">Other Instruments:</span></br>
                                                     <label class="smaller">
-                                                        <input class="smaller" type="checkbox" value="Keyboard" id="Keyboard" name="Keyboard"  @if($data2->Keyboard) checked @endif>
+                                                        <input class="smaller" type="checkbox" value="Keyboard" id="Keyboard" name="Keyboard"  @if($data2->keyboard) checked @endif>
                                                         Keyboard
                                                     </label>
                                                     </br>
                                                     <label class="smaller">
-                                                        <input class="smaller" type="checkbox" value="Harpsichord" id="Harpsichord" name="Harpsichord"  @if($data2->Harpsichord) checked @endif>
+                                                        <input class="smaller" type="checkbox" value="Harpsichord" id="Harpsichord" name="Harpsichord"  @if($data2->harpsichord) checked @endif>
                                                         Harpsichord
                                                     </label>
                                                     </br>
@@ -886,12 +887,12 @@
                                                     <div class="form-group" id="keys-children">
                                                         <div class="form-group" id="singing-children">
                                                             <label>
-                                                                <input type="checkbox" value="Male_Singing" id="Male_Singing" name="Male_Singing"  @if($data2->Male_Singing) checked @endif>
+                                                                <input type="checkbox" value="Male_Singing" id="Male_Singing" name="Male_Singing"  @if($data2->male_singing) checked @endif>
                                                                 Male
                                                             </label>
                                                             <br>
                                                             <label>
-                                                                <input type="checkbox" value="Female_Singing" id="Female_Singing" name="Female_Singing"  @if($data2->Female_Singing) checked @endif>
+                                                                <input type="checkbox" value="Female_Singing" id="Female_Singing" name="Female_Singing"  @if($data2->female_singing) checked @endif>
                                                                 Female
                                                             </label>
                                                         </div>

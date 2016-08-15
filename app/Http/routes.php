@@ -86,6 +86,7 @@ Route::get('/admin/dashboard/getGroup','adminController@getGroupsMailingList')->
 
 /*teacher*/
 Route::get('/edit/teacher', 'loginController@getTeacherDashboard')->middleware(['auth','teacher']);
+
 Route::get('/edit/user', 'loginController@getTeacherDashboard')->middleware(['auth','teacher']);
 /*repairer*/
 Route::get('/edit/repairer', 'loginController@getRepairerDashboard')->middleware(['auth','repairer']);
@@ -99,8 +100,9 @@ Route::get('/edit/group/event/{eventid}', 'loginController@editEvent')->middlewa
 Route::post('/discover/add/post', 'discoverController@newEvent' );
 Route::post('/learn/repairers/post', 'learnController@newRepairer');
 Route::post('/postensemble', 'playController@newAd');
-Route::post('/editensemble', 'playController@editAd');
+Route::post('/editensemble', 'playController@editAd')->middleware(['auth','group']);
 Route::post('/teach/register/post', 'teachController@newTeach');
+Route::post('/teach/edit/post', 'teachController@editTeach')->middleware(['auth','teacher']);
 Route::post('/play/join/post', 'playController@search');
 Route::post('/newsletter/subscribe_chimp', 'newsletterController@addtolist');
 Route::post('/learn/teachers', 'learnController@search');
