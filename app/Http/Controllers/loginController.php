@@ -7,6 +7,7 @@ use App\Instruments_Taught;
 use Illuminate\Http\Request;
 use App\Event;
 use App\Teacher;
+use App\Repairer;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests;
 
@@ -19,15 +20,31 @@ class loginController extends Controller
         return view('edit.teacher',['data'=> $data, 'data2'=>$data2]);
     }
     public function getRepairerDashboard(){
-        return view('edit.repairer');
+        $data = Repairer::whereUser_id(Auth::user()->id)->first();
+        $data2 = $data->Instruments_Repaired()->first();
+        return view('edit.repairer',['data'=> $data, 'data2'=>$data2]);
     }
     public function getGroupDashboard(){
         $data = Group::where('user_id', '==', Auth::user()->id)->first();
         return view('edit.group', ['data' => $data]);
     }
-    public function editEvent(Event $ev)
+    public function getGroupEvents(){
+        $group_model = Group::whereUser_id(Auth::user()->id)->first();
+        $groupid = $group_model->id;
+        $events = Event::whereGroup_id($groupid)->get();
+        $dates = [];
+        foreach($events as $e){
+            $dates[] = $e['date']->toFormattedDateString();
+        }
+
+        $group = $group_model->group_name;
+        return view('edit.event',['group' => $group, 'events'=>$events, 'dates'=>$dates]);
+    }
+    public function editEvent($id)
     {
-        return view('edit.event', ['groups' => $ev]);
+        $event = Event::find($id);
+        return view('edit.singleEvent', ['event' => $event]);
 
     }
+    
 }

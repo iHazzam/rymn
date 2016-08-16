@@ -25,10 +25,9 @@ class discoverController extends Controller
         $e = new \Spatie\GoogleCalendar\Event;
         $date = $event->date;
         $time = $event->time;
-        var_dump($time);
+        $date = strtok($date,' ');
         $time = $time . ":00";
         $dateTime = $date . " " . $time;
-        var_dump($dateTime);
         $time = Carbon::createFromFormat('Y-m-d H:i:s',$dateTime, 'Europe/London');
 
         $endTime = Carbon::createFromFormat('Y-m-d H:i:s',$dateTime, 'Europe/London')->addHours(2);
@@ -38,6 +37,14 @@ class discoverController extends Controller
         $e->startDateTime = $time;
         $e->endDateTime = $endTime;
         $e->save();
+        return $e->id;
+
+    }
+    public function updateEventCalendar(Event $event)
+    {
+        $eventId = $event->spatieID;
+        $e = \Spatie\GoogleCalendar\Event::find($eventId);
+
     }
     public function map()
     {
@@ -145,13 +152,94 @@ class discoverController extends Controller
 
             $event->save();
             $this->updateCalendar($event);
-            $request->session()->flash('alert-success', "Thanks! Event added succesfully. Click <a href={{url('discover/calendar')}}>here</a> to see the calendar!");
+            $request->session()->flash('alert-success', "Thanks! Event added succesfully!");
             return redirect('/discover');
         }
         else{
             $request->session()->flash('alert-danger',$error_reason);
             return Redirect::back()->withInput()->withErrors($error_reason);
         }
+    }
+    public function postEditEvent(Request $request, $id)
+    {
+
+        $req = $request->all();
+        var_dump($req);
+        $this->validate($request, [
+            'group' => 'required',
+            'name' => 'required',
+            'date' => 'required|date|after:today',
+            'time' => 'required',
+            'addr1' => 'required',
+            'postcode' => 'required',
+        ]);
+        $error = false;
+        $error_reason = "";
+        $event = Event::find($id);
+        $event->name = $req['name'];
+        $event->group_id = $req['group'];
+        $event->date = $req['date'];
+        $event->time = $req['time'];
+        $event->city = $req['city'];
+        if ($this->is_valid_postcode($req['postcode']))
+        {
+            $event->postcode =  $req['postcode'];
+        }
+        else{
+            $error = true;
+            $error_reason= "Invalid Postcode!";
+        }
+        $event->concert_address_line1 = $req['addr1'];
+        if($request->has('addr2'))
+        {
+            $event->concert_address_line2 = $req['addr2'];
+        }
+        else{
+            $event->concert_address_line2 = "";
+        }
+        if($request->has('programnotes'))
+        {
+            $event->concert_details = $req['programnotes'];
+        }else{
+            $event->concert_details = "";
+        }
+        if($request->has('ticket_price'))
+        {
+            $event->ticket_cost = $req['ticket_price'];
+        }else{
+            $event->ticket_cost = "";
+        }
+
+        if(Input::file('thumbnail_image')) {
+            if (Input::file('thumbnail_image')->isValid()) {
+                $destPath = 'upload';
+                $extension = Input::file('thumbnail_image')->getClientOriginalExtension();
+
+                if ($extension == 'png' || 'gif' || 'jpg' || 'jpeg') {
+                    $filename = rand(11111, 99999) . '.' . $extension;
+                    Input::file('thumbnail_image')->move($destPath, $filename);
+                    $event->thumbnail_img = $destPath . "/" . $filename;
+                } else {
+                    return Redirect::back()->withErrors(['Error: Incorrect filetype uploaded (Must be png, gif, jpg, or jpeg)']);
+                }
+            }
+        }
+        else{
+            $event->thumbnail_img = "/upload/event_default.png";
+        }
+        if($error == false)
+        {
+
+            $event->save();
+            $this->updateCalendar($event);
+            $request->session()->flash('alert-success', "Thanks! Event edited succesfully!");
+            return redirect('/discover');
+        }
+        else{
+            $request->session()->flash('alert-danger',$error_reason);
+            return Redirect::back()->withInput()->withErrors($error_reason);
+        }
+
     }
 
     public function addEvent()

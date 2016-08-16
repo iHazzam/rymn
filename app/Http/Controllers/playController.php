@@ -253,6 +253,7 @@ class playController extends Controller
                 $user->password =  bcrypt($request->password);
                 $user->is_group = true;
                 $user->save();
+                $group->user_id = $user->id;
             }
 
             $group->save();

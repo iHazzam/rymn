@@ -1,0 +1,379 @@
+if($request->has('Violin'))
+        {
+            $repairer_instruments->Violin = 1;
+        }
+        else{
+            $repairer_instruments->Violin=0;
+        }
+
+        if($request->has('Viola'))
+        {
+            $repairer_instruments->Viola = 1;
+        }
+        else{
+            $repairer_instruments->Viola=0;
+        }
+
+        if($request->has('Cello'))
+        {
+            $repairer_instruments->Cello = 1;
+        }else{
+            $repairer_instruments->Cello=0;
+        }
+
+        if($request->has('Double_Bass'))
+        {
+            $repairer_instruments->Double_Bass = 1;
+        }else{
+            $repairer_instruments->Double_Bass=0;
+        }
+
+        if($request->has('Harp'))
+        {
+            $repairer_instruments->Harp = 1;
+        }else{
+            $repairer_instruments->Harp =0;
+        }
+
+        if($request->has('Classical_Guitar'))
+        {
+            $repairer_instruments->guitar = 1;
+        }else{
+            $repairer_instruments->guitar=0;
+        }
+
+        if($request->has('Electric_Guitar'))
+        {
+            $repairer_instruments->Electric_Guitar = 1;
+        }else{
+            $repairer_instruments->Electric_Guitar=0;
+        }
+
+        if($request->has('Bass_Guitar'))
+        {
+            $repairer_instruments->Bass_Guitar = 1;
+        }else{
+            $repairer_instruments->Bass_Guitar=0;
+        }
+
+        if($request->has('Banjo'))
+        {
+            $repairer_instruments->Banjo = 1;
+        }else{
+            $repairer_instruments->Banjo =0;
+        }
+
+        if($request->has('Ukelele'))
+        {
+            $repairer_instruments->Ukelele = 1;
+        }else{
+            $repairer_instruments->Ukelele =0;
+        }
+
+        if($request->has('Sitar'))
+        {
+            $repairer_instruments->Sitar = 1;
+        }else{
+            $repairer_instruments->Sitar =0;
+        }
+
+        if($request->has('Balalaika'))
+        {
+            $repairer_instruments->Balalaika = 1;
+        }else{
+            $repairer_instruments->Balalaika =0;
+        }
+
+        if($request->has('Mandolin'))
+        {
+            $repairer_instruments->Mandolin = 1;
+        }else{
+            $repairer_instruments->Mandolin =0;
+        }
+
+        if($request->has('Zither'))
+        {
+            $repairer_instruments->Zither = 1;
+        }else{
+            $repairer_instruments->Zither =0;
+        }
+
+        if($request->has('Flute'))
+        {
+            $repairer_instruments->Flute = 1;
+        }else{
+            $repairer_instruments->Flute =0;
+        }
+
+        if($request->has('Clarinet'))
+        {
+            $repairer_instruments->Clarinet = 1;
+        }else{
+            $repairer_instruments->Clarinet =0;
+        }
+
+        if($request->has('Oboe'))
+        {
+            $repairer_instruments->Oboe = 1;
+        }else{
+            $repairer_instruments->Oboe =0;
+        }
+
+        if($request->has('Bassoon'))
+        {
+            $repairer_instruments->Bassoon = 1;
+        }else{
+            $repairer_instruments->Bassoon =0;
+        }
+
+        if($request->has('Recorder'))
+        {
+            $repairer_instruments->Recorder = 1;
+        }else{
+            $repairer_instruments->Recorder =0;
+        }
+
+        if($request->has('Piccolo'))
+        {
+            $repairer_instruments->Piccolo = 1;
+        }else{
+            $repairer_instruments->Piccolo =0;
+        }
+
+        if($request->has('Saxophone'))
+        {
+            $repairer_instruments->Saxophone = 1;
+        }else{
+            $repairer_instruments->Saxophone =0;
+        }
+
+        if($request->has('Cor_Anglais'))
+        {
+            $repairer_instruments->Cor_Anglais = 1;
+        }else{
+            $repairer_instruments->Cor_Anglais =0;
+        }
+
+        if($request->has('Basset_Horn'))
+        {
+            $repairer_instruments->Basset_Horn = 1;
+        }else{
+            $repairer_instruments->Basset_Horn=0;
+        }
+
+        if($request->has('Bass_Clarinet'))
+        {
+            $repairer_instruments->Bass_Clarinet = 1;
+        }else{
+            $repairer_instruments->Bass_Clarinet =0;
+        }
+
+        if($request->has('Contra_Bassoon'))
+        {
+            $repairer_instruments->Contra_Bassoon = 1;
+        }else{
+            $repairer_instruments->Contra_Bassoon =0;
+        }
+
+        if($request->has('Bagpipes'))
+        {
+            $repairer_instruments->Bagpipes = 1;
+        }else{
+            $repairer_instruments->Bagpipes =0;
+        }
+
+        if($request->has('Ocarina'))
+        {
+            $repairer_instruments->Ocarina = 1;
+        }else{
+            $repairer_instruments->Ocarina=0;
+        }
+
+        if($request->has('Mouth_Organ'))
+        {
+            $repairer_instruments->Mouth_Organ = 1;
+        }else{
+            $repairer_instruments->Mouth_Organ=0;
+        }
+
+        if($request->has('Horn'))
+        {
+            $repairer_instruments->French_Horn = 1;
+        }else{
+            $repairer_instruments->French_Horn=0;
+        }
+
+        if($request->has('Trumpet'))
+        {
+            $repairer_instruments->Trumpet = 1;
+        }else{
+            $repairer_instruments->Trumpet=0;
+        }
+
+        if($request->has('Trombone'))
+        {
+            $repairer_instruments->Trombone = 1;
+        }else{
+            $repairer_instruments->Trombone=0;
+        }
+
+        if($request->has('Tuba'))
+        {
+            $repairer_instruments->Tuba = 1;
+        }else{
+            $repairer_instruments->Tuba=0;
+        }
+
+        if($request->has('Cornet'))
+        {
+            $repairer_instruments->Cornet = 1;
+        }else{
+            $repairer_instruments->Cornet=0;
+        }
+
+        if($request->has('Flugel_Horn'))
+        {
+            $repairer_instruments->Flugel_Horn = 1;
+        }else{
+            $repairer_instruments->Flugel_Horn=0;
+        }
+
+        if($request->has('Tenor_Horn'))
+        {
+            $repairer_instruments->Tenor_Horn = 1;
+        }else{
+            $repairer_instruments->Tenor_Horn=0;
+        }
+
+        if($request->has('Baritone'))
+        {
+            $repairer_instruments->Baritone = 1;
+        }else{
+            $repairer_instruments->Baritone=0;
+        }
+
+        if($request->has('Euphonium'))
+        {
+            $repairer_instruments->Euphonium = 1;
+        }else{
+            $repairer_instruments->Euphonium=0;
+        }
+
+        if($request->has('Ophicleide'))
+        {
+            $repairer_instruments->Ophicleide = 1;
+        }else{
+            $repairer_instruments->Ophicleide=0;
+        }
+
+        if($request->has('Sackbutt'))
+        {
+            $repairer_instruments->Sackbutt = 1;
+        }else{
+            $repairer_instruments->Sackbutt=0;
+        }
+
+        if($request->has('Cornette'))
+        {
+            $repairer_instruments->Cornette = 1;
+        }else{
+            $repairer_instruments->Cornette =0;
+        }
+
+        if($request->has('Serpent'))
+        {
+            $repairer_instruments->Serpent = 1;
+        }else{
+            $repairer_instruments->Serpent=0;
+        }
+
+        if($request->has('Digeridoo'))
+        {
+            $repairer_instruments->Digeridoo = 1;
+        }else{
+            $repairer_instruments->Digeridoo =0;
+        }
+        if($request->has('Timpani'))
+        {
+            $repairer_instruments->Timpani = 1;
+        }else{
+            $repairer_instruments->Timpani=0;
+        }
+
+        if($request->has('Orchestral_Percussion'))
+        {
+            $repairer_instruments->Orchestral_Percussion = 1;
+        }else{
+            $repairer_instruments->Orchestral_Percussion=0;
+        }
+        if($request->has('Tuned_Percussion'))
+        {
+            $repairer_instruments->Tuned_Percussion = 1;
+        }else{
+            $repairer_instruments->Tuned_Percussion=0;
+        }
+
+        if($request->has('Drum_Kit'))
+        {
+            $repairer_instruments->Drum_Kit = 1;
+        }else{
+            $repairer_instruments->Drum_Kit=0;
+        }
+        if($request->has('xylophone'))
+        {
+            $repairer_instruments->xylophone = 1;
+        }else{
+            $repairer_instruments->xylophone=0;
+        }
+
+        if($request->has('Marimba'))
+        {
+            $repairer_instruments->Marimba = 1;
+        }else{
+            $repairer_instruments->Marimba=0;
+        }
+        if($request->has('Vibraphone'))
+        {
+            $repairer_instruments->Vibraphone = 1;
+        }else{
+            $repairer_instruments->Vibraphone=0;
+        }
+
+        if($request->has('Glockenspiel'))
+        {
+            $repairer_instruments->Glockenspiel = 1;
+        }else{
+            $repairer_instruments->Glockenspiel=0;
+        }
+        if($request->has('Cembalom'))
+        {
+            $repairer_instruments->Cembalom = 1;
+        }else{
+            $repairer_instruments->Cembalom=0;
+        }
+
+        if($request->has('Piano'))
+        {
+            $repairer_instruments->Piano = 1;
+        }else{
+            $repairer_instruments->Piano=0;
+        }
+        if($request->has('Organ'))
+        {
+            $repairer_instruments->Organ = 1;
+        }else{
+            $repairer_instruments->Organ=0;
+        }
+
+        if($request->has('Keyboard'))
+        {
+            $repairer_instruments->Keyboard = 1;
+        }else{
+            $repairer_instruments->Keyboard=0;
+        }
+        if($request->has('Harpsichord'))
+        {
+            $repairer_instruments->Harpsichord = 1;
+        }else{
+            $repairer_instruments->Harpsichord=0;
+        }

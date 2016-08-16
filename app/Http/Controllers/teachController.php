@@ -573,7 +573,8 @@ class teachController extends Controller
         ]);
         $error = false;
 
-        $teacher = Teacher::where('user_id', '==', Auth::user()->id)->first();
+        $teacher = Teacher::whereUser_id(Auth::user()->id)->first();
+
         $teacher_instruments = Instruments_Taught::find($teacher->id);
         $teacher->first_name = $request->firstname;
         $teacher->last_name = $request->lastname;

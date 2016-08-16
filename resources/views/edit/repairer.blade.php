@@ -535,7 +535,7 @@
                                     <div class="form-group">
                                         <label for="biography" class="control-label">Further biographical details:</label>
 
-                                        <textarea class="form-control" id="biography" name="biography">{{ old('biography') }}</textarea>
+                                        <textarea class="form-control" id="biography" name="biography">{{$data->biography}}</textarea>
                                     </div>
                                     <div class="form-group">
                                         <label for="thumbnail_image" class="control-label">Add an image to be used for your profile (optional)</label>

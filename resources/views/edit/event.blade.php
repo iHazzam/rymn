@@ -30,7 +30,34 @@
                     <h3 class="panel-title">Edit Events</h3>
                 </div>
                 <div class="panel-body">
+                    <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+                        <h2 class="set-left nonewline"><span class="htb3">Future events for group: {{$group}}</span></h2>
 
+                        <ul class="accompanist_list list-group">
+                            @if(sizeof($events) > 0)
+                                @foreach($events as $k => $event)
+                                    <li class="list-group-item">
+                                        <table class="listgrouptable">
+                                            <tr> <!-- name date id -->
+                                                <td>
+                                                    <h4 class="list-group-item-heading nonewline">{{$event['name']}}</h4>
+                                                </td>
+                                                <td>
+                                                    <span class="list-group-item-text">Date: {{$dates[$k]}}</span>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-warning" href="{{url('/edit/group/event/'.$event['id'])}}">Edit</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </li>
+                                @endforeach
+                            @else
+                                <p>Apologies, there are no events for this group in RYMN's database</p>
+                            @endif
+
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

@@ -33,8 +33,8 @@ Route::get('/sitemap', 'pageController@sitemap');
     $this->get('logout', 'Auth\AuthController@logout');
 
     // Registration Routes...
-    //$this->get('register', 'Auth\AuthController@showRegistrationForm'); Disabled admin registration
-    //$this->post('register', 'Auth\AuthController@register');
+    $this->get('register', 'Auth\AuthController@showRegistrationForm'); //Disabled admin registration
+    $this->post('register', 'Auth\AuthController@register');
 
     // Password Reset Routes...
     $this->get('password/reset/{token?}', 'Auth\PasswordController@showResetForm');
@@ -93,12 +93,14 @@ Route::get('/edit/repairer', 'loginController@getRepairerDashboard')->middleware
 
 /*group*/
 Route::get('/edit/group', 'loginController@getGroupDashboard')->middleware(['auth','group']);
+Route::get('/edit/group/event','loginController@getGroupEvents')->middleware(['auth','group']);
 Route::get('/edit/group/event/{eventid}', 'loginController@editEvent')->middleware(['auth','group']);
 
 
 /*forms*/
 Route::post('/discover/add/post', 'discoverController@newEvent' );
 Route::post('/learn/repairers/post', 'learnController@newRepairer');
+Route::post('/edit/repairers/post','learnController@editRepairer');
 Route::post('/postensemble', 'playController@newAd');
 Route::post('/editensemble', 'playController@editAd')->middleware(['auth','group']);
 Route::post('/teach/register/post', 'teachController@newTeach');
@@ -106,7 +108,7 @@ Route::post('/teach/edit/post', 'teachController@editTeach')->middleware(['auth'
 Route::post('/play/join/post', 'playController@search');
 Route::post('/newsletter/subscribe_chimp', 'newsletterController@addtolist');
 Route::post('/learn/teachers', 'learnController@search');
-
+Route::post('/edit/group/event/{id}/post','loginController@postEditEvent)')->middleware(['auth','group']);
 /*delete*/
 Route::delete('/admin/dashboard/groups/{group}','adminController@deleteGroup');
 Route::delete('/admin/dashboard/teachers/{teacher}','adminController@deleteTeacher');

@@ -84,6 +84,6 @@ class CreateInstrumentsTaughtTable extends Migration
      */
     public function down()
     {
-        Schema::drop('instruments_repaired');
+        Schema::drop('instruments_taught');
     }
 }
