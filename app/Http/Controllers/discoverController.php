@@ -39,7 +39,7 @@ class discoverController extends Controller
         $e->save();
         return $e->id;
 
-    }
+    }   
     public function updateEventCalendar(Event $event)
     {
         $eventId = $event->spatieID;
