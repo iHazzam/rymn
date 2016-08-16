@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed649e33-b377-40ad-868e-9b8b4cecf892" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/imgs/wind.jpg" afterPath="$PROJECT_DIR$/public/imgs/wind.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/discoverController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/discoverController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/learnController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/learnController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/rymn.css" afterPath="$PROJECT_DIR$/public/css/rymn.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/teacherdetails.js" afterPath="$PROJECT_DIR$/public/js/teacherdetails.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/discover/about.blade.php" afterPath="$PROJECT_DIR$/resources/views/discover/about.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/discover/add.blade.php" afterPath="$PROJECT_DIR$/resources/views/discover/add.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/discover/calendar.blade.php" afterPath="$PROJECT_DIR$/resources/views/discover/calendar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/edit/singleEvent.blade.php" afterPath="$PROJECT_DIR$/resources/views/edit/singleEvent.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/learn/maintainance.blade.php" afterPath="$PROJECT_DIR$/resources/views/learn/maintainance.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/learn/teacherdb.blade.php" afterPath="$PROJECT_DIR$/resources/views/learn/teacherdb.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/play/groups.blade.php" afterPath="$PROJECT_DIR$/resources/views/play/groups.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
     </list>
     <ignored path="rymn.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,16 +30,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="discoverController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/discoverController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="76" column="30" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="instruments.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/learn/instruments.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -62,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teacherdb.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="teacherdb.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/learn/teacherdb.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="441">
@@ -107,8 +85,28 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="117" column="49" selection-start-line="117" selection-start-column="49" selection-end-line="117" selection-end-column="49" />
+            <state relative-caret-position="459">
+              <caret line="36" column="57" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="67" column="36" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -119,16 +117,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="157">
               <caret line="1323" column="20" selection-start-line="1323" selection-start-column="20" selection-end-line="1323" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rymn.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/rymn.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="558" column="14" selection-start-line="558" selection-start-column="14" selection-end-line="558" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -160,7 +148,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_08_13_104418_alter_users_table2.php" />
         <option value="$PROJECT_DIR$/app/Repairer.php" />
         <option value="$PROJECT_DIR$/app/Instruments_Repaired.php" />
@@ -168,7 +155,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2016_08_13_104400_create_repairers_table.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/Admin.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/Teacher.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/Repairer.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/Group.php" />
@@ -211,6 +197,8 @@
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/learnController.php" />
         <option value="$PROJECT_DIR$/resources/views/learn/teacherdb.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
       </list>
     </option>
   </component>
@@ -893,6 +881,32 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rymn" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Auth" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -1011,12 +1025,12 @@
       <workItem from="1471168647306" duration="4930000" />
       <workItem from="1471199366808" duration="26910000" />
       <workItem from="1471257293715" duration="29250000" />
-      <workItem from="1471341519885" duration="17013000" />
+      <workItem from="1471341519885" duration="17949000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="488843000" />
+    <option name="totallyTimeSpent" value="489779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="6" width="1927" height="1050" extended-state="0" />
@@ -1092,22 +1106,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Teacher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repairer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Repairer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1459,14 +1457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="117" column="49" selection-start-line="117" selection-start-column="49" selection-end-line="117" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/learnController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -1489,6 +1479,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="272" column="59" selection-start-line="272" selection-start-column="59" selection-end-line="272" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="36" column="57" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="67" column="36" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
           <folding />
         </state>
       </provider>
