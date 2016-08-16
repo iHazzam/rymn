@@ -24,17 +24,18 @@
                     <ul>
                         <li><span class="htb2">Orchestras:</span> An “orchestra” can be any group of a dozen or more players but we tend to use the term to mean a group of players of the “orchestral” instruments on our lists.  There are various types of orchestra but the three most common ones are:-
                             <ol class="htb2">
-                                <li ><span class="boring">String Orchestra – these usually consist of at least 3 First Violins, 3 Second Violins, 2 x Violas, 2 x Cellos and 1 Double Bass – but there can be up to 4 or 5 times as many players on each instrument. There is a fabulous amount of superb music written for String Orchestra.</li>
-                                <li ><span class="boring">Chamber Orchestra – a small to medium sized orchestra of 20 to 45 players, with strings but also including some wind or brass (Flutes, Oboes, Clarinets, Bassoons, Horns, maybe Trumpets and Timpani – but rarely more than 2 of any of these).</li>
-                                <li ><span class="boring">Full Orchestra or Symphony Orchestra – 50 or more string players, along with all the above instruments plus Trombones, Tuba, Percussion, often 1 or 2 Harps and various other instruments. Sometimes over 100 players.</li>
+                                <li ><span class="boring">String Orchestra – these usually consist of at least 3 First Violins, 3 Second Violins, 2 Violas, 2 Cellos and 1 Double Bass – but there can be up to 4 or 5 times as many players on each instrument. There is a fabulous amount of superb music written for String Orchestra.</span></li>
+                                <li ><span class="boring">Chamber Orchestra – a small to medium sized orchestra of 20 to 45 players, with strings but also including some wind or brass (Flutes, Oboes, Clarinets, Bassoons, Horns, maybe Trumpets and Timpani – but rarely more than 2 of any of these).</span></li>
+                                <li ><span class="boring">Full Orchestra or Symphony Orchestra – 50 or more string players, along with all the above instruments plus Trombones, Tuba, Percussion, often 1 or 2 Harps and various other instruments. Sometimes over 100 players.</span></li>
                             </ol>
                             <p>
                                 Orchestras play a fantastic range of music, written by most of the greatest composers, from about 1600 to the present day.  However, they don’t just play and give concerts on their own; orchestras are also used in Operas, Musicals, Oratorios and much Choral music, Ballets and for most good TV and movie soundtracks.  All the great blockbuster films use a full symphony orchestra. (Star Wars, Harry Potter, Lord of the Rings, Titanic etc.)  There is a shortage of good string players, oboes, bassoons, horns and harps – which is why these instruments are a great choice.
                             </p>
                         </li>
-                        <li><span class="htb3">Chamber groups:</span>(From 2 to about 10 players, where each player has a separate part to play.  The most common are String Quartets (2 Violins, Viola & Cello) and Wind Quintets (Flute, Oboe, Clarinet, Horn & Bassoon) but it can be any combination of instruments.  For many musicians, chamber music is the ultimate form of music making.  Why?  Because so many great composers wrote so much of this wonderful music not for an audience to hear but for the players (often themselves) to enjoy playing.  It’s rather like having a really good, musical conversation with friends!
+                        <li><span class="htb3">Chamber groups: </span>From 2 to about 10 players, where each player has a separate part to play.  The most common are String Quartets (2 Violins, Viola & Cello) and Wind Quintets (Flute, Oboe, Clarinet, Horn & Bassoon) but it can be any combination of instruments.  For many musicians, chamber music is the ultimate form of music making.  Why?  Because so many great composers wrote so much of this wonderful music not for an audience to hear but for the players (often themselves) to enjoy playing.  It’s rather like having a really good, musical conversation with friends!
                         </li>
-                        <li><span class="htb4">Bands:</span>This word can be used widely for any group 4 or more players.  However, unlike orchestras, bands don’t usually include string players and they often exist for a particular purpose or to play some specific type of music, often outdoors.  The main types of bands are:
+                        <br>
+                        <li><span class="htb4">Bands: </span>This word can be used widely for any group 4 or more players.  However, unlike orchestras, bands don’t usually include string players and they often exist for a particular purpose or to play some specific type of music, often outdoors.  The main types of bands are:
                             <ol class="htb4">
                                 <li ><span class="boring">Brass Bands – consist of Cornets of various sizes, Flugel Horns, Tenor Horns, Trombones, Baritones, Euphoniums, Tubas and Percussion.  Popular in this part of the world, especially for outdoor events.
                                 </span></li>
@@ -46,8 +47,10 @@
                                 <li ><span class="boring">Rock/Pop Bands etc. – usually 4 or 5 players, including 2 or 3 guitars, drums, maybe a keyboard and often a singer.</span></li>
                             </ol>
                         </li>
-                        <li><span class="htb5">Choirs:</span>There are countless types of choir, depending on the type of music they want to sing, ranging from all types of church music, to Barbershop and Rock Choirs. They can be any size from about 8 singers to 180!  If you do join a choir, please learn to read music.  Many singers don’t, they just learn the music by ear – but that means they learn new music very slowly and, if they ever join a new choir where the singers can read music, they will be left miles behind!
+                        <br>
+                        <li><span class="htb5">Choirs: </span>There are countless types of choir, depending on the type of music they want to sing, ranging from all types of church music, to Barbershop and Rock Choirs. They can be any size from about 8 singers to 180!  If you do join a choir, please learn to read music.  Many singers don’t, they just learn the music by ear – but that means they learn new music very slowly and, if they ever join a new choir where the singers can read music, they will be left miles behind!
                         </li>
+                        <br>
                         <li><span class="htb6">Operas and Musicals:  </span>Of course, if you like singing, you might like acting and dancing too and want to take part in musicals or operas.  This can be great fun. Many amateur societies have youth sections and many schools put on productions of musicals.  Again, if you can read music, you will find you can learn your parts so much more easily and quickly.
                         </li>
                     </ul>

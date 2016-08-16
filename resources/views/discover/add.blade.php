@@ -47,12 +47,14 @@
                                 <label><i class="fa fa-star" aria-hidden="true"></i>Date of event
                                     <input type="date" class="form-control" name="date" id="date" >
                                 </label>
-                                <label><i class="fa fa-star" aria-hidden="true"></i>Time of event
-                                    <input type="time" class="form-control" name="time" id="time" >
+                                <label><i class="fa fa-star" aria-hidden="true"></i>Start time of event
+                                    <input type="time" class="form-control" name="start_time" id="start_time" >
                                 </label>
-
+                                <label><i class="fa fa-star" aria-hidden="true"></i>End time of event
+                                    <input type="time" class="form-control" name="end_time" id="end_time" >
+                                </label>
                                 <div class="form-group">
-                                    <label><i class="fa fa-star" aria-hidden="true"></i>Name of event
+                                    <label><i class="fa fa-star" aria-hidden="true"></i>Name or title of event
                                         <input type="text" class="form-control" name="name" id="name" >
                                     </label>
                                 </div>
@@ -71,7 +73,7 @@
 
                                 </div>
                                 <div class="form-group">
-                                    <label for="city" class="control-label"><i class="fa fa-star" aria-hidden="true"></i>Venue City</label>
+                                    <label for="city" class="control-label"><i class="fa fa-star" aria-hidden="true"></i>Venue Town/City</label>
 
                                     <input type="text" class="form-control" id="city" name="city" placeholder="" required="">
 
@@ -85,17 +87,17 @@
 
                                 </div>
                                 <div class="form-group">
-                                    <label for="ticket_price" class="control-label">Ticket price (£)</label>
+                                    <label for="ticket_info" class="control-label">Ticket price/details(if applicable) </label>
 
-                                    <input type="number" id="ticket_price" name="ticket_price" min="0.01" step="0.01" max="2500">
+                                    <textarea class="form-control" id="ticket_info" name="ticket_info"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="programnotes" class="control-label">Concert Information / Program</label>
-                                    <textarea class="form-control" id="programnotes" name="programnotes" placeholder="Please add any relevant information about tickets office, program or anything else here"></textarea>
+                                    <textarea class="form-control" id="programnotes" name="programnotes" placeholder="Please add any relevant information about the event, contact details, participants etc. here."></textarea>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="thumbnail_image" class="control-label">Add a thumbnail image for the concert (Optional)</label>
+                                    <label for="thumbnail_image" class="control-label">Add a thumbnail image for the event (Optional)</label>
                                     {!! Form::file('thumbnail_image') !!}
 
                                 </div>

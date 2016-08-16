@@ -44,12 +44,15 @@
                                 <label><i class="fa fa-star" aria-hidden="true"></i>Date of event
                                     <input type="date" class="form-control" name="date" id="date" value="{{$data->date->format('Y-m-d')}}">
                                 </label>
-                                <label><i class="fa fa-star" aria-hidden="true"></i>Time of event
-                                    <input type="time" class="form-control" name="time" id="time" value="{{$data->time}}" >
+                                <label><i class="fa fa-star" aria-hidden="true"></i>Start time of event
+                                    <input type="time" class="form-control" name="time" id="time" value="{{$data->start_time}}" >
+                                </label>
+                                <label><i class="fa fa-star" aria-hidden="true"></i>End time of event
+                                    <input type="time" class="form-control" name="time" id="time" value="{{$data->end_time}}" >
                                 </label>
 
                                 <div class="form-group">
-                                    <label><i class="fa fa-star" aria-hidden="true"></i>Name of event
+                                    <label><i class="fa fa-star" aria-hidden="true"></i>Name or title of event
                                         <input type="text" class="form-control" name="name" id="name" value="{{$data->name}}" >
                                     </label>
                                 </div>
@@ -82,17 +85,17 @@
 
                                 </div>
                                 <div class="form-group">
-                                    <label for="ticket_price" class="control-label">Ticket price (£)</label>
+                                    <label for="ticket_info" class="control-label">Ticket price/details(if applicable) </label>
 
-                                    <input type="number" id="ticket_price" name="ticket_price" min="0.01" step="0.01" value="{{$data->ticket_cost}}" max="2500">
+                                    <textarea class="form-control" id="ticket_info" name="ticket_info">{{$data->ticket_info}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="programnotes" class="control-label">Concert Information / Program</label>
-                                    <textarea class="form-control" id="programnotes" name="programnotes" placeholder="Please add any relevant information about tickets office, program or anything else here">{{$data->concert_details}}</textarea>
+                                    <textarea class="form-control" id="programnotes" name="programnotes" placeholder="Please add any relevant information about the event, contact details, participants etc. here.">{{$data->concert_details}}</textarea>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="thumbnail_image" class="control-label">Add a thumbnail image for the concert (Optional)</label>
+                                    <label for="thumbnail_image" class="control-label">Add a thumbnail image for the event (Optional)</label>
                                     {!! Form::file('thumbnail_image') !!}
 
                                 </div>

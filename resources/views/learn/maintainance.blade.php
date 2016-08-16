@@ -34,7 +34,7 @@
                                             <span class="list-group-item-text">Instruments repaired: {{$a['repaired']}}</span>
                                         </td>
                                         <td>
-                                            <button id="{{$a['id']}}" name="{{$a['name']}}" class="btn btn-warning" onclick="openModal(this.id,this.name)">Contact Details (click to reveal)*</button>
+                                            <button id="{{$a['id']}}" name="{{$a['name']}}" class="btn btn-warning" onclick="openModalRepairer(this.id,this.name)">Contact Details (click to reveal)*</button>
                                         </td>
                                     </tr>
                                 </table>

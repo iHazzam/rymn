@@ -250,9 +250,8 @@ footer {
     width: 100px;
 }
 .teachercard_full_img{
+    float: right;
     margin-right: 0;
-    margin-left: 25em;
-
     width: 200px;
 }
 
@@ -566,4 +565,7 @@ footer {
 .contains_facebook{
     width: 50%;
     margin: 0 auto;
+}
+.other_instruments{
+    display: inline;
 }

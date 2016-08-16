@@ -105,7 +105,7 @@
                         for($id = 1; $id<4; $id++)
                         {
                             $fieldPlayed = 'instruments_played'.$id;
-                            if(isset($teacher->$fieldPlayed))
+                            if($teacher->$fieldPlayed != null)
                             {
                                 $played = $teacher->$fieldPlayed;
                                 $min = 'level_min_instrument'.$id;
@@ -201,7 +201,6 @@
                     <img src="{{isset($teacher->thumbnail_img) ? '/'.$teacher->thumbnail_img : "http://placehold.it/200x200"}}" alt="leftimg" class="teachercard_full_img" />
                     <p id="city">From: {{$teacher->city}}</p>
                     <p id="ages">Teaches ages: {{$teacher->min_age_taught}} to {{$teacher->max_age_taught}}</p>
-                    <p id="instruments-head">Instruments taught</p>
                     <p id="main_instruments">Main instruments:
                         <br>
                         <?php
@@ -209,7 +208,7 @@
                         for($id = 1; $id<4; $id++)
                         {
                         $fieldPlayed = 'instruments_played'.$id;
-                        if(isset($teacher->$fieldPlayed))
+                        if($teacher->$fieldPlayed != null)
                         {
                             $played = $teacher->$fieldPlayed;
                             $main_instruments[] = $played;
@@ -226,7 +225,7 @@
                             else{
                                 $fieldMax = chunk_split($fieldMax, 5, ' ');
                             }
-                                $string = '<span class="userinput"><i class="fa fa-bullseye" aria-hidden="true"></i>&nbsp;'.$played.' ('.$fieldMin .' to ' .$fieldMax. ')</span><br><br>';
+                                $string = '<span class="userinput"><i class="fa fa-bullseye" aria-hidden="true"></i>&nbsp;'.$played.' ('.$fieldMin .' to ' .$fieldMax. ')</span><br>';
                                 echo($string);
                             }
                         }
@@ -243,7 +242,7 @@
 
                             foreach($instruments as $key=>$i)
                             {
-                                $key = str_replace('_',' ',$key); //replace all underscores with spaces
+                                $key = ucfirst(str_replace('_',' ',$key)); //replace all underscores with spaces and capitalise
                                if(($i == 1) && (!in_array($key, $main_instruments))){
                                    echo('<li >'.$key.'</li>');
                                }
@@ -254,6 +253,7 @@
                     </p>
                 </div>
                 <div class="modal-footer">
+                    <button id="{{$teacher->id}}" name="{{$teacher->first_name}}" class="btn btn-warning" onclick="openModalTeacher(this.id,this.name)">Request contact details!</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -270,5 +270,6 @@
 
 @section('js')
     <script src="{{url('js/teacherdb.js')}}"></script>
+    <script src="{{url('js/teacherdetails.js')}}"></script>
 
 @endsection

@@ -10,7 +10,8 @@
                     <br>
                     <h2 class="set-left"><span class="htb6">About RYMN:</span></h2>
                     <p>
-                        Ripon Youth Music Network is....
+                        Below are listed some of the things you can find out about or do on RYMN. </br>
+                        Before going any further, please like our <a href="http://www.facebook.com/youth.music.network"> Facebook Page </a> - This is a great place for the community to share information, ask questions (and get answers!), buy, trade and sell seccond hand music and instruments, recruit players, advertise events as well as launch new initiatives and projects. You can even ask for a lift to a rehearsal, event or concert!
                     </p>
                 </div>
                 <div class="ssd col-sm-8">

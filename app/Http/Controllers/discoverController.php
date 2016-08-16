@@ -24,12 +24,38 @@ class discoverController extends Controller
     public function updateCalendar(Event $event){
         $e = new \Spatie\GoogleCalendar\Event;
         $date = $event->date;
-        $time = $event->time;
+        $start_time = $event->start_time;
+        $end_time = $event->end_time;
         $date = strtok($date,' ');
-        $dateTime = $date . " " . $time;
-        $time = Carbon::createFromFormat('Y-m-d H:i:s',$dateTime, 'Europe/London');
+        $SdateTime = $date . " " . $start_time;
+        $EdateTime = $date . " " . $end_time;
+        try
+        {
+            $time = Carbon::createFromFormat('Y-m-d H:i:s',$SdateTime, 'Europe/London');
+        }
+        catch(\Exception $err)
+        {
+            try{
+                $time = Carbon::createFromFormat('Y-m-d H:i',$SdateTime, 'Europe/London');
+            }
+            catch(\Exception $err2){
+                return redirect()->back()->withErrors("Sorry, fatal error - please contact the administrator");
+            }
+        }
+        try
+        {
+            $endTime = Carbon::createFromFormat('Y-m-d H:i:s',$EdateTime, 'Europe/London');
+        }
+        catch(\Exception $err)
+        {
+            try{
+                $endTime = Carbon::createFromFormat('Y-m-d H:i',$EdateTime, 'Europe/London');
+            }
+            catch(\Exception $err2){
+                return redirect()->back()->withErrors("Sorry, fatal error - please contact the administrator");
+            }
+        }
 
-        $endTime = Carbon::createFromFormat('Y-m-d H:i:s',$dateTime, 'Europe/London')->addHours(2);
 
         $heldby = Group::find($event->group_id);
         $e->name = $event->name . " - an event held by " . $heldby->group_name ;
@@ -65,7 +91,7 @@ class discoverController extends Controller
                 $address = $a->concert_address_line1 . "<br>" . $a->city . "<br>" . $a->postcode;
             }
             $date = str_split($a->date,10)[0];
-            $datetime = $date . " " . $a->time;
+            $datetime = $date . " " . $a->start_time;
             $datetime = Carbon::createFromFormat('Y-m-d H:i:s', $datetime, 'Europe/London')->toDayDateTimeString();
             $concert_details = $a->concert_details;
             $postcode = $a->postcode;
@@ -95,7 +121,8 @@ class discoverController extends Controller
             'group' => 'required',
             'name' => 'required',
             'date' => 'required|date|after:today',
-            'time' => 'required',
+            'start_time' => 'required',
+            'end_time' => 'required',
             'addr1' => 'required',
             'postcode' => 'required',
         ]);
@@ -105,7 +132,8 @@ class discoverController extends Controller
         $event->name = $req['name'];
         $event->group_id = $req['group'];
         $event->date = $req['date'];
-        $event->time = $req['time'];
+        $event->start_time = $req['start_time'];
+        $event->end_time = $req['end_time'];
         $event->city = $req['city'];
         if ($this->is_valid_postcode($req['postcode']))
         {
@@ -124,9 +152,9 @@ class discoverController extends Controller
         {
             $event->concert_details = $req['programnotes'];
         }
-        if($request->has('ticket_price'))
+        if($request->has('ticket_info'))
         {
-            $event->ticket_cost = $req['ticket_price'];
+            $event->ticket_info = $req['ticket_info'];
         }
 
         if(Input::file('thumbnail_image')) {
@@ -169,7 +197,8 @@ class discoverController extends Controller
             'group' => 'required',
             'name' => 'required',
             'date' => 'required|date|after:today',
-            'time' => 'required',
+            'start_time' => 'required',
+            'end_time' => 'required',
             'addr1' => 'required',
             'postcode' => 'required',
         ]);
@@ -179,7 +208,8 @@ class discoverController extends Controller
         $event->name = $req['name'];
         $event->group_id = $req['group'];
         $event->date = $req['date'];
-        $event->time = $req['time'];
+        $event->start_time = $req['start_time'];
+        $event->end_time = $req['end_time'];
         $event->city = $req['city'];
         if ($this->is_valid_postcode($req['postcode']))
         {
@@ -203,11 +233,11 @@ class discoverController extends Controller
         }else{
             $event->concert_details = "";
         }
-        if($request->has('ticket_price'))
+        if($request->has('ticket_info'))
         {
-            $event->ticket_cost = $req['ticket_price'];
+            $event->ticket_info = $req['ticket_info'];
         }else{
-            $event->ticket_cost = "";
+            $event->ticket_info = "";
         }
 
         if(Input::file('thumbnail_image')) {

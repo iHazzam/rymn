@@ -115,5 +115,6 @@ Route::delete('/admin/dashboard/teachers/{teacher}','adminController@deleteTeach
 Route::delete('/admin/dashboard/events/{event}','adminController@deleteEvent');
 /*ajax get*/
 Route::get('/teach/teacher_details/{id}', 'teachController@getTeacherContactDetails');
+Route::get('/teach/repairer_details/{id}', 'learnController@getRepairerContactDetails');
 Route::post('/newsletter/subscribe_chimp', 'newsletterController@addtolist');
 Route::get('/play/join/get/{id}', 'playController@getGroupContactDetails');

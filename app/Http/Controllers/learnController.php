@@ -27,7 +27,7 @@ class learnController extends Controller
         array_pop($rows); array_pop($rows); //remove the timestamps
         $values =  $rows; //save the values without the spaces removed to make them postable
         $rows = str_replace('_',' ',$rows); //replace all underscores with spaces
-
+        
         $teachers = Teacher::all();
         return view('learn.teacherdb', ['rows' => $rows, 'values' => $values,'teachers' => $teachers,]);
     }
@@ -175,16 +175,30 @@ public function kids()
     }
     public function repaired()
     {
-        $accompanists = Teacher::where('is_instrument_repairer', '=', '1')->orderBy('last_name','asc')->get();
-        $acc = [];
-        foreach($accompanists as $a)
+        $repairers = Repairer::all();
+        $rep = [];
+
+        foreach($repairers as $a)
         {
-            $acc_temp['id'] = $a->id;
-            $acc_temp['name'] = $a->first_name . ' ' . $a->last_name;
-            $acc_temp['repaired'] = $a->instruments_repaired;
-            $acc[] = $acc_temp;
+
+            $repairer_temp['id'] = $a->id;
+            $repairer_temp['name'] = $a->first_name . ' ' . $a->last_name;
+            $instruments = Instruments_Repaired::whereRepairer_id($a->id)->get();
+            $instruments = $instruments->toArray();
+            $instruments = $instruments[0];
+            array_shift($instruments);
+            array_shift($instruments);//get rid of first 2
+            $repairer_temp['repaired'] = "";
+            foreach($instruments as $k => $i)
+            {
+                if($i == 1){
+                    $repairer_temp['repaired'] = $repairer_temp['repaired'] . $k . ", ";
+                }
+            }
+            $repairer_temp['repaired'] = rtrim( $repairer_temp['repaired'], ", ");
+            $rep[] = $repairer_temp;
         }
-        return view('learn.maintainance', ['repair' => $acc]);
+        return view('learn.maintainance', ['repair' => $rep]);
     }
 
     public function registerRepairer()
@@ -1200,7 +1214,21 @@ function getTeacherContactDetails($id){
     return json_encode($teacher);
 
 }
+    function getRepairerContactDetails($id){
+        $teach = Repairer::where('id','=',$id)->first();
+        $teacher = [];
+        $teacher['email'] = $teach->email;
+        if($teach->phone !== null)
+        {
+            $teacher['phone'] = $teach->phone;
+        }
+        if($teach->mobile !== null)
+        {
+            $teacher['mobile'] = $teach->mobile;
+        }
+        return json_encode($teacher);
 
+    }
 public function exams(){
         return view('learn.exams');
     }
