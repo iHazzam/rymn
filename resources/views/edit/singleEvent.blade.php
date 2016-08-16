@@ -35,14 +35,14 @@
                         <div id="sf1" class="frm">
                             <fieldset name="one">
                                 <label><i class="fa fa-star" aria-hidden="true"></i>Group holding the event
-                                    <select id="cband" name="group" class="form-control">
+                                    <select id="cband" name="group" class="form-control" readonly>
                                         @foreach(array_combine($groups, $ids) as $row => $value)
-                                            <option value={{$value}} @if($value == $group) selected @endif>{{$row}}</option>"}}
+                                            <option value={{$value}} @if($value == $row) selected @endif>{{$row}}</option>"}}
                                         @endforeach
                                     </select>
                                 </label>
                                 <label><i class="fa fa-star" aria-hidden="true"></i>Date of event
-                                    <input type="date" class="form-control" name="date" id="date" value="{{$data->date}}">
+                                    <input type="date" class="form-control" name="date" id="date" value="{{$data->date->format('Y-m-d')}}">
                                 </label>
                                 <label><i class="fa fa-star" aria-hidden="true"></i>Time of event
                                     <input type="time" class="form-control" name="time" id="time" value="{{$data->time}}" >

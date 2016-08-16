@@ -26,7 +26,6 @@ class discoverController extends Controller
         $date = $event->date;
         $time = $event->time;
         $date = strtok($date,' ');
-        $time = $time . ":00";
         $dateTime = $date . " " . $time;
         $time = Carbon::createFromFormat('Y-m-d H:i:s',$dateTime, 'Europe/London');
 
@@ -39,7 +38,7 @@ class discoverController extends Controller
         $e->save();
         return $e->id;
 
-    }   
+    }
     public function updateEventCalendar(Event $event)
     {
         $eventId = $event->spatieID;
@@ -149,9 +148,10 @@ class discoverController extends Controller
     }
         if($error == false)
         {
-
+            $spatieID = $this->updateCalendar($event);
+            $event->spatieID = $spatieID;
             $event->save();
-            $this->updateCalendar($event);
+
             $request->session()->flash('alert-success', "Thanks! Event added succesfully!");
             return redirect('/discover');
         }

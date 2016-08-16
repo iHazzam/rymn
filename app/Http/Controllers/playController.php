@@ -303,7 +303,7 @@ class playController extends Controller
         $errormessage = "Sorry, something went wrong, please contact an administrator";
         $isrecruiting = $request->recruiting ? true : false;
 
-        $group = Group::where('user_id', '==', Auth::user()->id)->first();
+        $group = Group::whereUser_id(Auth::user()->id)->first();
         $group->group_name = $request->group_name;
         $group->group_town = $request->grouptown;
         $group->ensemble_type = $request->typeofgroup;
@@ -381,7 +381,7 @@ class playController extends Controller
             $rules = array('email' => 'unique:users,email');
             $validator = Validator::make($input, $rules);
             if ($validator->fails()) {
-                $user = User::where('email', '=', $request->email)->get();
+                $user = User::where('email', '=', $request->email)->first();
                 $userid = $user->id;
                 $user->is_group = true;
                 $user->save();

@@ -108,7 +108,7 @@ Route::post('/teach/edit/post', 'teachController@editTeach')->middleware(['auth'
 Route::post('/play/join/post', 'playController@search');
 Route::post('/newsletter/subscribe_chimp', 'newsletterController@addtolist');
 Route::post('/learn/teachers', 'learnController@search');
-Route::post('/edit/group/event/{id}/post','loginController@postEditEvent)')->middleware(['auth','group']);
+Route::post('/edit/group/event/{id}/post','discoverController@postEditEvent')->middleware(['auth','group']);
 /*delete*/
 Route::delete('/admin/dashboard/groups/{group}','adminController@deleteGroup');
 Route::delete('/admin/dashboard/teachers/{teacher}','adminController@deleteTeacher');

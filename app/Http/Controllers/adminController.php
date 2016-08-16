@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Event;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\File;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
 use App\Group;
@@ -56,26 +56,44 @@ class adminController extends Controller
         if($request->hasFile('file_upload'))
         {
             if ($request->file('file_upload')->isValid()) {
-                $filename = $request->file('file_upload')->getFilename();
-
+                $file = $request->file('file_upload');
+                $filename = $file->getClientOriginalName();
                 switch($request->type)
                 {
                     case 'news':
                         if($request->file('file_upload')->getExtension() == "pdf"){
-                            Storage::put('newsletters/'.$filename, $request->file_upload);
+                            Storage::put('newsletters/'.$filename, File::get($file));
                         }
                         else{
                             $error = 'Newsletter filetype not PDF. Please try again';
                         }
                         break;
-                    case '0':
-                        Storage::put('resources/0-10/'.$filename, $request->file_upload);
+                    case 'voice':
+                        Storage::put('resources/voice/'.$filename, File::get($file));
                         break;
-                    case '10':
-                        Storage::put('resources/10-16/'.$filename, $request->file_upload);
+                    case 'keyboard':
+                        Storage::put('resources/keyboard/'.$filename, File::get($file));
                         break;
-                    case '16':
-                        Storage::put('resources/16+/'.$filename,$request->file_upload);
+                    case 'strings':
+                        Storage::put('resources/strings/'.$filename, File::get($file));
+                        break;
+                    case 'woodwind':
+                        Storage::put('resources/woodwind/'.$filename, File::get($file));
+                        break;
+                    case 'brass':
+                        Storage::put('resources/brass/'.$filename, File::get($file));
+                        break;
+                    case 'percussion':
+                        Storage::put('resources/percussion/'.$filename, File::get($file));
+                        break;
+                    case 'guitar':
+                        Storage::put('resources/guitar/'.$filename, File::get($file));
+                        break;
+                    case 'harp':
+                        Storage::put('resources/harp/'.$filename, File::get($file));
+                        break;
+                    case 'other':
+                        Storage::put('resources/other/'.$filename, File::get($file));
                         break;
                     default:
                         $error = 'Incorrect value checked somehow';

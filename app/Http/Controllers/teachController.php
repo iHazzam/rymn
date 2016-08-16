@@ -27,10 +27,16 @@ class teachController extends Controller
     public function resources()
     {
         $files = [];
-        $files['0-10'] = Storage::files('resources/0-10');
-        $files['10-16'] = Storage::files('resources/10-16');
-        $files['16+'] = Storage::files('resources/16+');
-
+        $files['voice'] = Storage::files('resources/voice');
+        $files['keyboard'] = Storage::files('resources/keyboard');
+        $files['strings'] = Storage::files('resources/strings');
+        $files['woodwind'] = Storage::files('resources/woodwind');
+        $files['brass'] = Storage::files('resources/brass');
+        $files['percussion'] = Storage::files('resources/percussion');
+        $files['guitar'] = Storage::files('resources/guitar');
+        $files['harp'] = Storage::files('resources/harp');
+        $files['other'] = Storage::files('resources/other');
+        
         return view('teach.resources')->with('files', $files);
     }
     public function newTeach(Request $request)

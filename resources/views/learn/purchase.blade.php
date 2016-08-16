@@ -23,11 +23,11 @@
                 <div class="col-xs-12">
                     Failing that, there are a number of <a href="https://www.yell.com/s/musical+instrument+and+sheet+music+shops-north+yorkshire.html">music shops</a> in the area, some of which operate reasonably priced hire schemes for school children. Instruments vary widely in price and can be purchased outright, bought on a hire purchase arrangement with a music shop, or leased. There are small sized instruments (mainly strings) for younger players, which cost less than the full sized instruments.
                     <br>
-                    When you do want to buy your own instrument, it makes sense to buy one that will retain its value, so that you can sell it again if need be (if your child gives up – or, better still, needs to get a better instrument when they reach a higher level of playing). For our <a href="/learn/purchase#buy">guide on buying instruments</a>, see below
+                    When you do want to buy your own instrument, it makes sense to buy one that will retain its value, so that you can sell it again if need be (if your child gives up – or, better still, needs to get a better instrument when they reach a higher level of playing). For our guide on buying instruments, please scroll down!
                     <br>
-                    Always consult with your child’s teacher before buying any instrument!  It is worth getting advice about which size to buy and which model, because cheap or second hand instruments sometimes do not work, and a new player can blame themselves. If you buy second hand, always take the instrument to a decent repairer for a thorough overhaul. <a href="/learn/purchase#repair">(See our guide on instrument repairers in the county)</a>
+                    Always consult with your child’s teacher before buying any instrument!  It is worth getting advice about which size to buy and which model, because cheap or second hand instruments sometimes do not work, and a new player can blame themselves. If you buy second hand, always take the instrument to a decent repairer for a thorough overhaul. <a href="/learn/maintainance">(See our guide on instrument repairers in the county)</a>
                     <br>
-                    Prices tend to get higher as instruments within each ‘family’ get bigger (so a starter cello costs more than a starter violin) Strings are cheaper than brass, which are in turn cheaper than woodwind. ‘Shortage’ instruments can sometimes be leased from County Music Services at very low cost or for nothing if you have a County teacher. Looking at guide prices on <a href="http://www.ebay.co.uk">eBay</a> is probably a good idea, buying instruments on eBay probably isn’t!
+                    Prices tend to get higher as instruments within each ‘family’ get bigger (so a starter cello costs more than a starter violin). Starter string instruments are cheaper than brass, which are in turn cheaper than woodwind. ‘Shortage’ instruments can sometimes be leased from County Music Services at very low cost or for nothing if you have a County teacher. Looking at guide prices on <a href="http://www.ebay.co.uk">eBay</a> is probably a good idea, buying instruments on eBay probably isn’t!
                     <br>
                     There are some other, ongoing costs for some instruments:-
                     <br>
@@ -348,7 +348,7 @@
                                 £1200+
                             </td>
                             <td>
-                                Similar for Cornet
+
                             </td>
                         </tr>
                         <tr>

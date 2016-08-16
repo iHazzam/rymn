@@ -27,7 +27,7 @@
                         One big danger of focussing too much attention on grade exams is that you may end up learning only those pieces required for the exams – when, really, you should be learning and playing far more and a far greater variety of music than that!
                     </p>
                     <p>
-                        Also, exams don’t encourage you to play with other people (apart from your accompanist) and and it is from playing with others that you will get the most pleasure and the greatest educational benefit from your musical activities.
+                        Also, exams don’t encourage you to play with other people (apart from your accompanist) and it is from playing with others that you will get the most pleasure and the greatest educational benefit from your musical activities.
                     </p>
                     <p>
                         Remember, exams don’t actually teach you anything and they don’t serve any useful purpose other than providing a rough guide to your progress and, maybe, a means of motivation.

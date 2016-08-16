@@ -58,7 +58,8 @@
             <h3 class="htb_r">Singing</h3>
             <p><span class="htb1">Recommended minimum age:</span> 2-3</p>
             <p><span class="htb1">Instruments included: </span>Voice!</p>
-            <p><span class="htb1">Groups you can play in:</span> All sorts of choirs and countless other contexts.</p>
+            <p><span class="htb1">Groups you can play in:</span> All kinds of orchestras, ensembles, chamber music, opera, oratorio, musicals, folk, jazz and countless other contexts.
+            </p>
             <p><span class="htb1">Details:</span> All children should be encouraged to sing, as often as possible, throughout their lives!</p>
             <p><span class="htb1">Practicalities:</span> Free! Try to learn to read music along the way!</p>
         </div>
@@ -86,14 +87,14 @@
             <p><span class="htb4">Recommended minimum age:</span> 6-10 </p>
             <p><span class="htb4">Instruments included: </span>Flute, Oboe, Clarinet, Bassoon, Recorder, Saxophone, various others</p>
             <p><span class="htb4">Groups you can play in: </span>Orchestras, chamber ensembles, various groups and bands, folk, jazz etc.. </p>
-            <p><span class="htb4">Details: </span>The recorder is a great place to start when young. The other instruments each require a different skills and techniques, so specialisation is the key!</p>
-            <p><span class="htb4">Practicalities:</span> Practicalities: Reeds are required regularly, and there can be strong competition for places in ensembles on Flute, Clarinet and Saxophone.</p>
+            <p><span class="htb4">Details: </span>The recorder is a great place to start when young. Skills transfer easily to the other wind instruments but, later, each instrument requires different skills and techniques so specialisation becomes the key!</p>
+            <p><span class="htb4">Practicalities:</span> Reeds are required regularly, and there can be strong competition for places in ensembles on Flute, Clarinet and Saxophone.</p>
         </div>
         <div class="col-sm-6 col-md-4 foundation">
             <section class="ht-box"><div><span class="helper"></span><img src="/imgs/brass.jpg"></div></section>
             <h3 class="htb_r">Brass</h3>
             <p><span class="htb5">Recommended minimum age:</span> 7-10 </p>
-            <p><span class="htb5">Instruments included: </span>Trumpet, (French) Horn, Cornet, Trombone, Tuba</p>
+            <p><span class="htb5">Instruments included: </span>Horn, Trumpet, Cornet, Trombone, Tuba</p>
             <p><span class="htb5">Groups you can play in:</span> Orchestras, chamber ensembles, various bands,, jazz etc..</p>
             <p><span class="htb5">Details:</span> Starting with trumpet provides good transferrable skills to the heavier instruments. Horn and Tuba are highly in demand for orchestras and other bands!</p>
             <p><span class="htb5">Practicalities:</span> Loud! The larger instruments are heavy and harder to transport</p>

@@ -10,7 +10,7 @@
 </script>
     <div class="divide-nav">
         <div class="container">
-            <p class="divide-text">Find a teacher in the Ripon area</p>
+            <p class="divide-text">Find a teacher in the North Yorkshire area</p>
         </div>
     </div>
     <nav class="navbar navbar-default navbar-lower permalock" role="findingstuff">

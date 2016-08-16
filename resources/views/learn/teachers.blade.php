@@ -148,7 +148,7 @@
                 </div>
                 <div class="col-sm-12">
                     <h2 id="performance"><span class="htb3">Where and when</span></h2>
-                    <p>There are a few normal times to deliver lessons, and these are detailed in the table below. There is no "right" or "wrong" way to pick this, and the way a child learns and the availability of teachers both will influence the decision making process
+                    <p>There are a few normal times to deliver lessons, and these are detailed in the table below. There is no "right" or "wrong" way to pick this, both the way a child learns and the availability of teachers will influence the decision making process
                     </p>
 
                     <table class="table table-striped table-bordered table-hover ">
@@ -204,7 +204,7 @@
                                 At the teacher’s house
                             </td>
                             <td>
-                                Teacher has arranged facilities best suited to their teaching style, you can choose the teacher, you get to know the teacher, you can arrange to lessons at weekend and during school holidays.
+                                Teacher has arranged facilities best suited to their teaching style, you can choose the teacher, you get to know the teacher, you can arrange to have lessons at weekends and during school holidays.
                             </td>
                             <td>
                                 Travel to and from the lesson: parent spends time in lessons or waiting.
@@ -218,7 +218,7 @@
                                 No travel time, Can schedule lessons at any time and from any location
                             </td>
                             <td>
-                                Requires purchase of high quality microphone/webcam, Teacher cannot physically demonstrate techniques to students, technical difficulties can cause delays/cancelled lessons, bad for beginners.
+                                Requires purchase of high quality microphone/webcam, Teacher cannot physically demonstrate techniques to students, technical difficulties can cause delays/cancelled lessons, bad for beginners, limited value for any pupil, not recommended.
                             </td>
                         </tr>
                         </tbody>

@@ -38,9 +38,16 @@
                     <div class="form-group">
                         <label for="type" class="control-label">File upload: </label> <br>
                         <input type="radio" name="type" value="news"> Newsletter<br>
-                        <input type="radio" name="type" value="0"> Resource(age 0-10)<br>
-                        <input type="radio" name="type" value="10"> Resource (age 10-16) <br>
-                        <input type="radio" name="type" value="16"> Resource (age 16+)
+                        <input type="radio" name="type" value="voice"> Resource - Voice<br>
+                        <input type="radio" name="type" value="keyboard"> Resource - Keyboard<br>
+                        <input type="radio" name="type" value="strings"> Resource - Strings<br>
+                        <input type="radio" name="type" value="woodwind"> Resource - Woodwind<br>
+                        <input type="radio" name="type" value="brass"> Resource - Brass<br>
+                        <input type="radio" name="type" value="percussion"> Resource - Percussion<br>
+                        <input type="radio" name="type" value="guitar"> Resource - Guitar<br>
+                        <input type="radio" name="type" value="harp"> Resource - Harp<br>
+                        <input type="radio" name="type" value="other"> Resource - Other<br>
+
                     </div>
 
                     <div class="clearfix" style="height: 10px;clear: both;"></div>

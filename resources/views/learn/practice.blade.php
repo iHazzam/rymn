@@ -19,6 +19,10 @@
                         Of course, more advanced players will probably also be playing in orchestras and ensembles, which may reduce the time they have for private practice.  That is fine, but try to make sure you do at least one stint of focussed, technical practice each day, on top of your other commitments.<br>
                         A useful tip:- If possible, don’t pack your instrument away in its case at the end of every practice stint – leave it out, so that you can just pick it up and play if you happen to have a couple of minutes to spare. (One possibility is to leave the instrument near the telly and, every time the adverts came on, pick it up and play!)<br>
                     </p>
+                    <h3 class="set-left"><span class="htb4">Sitting or standing?</span></h3>
+                    <p>
+                        Some instruments (piano, organ, harp, cello etc.) are almost always played sitting down. Most of the other instruments can be played either sitting or standing. When you play a solo (with or without accompaniment) for a concert, or a festival or competition, for an audition or an exam, you will normally be expected to play standing up. When you play chamber music or in an orchestra, you will normally play sitting down. So it's important to practice both! When standing, make sure your posture is correct and relaxed and that you stand with your feet apart and one foot slightly in front of the other. When sitting, make sure you maintain the correct posture in the upper part of your body.
+                    </p>
                     <div class="bold_div">
                         <p>
                         <span class="htb5">Remember</span> – practising is not just about getting it right!  There are three elements to good practising:

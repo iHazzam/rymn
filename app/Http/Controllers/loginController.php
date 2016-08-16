@@ -25,7 +25,7 @@ class loginController extends Controller
         return view('edit.repairer',['data'=> $data, 'data2'=>$data2]);
     }
     public function getGroupDashboard(){
-        $data = Group::where('user_id', '==', Auth::user()->id)->first();
+        $data = Group::whereUser_id(Auth::user()->id)->first();
         return view('edit.group', ['data' => $data]);
     }
     public function getGroupEvents(){
@@ -42,8 +42,16 @@ class loginController extends Controller
     }
     public function editEvent($id)
     {
-        $event = Event::find($id);
-        return view('edit.singleEvent', ['event' => $event]);
+        $data = Event::find($id);
+        $groups_model = Group::all();
+        $groups = [];
+        $ids = [];
+        foreach($groups_model as $g)
+        {
+            $groups[] = $g->group_name;
+            $ids[] = $g->id;
+        }
+        return view('edit.singleEvent', ['data' => $data,'groups'=>$groups,'ids'=>$ids]);
 
     }
     

@@ -40,7 +40,7 @@
                                     <div class="form-group">
                                         <label for="group_name" class="control-label">Group Name</label>
 
-                                        <input type="text" class="form-control" id="group_name"  name="group_name" value="{{$data->group_name}}" placeholder="" required="">
+                                        <input type="text" class="form-control" id="group_name"  name="group_name" value="{{$data->group_name}}"  readonly placeholder="" required="">
 
                                     </div>
                                     <div class="form-group">
