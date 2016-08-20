@@ -108,18 +108,37 @@
                             if($teacher->$fieldPlayed != null)
                             {
                                 $played = $teacher->$fieldPlayed;
+                                $played = str_replace('_',' ',$played); //replace all underscores with spaces
                                 $min = 'level_min_instrument'.$id;
                                 $fieldMin = $teacher->$min;
-                                $fieldMin = chunk_split($fieldMin, 5, ' ');
+
+                                if($fieldMin=="concert_soloist")
+                                {
+                                    $fieldMin = "Concert Soloist";
+                                }
+                                elseif($fieldMin =="diploma")
+                                {
+                                    $fieldMin = "Diploma";
+                                }
+                                else{
+                                    $fieldMin = chunk_split($fieldMin, 5, ' ');
+                                    $fieldMin = ucfirst($fieldMin);
+                                }
+
                                 $max = 'level_max_instrument'.$id;
                                 $fieldMax = $teacher->$max;
 
                                 if($fieldMax=="concert_soloist")
                                 {
-                                    $fieldMax = str_replace("_", ' ',$fieldMax);
+                                    $fieldMax = "Concert Soloist";
+                                }
+                                elseif($fieldMax =="diploma")
+                                {
+                                    $fieldMax = "Diploma";
                                 }
                                 else{
                                     $fieldMax = chunk_split($fieldMax, 5, ' ');
+                                    $fieldMax = ucfirst($fieldMax);
                                 }
                                 $string = '<span class="userinput"><i class="fa fa-bullseye" aria-hidden="true"></i>&nbsp;'.$played.' ('.$fieldMin .' to ' .$fieldMax . ')</span><br><br>';
                                 echo($string);
@@ -211,20 +230,41 @@
                         if($teacher->$fieldPlayed != null)
                         {
                             $played = $teacher->$fieldPlayed;
+                            $played = str_replace('_',' ',$played); //replace all underscores with spaces
                             $main_instruments[] = $played;
+
                             $min = 'level_min_instrument'.$id;
                             $fieldMin = $teacher->$min;
-                            $fieldMin = chunk_split($fieldMin, 5, ' ');
+
+                            if($fieldMin=="concert_soloist")
+                            {
+                                $fieldMin = "Concert Soloist";
+                            }
+                            elseif($fieldMin =="diploma")
+                            {
+                                $fieldMin = "Diploma";
+                            }
+                            else{
+                                $fieldMin = chunk_split($fieldMin, 5, ' ');
+                                $fieldMin = ucfirst($fieldMin);
+                            }
+
                             $max = 'level_max_instrument'.$id;
                             $fieldMax = $teacher->$max;
 
                             if($fieldMax=="concert_soloist")
                             {
-                                $fieldMax = str_replace("_", ' ',$fieldMax);
+                                $fieldMax = "Concert Soloist";
+                            }
+                            elseif($fieldMax =="diploma")
+                            {
+                                $fieldMax =  "Diploma";
                             }
                             else{
                                 $fieldMax = chunk_split($fieldMax, 5, ' ');
+                                $fieldMax = ucfirst($fieldMax);
                             }
+
                                 $string = '<span class="userinput"><i class="fa fa-bullseye" aria-hidden="true"></i>&nbsp;'.$played.' ('.$fieldMin .' to ' .$fieldMax. ')</span><br>';
                                 echo($string);
                             }
@@ -251,6 +291,13 @@
                         ?>
                     </ul>
                     </p>
+                    <p id="bio"> <i class="fa fa-quote-left" aria-hidden="true"></i> {{$teacher->biography}} <i class="fa fa-quote-right" aria-hidden="true"></i></p>
+                    @if($teacher->website != null)
+                        <p id="website"> <a href="{{$teacher->website}}">Click to access teacher's website </a> </p>
+                    @endif
+                    @if($teacher->facebook != null)
+                        <p id="website"> <a href="{{$teacher->facebook}}">Click to access teacher's facebook page </a> </p>
+                    @endif
                 </div>
                 <div class="modal-footer">
                     <button id="{{$teacher->id}}" name="{{$teacher->first_name}}" class="btn btn-warning" onclick="openModalTeacher(this.id,this.name)">Request contact details!</button>

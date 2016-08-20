@@ -498,7 +498,7 @@
                         <div id="sf4" class="frm" style="display: none;">
                             <fieldset name="four">
                                 <legend>Step 4 of 6 - Instruments Taught</legend>
-                                <span>which other instruments can you teach at any level? ( Expand (>) and tick all that apply. )</span>
+                                <span>Which other instruments can you teach at any level? ( Expand (>) and tick all that apply. )</span>
                                 <div class="form-group">
                                     <div class="panel-group" id="accordion">
                                         <div class="panel panel-default" id="panel1">
@@ -1055,7 +1055,7 @@
                                             <label><input type="checkbox" id="crb" name="crb" @if($data->crb_checked) checked @endif value="crb">Are you CRB checked?</label>
                                         </div>
                                     </div>
-                                    <div class=form-group>
+                                    <div class=form-group hidden>
                                         <div class="checkbox" >
                                             <label><input type="checkbox" id="repair" name="repair" value="repair" @if($data->is_instrument_repairer) checked @endif onchange="valueChangedRepair();">Do you repair instruments?</label>
                                         </div>

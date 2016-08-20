@@ -27,7 +27,6 @@ class learnController extends Controller
         array_pop($rows); array_pop($rows); //remove the timestamps
         $values =  $rows; //save the values without the spaces removed to make them postable
         $rows = str_replace('_',' ',$rows); //replace all underscores with spaces
-        
         $teachers = Teacher::all();
         return view('learn.teacherdb', ['rows' => $rows, 'values' => $values,'teachers' => $teachers,]);
     }
@@ -207,7 +206,6 @@ public function kids()
     }
     public function newRepairer(Request $request)
     {
-        var_dump($request->all());
         $this->validate($request,[
             'firstname' => 'required',
             'lastname' => 'required',
@@ -229,6 +227,14 @@ public function kids()
         $repairer->first_name = $request->firstname;
         $repairer->last_name = $request->lastname;
         $repairer->address_line1 = $request->addr1;
+        if($request->has('facebook'))
+        {
+            $repairer->facebook  = $request->facebook;
+        }
+        if($request->has('website'))
+        {
+            $repairer->website = $request->website;
+        }
         if($request->has('addr2'))
         {
             $repairer->address_line2 = $request->addr2;
@@ -697,7 +703,6 @@ public function kids()
                 $validator = Validator::make($input, $rules);
                 if ($validator->fails()) {
                     $user = User::where('email', '=', $request->email)->first();
-                    var_dump($user);
                     $user->is_repairer = true;
                     $user->save();
                 }
@@ -746,6 +751,20 @@ public function kids()
         $repairer->first_name = $request->firstname;
         $repairer->last_name = $request->lastname;
         $repairer->address_line1 = $request->addr1;
+        if($request->has('facebook'))
+        {
+            $repairer->facebook  = $request->facebook;
+        }
+        else{
+            $repairer->facebook = "";
+        }
+        if($request->has('website'))
+        {
+            $repairer->website = $request->website;
+        }
+        else{
+            $repairer->website = "";
+        }
         if($request->has('addr2'))
         {
             $repairer->address_line2 = $request->addr2;

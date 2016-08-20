@@ -145,7 +145,6 @@ class playController extends Controller
     public function newAd(Request $request)
     {
         //handle form
-        var_dump($request->all());
         $this->validate($request,[
             'group_name' => 'required|unique:groups|max:255',
             'grouptown' => 'required',
@@ -168,6 +167,14 @@ class playController extends Controller
         $group->ensemble_type = $request->typeofgroup;
         $group->group_description = $request->biography;
         $group->contact_email = $request->email;
+        if($request->has('facebook'))
+        {
+            $group->facebook  = $request->facebook;
+        }
+        if($request->has('website'))
+        {
+            $group->website = $request->website;
+        }
         if(Input::file('thumbnail')) {
             if (Input::file('thumbnail')->isValid()) {
                 $destPath = 'upload';
@@ -290,7 +297,6 @@ class playController extends Controller
     public function editAd(Request $request)
     {
         //handle form
-        var_dump($request->all());
         $this->validate($request,[
             'group_name' => 'required|max:255',
             'grouptown' => 'required',
@@ -309,6 +315,20 @@ class playController extends Controller
         $group->ensemble_type = $request->typeofgroup;
         $group->group_description = $request->biography;
         $group->contact_email = $request->email;
+        if($request->has('facebook'))
+        {
+            $group->facebook  = $request->facebook;
+        }
+        else{
+            $group->facebook = "";
+        }
+        if($request->has('website'))
+        {
+            $group->website = $request->website;
+        }
+        else{
+            $group->website = "";
+        }
         if(Input::file('thumbnail')) {
             if (Input::file('thumbnail')->isValid()) {
                 $destPath = 'upload';

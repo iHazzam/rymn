@@ -116,7 +116,6 @@ class discoverController extends Controller
     public function newEvent(Request $request)
     {
         $req = $request->all();
-        var_dump($req);
         $this->validate($request, [
             'group' => 'required',
             'name' => 'required',
@@ -192,7 +191,6 @@ class discoverController extends Controller
     {
 
         $req = $request->all();
-        var_dump($req);
         $this->validate($request, [
             'group' => 'required',
             'name' => 'required',

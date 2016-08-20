@@ -41,7 +41,6 @@ class teachController extends Controller
     }
     public function newTeach(Request $request)
     {
-        var_dump($request->all());
         $this->validate($request,[
             'firstname' => 'required',
             'lastname' => 'required',
@@ -217,6 +216,14 @@ class teachController extends Controller
         if($request->has('biography'))
         {
             $teacher->biography = $request->biography;
+        }
+        if($request->has('website'))
+        {
+            $teacher->website = $request->website;
+        }
+        if($request->has('facebook'))
+        {
+            $teacher->facebook  = $request->facebook;
         }
         //remove teach_accompanying
         //Remove acompanying level
@@ -496,10 +503,8 @@ class teachController extends Controller
         {
             $teacher_instruments->Female_Singing = 1;
         }
-        var_dump('arriving');
         if($request->hasFile('thumbnail_image'))
         {
-            var_dump('has');
             if ($request->file('thumbnail_image')->isValid()) {
                     $destPath = 'upload';
                     $extension = $request->file('thumbnail_image')->getClientOriginalExtension();
@@ -562,7 +567,6 @@ class teachController extends Controller
 
     public function editTeach(Request $request)
     {
-        var_dump($request->all());
         $this->validate($request,[
             'firstname' => 'required',
             'lastname' => 'required',
@@ -788,6 +792,19 @@ class teachController extends Controller
             $teacher->biography = $request->biography;
         }else{
             $teacher->biography = "";
+        }
+        if($request->has('facebook'))
+        {
+            $teacher->facebook  = $request->facebook;
+        }
+        else{
+            $teacher->facebook = "";
+        }
+        if($request->has('website'))
+        {
+            $teacher->website = $request->website;
+        }else{
+            $teacher->website = "";
         }
         //remove teach_accompanying
         //Remove acompanying level
@@ -1183,10 +1200,8 @@ class teachController extends Controller
         }else{
             $teacher_instruments->Female_Singing=0;
         }
-        var_dump('arriving');
         if($request->hasFile('thumbnail_image'))
         {
-            var_dump('has');
             if ($request->file('thumbnail_image')->isValid()) {
                 $destPath = 'upload';
                 $extension = $request->file('thumbnail_image')->getClientOriginalExtension();

@@ -489,7 +489,7 @@
                         <div id="sf4" class="frm" style="display: none;">
                             <fieldset name="four">
                                 <legend>Step 4 of 6 - Instruments Taught</legend>
-                                <span>which other instruments can you teach at any level? ( Expand (>) and tick all that apply. )</span>
+                                <span>Which other instruments can you teach at any level? ( Expand (>) and tick all that apply. )</span>
                                 <div class="form-group">
                                     <div class="panel-group" id="accordion">
                                         <div class="panel panel-default" id="panel1">
@@ -1068,6 +1068,14 @@
                                         <label for="thumbnail_image" class="control-label">Add an image to be used for your profile (optional)</label>
                                         {!! Form::file('thumbnail_image') !!}
 
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="website" class="control-label">Please enter your website or webpage (Optional)</label>
+                                        <input type="url" class="website" id="website" name="website" placeholder="www.yoursitehere.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="facebook" class="control-label">Please enter your facebook page URL (Optional)</label>
+                                        <input type="url" class="facebook" id="facebook" name="facebook" placeholder="https://www.facebook.com/youth.music.network/">
                                     </div>
                                     <span> Please enter a password to allow you to log in and edit the information you are entering.
                                     Please note, if you have entered an email address which is already registered on the site (As a teacher, group or repairer) please use <b>the same</b> password here</span>
