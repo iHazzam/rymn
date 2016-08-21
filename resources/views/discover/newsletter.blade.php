@@ -10,8 +10,9 @@
                     <br>
                     <h2 class="set-left"><span class="htb6">The RYMN newsletter:</span></h2>
                     <p>
-                        The RYMN newsletter is one of the best ways to stay completely up-to-date with all the happenings of music in North Yorkshire, across the Ripon&Harrogate area and beyond.
-                        The newsletter gets sent out ...
+                        The RYMN newsletter is one of the best ways to stay completely up to date with musical happenings and events across North Yorkshire.
+                        The newsletter gets sent out regularly, and is the number one port of call for information in this area, so make sure you don't miss out!
+
                     </p>
                 </div>
                 <div class="ssd col-sm-8">
