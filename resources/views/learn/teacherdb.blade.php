@@ -93,7 +93,7 @@
         <div class="panel-body">
             <a href="#modal{{$teacher->id}}" role="button" data-toggle="modal" >
             <div id="minheight">
-                <img src="{{isset($teacher->thumbnail_img) ? '/'.$teacher->thumbnail_img : "http://placehold.it/100x100"}}" alt="leftimg" class="teachercard_img" />
+                <img src="{{isset($teacher->thumbnail_img) ? '/'.$teacher->thumbnail_img : '/upload/default2.png'}}" alt="leftimg" class="teachercard_img" />
                 <br>
                 <p class="idcard">Name: <span class="userinput">{{$teacher->first_name . ' ' . $teacher->last_name}}</span></p>
                 <p class="idcard">Location: <span class="userinput">{{$teacher->city}}</span></p>
@@ -217,7 +217,7 @@
                     <h4 class="modal-title" id="myModalLabel">{{$teacher->first_name . " " . $teacher->last_name . " - Music Teacher"}}</h4>
                 </div>
                 <div class="modal-body">
-                    <img src="{{isset($teacher->thumbnail_img) ? '/'.$teacher->thumbnail_img : "http://placehold.it/200x200"}}" alt="leftimg" class="teachercard_full_img" />
+                    <img src="{{isset($teacher->thumbnail_img) ? '/'.$teacher->thumbnail_img : '/upload/default2.png'}}" alt="leftimg" style="width:200px; height:200px;"class="teachercard_full_img" />
                     <p id="city">From: {{$teacher->city}}</p>
                     <p id="ages">Teaches ages: {{$teacher->min_age_taught}} to {{$teacher->max_age_taught}}</p>
                     <p id="main_instruments">Main instruments:
@@ -292,6 +292,9 @@
                     </ul>
                     </p>
                     <p id="bio"> <i class="fa fa-quote-left" aria-hidden="true"></i> {{$teacher->biography}} <i class="fa fa-quote-right" aria-hidden="true"></i></p>
+                    <p id="teaching_exp"><b>Teaching experience: </b> <br> {{$teacher->teaching_experience}} </p>
+                    <p id="teaching_exp"><b>Performing experience: </b> <br> {{$teacher->performing_experience}} </p>
+                    <p id="teaching_exp"><b>Level of Qualification: </b> <br> {{$teacher->qualification}} </p>
                     @if($teacher->website != null)
                         <p id="website"> <a href="{{$teacher->website}}">Click to access teacher's website </a> </p>
                     @endif

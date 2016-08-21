@@ -82,12 +82,42 @@
                                     <h4 class="modal-title" id="myModalLabel">{{$group->group_name . " - Groups on RYMN"}}</h4>
                                 </div>
                                 <div class="modal-body">
-                                    <h3 class="htb1">Group Recruitment factsheet</h3>
+                                    <h3 class="htb1">Group Recruitment Factsheet</h3>
                                     <p><span class="htb4">Group name:</span> {{$group->group_name}}</p>
-                                    <p><span class="htb4">Group location:</span> {{$group->group_town}}</p>
-                                    <p><span class="htb4">Minimum level:</span> {{$group->minimum_level}}</p>
+                                    <p><span class="htb4">Group location:</span>
+                                        <?php
+                                        $temp = $group->group_town;
+                                        $temp = str_replace('_', ' ', $temp);
+                                        $temp = ucwords($temp);
+                                        echo($temp);
+                                        ?>
+                                    </p>
+                                    <p><span class="htb4">Minimum level:</span>
+                                        <?php
+                                            $fieldMin = $group->minimum_level;
+                                        if($fieldMin=="concert_soloist")
+                                        {
+                                        $fieldMin = "Concert Soloist";
+                                        }
+                                        elseif($fieldMin =="diploma")
+                                        {
+                                        $fieldMin = "Diploma";
+                                        }
+                                        else{
+                                        $fieldMin = chunk_split($fieldMin, 5, ' ');
+                                        $fieldMin = ucfirst($fieldMin);
+                                        }
+                                        echo($fieldMin);
+                                        ?>
+                                    </p>
                                     <p><span class="htb4">Audition?</span> @if($group->audition == 1)  <i class="fa fa-check htb3" aria-hidden="true"></i>  @else <i class="fa fa-times htb5"  aria-hidden="true"></i>@endif</p>
                                     <p><span class="htb4">Details:</span> {{$group->recruit_details}}</p>
+                                    @if($group->website != null)
+                                        <p id="website"> <a href="{{$group->website}}">Click to access group's website </a> </p>
+                                    @endif
+                                    @if($group->facebook != null)
+                                        <p id="website"> <a href="{{$group->facebook}}">Click to access group's facebook page </a> </p>
+                                    @endif
                                     <button type="button" id="{{$group->id}}" name="{{$group->name}}" class="btn btn-default" onclick="openModal(this.id,this.name)" >Get Group Contact Email Address</button>
                                 </div>
                                 <div class="modal-footer">
@@ -103,10 +133,23 @@
 
 
                 <tr>
-                    <td><img src="http://placehold.it/100x100"></td>
+                    <td><img style="max-width: 100px; max-height:100px;" src={{url($group->thumbnail_image_path)}}></td>
                     <td>{{$group->group_name}}</td>
-                    <td>{{$group->ensemble_type}}</td>
-                    <td>{{$group->group_town}}</td>
+                    <td>
+                        <?php
+                                $temp = $group->ensemble_type;
+                                $temp = str_replace('_', ' ', $temp);
+                                $temp = ucwords($temp);
+                        echo($temp);
+                        ?>
+                    </td>
+                    <td>
+                        <?php
+                        $temp = $group->group_town;
+                        $temp = str_replace('_', ' ', $temp);
+                        $temp = ucwords($temp);
+                        echo($temp);
+                        ?></td>
                     <td>{{$group->group_description}}</td>
                     <td>@if($group->recruiting == 1) <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal{{$group->id}}"> Click to see recruiting details! </button> @else <i class="fa fa-times htb5"  aria-hidden="true"></i> @endif</td>
                 </tr>

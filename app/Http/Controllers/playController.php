@@ -190,7 +190,7 @@ class playController extends Controller
             }
         }
         else{
-            $group->thumbnail_image_path = "/upload/default.png";
+            $group->thumbnail_image_path = "upload/default.png";
         }
         $images = Input::file('images');
         $size = sizeof($images);
@@ -344,7 +344,7 @@ class playController extends Controller
             }
         }
         else{
-            $group->thumbnail_image_path = "/upload/default.png";
+            $group->thumbnail_image_path = "upload/default.png";
         }
         $images = Input::file('images');
         $size = sizeof($images);

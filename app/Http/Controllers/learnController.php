@@ -191,6 +191,8 @@ public function kids()
             foreach($instruments as $k => $i)
             {
                 if($i == 1){
+                    $k = str_replace('_',' ',$k);
+                    $k = ucwords($k);
                     $repairer_temp['repaired'] = $repairer_temp['repaired'] . $k . ", ";
                 }
             }
@@ -1245,6 +1247,15 @@ function getTeacherContactDetails($id){
         {
             $teacher['mobile'] = $teach->mobile;
         }
+        if($teach->website !== null)
+        {
+            $teacher['website'] = $teach->website;
+        }
+        if($teach->facebook !== null)
+        {
+            $teacher['facebook'] = $teach->facebook;
+        }
+
         return json_encode($teacher);
 
     }
