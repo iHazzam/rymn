@@ -58,7 +58,7 @@
             <h3 class="htb_r">Singing</h3>
             <p><span class="htb1">Recommended minimum age:</span> 2-3</p>
             <p><span class="htb1">Instruments included: </span>Voice!</p>
-            <p><span class="htb1">Groups you can play in:</span> All kinds of orchestras, ensembles, chamber music, opera, oratorio, musicals, folk, jazz and countless other contexts.
+            <p><span class="htb1">Groups you can sing in:</span> All kinds of choirs and vocal ensembles, church music, oratorio, opera, musicals, folk, jazz, barbershop and countless other contexts.
             </p>
             <p><span class="htb1">Details:</span> All children should be encouraged to sing, as often as possible, throughout their lives!</p>
             <p><span class="htb1">Practicalities:</span> Free! Try to learn to read music along the way!</p>
@@ -77,7 +77,7 @@
             <h3 class="htb_r">Strings</h3>
             <p><span class="htb3">Recommended minimum age:</span> 4-5</p>
             <p><span class="htb3">Instruments included: </span>Violin, Viola, Cello, Double Bass</p>
-            <p><span class="htb3">Groups you can play in:</span> All sorts of choirs and countless other contexts.</p>
+            <p><span class="htb3">Groups you can play in:</span>All kinds of orchestras, ensembles, chamber music, opera, oratorio, musicals, folk, jazz and countless other contexts.</p>
             <p><span class="htb3">Details:</span> Ideal for a musical child. Best to start young! Usual to start on Violin or Cello and transfer to Viola or Double Bass later if you like. Skills are easily transferable.</p>
             <p><span class="htb3">Practicalities:</span> Transport issues for large Cellos and Basses can be a problem, requiring fold-down seats in cars!</p>
         </div>
