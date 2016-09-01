@@ -194,9 +194,8 @@ class playController extends Controller
         }
         $images = Input::file('images');
         $size = sizeof($images);
-        if (($size > 0) && ($size[0] !== NULL))
+        if (($size > 0))
         {
-
             $destPath = 'upload';
             echo('<br>');echo('<br>');echo('<br>');echo('<br>');
             if($images[0]->isValid())
@@ -221,9 +220,9 @@ class playController extends Controller
                     $extension1 = $images[1]->getClientOriginalExtension();
                     if($extension1 == 'png'||'gif'||'jpg'||'jpeg')
                     {
-                        $filename1 = rand(11111,99999).'.'.$extension0;
+                        $filename1 = rand(11111,99999).'.'.$extension1;
 
-                        $images[1]->move($destPath, $filename0);
+                        $images[1]->move($destPath, $filename1);
 
                         $group->image2_path = $destPath . "/" . $filename1;
                     }
@@ -348,7 +347,7 @@ class playController extends Controller
         }
         $images = Input::file('images');
         $size = sizeof($images);
-        if (($size > 0) && ($size[0] !== NULL))
+        if (($size > 0))
         {
 
             $destPath = 'upload';
@@ -375,9 +374,9 @@ class playController extends Controller
                     $extension1 = $images[1]->getClientOriginalExtension();
                     if($extension1 == 'png'||'gif'||'jpg'||'jpeg')
                     {
-                        $filename1 = rand(11111,99999).'.'.$extension0;
+                        $filename1 = rand(11111,99999).'.'.$extension1;
 
-                        $images[1]->move($destPath, $filename0);
+                        $images[1]->move($destPath, $filename1);
 
                         $group->image2_path = $destPath . "/" . $filename1;
                     }

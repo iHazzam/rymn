@@ -60,7 +60,7 @@
         <table class="table table-bordered table-responsive table-striped" id="table" data-search="true" data-show-columns="true" data-pagination="true" data-height="250">
             <thead>
                 <tr>
-                    <th data-field="image" data-sortable="true" >Thumbnail</th>
+                    <th data-field="image" data-sortable="true" >Images</th>
                     <th data-field="name" data-sortable="true" width="10%" >Group Name</th>
                     <th data-field="group-type" data-sortable="true"  width="10%" >Group Type</th>
                     <th data-field="town" data-sortable="true">Group Town</th>
@@ -130,10 +130,31 @@
 
                     </div>
                 @endif
+                @if($group->image1_path != null)
+                    <div id="modal{{$group->id}}img" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;  </button>
+                                    <h4 class="modal-title" id="myModalLabel">{{$group->group_name . " - Other Pictures"}}</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <img style="max-width: 200px; max-height:200px;" src={{url($group->image1_path)}}><br>
+                                    @if($group->image2_path != null)<img style="max-width: 200px; max-height:200px;" src={{url($group->image2_path)}}>@endif
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
 
+
+
+                    </div>
+                @endif
 
                 <tr>
-                    <td><img style="max-width: 100px; max-height:100px;" src={{url($group->thumbnail_image_path)}}></td>
+                    <td><img style="max-width: 100px; max-height:100px;" src={{url($group->thumbnail_image_path)}}><br>@if($group->image1_path != null)<button type="button" class="btn btn-link smaller2" data-toggle="modal" data-target="#modal{{$group->id}}img"> Click to see more! </button> @endif</td>
                     <td>{{$group->group_name}}</td>
                     <td>
                         <?php

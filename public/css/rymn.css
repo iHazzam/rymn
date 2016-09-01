@@ -276,6 +276,10 @@ footer {
 .smaller{
     font-size: 9px;
 }
+.smaller2{
+    font-size: 9px;
+    @override color: #0000EE;
+}
 
 .idcard{
     font-size: 11px;
@@ -326,9 +330,9 @@ footer {
     max-height: 110px;
 }
 
-.btn-link,.btn-link:hover{
-    color:white;
-}
+/*.btn-link,.btn-link:hover{*/
+    /*color:white;*/
+/*}*/
 
 .facebook-advert{
     position: fixed;
