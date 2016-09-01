@@ -247,12 +247,12 @@ footer {
     margin-right: 0;
     margin-left: 1em;
 
-    width: 100px;
+    max-width: 100px;
 }
 .teachercard_full_img{
     float: right;
     margin-right: 0;
-    width: 200px;
+    max-width: 200px;
 }
 
 .list-left{
@@ -333,6 +333,11 @@ footer {
 /*.btn-link,.btn-link:hover{*/
     /*color:white;*/
 /*}*/
+
+.white_
+{
+    color:white;
+}
 
 .facebook-advert{
     position: fixed;

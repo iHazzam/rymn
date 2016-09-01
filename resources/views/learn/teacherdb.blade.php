@@ -205,7 +205,7 @@
         </div>
         </a>
         </div>
-        <div class="bottom-line-ban" id="teacher_modal{{$teacher->id}}"><button type="button" class="btn btn-link" data-toggle="modal" data-target="#modal{{$teacher->id}}">To find out more, click here &nbsp; <i class="fa fa-angle-double-down" aria-hidden="true"></i> </button></div>
+        <div class="bottom-line-ban" id="teacher_modal{{$teacher->id}}"><button type="button" class="btn btn-link white_" data-toggle="modal" data-target="#modal{{$teacher->id}}">To find out more, click here &nbsp; <i class="fa fa-angle-double-down" aria-hidden="true"></i> </button></div>
     </div>
         </a>
 
