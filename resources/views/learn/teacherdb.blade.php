@@ -217,7 +217,7 @@
                     <h4 class="modal-title" id="myModalLabel">{{$teacher->first_name . " " . $teacher->last_name . " - Music Teacher"}}</h4>
                 </div>
                 <div class="modal-body">
-                    <img src="{{isset($teacher->thumbnail_img) ? '/'.$teacher->thumbnail_img : '/upload/default2.png'}}" alt="leftimg" style="width:200px; height:200px;"class="teachercard_full_img" />
+                    <img src="{{isset($teacher->thumbnail_img) ? '/'.$teacher->thumbnail_img : '/upload/default2.png'}}" alt="leftimg" class="teachercard_full_img" />
                     <p id="city">From: {{$teacher->city}}</p>
                     <p id="ages">Teaches ages: {{$teacher->min_age_taught}} to {{$teacher->max_age_taught}}</p>
                     <p id="main_instruments">Main instruments:
