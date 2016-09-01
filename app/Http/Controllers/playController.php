@@ -192,7 +192,14 @@ class playController extends Controller
         else{
             $group->thumbnail_image_path = "upload/default.png";
         }
-        $images = Input::file('images');
+        $images_upload = Input::file('images');
+        if(!is_array($images_upload))
+        {
+            $images[0] = $images_upload;
+        }//if images is just a single thing
+        else{
+            $images = $images_upload;
+        }
         $size = sizeof($images);
         if (($size > 0))
         {
@@ -343,9 +350,16 @@ class playController extends Controller
             }
         }
         else{
-            $group->thumbnail_image_path = "upload/default.png";
+            //$group->thumbnail_image_path = "upload/default.png"; else don't change the thumbnail path
         }
-        $images = Input::file('images');
+        $images_upload = Input::file('images');
+        if(!is_array($images_upload))
+        {
+            $images[0] = $images_upload;
+        }//if images is just a single thing
+        else{
+            $images = $images_upload;
+        }
         $size = sizeof($images);
         if (($size > 0))
         {
