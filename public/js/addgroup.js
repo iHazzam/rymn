@@ -1,5 +1,10 @@
 $( document ).ready(function() {
     console.log( "ready!" );
+    if($('#recruiting').is(":checked"))
+    {
+        $("#group_next").removeClass('hidden');
+        $("#group_sub").addClass('hidden');
+    }
 });
 
 

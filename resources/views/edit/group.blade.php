@@ -103,7 +103,7 @@
 
                                     <div class="form-group">
                                         <div class="checkbox" >
-                                            <label for="recruiting" class="control-label"><input type="checkbox" id="recruiting" value="recruiting" name="recruiting" onchange="valueChangedRecruiting(); ">Is the group recruiting for new members?</label>
+                                            <label for="recruiting" class="control-label "><input class="" type="checkbox" id="recruiting" value="recruiting" name="recruiting" @if($data->recruiting == 1) checked @endif onchange="valueChangedRecruiting(); ">Is the group recruiting for new members?</label>
                                         </div>
                                     </div>
 
