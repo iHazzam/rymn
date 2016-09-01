@@ -86,7 +86,7 @@ class teachController extends Controller
 
         if($request->has('mobile'))
         {
-            $checkMob = $this->checkUKTelephone($request->phone);
+            $checkMob = $this->checkUKTelephone($request->mobile);
             if($checkMob)
             {
                 $teacher->mobile = $request->mobile;
@@ -610,7 +610,7 @@ class teachController extends Controller
 
         if($request->has('mobile'))
         {
-            $checkMob = $this->checkUKTelephone($request->phone);
+            $checkMob = $this->checkUKTelephone($request->mobile);
             if($checkMob)
             {
                 $teacher->mobile = $request->mobile;
