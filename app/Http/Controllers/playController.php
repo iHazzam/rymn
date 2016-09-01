@@ -351,7 +351,7 @@ class playController extends Controller
                 $images[0] = $images_upload;
             }//if images is just a single thing
             else {
-                $images[0] = $images_upload;
+                $images = $images_upload;
             }
             $size = sizeof($images);
             if (($size > 0)) {
