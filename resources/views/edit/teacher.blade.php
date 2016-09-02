@@ -1078,7 +1078,14 @@
                                         {!! Form::file('thumbnail_image')!!}
 
                                     </div>
-
+                                    <div class="form-group">
+                                        <label for="website" class="control-label">Please enter your website or webpage(Optional) <br> URL must contain http://</label>
+                                        <input type="url" class="website" id="website" name="website" value="@if($data->website != ""){{$data->website}}   @endif" placeholder="http://www.yoursitehere.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="facebook" class="control-label">Please enter your facebook page URL(Optional) <br> URL must contain http://</label>
+                                        <input type="url" class="facebook" id="facebook" name="facebook" value="@if($data->facebook != ""){{$data->facebook}}   @endif" placeholder="https://www.facebook.com/youth.music.network/">
+                                    </div>
                                 </div>
 
                                 <div class="clearfix" style="height: 10px;clear: both;"></div>

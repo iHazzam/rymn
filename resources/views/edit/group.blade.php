@@ -34,7 +34,7 @@
                         {!! csrf_field() !!}
                         <div id="sf1" class="frm">
                             <fieldset>
-                                <div class="alert alert-warning alert-dismissible hidden" id="incomplete" role="alert">Please complete all fields to continue</div>
+                                <div class="alert alert-warning alert-dismissible hidden" id="incomplete" role="alert">Please complete all fields to continue - URLs must contain http://</div>
                                 <legend>Group information</legend>
                                 <div class="form-group">
                                     <div class="form-group">
@@ -91,29 +91,28 @@
 
                                     </div>
                                     <div class="form-group">
-                                        <label for="thumbnail" class="control-label">Thumbnail image for group</label>
+                                        <label for="website" class="control-label">Please enter your website or webpage(Optional) <br> URL must contain http://</label>
+                                        <input type="url" class="website" id="website" name="website" value="@if($data->website != ""){{$data->website}}   @endif" placeholder="http://www.yoursitehere.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="facebook" class="control-label">Please enter your facebook page URL(Optional) <br> URL must contain http://</label>
+                                        <input type="url" class="facebook" id="facebook" name="facebook" value="@if($data->facebook != ""){{$data->facebook}}   @endif" placeholder="https://www.facebook.com/youth.music.network/">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="thumbnail" class="control-label">Thumbnail image for group(optional)</label>@if($data->thumbnail_image_path)&nbsp;&nbsp;&nbsp;Currently: <img style="max-width: 70px; max-height:70px;" src={{url($data->thumbnail_image_path)}}>@endif
                                         {!! Form::file('thumbnail') !!}
 
                                     </div>
                                     <div class="form-group">
-                                        <label for="thumbnail" class="control-label">Other group photos(Only two will be used)</label>
-                                        {!! Form::file('images[]', array('multiple'=>true)) !!}
-
+                                        <label for="thumbnail" class="control-label">One other group photo (optional)</label>@if($data->image1_path)&nbsp;&nbsp;&nbsp;Currently: <img style="width: 70px; max-height: 70px;" src={{url($data->image1_path)}}>@endif
+                                        {!! Form::file('images') !!}
                                     </div>
-
-                                    <div class="form-group">
-                                        <div class="checkbox" >
-                                            <label for="recruiting" class="control-label "><input class="" type="checkbox" id="recruiting" value="recruiting" name="recruiting" @if($data->recruiting == 1) checked @endif onchange="valueChangedRecruiting(); ">Is the group recruiting for new members?</label>
-                                        </div>
-                                    </div>
-
 
                                     <div class="clearfix" style="height: 10px;clear: both;"></div>
 
                                     <div class="form-group">
                                         <div class="col-lg-10 col-lg-offset-2">
-                                            <button type="submit" id="group_sub" class="btn btn-warning"> <span class="fa fa-paper-plane"></span> Submit </button>
-                                            <button class="btn btn-primary hidden open1" id="group_next" type="button">Next <span class="fa fa-arrow-right"></span></button>
+                                            <button class="btn btn-primary open1" id="group_next" type="button">Next <span class="fa fa-arrow-right"></span></button>
                                         </div>
                                     </div>
                                 </div>

@@ -95,7 +95,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="thumbnail_image" class="control-label">Add a thumbnail image for the event (Optional)</label>
+                                    <label for="thumbnail_image" class="control-label">Add a thumbnail image for the event(Optional)</label>
                                     {!! Form::file('thumbnail_image') !!}
 
                                 </div>

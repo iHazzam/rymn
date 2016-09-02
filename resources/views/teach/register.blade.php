@@ -1070,12 +1070,12 @@
 
                                     </div>
                                     <div class="form-group">
-                                        <label for="website" class="control-label">Please enter your website or webpage (Optional)</label>
-                                        <input type="url" class="website" id="website" name="website" placeholder="www.yoursitehere.com">
+                                        <label for="website" class="control-label">Please enter your website or webpage(Optional) <br> URL must contain http://</label>
+                                        <input type="url" class="website" id="website" name="website"   placeholder="Http://www.yoursitehere.com">
                                     </div>
                                     <div class="form-group">
-                                        <label for="facebook" class="control-label">Please enter your facebook page URL (Optional)</label>
-                                        <input type="url" class="facebook" id="facebook" name="facebook" placeholder="https://www.facebook.com/youth.music.network/">
+                                        <label for="facebook" class="control-label">Please enter your facebook page URL(Optional) <br> URL must contain http://</label>
+                                        <input type="url" class="facebook" id="facebook" name="facebook"   placeholder="https://www.facebook.com/youth.music.network/">
                                     </div>
                                     <span> Please enter a password to allow you to log in and edit the information you are entering.
                                     Please note, if you have entered an email address which is already registered on the site (As a teacher, group or repairer) please use <b>the same</b> password here</span>

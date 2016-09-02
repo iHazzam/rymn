@@ -85,22 +85,22 @@
 
                                     </div>
                                     <div class="form-group">
-                                        <label for="thumbnail" class="control-label">Thumbnail image for group</label>
+                                        <label for="thumbnail" class="control-label">Thumbnail image for group(optional)</label>
                                         {!! Form::file('thumbnail') !!}
 
                                     </div>
                                     <div class="form-group">
-                                        <label for="thumbnail" class="control-label">Other group photos(Only two will be used)</label>
-                                        {!! Form::file('images[]', array('multiple'=>true)) !!}
+                                        <label for="thumbnail" class="control-label">One other group photo (optional)</label>
+                                        {!! Form::file('images') !!}
 
                                     </div>
                                     <div class="form-group">
-                                        <label for="website" class="control-label">Please enter your website or webpage (Optional)</label>
-                                        <input type="url" class="website" id="website" name="website" placeholder="www.yoursitehere.com">
+                                        <label for="website" class="control-label">Please enter your website or webpage(Optional) <br> URL must contain http://</label>
+                                        <input type="url" class="website" id="website" name="website"   placeholder="http://www.yoursitehere.com">
                                     </div>
                                     <div class="form-group">
-                                        <label for="facebook" class="control-label">Please enter your facebook page URL (Optional)</label>
-                                        <input type="url" class="facebook" id="facebook" name="facebook" placeholder="https://www.facebook.com/youth.music.network/">
+                                        <label for="facebook" class="control-label">Please enter your facebook page URL(Optional) <br> URL must contain http://</label>
+                                        <input type="url" class="facebook" id="facebook" name="facebook"   placeholder="http://www.facebook.com/youth.music.network/">
                                     </div>
 
                                     <span> Please enter a password to allow you to log in and edit the information you are entering.
@@ -115,19 +115,13 @@
                                         <input type="password" class="form-control" id="password2" name="password2" required placeholder="">
 
                                     </div>
-                                    <div class="form-group">
-                                        <div class="checkbox" >
-                                            <label for="recruiting" class="control-label"><input type="checkbox" id="recruiting" value="recruiting" name="recruiting" onchange="valueChangedRecruiting();">Is the group recruiting for new members?</label>
-                                        </div>
-                                    </div>
 
 
                                     <div class="clearfix" style="height: 10px;clear: both;"></div>
 
                                     <div class="form-group">
                                         <div class="col-lg-10 col-lg-offset-2">
-                                            <button type="submit" id="group_sub" class="btn btn-warning"> <span class="fa fa-paper-plane"></span> Submit </button>
-                                            <button class="btn btn-primary hidden open1" id="group_next" type="button">Next <span class="fa fa-arrow-right"></span></button>
+                                            <button class="btn btn-primary open1" id="group_next" type="button">Next <span class="fa fa-arrow-right"></span></button>
                                         </div>
                                     </div>
                                 </div>
