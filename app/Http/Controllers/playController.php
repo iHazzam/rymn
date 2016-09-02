@@ -158,7 +158,7 @@ class playController extends Controller
             $error = true;
             $errormessage = "Passwords do not match!";
         }
-        $isrecruiting = $request->recruiting ? true : false;
+        $isrecruiting = true;
 
         $group = new Group;
         $group->group_name = $request->group_name;
@@ -188,52 +188,22 @@ class playController extends Controller
         } else {
             $group->thumbnail_image_path = "upload/default.png";
         }
-        if(Input::file('images')[0] != null)
-        {
-        $images_upload = Input::file('images');
-        if (!is_array($images_upload)) {
-            $images[0] = $images_upload;
-        }//if images is just a single thing
-        else {
-            $images = $images_upload;
-        }
-        $size = sizeof($images);
-        if (($size > 0)) {
-            $destPath = 'upload';
-            echo('<br>');
-            echo('<br>');
-            echo('<br>');
-            echo('<br>');
-            if ($images[0]->isValid()) {
-                $extension0 = $images[0]->getClientOriginalExtension();
-                if ($extension0 == 'png' || 'gif' || 'jpg' || 'jpeg') {
-                    $filename0 = rand(11111, 99999) . '.' . $extension0;
+        if (Input::file('images')) {
+            if (Input::file('images')->isValid()) {
+                $destPath = 'upload';
+                $extension = Input::file('images')->getClientOriginalExtension();
 
-                    $images[0]->move($destPath, $filename0);
-
-                    $group->image1_path = $destPath . "/" . $filename0;
+                if ($extension == 'png' || 'gif' || 'jpg' || 'jpeg') {
+                    $filename = rand(11111, 99999) . '.' . $extension;
+                    Input::file('images')->move($destPath, $filename);
+                    $group->image1_path = $destPath . "/" . $filename;
                 } else {
-                    return Redirect::back()->withErrors(['Error: One or more incorrect filetypes uploaded (Must be png, gif, jpg, or jpeg)']);
+                    return Redirect::back()->withErrors(['Error: Incorrect filetype uploaded (Must be png, gif, jpg, or jpeg)']);
                 }
             }
-            if ($size > 1) {
-                if ($images[1]->isValid()) {
-                    $extension1 = $images[1]->getClientOriginalExtension();
-                    if ($extension1 == 'png' || 'gif' || 'jpg' || 'jpeg') {
-                        $filename1 = rand(11111, 99999) . '.' . $extension1;
-
-                        $images[1]->move($destPath, $filename1);
-
-                        $group->image2_path = $destPath . "/" . $filename1;
-                    } else {
-                        return Redirect::back()->withErrors(['Error: One or more incorrect filetypes uploaded (Must be png, gif, jpg, or jpeg)']);
-                    }
-                }
-            }
-
         }
-    }
-        $group->recruiting = $isrecruiting;
+
+        $group->recruiting = true;
         if($isrecruiting)
         {
             $group->minimum_level = $request->standard;
@@ -306,7 +276,7 @@ class playController extends Controller
         ]);
         $error = false;
         $errormessage = "Sorry, something went wrong, please contact an administrator";
-        $isrecruiting = $request->recruiting ? true : false;
+        $isrecruiting = true;
 
         $group = Group::whereUser_id(Auth::user()->id)->first();
         $group->group_name = $request->group_name;
@@ -345,52 +315,21 @@ class playController extends Controller
         else{
             //$group->thumbnail_image_path = "upload/default.png"; else don't change the thumbnail path
         }
-        if(Input::file('images')[0] != null) {
-            $images_upload = Input::file('images');
-            if (!is_array($images_upload)) {
-                $images[0] = $images_upload;
-            }//if images is just a single thing
-            else {
-                $images = $images_upload;
-            }
-            $size = sizeof($images);
-            if (($size > 0)) {
-
+        if (Input::file('images')) {
+            if (Input::file('images')->isValid()) {
                 $destPath = 'upload';
-                echo('<br>');
-                echo('<br>');
-                echo('<br>');
-                echo('<br>');
-                if ($images[0]->isValid()) {
-                    $extension0 = $images[0]->getClientOriginalExtension();
-                    if ($extension0 == 'png' || 'gif' || 'jpg' || 'jpeg') {
-                        $filename0 = rand(11111, 99999) . '.' . $extension0;
+                $extension = Input::file('images')->getClientOriginalExtension();
 
-                        $images[0]->move($destPath, $filename0);
-
-                        $group->image1_path = $destPath . "/" . $filename0;
-                    } else {
-                        return Redirect::back()->withErrors(['Error: One or more incorrect filetypes uploaded (Must be png, gif, jpg, or jpeg)']);
-                    }
+                if ($extension == 'png' || 'gif' || 'jpg' || 'jpeg') {
+                    $filename = rand(11111, 99999) . '.' . $extension;
+                    Input::file('images')->move($destPath, $filename);
+                    $group->image1_path = $destPath . "/" . $filename;
+                } else {
+                    return Redirect::back()->withErrors(['Error: Incorrect filetype uploaded (Must be png, gif, jpg, or jpeg)']);
                 }
-                if ($size > 1) {
-                    if ($images[1]->isValid()) {
-                        $extension1 = $images[1]->getClientOriginalExtension();
-                        if ($extension1 == 'png' || 'gif' || 'jpg' || 'jpeg') {
-                            $filename1 = rand(11111, 99999) . '.' . $extension1;
-
-                            $images[1]->move($destPath, $filename1);
-
-                            $group->image2_path = $destPath . "/" . $filename1;
-                        } else {
-                            return Redirect::back()->withErrors(['Error: One or more incorrect filetypes uploaded (Must be png, gif, jpg, or jpeg)']);
-                        }
-                    }
-                }
-
             }
         }
-        $group->recruiting = $isrecruiting;
+        $group->recruiting = true;
         if($isrecruiting)
         {
             $group->minimum_level = $request->standard;

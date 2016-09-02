@@ -41,6 +41,10 @@ class pageController extends Controller
     {
         return view('sitemap');
     }
+    public function download($filepath)
+    {
+        return response()->download(storage_path($filepath));
+    }
     public function dashboard()
     {
         if(Auth::check())

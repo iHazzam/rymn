@@ -1,10 +1,6 @@
 $( document ).ready(function() {
     console.log( "ready!" );
-    if($('#recruiting').is(":checked"))
-    {
-        $("#group_next").removeClass('hidden');
-        $("#group_sub").addClass('hidden');
-    }
+
 });
 
 
@@ -32,17 +28,3 @@ $( document ).ready(function() {
         $("#sf1").show("slow");
     });
 
-function valueChangedRecruiting()
-{
-    if($('#recruiting').is(":checked"))
-    {
-        $("#group_next").removeClass('hidden');
-        $("#group_sub").addClass('hidden');
-    }
-    else
-    {
-        $("#group_sub").removeClass('hidden');
-        $("#group_next").addClass('hidden');
-    }
-
-}
