@@ -37,7 +37,7 @@
                          @foreach($repair as $k => $a)
                                     <tr>
                                         <td>
-                                            <img style="max-width: 100px;" src="{{$a['img']}}">
+                                            <img style="max-width: 100px;" src="{{url($a['img'])}}">
                                         </td>
                                         <td>
                                             <span class="list-group-item-heading">{{$a['name']}}</span>
