@@ -179,7 +179,6 @@ public function kids()
 
         foreach($repairers as $a)
         {
-
             $repairer_temp['id'] = $a->id;
             $repairer_temp['name'] = $a->first_name . ' ' . $a->last_name;
             $instruments = Instruments_Repaired::whereRepairer_id($a->id)->get();
@@ -196,9 +195,13 @@ public function kids()
                     $repairer_temp['repaired'] = $repairer_temp['repaired'] . $k . ", ";
                 }
             }
+            $repairer_temp['img'] = $a->thumbnail_img != null ? $a->thumbnail_img : "/upload/default3.png" ;
+            $repairer_temp['town'] = $a->city;
             $repairer_temp['repaired'] = rtrim( $repairer_temp['repaired'], ", ");
             $rep[] = $repairer_temp;
+
         }
+
         return view('learn.maintainance', ['repair' => $rep]);
     }
 

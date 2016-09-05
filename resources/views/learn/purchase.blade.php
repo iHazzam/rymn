@@ -248,7 +248,27 @@
                                 £3000+
                             </td>
                             <td>
-                                May be required in addition to Oboe later on. Reeds are required (~£15 each)
+                                Reeds are required (£10-15 each)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Contrabassoon
+                            </td>
+                            <td>
+                                -
+                            </td>
+                            <td>
+                                -
+                            </td>
+                            <td>
+                                £4000+
+                            </td>
+                            <td>
+                                £6000+
+                            </td>
+                            <td>
+                                Optional extra in addition to Bassoon later on. Reeds are required (£15 each).
                             </td>
                         </tr>
                         <tr>
