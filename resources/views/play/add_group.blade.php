@@ -64,11 +64,12 @@
                                             <option value="community_group">Community Group </option>
                                             <option value="orchestra">Orchestra </option>
                                             <option value="percussion_ensemble">Percussion Ensemble</option>
-                                            <option value="pop/rock_band">Pop/Rock group</option>
-                                            <option value="string_chamber_group">String Chamber Group</option>
+                                            <option value="string_chamber_group">String Chamber Ensemble</option>
+                                            <option value="wind_chamber_group">Wind Chamber Group</option>
+                                            <option value="brass_chamber_group">Brass Chamber Ensemble</option>
                                             <option value="string_group">String Group</option>
                                             <option value="wind_band">Wind Band</option>
-                                            <option value="wind_chamber_group">Wind Chamber Group</option>
+                                            <option value="other">Other</option>
                                         </select>
                                     </div>
                                     <div class="form-group">

@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed649e33-b377-40ad-868e-9b8b4cecf892" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/adminer/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/playController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/playController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_06_17_111057_create_groups_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_06_17_111057_create_groups_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/rymn.css" afterPath="$PROJECT_DIR$/public/css/rymn.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/edit/group.blade.php" afterPath="$PROJECT_DIR$/resources/views/edit/group.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/learn/maintainance.blade.php" afterPath="$PROJECT_DIR$/resources/views/learn/maintainance.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/play/add_group.blade.php" afterPath="$PROJECT_DIR$/resources/views/play/add_group.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/play/groups.blade.php" afterPath="$PROJECT_DIR$/resources/views/play/groups.blade.php" />
     </list>
     <ignored path="rymn.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,11 +37,94 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="join.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/play/join.blade.php">
+      <file leaf-file-name="playController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/playController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+            <state relative-caret-position="438">
+              <caret line="283" column="54" selection-start-line="283" selection-start-column="54" selection-end-line="283" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/adminer/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="104" selection-start-line="6" selection-start-column="104" selection-end-line="6" selection-end-column="104" />
+              <folding>
+                <marker date="1473248370418" expanded="true" signature="52704:52714" ph="{...}" />
+                <marker date="1473248370418" expanded="true" signature="184576:184588" ph="INSERT INTO ${table($Q)}... " />
+                <marker date="1473248370418" expanded="true" signature="188344:188383" ph="INSERT INTO ${table($Q)}... " />
+                <marker date="1473248370418" expanded="true" signature="188451:188506" ph="INSERT INTO ${table($Q)}... " />
+                <marker date="1473248370418" expanded="true" signature="189413:189464" ph="SELECT SCHEM... SCHEMATA" />
+                <marker date="1473248370418" expanded="true" signature="190255:190367" ph="SELECT TABLE... TABLES" />
+                <marker date="1473248370418" expanded="true" signature="190606:190729" ph="SELECT TABLE... TABLES" />
+                <marker date="1473248370418" expanded="true" signature="194933:194988" ph="CREATE TABLE... ${table($F)}" />
+                <marker date="1473248370418" expanded="true" signature="195085:195112" ph="ALTER TABLE ${table($Q)}... " />
+                <marker date="1473248370418" expanded="true" signature="195380:195392" ph="ALTER TABLE ${table($Q)}... " />
+                <marker date="1473248370418" expanded="true" signature="195628:195639" ph="DROP TABLE $... " />
+                <marker date="1473248370418" expanded="true" signature="196072:196093" ph="CREATE TABLE... ${$F}" />
+                <marker date="1473248370418" expanded="true" signature="196117:196146" ph="INSERT INTO ${$F}... " />
+                <marker date="1473248370418" expanded="true" signature="196132:196146" ph="SELECT * FRO... ${table($Q)}" />
+                <marker date="1473248370418" expanded="true" signature="198084:198190" ph="SELECT ROUTI... ROUTINES" />
+                <marker date="1473248370418" expanded="true" signature="202578:202587" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="202934:202988" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="203116:203172" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="212623:212672" ph="CREATE TABLE... ${table($Q)}" />
+                <marker date="1473248370418" expanded="true" signature="213500:213580" ph="INSERT INTO ${table($Q)}... " />
+                <marker date="1473248370418" expanded="true" signature="216910:216924" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="221663:221725" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="221682:221725" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="232422:232436" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="246880:246897" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="251719:251744" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="253094:253111" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="253254:253272" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="254044:254061" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="254774:254871" ph="SELECT User,... ${(DB==&quot;&quot;?&quot;user&quot;:&quot;db WHERE &quot;.q(DB).&quot; LIKE Db&quot;)}" />
+                <marker date="1473248370418" expanded="true" signature="267418:267423" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="268982:269011" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="271870:271926" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="271909:271926" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="271917:271926" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="271921:271926" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="271972:272006" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="273558:273587" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="274885:274890" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="277229:277258" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="277877:277889" ph="ALTER TABLE ${table($b)}... " />
+                <marker date="1473248370418" expanded="true" signature="278605:278610" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="278912:278928" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="279581:279610" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="280711:280715" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="280857:280886" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="282259:282347" ph="SELECT * FRO... EVENTS" />
+                <marker date="1473248370418" expanded="true" signature="282406:282439" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="282430:282439" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="283264:283293" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="284233:284237" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="284682:284711" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="285642:285675" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="285666:285675" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="286374:286403" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="289520:289553" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="289544:289553" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="291322:291351" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="291806:291923" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="297989:298003" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="304540:304569" ph="..." />
+                <marker date="1473248370418" expanded="true" signature="304724:304765" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="groups.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/play/groups.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -42,77 +133,58 @@
       <file leaf-file-name="group.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/edit/group.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="63" column="60" selection-start-line="63" selection-start-column="60" selection-end-line="63" selection-end-column="60" />
+            <state relative-caret-position="418">
+              <caret line="71" column="175" selection-start-line="71" selection-start-column="175" selection-end-line="71" selection-end-column="175" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="repairers.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/learn/repairers.blade.php">
+      <file leaf-file-name="2016_06_17_111057_create_groups_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_17_111057_create_groups_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2856">
-              <caret line="541" column="135" selection-start-line="541" selection-start-column="135" selection-end-line="541" selection-end-column="135" />
+            <state relative-caret-position="459">
+              <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="maintainance.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/learn/maintainance.blade.php">
+      <file leaf-file-name="2016_09_07_112927_change_ensemble_type_groups_enum.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_09_07_112927_change_ensemble_type_groups_enum.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="39" column="96" selection-start-line="39" selection-start-column="96" selection-end-line="39" selection-end-column="96" />
-              <folding>
-                <element signature="e#2293#2318#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="learnController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/learnController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="180" column="9" selection-start-line="180" selection-start-column="9" selection-end-line="180" selection-end-column="9" />
+            <state relative-caret-position="306">
+              <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default3.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/upload/default3.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <file leaf-file-name="2016_08_16_134617_change_event_times.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_16_134617_change_event_times.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="49" column="24" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="24" />
+            <state relative-caret-position="272">
+              <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="instruments.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/learn/instruments.blade.php">
+      <file leaf-file-name="2016_08_20_132534_add_websites_to_things.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_20_132534_add_websites_to_things.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-519">
-              <caret line="37" column="144" selection-start-line="37" selection-start-column="144" selection-end-line="37" selection-end-column="144" />
+            <state relative-caret-position="272">
+              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="19" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="purchase.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/learn/purchase.blade.php">
+      <file leaf-file-name="2016_09_02_154507_remove_image2_from_groups.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2016_09_02_154507_remove_image2_from_groups.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="807">
-              <caret line="269" column="32" selection-start-line="269" selection-start-column="32" selection-end-line="269" selection-end-column="32" />
+            <state relative-caret-position="221">
+              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="16" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -121,8 +193,8 @@
       <file leaf-file-name="add_group.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/play/add_group.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
-              <caret line="88" column="71" selection-start-line="88" selection-start-column="71" selection-end-line="88" selection-end-column="71" />
+            <state relative-caret-position="272">
+              <caret line="52" column="82" selection-start-line="52" selection-start-column="82" selection-end-line="52" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -144,8 +216,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2016_08_14_112127_alter_repairers_table_users.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_08_15_153527_useSoftDeletes3.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/temp" />
         <option value="$PROJECT_DIR$/database/migrations/2016_05_26_005208_create_instruments_taught_table.php" />
         <option value="$PROJECT_DIR$/resources/views/template.blade.php" />
@@ -157,7 +227,6 @@
         <option value="$PROJECT_DIR$/resources/views/learn/practice.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/dashboard/submit_resource.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/adminController.php" />
-        <option value="$PROJECT_DIR$/resources/views/play/groups.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/discover/calendar.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_08_16_134617_change_event_times.php" />
         <option value="$PROJECT_DIR$/resources/views/discover/add.blade.php" />
@@ -171,7 +240,6 @@
         <option value="$PROJECT_DIR$/resources/views/discover/newsletter.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/learn/instruments.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/teachController.php" />
-        <option value="$PROJECT_DIR$/public/css/rymn.css" />
         <option value="$PROJECT_DIR$/resources/views/learn/teacherdb.blade.php" />
         <option value="$PROJECT_DIR$/public/js/addgroup.js" />
         <option value="$PROJECT_DIR$/resources/views/edit/singleEvent.blade.php" />
@@ -187,14 +255,18 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/pageController.php" />
         <option value="$PROJECT_DIR$/storage/framework/views/5d519a938f5de9d5ac48f34da464d9e4d9bad53c.php" />
         <option value="$PROJECT_DIR$/resources/views/teach/resources.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/play/add_group.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_09_02_154507_remove_image2_from_groups.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/playController.php" />
         <option value="$PROJECT_DIR$/resources/views/play/join.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/edit/group.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/learn/purchase.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/learnController.php" />
         <option value="$PROJECT_DIR$/resources/views/learn/maintainance.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/play/groups.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/rymn.css" />
+        <option value="$PROJECT_DIR$/resources/views/play/add_group.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/playController.php" />
+        <option value="$PROJECT_DIR$/resources/views/edit/group.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_06_17_111057_create_groups_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_09_07_112927_change_ensemble_type_groups_enum.php" />
       </list>
     </option>
   </component>
@@ -312,6 +384,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -818,25 +891,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rymn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rymn" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
+              <option name="myItemId" value="adminer" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -914,7 +973,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -927,19 +985,19 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\rymn\public\adminer" />
+      <recent name="C:\laragon\www\rymn\public\upload" />
+      <recent name="C:\laragon\www\rymn\resources\views\edit" />
+      <recent name="C:\laragon\www\rymn\public\js" />
+      <recent name="C:\laragon\www\rymn\resources\views\learn" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\rymn\public\imgs" />
       <recent name="C:\laragon\www\rymn\public\imgs\wind.jpg" />
       <recent name="C:\laragon\www\rymn" />
       <recent name="C:\laragon\www\rymn\public\imgs\banners" />
       <recent name="C:\laragon\www\rymn\public\imgs\files" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\rymn\public\upload" />
-      <recent name="C:\laragon\www\rymn\resources\views\edit" />
-      <recent name="C:\laragon\www\rymn\public\js" />
-      <recent name="C:\laragon\www\rymn\resources\views\learn" />
-      <recent name="C:\laragon\www\rymn\app" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.rymn">
@@ -1059,12 +1117,13 @@
       <workItem from="1472752926062" duration="2163000" />
       <workItem from="1472812201195" duration="13742000" />
       <workItem from="1473014592135" duration="10000" />
-      <workItem from="1473069473628" duration="2440000" />
+      <workItem from="1473069473628" duration="2593000" />
+      <workItem from="1473244608978" duration="3855000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="540770000" />
+    <option name="totallyTimeSpent" value="544778000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1075,7 +1134,6 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26744187" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31078225" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1089,6 +1147,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31078225" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1140,25 +1199,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/discover/about.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/imgs/wind.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="100" selection-start-line="14" selection-start-column="100" selection-end-line="14" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1201,20 +1241,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_16_134617_change_event_times.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_20_132534_add_websites_to_things.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/discover/newsletter.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1249,13 +1275,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/play/groups.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="28" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -1393,14 +1412,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/rymn.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3604">
-          <caret line="212" column="1" selection-start-line="212" selection-start-column="1" selection-end-line="212" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/edit/repairer.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
@@ -1415,33 +1426,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_09_02_154507_remove_image2_from_groups.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/playController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5559">
-          <caret line="335" column="50" selection-start-line="335" selection-start-column="50" selection-end-line="335" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/play/add_group.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="88" column="71" selection-start-line="88" selection-start-column="71" selection-end-line="88" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/learn/purchase.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="807">
+        <state relative-caret-position="4573">
           <caret line="269" column="32" selection-start-line="269" selection-start-column="32" selection-end-line="269" selection-end-column="32" />
           <folding />
         </state>
@@ -1449,23 +1436,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/learn/instruments.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-519">
+        <state relative-caret-position="629">
           <caret line="37" column="144" selection-start-line="37" selection-start-column="144" selection-end-line="37" selection-end-column="144" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/play/join.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
+        <state relative-caret-position="680">
           <caret line="49" column="24" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="24" />
           <folding />
         </state>
@@ -1478,7 +1457,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/learnController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
+        <state relative-caret-position="2890">
           <caret line="180" column="9" selection-start-line="180" selection-start-column="9" selection-end-line="180" selection-end-column="9" />
           <folding />
         </state>
@@ -1486,26 +1465,175 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/learn/repairers.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2856">
+        <state relative-caret-position="9197">
           <caret line="541" column="135" selection-start-line="541" selection-start-column="135" selection-end-line="541" selection-end-column="135" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/edit/group.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="63" column="60" selection-start-line="63" selection-start-column="60" selection-end-line="63" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/learn/maintainance.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="39" column="96" selection-start-line="39" selection-start-column="96" selection-end-line="39" selection-end-column="96" />
+        <state relative-caret-position="705">
+          <caret line="64" column="137" selection-start-line="64" selection-start-column="137" selection-end-line="64" selection-end-column="137" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/rymn.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="563" column="19" selection-start-line="563" selection-start-column="19" selection-end-line="563" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/play/join.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/play/add_group.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="52" column="82" selection-start-line="52" selection-start-column="82" selection-end-line="52" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_09_02_154507_remove_image2_from_groups.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="16" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_16_134617_change_event_times.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_20_132534_add_websites_to_things.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="19" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_09_07_112927_change_ensemble_type_groups_enum.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_06_17_111057_create_groups_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/edit/group.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="71" column="175" selection-start-line="71" selection-start-column="175" selection-end-line="71" selection-end-column="175" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/play/groups.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/playController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="283" column="54" selection-start-line="283" selection-start-column="54" selection-end-line="283" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/adminer/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="104" selection-start-line="6" selection-start-column="104" selection-end-line="6" selection-end-column="104" />
           <folding>
-            <element signature="e#2293#2318#0#HTML" expanded="true" />
+            <marker date="1473248370418" expanded="true" signature="52704:52714" ph="{...}" />
+            <marker date="1473248370418" expanded="true" signature="184576:184588" ph="INSERT INTO ${table($Q)}... " />
+            <marker date="1473248370418" expanded="true" signature="188344:188383" ph="INSERT INTO ${table($Q)}... " />
+            <marker date="1473248370418" expanded="true" signature="188451:188506" ph="INSERT INTO ${table($Q)}... " />
+            <marker date="1473248370418" expanded="true" signature="189413:189464" ph="SELECT SCHEM... SCHEMATA" />
+            <marker date="1473248370418" expanded="true" signature="190255:190367" ph="SELECT TABLE... TABLES" />
+            <marker date="1473248370418" expanded="true" signature="190606:190729" ph="SELECT TABLE... TABLES" />
+            <marker date="1473248370418" expanded="true" signature="194933:194988" ph="CREATE TABLE... ${table($F)}" />
+            <marker date="1473248370418" expanded="true" signature="195085:195112" ph="ALTER TABLE ${table($Q)}... " />
+            <marker date="1473248370418" expanded="true" signature="195380:195392" ph="ALTER TABLE ${table($Q)}... " />
+            <marker date="1473248370418" expanded="true" signature="195628:195639" ph="DROP TABLE $... " />
+            <marker date="1473248370418" expanded="true" signature="196072:196093" ph="CREATE TABLE... ${$F}" />
+            <marker date="1473248370418" expanded="true" signature="196117:196146" ph="INSERT INTO ${$F}... " />
+            <marker date="1473248370418" expanded="true" signature="196132:196146" ph="SELECT * FRO... ${table($Q)}" />
+            <marker date="1473248370418" expanded="true" signature="198084:198190" ph="SELECT ROUTI... ROUTINES" />
+            <marker date="1473248370418" expanded="true" signature="202578:202587" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="202934:202988" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="203116:203172" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="212623:212672" ph="CREATE TABLE... ${table($Q)}" />
+            <marker date="1473248370418" expanded="true" signature="213500:213580" ph="INSERT INTO ${table($Q)}... " />
+            <marker date="1473248370418" expanded="true" signature="216910:216924" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="221663:221725" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="221682:221725" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="232422:232436" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="246880:246897" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="251719:251744" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="253094:253111" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="253254:253272" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="254044:254061" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="254774:254871" ph="SELECT User,... ${(DB==&quot;&quot;?&quot;user&quot;:&quot;db WHERE &quot;.q(DB).&quot; LIKE Db&quot;)}" />
+            <marker date="1473248370418" expanded="true" signature="267418:267423" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="268982:269011" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="271870:271926" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="271909:271926" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="271917:271926" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="271921:271926" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="271972:272006" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="273558:273587" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="274885:274890" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="277229:277258" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="277877:277889" ph="ALTER TABLE ${table($b)}... " />
+            <marker date="1473248370418" expanded="true" signature="278605:278610" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="278912:278928" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="279581:279610" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="280711:280715" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="280857:280886" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="282259:282347" ph="SELECT * FRO... EVENTS" />
+            <marker date="1473248370418" expanded="true" signature="282406:282439" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="282430:282439" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="283264:283293" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="284233:284237" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="284682:284711" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="285642:285675" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="285666:285675" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="286374:286403" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="289520:289553" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="289544:289553" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="291322:291351" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="291806:291923" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="297989:298003" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="304540:304569" ph="..." />
+            <marker date="1473248370418" expanded="true" signature="304724:304765" ph="..." />
           </folding>
         </state>
       </provider>

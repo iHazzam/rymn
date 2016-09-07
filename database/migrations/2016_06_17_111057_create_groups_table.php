@@ -20,7 +20,7 @@ class CreateGroupsTable extends Migration
             $table->string('image1_path')->nullable();
             $table->string('image2_path')->nullable();
             $table->string('thumbnail_image_path');
-            $table->enum('ensemble_type',['brass_band','choir','community_group','orchestra','percussion_ensemble','pop/rock_band','string_chamber_group','string_group','wind_band','wind_chamber_group']);
+            $table->enum('ensemble_type',['brass_band','choir','community_group','orchestra','percussion_ensemble','string_chamber_group','string_group','wind_band','wind_chamber_group','brass_chamber_group','other']);
             $table->boolean('recruiting');
             $table->enum('minimum_level', ['grade1','grade2','grade3','grade4','grade5','grade6','grade7','grade8','diploma','concert_soloist'])->nullable();
             $table->boolean('audition')->nullable();

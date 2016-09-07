@@ -70,11 +70,12 @@
                                             <option value="community_group" @if($data->ensemble_type == "community_group") selected @endif>Community Group </option>
                                             <option value="orchestra" @if($data->ensemble_type == "orchestra") selected @endif>Orchestra </option>
                                             <option value="percussion_ensemble" @if($data->ensemble_type == "percussion_ensemble") selected @endif>Percussion Ensemble</option>
-                                            <option value="pop/rock_band" @if($data->ensemble_type == "pop/rock_band") selected @endif>Pop/Rock group</option>
-                                            <option value="string_chamber_group" @if($data->ensemble_type == "string_chamber_group") selected @endif>String Chamber Group</option>
+                                            <option value="string_chamber_group" @if($data->ensemble_type == "string_chamber_group") selected @endif>String Chamber Ensemble</option>
+                                            <option value="wind_chamber_group" @if($data->ensemble_type == "wind_chamber_group") selected @endif>Wind Chamber Ensemble</option>
+                                            <option value="brass_chamber_group" @if($data->ensemble_type == "brass_chamber_group") selected @endif>Brass Chamber Ensemble</option>
                                             <option value="string_group" @if($data->ensemble_type == "string_group") selected @endif>String Group</option>
                                             <option value="wind_band" @if($data->ensemble_type == "wind_band") selected @endif>Wind Band</option>
-                                            <option value="wind_chamber_group" @if($data->ensemble_type == "wind_chamber_group") selected @endif>Wind Chamber Group</option>
+                                            <option value="other" @if($data->ensemble_type == "other") selected @endif>Other</option>
                                         </select>
                                     </div>
                                     <div class="form-group">

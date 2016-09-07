@@ -45,7 +45,7 @@ class playController extends Controller
             }
         }
         $cities = ['ripon'=>'Ripon','thirsk'=>'Thirsk','easingwold'=>'Easingwold','boroughbridge'=>'Boroughbridge','harrogate'=>'Harrogate','knaresborough'=>'Knaresborough','pately_bridge'=>'Pately Bridge','northallerton'=>'Northallerton','ripley'=>'Ripley','masham'=>'Masham','richmond'=>'Richmond','skipton'=>'Skipton'];
-        $types = ['brass_band'=>'Brass Band','choir'=>'Choir','community_group'=>'Community Group','orchestra'=>'Orchestra','percussion_ensemble'=>'Percussion Ensemble', 'pop/rock_band' => 'Pop/Rock band','string_chamber_group'=>'String Chamber Group','string_group'=>"String Group",'wind_band'=>'Wind band','wind_chamber_group'=>'Wind Chamber Group'];
+        $types = ['brass_band'=>'Brass Band','choir'=>'Choir','community_group'=>'Community Group','orchestra'=>'Orchestra','percussion_ensemble'=>'Percussion Ensemble', 'pop/rock_band' => 'Pop/Rock band','string_chamber_group'=>'String Chamber Ensemble','string_group'=>"String Group",'wind_band'=>'Wind Band','wind_chamber_group'=>'Wind Chamber Ensemble','brass_chamber_group'=>'Brass Chamber Ensemble','other'=>'Other'];
 
 
         return view('play.join',['groups' => $groups, 'cities'=>$cities,'types'=>$types]);

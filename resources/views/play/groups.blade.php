@@ -21,6 +21,9 @@
                 <div class="ssd col-sm-8">
                     <h2 class="set-left"><span class="htb3">What sorts of groups could you join?</span></h2>
                     <p>There are countless different types of group or ensemble, playing a vast range of different types and genres of music.  These are just the main ones</p>
+                    <span class="htb3 cent"><a href="{{url('/play/join')}}">Click here to find orchestras, choirs and other groups in the area.</a></span>
+                    <br>
+                    <br>
                     <ul>
                         <li><span class="htb2">Orchestras:</span> An “orchestra” can be any group of a dozen or more players but we tend to use the term to mean a group of players of the “orchestral” instruments on our lists.  There are various types of orchestra but the three most common ones are:-
                             <ol class="htb2">

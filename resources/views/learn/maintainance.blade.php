@@ -62,7 +62,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-offset-2 col-sm-8">
-                    <p style="font-size: 9px">* - The click to reveal protects the sensitive information of the teachers from bots and scrapers</p>
+                    <p style="font-size: 9px">* - The click to reveal process protects the sensitive information of the repairers against bots and scrapers</p>
                 </div>
             </div>
         </section>
