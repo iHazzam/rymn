@@ -73,6 +73,7 @@
 
             @foreach($groups as $group)
                 @if(is_array($group))  <?php $group=$group[0]; ?> @endif
+
                 @if($group->recruiting == 1)
                     <div id="modal{{$group->id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -121,7 +122,7 @@
                                     @if($group->facebook != null)
                                         <p id="website"> <a href="{{$group->facebook}}">Click to access group's facebook page </a> </p>
                                     @endif
-                                    <button type="button" id="{{$group->id}}" name="{{$group->name}}" class="btn btn-default" onclick="openModal(this.id,this.name)" >Get Group Contact Email Address</button>
+                                    <button type="button" id="{{$group->id}}" name="{{$group->group_name}}" class="btn btn-default" onclick="openModal(this.id,this.name)" >Get Group Contact Email Address</button>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

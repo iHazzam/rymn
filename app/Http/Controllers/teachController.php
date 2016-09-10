@@ -39,6 +39,10 @@ class teachController extends Controller
         
         return view('teach.resources')->with('files', $files);
     }
+    public function resourcesTemp()
+    {
+        return view('teach.resourcesTemp');
+    }
     public function newTeach(Request $request)
     {
         $this->validate($request,[

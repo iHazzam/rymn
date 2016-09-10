@@ -45,7 +45,7 @@ class playController extends Controller
             }
         }
         $cities = ['ripon'=>'Ripon','thirsk'=>'Thirsk','easingwold'=>'Easingwold','boroughbridge'=>'Boroughbridge','harrogate'=>'Harrogate','knaresborough'=>'Knaresborough','pately_bridge'=>'Pately Bridge','northallerton'=>'Northallerton','ripley'=>'Ripley','masham'=>'Masham','richmond'=>'Richmond','skipton'=>'Skipton'];
-        $types = ['brass_band'=>'Brass Band','choir'=>'Choir','community_group'=>'Community Group','orchestra'=>'Orchestra','percussion_ensemble'=>'Percussion Ensemble', 'pop/rock_band' => 'Pop/Rock band','string_chamber_group'=>'String Chamber Ensemble','string_group'=>"String Group",'wind_band'=>'Wind Band','wind_chamber_group'=>'Wind Chamber Ensemble','brass_chamber_group'=>'Brass Chamber Ensemble','other'=>'Other'];
+        $types = ['other' => 'Other', 'brass_band'=>'Brass Band','choir'=>'Choir','community_group'=>'Community Group','orchestra'=>'Orchestra','percussion_ensemble'=>'Percussion Ensemble','string_chamber_group'=>'String Chamber Ensemble','string_group'=>"String Group",'wind_band'=>'Wind band','wind_chamber_group'=>'Wind Chamber Ensemble','brass_chamber_group'=>'Brass Chamber Ensemble'];
 
 
         return view('play.join',['groups' => $groups, 'cities'=>$cities,'types'=>$types]);
@@ -55,7 +55,7 @@ class playController extends Controller
         $reqall = $request->all();
         $reqArray = [];
         if($request->has('type'))
-        {   
+        {
             $type = $reqall['type'];
             $groups = DB::table('groups')->where('ensemble_type', '=', $type)->get();
             $reqArray[] = $groups;
@@ -73,11 +73,12 @@ class playController extends Controller
             $groups = DB::table('groups')->where('recruiting', '=', 1)->get();
             $reqArray[] = $groups;
         }
-        $ids = $this->restrictValues($reqArray);
 
+        $ids = $this->restrictValues($reqArray);
         $groups = [];
         if(count($ids) > 1)
         {
+
             $ids_final = call_user_func_array('array_intersect', $ids);
             foreach($ids_final as $id)
             {
@@ -85,7 +86,13 @@ class playController extends Controller
             }
         }
         elseif($ids != null) {
-            if(count($ids) == 1)
+            //if is 2d array
+            if (count($ids) != count($ids, COUNT_RECURSIVE))
+            {
+                $ids = call_user_func_array('array_merge', $ids);
+            }
+
+            if(!is_array($ids[0]))
             {
                 foreach ($ids as $id) {
                     $groups[] = DB::table('groups')->where('id', '=', $id)->get();
@@ -103,15 +110,13 @@ class playController extends Controller
             return Redirect::back();
         }
 
-
         foreach ($groups as $group)
         {
-            //var_dump($group);
-            if(is_array($group))
+            if(is_array($group[0]))
             {
-                $group=$group[0];
+                $group = $group['0'];
             }
-
+            $group = $group[0];
             if(property_exists($group, "minimum_level"))
             {
                 if($group->minimum_level == 'concert soloist')
@@ -128,8 +133,7 @@ class playController extends Controller
             }
         }
         $cities = ['ripon'=>'Ripon','thirsk'=>'Thirsk','easingwold'=>'Easingwold','boroughbridge'=>'Boroughbridge','harrogate'=>'Harrogate','knaresborough'=>'Knaresborough','pately_bridge'=>'Pately Bridge','northallerton'=>'Northallerton','ripley'=>'Ripley','masham'=>'Masham','richmond'=>'Richmond','skipton'=>'Skipton'];
-        $types = ['brass_band'=>'Brass Band','choir'=>'Choir','community_group'=>'Community Group','orchestra'=>'Orchestra','percussion_ensemble'=>'Percussion Ensemble', 'pop/rock_band' => 'Pop/Rock band','string_chamber_group'=>'String Chamber Group','string_group'=>"String Group",'wind_band'=>'Wind band','wind_chamber_group'=>'Wind Chamber Group'];
-
+        $types = ['other' => 'Other', 'brass_band'=>'Brass Band','choir'=>'Choir','community_group'=>'Community Group','orchestra'=>'Orchestra','percussion_ensemble'=>'Percussion Ensemble','string_chamber_group'=>'String Chamber Ensemble','string_group'=>"String Group",'wind_band'=>'Wind band','wind_chamber_group'=>'Wind Chamber Ensemble','brass_chamber_group'=>'Brass Chamber Ensemble'];
 
         return view('play.join',['groups' => $groups, 'cities'=>$cities,'types'=>$types]);
     }
@@ -217,6 +221,7 @@ class playController extends Controller
             $validator = Validator::make($input, $rules);
             if ($validator->fails()) {
                 $user = User::where('email', '=', $request->email)->get();
+                $user = $user['0'];
                 $userid = $user->id;
                 $user->is_group = true;
                 $user->save();

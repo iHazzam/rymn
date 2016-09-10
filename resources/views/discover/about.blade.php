@@ -34,6 +34,9 @@
                     <li><a href="https://www.facebook.com/youth.music.network/?fref=ts">the RYMN Facebook Feed - a live page to get help, advice and much much more</a></li>
                     </p>
                 </div>
+                <p class="htb2">
+                    To contact us about the website or anything RYMN, please write to <a href="mailto:mail@riponyouthmusic.net">mail@riponyouthmusic.net</a>
+                </p>
 
 
 

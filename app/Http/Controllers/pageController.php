@@ -41,8 +41,9 @@ class pageController extends Controller
     {
         return view('sitemap');
     }
-    public function download($filepath)
+    public function download($fp)
     {
+        dd($fp);
         return response()->download(storage_path($filepath));
     }
     public function dashboard()

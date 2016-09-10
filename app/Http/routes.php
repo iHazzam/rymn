@@ -22,7 +22,7 @@ Route::get('/teach', 'pageController@teach');
 Route::get('/play', 'pageController@play');
 Route::get('/discover', 'pageController@discover');
 Route::get('/user_login', 'loginController@userLogin');
-Route::get('/storage/{filepath}','pageController@download');
+//Route::get('/storage/download/{fp}','pageController@download')->name('download');
 Route::get('/privacy', 'pageController@privacy');
 Route::get('/cookies', 'pageController@cookies');
 Route::get('/sitemap', 'pageController@sitemap');
@@ -55,10 +55,11 @@ Route::get('/learn/purchase','learnController@purchase');
 
 /*teach*/
 Route::get('/teach/register', 'teachController@register');
-Route::get('/teach/resources', 'teachController@resources');
+Route::get('/teach/resources', 'teachController@resourcesTemp');//used to be @resources
 /*play*/
 Route::get('/play/groups', 'playController@groups');
 Route::get('/play/join', 'playController@join');
+Route::get('/play/join/post', 'playController@join');
 Route::get('/play/why', 'playController@why');
 Route::get('/play/advertise', 'playController@add_group');
 /*discover*/

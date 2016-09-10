@@ -236,7 +236,10 @@
             <a href="{{ url('privacy') }}">Privacy Policy</a> &nbsp;
             <a href="{{ url('sitemap') }}">Sitemap</a> &nbsp;
             <a href="{{ url('cookies') }}">Cookies Policy</a> &nbsp;
-            Copyright &copy; Ripon Youth Music Network {{date("Y")}}</p>
+            Copyright &copy; Ripon Youth Music Network {{date("Y")}}&nbsp
+            <a href="mailto:mail@riponyouthmusic.net">Contact - mail@riponyouthmusic.net</a>
+        </p>
+
     </div>
 </footer>
 <!-- /.container -->
