@@ -23,7 +23,6 @@ class teachController extends Controller
     //
     public function register()
     {
-        App::make('files')->link(storage_path('app/public'), public_path('storage'));
         return view('teach.register');
     }
     public function resources()
