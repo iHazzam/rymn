@@ -110,6 +110,6 @@
         </div>
 
     </section>
-    <div id="centerme123_div">Please click <a href="{{asset('storage/instrument_analysis.pdf')}}">here</a> to download a full table containing more specific advice for all of the most common instruments listed above</div>
+    <div id="centerme123_div">Please click <a href="{{asset('upload/instrument_analysis.pdf')}}">here</a> to download a full table containing more specific advice for all of the most common instruments listed above</div>
 
 @endsection

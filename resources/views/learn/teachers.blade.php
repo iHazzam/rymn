@@ -227,7 +227,7 @@
                 <div class="col-sm-12">
                     <h2 id="performance"><span class="htb2">Find a Teacher Online (RYMN Teacher Database):</span></h2>
                     <a class="htb3" href="/learn/teacherdb"><h4>Click <span class="htb2">here</span> to visit the RYMN Teacher Database</h4></a>
-                    <p>There are several websites where teachers advertise their services – the most commonly used is <a href="www.musicteachers.com">www.musicteachers.com</a>  – which also gives a fair amount of useful advice.  However, this site (and most others) will have a disclaimer similar to ours below.</p>
+                    <p>There are several websites where teachers advertise their services – the most commonly used is <a href="http://www.musicteachers.co.uk">www.musicteachers.co.uk</a>  – which also gives a fair amount of useful advice.  However, this site (and most others) will have a disclaimer similar to ours below.</p>
                     <h4>Disclaimer:</h4>
                     <p>We have no control over the teachers listed on this site.  We have designed it to give as much information as possible but we are not responsible for the accuracy of the content – this is entered by the teachers themselves.
                        <br> If we find any inaccurate or misleading information we will, of course, delete the entry – but we cannot take responsibility for vetting every teacher and their presence on this site is no guarantee of their quality.
