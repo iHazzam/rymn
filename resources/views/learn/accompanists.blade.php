@@ -32,7 +32,7 @@
                                         <span class="list-group-item-text">Max Level accompanied: {{$a['level']}}</span>
                                     </td>
                                     <td>
-                                        <button id="{{$a['id']}}" name="{{$a['name']}}" class="btn btn-warning" onclick="openModal(this.id,this.name)">Contact Details (click to reveal)*</button>
+                                        <button id="{{$a['id']}}" name="{{$a['name']}}" class="btn btn-warning" onclick="openModalTeacher(this.id,this.name)">Contact Details (click to reveal)*</button>
 
                                         <div id="target"></div>
                                     </td>
