@@ -14,12 +14,12 @@
             </a>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-6">
-            <a href="learn/parents">
+            <a href="learn/purchase">
                 <img class="banner-img" src="imgs/banners/learn_3.png">
             </a>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-6">
-            <a href="learn/kids">
+            <a href="learn/teacherdb">
                 <img class="banner-img" src="imgs/banners/learn_4.png">
             </a>
         </div>
