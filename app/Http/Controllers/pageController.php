@@ -39,7 +39,8 @@ class pageController extends Controller
     }
     public function sitemap()
     {
-        return view('sitemap');
+        $file = "upload/sitemap.xml";
+        return response()->download($file);
     }
     public function download($fp)
     {

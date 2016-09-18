@@ -1027,13 +1027,12 @@
                         <div id="sf6" class="frm" style="display: none;">
                             <fieldset name="six">
                                 <legend>Step 6 of 6 - Final Details</legend>
-
                                 <div class="form-group">
                                     <div class="form-group">
                                         <div class="checkbox" >
-                                            <label><input type="checkbox" id="cb-acc" name="cb_acc"  value="accompanies"  @if($data->cb_acc) checked @endif onchange="valueChangedAcc();">Do you accompany students?</label>
+                                            <label><input type="checkbox" id="cb-acc" name="cb_acc"  value="accompanies"  @if($data->is_accompanist) checked @endif onchange="valueChangedAcc();">Do you accompany students?</label>
                                         </div>
-                                        <div class="form-group hidden" id="acc">
+                                        <div class="form-group @if(!$data->is_accompanist) hidden @endif" id="acc">
                                             <label for="level_accompanied">Maximum level accompanied:</label>
                                             <select id="level_accompanied" name="level_accompanied">
                                                 <option value="">-</option>
