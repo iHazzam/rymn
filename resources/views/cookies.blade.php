@@ -1,4 +1,4 @@
-privacy.blade.php@extends('template')
+@extends('template')
 
 @section('title', 'homepage')
 
