@@ -166,9 +166,6 @@
                                 <a href="/discover/map"><i class=""></i>Events Map</a>
                             </li>
                             <li>
-                                <a href="/discover/newsletter"><i class=""></i>The RYMN newsletter</a>
-                            </li>
-                            <li>
                                 <a href="/discover/social"><i class=""></i>RYMN Social Feed</a>
                             </li>
                             <li>
