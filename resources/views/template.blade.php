@@ -134,15 +134,21 @@
                             <li>
                                 <a href="/play"><i class=""></i>Play Dashboard</a>
                             </li>
+                            <li>
+                                <a href="/play/groups"><i class=""></i>Benifits of group playing</a>
+                            </li>
                             <li role="separator" class="divider"></li>
                             <li>
                                 <a href="/play/join"><i class=""></i>Join an ensemble</a>
                             </li>
                             <li>
-                                <a href="/play/groups"><i class=""></i>Benifits of group playing</a>
+                                <a href="/play/join"><i class=""></i>Organisations for Youth Music</a>
                             </li>
                             <li>
-                                <a href="/play/advertise"><i class=""></i> Add your ensemble to RYMN</a>
+                                <a href="/play/advertise"><i class=""></i> Add your ensemble or group</a>
+                            </li>
+                            <li>
+                                <a href="/play/advertise"><i class=""></i> Add your organisation to RYMN</a>
                             </li>
                         </ul>
                     </li>

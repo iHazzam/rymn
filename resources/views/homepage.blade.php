@@ -44,6 +44,7 @@
             <li><a href="learn/teacherdb">A database of teachers across the county</a></li>
             <li><a href="play/groups">Where to find opportunities to play with others – orchestras, ensembles, bands, choirs etc.</a></li>
             <li><a href="play/groups">As well as a list of groups recruiting players in the area</a></li>
+            <li><a href="play/groups">“Find out about organisations offering opportunities and experience for young musicians.”</a></li>
             <li><a href="learn/purchase">Where to buy, rent or borrow an instrument.</a></li>
             <li><a href="learn/maintainace">Where to get an instrument repaired.</a></li>
             <li><a href="learn/exams">About the different exam boards and what exams are available and when.</a></li>

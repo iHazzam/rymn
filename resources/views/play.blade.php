@@ -36,15 +36,15 @@
     </div> <!-- end .flash-message -->
     <div class="col-sm-6 col-md-4 foundation ">
         <a href="/play/groups"><section class="ht-box brder3"><div><span class="helper"></span><img src="/imgs/singing.jpg"></div></section>
-        <h3 class="htb3">Find out why you should join an ensemble</h3></a>
+        <h3 class="htb3">FIND OUT WHY YOU SHOULD JOIN AN ENSEMBLE</h3></a>
     </div>
     <div class="col-sm-6 col-md-4 foundation">
         <a href="/play/join"><section class="ht-box  brder2"><div><span class="helper"></span><img src="/imgs/piano.jpg"></div></section>
-        <h3 class="htb2">Browse North Yorkshire Groups!<br></h3></a>
+        <h3 class="htb2">BROWSE NORTH YORKSHIRE GROUPS, ENSEMBLES AND ORGANISATIONS!<br></h3></a>
     </div>
     <div class="col-sm-6 col-md-4 foundation  ">
         <a href="/play/advertise"><section class="ht-box brder4"><div><span class="helper"></span><img src="/imgs/strings.jpg"></div></section>
-        <h3 class="htb4">Add your own ensemble to our database!</h3></a>
+        <h3 class="htb4">ADD YOUR OWN ENSEMBLE OR ORGANISATION TO OUR DATABASE!</h3></a>
     </div>
 
 

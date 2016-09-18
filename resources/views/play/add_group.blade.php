@@ -10,7 +10,7 @@
         <div class="col-lg-offset-2 col-lg-8">
             <div class="panel panel-default" id="multistep-panel" >
                 <div class="panel-heading cent">
-                    <h3 class="panel-title">Add your ensemble to RYNM's site!</h3>
+                    <h3 class="panel-title">Add your ensemble or organisation to RYMN’s site!</h3>
                 </div>
                 @if (count($errors) > 0)
                     <div class="alert alert-danger">
@@ -22,7 +22,7 @@
                     </div>
                 @endif
                 <div class="panel-body">
-                    <p>Adding details of your group allows you to advertise for members, add events to the calendar and reach a large number of potential audience members via our newsletter</p>
+                    <p>Adding your group or organisation allows you to advertise for members, add events to the calendar and reach a large number of potential audience members via our newsletter</p>
                     <form name="basicform" id="groupform" method="post" action="/postensemble" enctype="multipart/form-data">
                         {!! csrf_field() !!}
                         <div id="sf1" class="frm">
