@@ -585,11 +585,11 @@
                         <span class="htb5">Ready to start practicing?</span> Click <a href="/learn/practice">here</a> to read our expert advice on how to make the most of your practice!  </span>
                     </p>
                     <p>
-                        <span class="htb6">Looking to buy? </span>Yell.com has a list of music teachers in the area, which can be seen <a href="https://www.yell.com/s/musical+instrument+and+sheet+music+shops-north+yorkshire.html">here!</a>
+                        <span class="htb6">Looking to buy? </span>Yell.com has a list of shops in the area, which can be seen <a href="https://www.yell.com/s/musical+instrument+and+sheet+music+shops-north+yorkshire.html">here!</a>
                     </p>
             </div>
 
-
+        </div>
         </section>
     </article>
 

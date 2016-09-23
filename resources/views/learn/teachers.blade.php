@@ -193,7 +193,7 @@
                                 At your house
                             </td>
                             <td>
-                                No transport issues, you can choose the teacher, you get to know the teacher, you can arrange to lessons at weekend and during school holidays, children learn in a comfortable environment.
+                                No transport issues, you can choose the teacher, you get to know the teacher, you can arrange to have lessons at weekend and during school holidays, children learn in a comfortable environment.
                             </td>
                             <td>
                                 You will need to provide a suitable space in which to have lessons..
