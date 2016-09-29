@@ -65,7 +65,7 @@
                     <th data-field="group-type" data-sortable="true"  width="10%" >Group Type</th>
                     <th data-field="town" data-sortable="true">Group Town</th>
                     <th data-field="description" data-sortable="true">Group Description</th>
-                    <th data-field="recruiting" data-sortable="true" width="10%">Recruitment Details</th>
+                    <th data-field="recruiting" data-sortable="true" width="10%">Further Information</th>
                 </tr>
             </thead>
             <tbody>
@@ -153,7 +153,7 @@
                         echo($temp);
                         ?></td>
                     <td>{{$group->group_description}}</td>
-                    <td>@if($group->recruiting == 1) <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal{{$group->id}}"> Click to see recruiting details! </button> @else <i class="fa fa-times htb5"  aria-hidden="true"></i> @endif</td>
+                    <td>@if($group->recruiting == 1) <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal{{$group->id}}"> Click here to read more! </button> @else <i class="fa fa-times htb5"  aria-hidden="true"></i> @endif</td>
                 </tr>
 
 

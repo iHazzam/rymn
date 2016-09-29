@@ -73,9 +73,9 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="description" class="control-label">Paragraph about the group:</label>
+                                        <label for="description" class="control-label">Paragraph about the group  (400 characters maximum, more details can be added on the next page!):</label>
 
-                                        <textarea class="form-control" id="biography" name="biography" required></textarea>
+                                        <textarea class="form-control" id="biography" maxlength="400" name="biography" required></textarea>
                                     </div>
 
                                     <div class="form-group">

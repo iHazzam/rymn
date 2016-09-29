@@ -79,9 +79,9 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="description" class="control-label">Paragraph about the group:</label>
+                                        <label for="description" class="control-label">Paragraph about the group (~60 words, more details can be input later!):</label>
 
-                                        <textarea class="form-control" id="biography" name="biography" required>{{$data->group_description}}</textarea>
+                                        <textarea class="form-control" id="biography" name="biography"  maxlength="400" required>{{$data->group_description}}</textarea>
                                     </div>
 
                                     <div class="form-group">

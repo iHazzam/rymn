@@ -193,12 +193,24 @@
                                 @if(Auth::user()->isGroup())
                                         <li><a href="{{ url('edit/group') }}"><i class="fa fa-btn fa-tachometer"></i>Edit Group Details</a></li>
                                         <li><a href="{{ url('edit/group/event') }}"><i class="fa fa-btn fa-tachometer"></i>Edit Group Events</a></li>
+                                        <li><a href="{{ url('discover/add') }}"><i class="fa fa-btn fa-plus-square-o"></i>Add New Event</a></li>
                                 @endif
                                 <li><a href="{{ url('logout') }}"><i class="fa fa-btn fa-sign-out"></i> Logout</a></li>
                             </ul>
                         </li>
                     @else
-                        <li><a href="/login" >Log In</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                Login/Register <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/login" >Log In</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="{{ url('teach/register') }}">Register as a Teacher</a></li>
+                                <li><a href="{{ url('learn/repairers') }}">Register as a Repairer</a></li>
+                                <li><a href="{{ url('play/advertise') }}">Add your Group</a></li>
+                            </ul>
+                        </li>
                     @endif
                 </ul>
             </div>

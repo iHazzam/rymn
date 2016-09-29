@@ -610,3 +610,24 @@ footer {
     text-align: right;
     padding-right: .5em;
 }
+
+.registerme{
+    font-weight: bold;
+    margin: 0 auto;
+    width: 100px;
+}
+
+.registerme2{
+    width: 90%;
+    margin: 0 auto;
+}
+.registerme3{
+    font-weight: bold;
+    margin: 0 auto;
+    width: 100px;
+}
+
+.registerme4{
+    width: 60%;
+    margin: 0 auto;
+}

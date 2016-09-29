@@ -76,6 +76,7 @@
                             </div>
                         </div>
                     </form>
+                    <div class="registerme2"> <span class="registerme">Not yet registered? You can: <a href="teach/register">Join as a teacher</a>,<a href="learn/repairers">Join as a repairer</a> or <a href="play/advertise">add an ensemble!</a></span> </div>
                 </div>
             </div>
         </div>

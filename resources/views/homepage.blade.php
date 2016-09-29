@@ -57,9 +57,11 @@
 
 
         </ul>
+        <br><br>
+        <div class="registerme4"><span class="registerme3">Ripon Youth Music Network is supported by North Yorkshire County Council</span></div>
+    </div>
     </div>
 
-    </div>
 @endsection
 
 @section('background-color','#e6f7ff')
