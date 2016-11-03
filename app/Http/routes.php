@@ -33,8 +33,8 @@ Route::get('/sitemap', 'pageController@sitemap');
     $this->get('logout', 'Auth\AuthController@logout');
 
     // Registration Routes...
-    $this->get('register', 'Auth\AuthController@showRegistrationForm'); //Disabled admin registration
-    $this->post('register', 'Auth\AuthController@register');
+//    $this->get('register', 'Auth\AuthController@showRegistrationForm'); //Disabled admin registration
+//    $this->post('register', 'Auth\AuthController@register');
 
     // Password Reset Routes...
     $this->get('password/reset/{token?}', 'Auth\PasswordController@showResetForm');
