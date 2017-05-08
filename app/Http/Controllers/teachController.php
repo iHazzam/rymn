@@ -113,24 +113,32 @@ class teachController extends Controller
                 $error = true;
             }
         }
+        $i1 = $request->instrument_1;
         $teacher->instruments_played1 = $request->instrument_1;
+        $teacher_instruments->$i1 = 1;
         $teacher->level_min_instrument1 = $request->instrument_1_select_min;
         $teacher->level_max_instrument1 = $request->instrument_1_select_max;
         if($request->has('instrument_2'))
         {
+            $i2 = $request->instrument_2;
             $teacher->instruments_played2 = $request->instrument_2;
+            $teacher_instruments->$i2 = 1;
             $teacher->level_min_instrument2 = $request->instrument_2_select_min;
             $teacher->level_max_instrument2 = $request->instrument_2_select_max;
         }
         if($request->has('instrument_3'))
         {
+            $i3 = $request->instrument_3;
             $teacher->instruments_played3 = $request->instrument_3;
+            $teacher_instruments->$i3 = 1;
             $teacher->level_min_instrument3 = $request->instrument_3_select_min;
             $teacher->level_max_instrument3 = $request->instrument_3_select_max;
         }
         if($request->has('instrument_4'))
         {
+            $i4 = $request->instrument_4;
             $teacher->instruments_played4 = $request->instrument_4;
+            $teacher_instruments->$i4 = 1;
             $teacher->level_min_instrument4 = $request->instrument_4_select_min;
             $teacher->level_max_instrument4 = $request->instrument_4_select_max;
         }
@@ -642,12 +650,16 @@ class teachController extends Controller
         }else{
             $teacher->phone = "";
         }
+        $i1 = $request->instrument_1;
         $teacher->instruments_played1 = $request->instrument_1;
+        $teacher_instruments->$i1 = 1;
         $teacher->level_min_instrument1 = $request->instrument_1_select_min;
         $teacher->level_max_instrument1 = $request->instrument_1_select_max;
         if($request->has('instrument_2'))
         {
+            $i2 = $request->instrument_2;
             $teacher->instruments_played2 = $request->instrument_2;
+            $teacher_instruments->$i2 = 1;
             $teacher->level_min_instrument2 = $request->instrument_2_select_min;
             $teacher->level_max_instrument2 = $request->instrument_2_select_max;
         }
@@ -658,7 +670,9 @@ class teachController extends Controller
         }
         if($request->has('instrument_3'))
         {
+            $i3 = $request->instrument_3;
             $teacher->instruments_played3 = $request->instrument_3;
+            $teacher_instruments->$i3 = 1;
             $teacher->level_min_instrument3 = $request->instrument_3_select_min;
             $teacher->level_max_instrument3 = $request->instrument_3_select_max;
         }
@@ -669,7 +683,9 @@ class teachController extends Controller
         }
         if($request->has('instrument_4'))
         {
+            $i4 = $request->instrument_4;
             $teacher->instruments_played4 = $request->instrument_4;
+            $teacher_instruments->$i4 = 1;
             $teacher->level_min_instrument4 = $request->instrument_4_select_min;
             $teacher->level_max_instrument4 = $request->instrument_4_select_max;
         }
